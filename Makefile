@@ -6,33 +6,19 @@
 #    By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/02 21:32:05 by sikpenou          #+#    #+#              #
-#    Updated: 2019/07/10 19:20:35 by sikpenou         ###   ########.fr        #
+#    Updated: 2019/07/11 17:46:23 by hehlinge         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 
-#CFLAGS = -Wall -Wextra -Werror
-CFLAGS = -g
+CFLAGS = -Wall -Wextra -Werror -g
 
-NAME = libftprintf.a
-
-EXEC = ft_printf
+NAME = hehlinge.filler
 
 SRCS = $(addprefix $(SRCDIR), $(SRCFILES))
 
-SRCFILES = \
-		   ft_printf.c \
-		   core.c \
-		   memory.c \
-		   support.c \
-		   display.c \
-		   text_funcs.c \
-		   num_funcs.c \
-		   floats.c \
-		   calc_floats.c \
-		   padding.c \
-		   debug.c
+SRCFILES = main.c	parser.c
 
 SRCDIR = ./srcs/
 
@@ -46,31 +32,23 @@ INCLS = $(INCLDIR)*.h
 
 INCLDIR = ./includes/
 
-MAIN = ./srcs/main.c
+LIB = libft.a
 
-LIB = libftprintf.a
+LIBDIR = ./libft/
 
-LIBDIR = ./
-
-all: $(NAME) $(EXEC)
+all: $(NAME)
 	@echo "\e[31mDEPENDENCY TO EXEC TO BE REMOVED\e[0m"
 
 $(NAME): $(INCLS) $(SRCS)
 #
 	@rm -f auteur
-	@echo sikpenou > auteur
-	@/bin/echo compiling source files
-	@make -j --no-print-directory objects
+	@echo hehlinge > auteur
 	@/bin/echo creating $(LIBDIR)$(LIB)
-	@ar src $(LIBDIR)$(LIB) $(OBJS)
-
-ft_printf: $(MAIN) $(LIB)
-#
-	@/bin/echo updating $(NAME)
-	@make -j --no-print-directory $(NAME)
-	@/bin/echo linking main and $(LIBDIR)$(LIB)
-	@$(CC) $(CFLAGS) -I $(INCLDIR) -o ./objs/main.o -c ./srcs/main.c
-	@$(CC) $(CFLAGS) -I $(INCLDIR) -L$(LIBDIR) -o $@ ./objs/main.o -lftprintf
+	@make -j --no-print-directory -C $(LIBDIR)
+	@/bin/echo compiling source files
+	@mkdir -p objs
+	@make -j --no-print-directory objects
+	@$(CC) $(CFLAGS) -I $(INCLDIR) -o $@ $(OBJS) $(LIBDIR)/$(LIB)
 #	@clear
 
 objects: $(OBJS)
@@ -78,10 +56,6 @@ objects: $(OBJS)
 $(OBJDIR)%.o: $(SRCDIR)%.c
 #
 	@$(CC) $(CFLAGS) -I $(INCLDIR) -o $@ -c $<
-
-test: $(INCL) testprintf.c
-#
-	@$(CC) $(CFLAGS) -I $(INCLDIR) -L$(LIBDIR) -o $@ testprintf.c -lftprintf
 
 clean: FORCE
 #

@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 14:03:58 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/07/11 16:32:06 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/07/11 17:57:08 by hehlinge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,11 +61,19 @@ static t_gnl	*find_fd(t_gnl **begin_list, int fd)
 	return (elem);
 }
 
-static void		ft_move_buf(char *buf, char *strstr)
+static int			ft_move_buf(char *buf, char *strstr, int opt, t_gnl *begin)
 {
-	ft_memmove(buf, strstr + 1, BUFF_SIZE);
-	buf[BUFF_SIZE] = '\0';
-	strstr[0] = '\0';
+	if (!opt)
+	{
+		ft_memmove(buf, strstr + 1, BUFF_SIZE);
+		buf[BUFF_SIZE] = '\0';
+		strstr[0] = '\0';
+		return (0);
+	}
+	if (buf)
+		free(buf);
+	ft_lstdel(begin);
+	return (0);
 }
 
 static int		read_buff(char *buf, char **str, int fd)
@@ -88,7 +96,7 @@ static int		read_buff(char *buf, char **str, int fd)
 			break ;
 	}
 	if (strstr)
-		ft_move_buf(buf, strstr);
+		ft_move_buf(buf, strstr, 0, NULL);
 	if (!strstr && ret == 0)
 	{
 		buf[0] = '\0';
@@ -97,15 +105,15 @@ static int		read_buff(char *buf, char **str, int fd)
 	return (ret);
 }
 
-int				get_next_line(const int fd, char **line)
+int				gnl(const int fd, char **line, int opt)
 {
 	static t_gnl	*begin_gnl = NULL;
 	char			*tmp;
 	t_gnl			*elem;
 	int				ret;
 
-	if (fd < 0 || !line || BUFF_SIZE < 0 || !(elem = find_fd(&begin_gnl, fd)))
-		return (-1);
+	if (opt || fd < 0 || !line || BUFF_SIZE < 0 || !(elem = find_fd(&begin_gnl, fd)))
+		return (opt ? ft_move_buf(*line, NULL, opt, begin_gnl) : -1);
 	if ((tmp = ft_strstr(elem->buf, "\n")))
 	{
 		tmp[0] = '\0';
