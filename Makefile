@@ -18,7 +18,7 @@ NAME = hehlinge.filler
 
 SRCS = $(addprefix $(SRCDIR), $(SRCFILES))
 
-SRCFILES = main.c	parser.c
+SRCFILES = main.c	parser.c	algo.c		gnl.c		memory.c
 
 SRCDIR = ./srcs/
 
@@ -36,6 +36,11 @@ LIB = libft.a
 
 LIBDIR = ./libft/
 
+LIBFTPRINTF = libftprintf.a
+
+LIBFTPRINTFDIR = ./libft/ft_printf
+
+
 all: $(NAME)
 	@echo "\e[31mDEPENDENCY TO EXEC TO BE REMOVED\e[0m"
 
@@ -48,7 +53,7 @@ $(NAME): $(INCLS) $(SRCS)
 	@/bin/echo compiling source files
 	@mkdir -p objs
 	@make -j --no-print-directory objects
-	@$(CC) $(CFLAGS) -I $(INCLDIR) -o $@ $(OBJS) $(LIBDIR)/$(LIB)
+	@$(CC) $(CFLAGS) -I $(INCLDIR) -o $@ $(OBJS) $(LIBDIR)/$(LIB) $(LIBFTPRINTFDIR)/$(LIBFTPRINTF)
 #	@clear
 
 objects: $(OBJS)

@@ -11,89 +11,141 @@
 /* ************************************************************************** */
 
 #include "filler.h"
+#include <stdlib.h>
+#include <stdio.h>
 
-int		ft_parse_first_line(t_var *var)
+int		ft_alloc_map(t_var *var)
 {
-	char	*str;
-	char	*tmp;
-	char	ret;
+	int		i;
 
-	ret = 1;
-	str = 0;
-	if (gnl(1, &str, 0) <= 0)
-		ret = 0;
-	tmp = str;
-	if (ft_strncmp(str, "$$$ exec p", ft_strlen("$$$ exec p")))
-		ret = 0;
-	str += ft_strlen("$$$ exec p");
-	if (!((var->player = str[0]) == '1' || str[0] == '2'))
-		ret = 0;
-	str++;
-	if (ft_strncmp(str, "p1 : [players/", ft_strlen("p1 : [players/")))
-		ret = 0;
-	str += ft_strlen("p1 : [players/");
-	if (ft_strcmp(str, "hehlinge.filler]"))
-		ret = 0;
-	if (tmp)
-		free(tmp);
-	return (ret);
+	ft_putendl("oui");
+	if (!(var->map = (char **)ft_easy_malloc(&(var->to_free),
+		var->y_max * sizeof(char *), 0)))
+		return (0);
+	ft_putendl("non");
+	i = -1;
+	while (++i < var->y_max)
+	{
+		if (!(var->map[i] = (char *)ft_easy_malloc(&(var->to_free),
+			var->x_max * sizeof(char), 0)))
+			return (0);
+	}
+	return (1);
 }
 
-int		ft_parse_second_line(t_var *var, char *str)
+int		ft_parse_line_map(t_var *var, char *str)
 {
-	char	ret;
+	int		i;
+
+	i = -1;
+	while (++i < var->x_max)
+	{
+		if (str[i] != '.' && str[i] != 'X' && str[i] != 'O'
+			&& str[i] != 'x' && str[i] != 'o')
+			return (0);
+		else if (var->turn == 1 && (str[i] == 'x' || str[i] == 'o'))
+			return (0);
+		else if (var->turn == 1)
+		{
+			if (str[i] == 'X')
+				var->nb_x++;
+			else if (str[i] == 'O')
+				var->nb_o++;
+		}
+	}
+	if (str[i] || var->nb_o != 1 || var->nb_x != 1)
+		return (0);
+	return (1);
+}
+
+int		ft_parse_map(t_var *var, char *str)
+{
 	int		off;
 	int		i;
 
 	if (gnl(1, &str, 0) <= 0)
-		ret = 0;
+		return (0);
 	if (ft_strncmp(str, "    ", ft_strlen("    ")))
-		ret = 0;
+		return (0);
 	i = -1;
 	while (++i < var->x_max)
 		if (str[4 + i] != (i % 10 + '0'))
-			ret = 0;
+			return (0);
 	if (str[4 + i])
-		ret = 0;
+		return (0);
 	var->turn++;
 	i = -1;
-	while (gnl(1, &str, 0) > 0 && ++i < var->y_max)
+	while (++i < var->y_max && gnl(1, &str, 0) > 0)
 	{
 		off = 0;
-		if (str[0] != i / 100 - 48 || str[1] != (i % 100) / 10 - 48 || str[2]
-			!= i % 10 - 48 || str[3] != ' ' || !(check_line(str + 4, var))
-			ret = 0;
-
+		if (str[0] != i / 100 - '0' || str[1] != (i % 100) / 10 - '0' || str[2]
+			!= i % 10 - '0' || str[3] != ' ' || !(ft_parse_line_map(var, str + 4)))
+			return (0);
 	}
+	return (1);
+}
+
+int		ft_parse_line_plateau(t_var *var, char **str, int off, int res)
+{
+	if (gnl(1, str, 0) <= 0)
+		return (0);
+	if (ft_strncmp(*str + off, "Plateau ", ft_strlen("Plateau ")))
+		return (0);
+	off += ft_strlen("Plateau ");
+	while ((*str)[off] >= '0' && (*str)[off] <= '9')
+		res = res * 10 + (*str)[off++] - '0';
+	if (!res || (var->y_max && res != var->y_max) || (*str)[off++] != ' ')
+		return (0);
+	var->y_max = res;
+	res = 0;
+	while ((*str)[off] >= '0' && (*str)[off] <= '9')
+		res = res * 10 + (*str)[off++] - '0';
+	if (!res || (var->x_max && res != var->x_max)
+		|| ft_strcmp((*str) + off, ":"))
+		return (0);
+	var->x_max = res;
+	if (!(var->map))
+		if (!(ft_alloc_map(var)))
+			return (0);
+	return (1);
+}
+
+int		ft_parse_piece(t_var *var, char *str, int off, int res)
+{
+	if (gnl(1, &str, 0) <= 0)
+		return (0);
+	if (ft_strncmp(str + off, "Piece ", ft_strlen("Piece ")))
+		return (0);
+	off += ft_strlen("Piece ");
+	res = 0;
+	while (str[off] >= '0' && str[off] <= '9')
+		res = res * 10 + str[off++] - '0';
+	if (!res || str[off++] != ' ')
+		return (0);
+	var->x_size_piece = res;
+	res = 0;
+	while (str[off] >= '0' && str[off] <= '9')
+		res = res * 10 + str[off++] - '0';
+	if (!res || str[off])
+		return (0);
+	var->y_size_piece = res;
+	return (1);
 }
 
 int		ft_parse_input(t_var *var)
 {
-	char	*str;
-	char	ret;
-	int		res;
-	int		off;
+	char *str;
 
-	ret = 1;
-	str = 0;
-	off = 0;
-	if (gnl(1, &str, 0) <= 0)
-		ret = 0;
-	if (ft_strncmp(str + off, "Plateau ", ft_strlen("Plateau ")))
-		ret = 0;
-	off += ft_strlen("Plateau ");
-	res = 0;
-	while (str[off] >= '0' && str[off] <= '9')
-		res = res * 10 + str[off++] - '0';
-	if (!res && !var->y_max || (var->y_max && res != var->y_max) || str[off++] != ' ')
-		ret = 0;
-	var->x_max = res;
-	res = 0;
-	while (str[off] >= '0' && str[off] <= '9')
-		res = res * 10 + str[off++] - '0';
-	if (!res && !var->x_max || (var->x_max && res != var->x_max) || ft_strcmp(str + off, ":"))
-		ret = 0;
-	var->x_max = res;
-	
-	return (!ret ? 0 : parse_second_line(var, str));
+	str = NULL;
+	if (!(ft_easy_malloc(&(var->to_free), 0, INIT_EASY_FREE)))
+		return (0);
+	if (!(ft_parse_line_plateau(var, &str, 0, 0)))
+		return (0);
+	if (!(ft_parse_map(var, str)))
+		return (0);
+	printf("ft_parse_map ok\n");
+	return (1);
+	if (!(ft_parse_piece(var, str, 0, 0)))
+		return (0);
+	return (1);
 }

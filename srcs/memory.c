@@ -10,8 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "filler.h"
 #include <stdlib.h>
+#include <stdio.h>
+
+void	ft_clear_list(t_gnl **begin_list)
+{
+	t_gnl *tmp;
+
+	if (!(*begin_list))
+		return ;
+	while (*begin_list)
+	{
+		tmp = (*begin_list)->next;
+		free(*begin_list);
+		*begin_list = tmp;
+	}
+}
 
 void	*ft_stralloc(char *str)
 {
@@ -28,25 +43,29 @@ void	*ft_stralloc(char *str)
 	return (newzone);
 }
 
-int		ft_realloc(void **zone, long curr_size, long to_add)
+int		ft_realloc(void ***zone, long curr_size, long to_add)
 {
-	char	*tmp;
+	void	**tmp;
+	int		size;
 
-	if (!(tmp = (char *)malloc(sizeof(char) * (curr_size))))
+	if (!(tmp = (void **)malloc(sizeof(void *) * curr_size)))
 		return (0);
-	ft_memset(tmp, 0, curr_size);
-	ft_memcpy(tmp, *zone, curr_size);
+	ft_memset(tmp, 0, curr_size * sizeof(void *));
+	size = (int)(*zone[0]);
+	ft_putnbr(size);
 	if (*zone)
 		free(*zone);
-	if (!(*zone = (char *)malloc(sizeof(char) * (curr_size + to_add))))
+	zone = NULL;
+	if (!(*zone = (void **)malloc((curr_size + to_add) * sizeof(void *))))
 		return (0);
-	ft_memset(*zone, 0, curr_size + to_add);
-	ft_memcpy(*zone, tmp, curr_size);
+	ft_putendl("coucou2");
+	ft_memset(*zone, 0, (curr_size + to_add) * sizeof(void *));
+	ft_memcpy(*zone, tmp, curr_size * sizeof(void *));
 	free(tmp);
 	return (curr_size + to_add);
 }
 
-int		ft_easy_free(void **to_free)
+void	*ft_easy_free(void **to_free)
 {
 	int		size;
 
@@ -58,21 +77,28 @@ int		ft_easy_free(void **to_free)
 	}
 	if (to_free)
 		free(to_free);
-	return (0);
+	return (NULL);
 }
 
-int		ft_easy_malloc(void	**ptr, void	**to_free, int size, int opt)
+void	*ft_easy_malloc(void ***to_free, int size, int opt)
 {
-	if (opt == -1)
+	void	*ptr;
+
+	if (opt == 1)
 	{
-		if (!(to_free[0] = (void *)malloc(sizeof(void *) * 2)))
-			return (0);
-		to_free[0] = (void *)1;
-		return (1);
+		if (!(*to_free = (void **)malloc(sizeof(void *))))
+			return (NULL);
+		*to_free[0] = (void *)1;
+		return ((void *)to_free);
 	}
-	if (!(to_free[(to_free[0])++] = (void *)malloc(sizeof(void *) * (size + 1))))
-		return (ft_easy_free(to_free));
-	if (!(ft_realloc(to_free, (long)to_free[0] + (long)1, 1)))
-		return (ft_easy_free(to_free));
-	return (1);
+	if (!(ptr = (void *)malloc(size + 1)))
+		return (ft_easy_free(*to_free));
+	ft_bzero(ptr, size + 1);
+	ft_putendl("malloc de ptr");
+	if (!(ft_realloc(to_free,
+		((long)to_free[0] + (long)1), (long)1)))
+		return (ft_easy_free(*to_free));
+	ft_putendl("realloc de to_free");
+	to_free[(int)(to_free[0])++] = ptr;
+	return (ptr);
 }

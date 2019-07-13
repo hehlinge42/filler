@@ -16,6 +16,10 @@ NAME = libft.a
 
 FLAGS = -Wall -Wextra -Werror
 
+LIBFTPRINTF = libftprintf.a
+
+LIBFTPRINTFDIR = ./ft_printf/
+
 INC = libft.h
 
 SRC_DIR = srcs
@@ -39,6 +43,7 @@ SRCS = ft_atoi.c       ft_lstclr.c     ft_memcmp.c     ft_putnbr.c     ft_strdel
 all: $(NAME)
 
 $(NAME): $(OBJS_LIB)
+	@make -j --no-print-directory -C $(LIBFTPRINTFDIR)
 	@mkdir -p $(OBJ_DIR)
 	@ar rc $(NAME) $(OBJS_LIB)
 	@ranlib $(NAME)

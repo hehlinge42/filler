@@ -12,7 +12,8 @@
 
 #include <stdlib.h>
 #include <unistd.h>
-#include "../includes/libft.h"
+#include "filler.h"
+#include "../libft/includes/libft.h"
 
 static void		ft_free(t_gnl **begin_list, t_gnl *elem)
 {
@@ -72,7 +73,7 @@ static int			ft_move_buf(char *buf, char *strstr, int opt, t_gnl *begin)
 	}
 	if (buf)
 		free(buf);
-	ft_lstdel(begin);
+	ft_clear_list(&begin);
 	return (0);
 }
 
