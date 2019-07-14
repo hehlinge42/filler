@@ -17,23 +17,25 @@
 int		ft_alloc_map(t_var *var)
 {
 	int		i;
+	t_list	*begin_list;
 
-	ft_putendl("oui");
-	if (!(var->map = (char **)ft_easy_malloc(&(var->to_free),
-		var->y_max * sizeof(char *), 0)))
+	if (!(var->map = (char **)malloc(sizeof(char *) * var->y_max)))
 		return (0);
-	ft_putendl("non");
+	begin_list = ft_lstnew((void *)var->map, sizeof(char *) * var->y_max);
+	var->to_free = &begin_list;
 	i = -1;
 	while (++i < var->y_max)
 	{
-		if (!(var->map[i] = (char *)ft_easy_malloc(&(var->to_free),
-			var->x_max * sizeof(char), 0)))
+		if (!(var->map[i] = (char *)malloc(sizeof(char) * (var->x_max + 1))))
 			return (0);
+		ft_lstadd(var->to_free,
+			ft_lstnew((void *)var->map[i], sizeof(char) * (var->x_max + 1)));
 	}
+	ft_putendl("Map alloc");
 	return (1);
 }
 
-int		ft_parse_line_map(t_var *var, char *str)
+int		ft_parse_line_map(t_var *var, char *str, int lin)
 {
 	int		i;
 
@@ -53,14 +55,14 @@ int		ft_parse_line_map(t_var *var, char *str)
 				var->nb_o++;
 		}
 	}
-	if (str[i] || var->nb_o != 1 || var->nb_x != 1)
+	if (str[i])
 		return (0);
+	ft_strcpy(var->map[lin], str);
 	return (1);
 }
 
 int		ft_parse_map(t_var *var, char *str)
 {
-	int		off;
 	int		i;
 
 	if (gnl(1, &str, 0) <= 0)
@@ -77,11 +79,12 @@ int		ft_parse_map(t_var *var, char *str)
 	i = -1;
 	while (++i < var->y_max && gnl(1, &str, 0) > 0)
 	{
-		off = 0;
-		if (str[0] != i / 100 - '0' || str[1] != (i % 100) / 10 - '0' || str[2]
-			!= i % 10 - '0' || str[3] != ' ' || !(ft_parse_line_map(var, str + 4)))
+		if (str[0] != i / 100 + '0' || str[1] != (i % 100) / 10 + '0' || str[2]
+			!= i % 10 + '0' || str[3] != ' ' || !(ft_parse_line_map(var, str + 4, i)))
 			return (0);
 	}
+	if (var->turn == 1 && (var->nb_o != 1 || var->nb_x != 1))
+		return (0);
 	return (1);
 }
 
@@ -104,16 +107,15 @@ int		ft_parse_line_plateau(t_var *var, char **str, int off, int res)
 		|| ft_strcmp((*str) + off, ":"))
 		return (0);
 	var->x_max = res;
-	if (!(var->map))
-		if (!(ft_alloc_map(var)))
-			return (0);
 	return (1);
 }
 
-int		ft_parse_piece(t_var *var, char *str, int off, int res)
+int		ft_parse_first_line_piece(t_var *var, char *str, int off, int res)
 {
 	if (gnl(1, &str, 0) <= 0)
 		return (0);
+	ft_putstr("gnl = ");
+	ft_putendl(str);
 	if (ft_strncmp(str + off, "Piece ", ft_strlen("Piece ")))
 		return (0);
 	off += ft_strlen("Piece ");
@@ -122,13 +124,35 @@ int		ft_parse_piece(t_var *var, char *str, int off, int res)
 		res = res * 10 + str[off++] - '0';
 	if (!res || str[off++] != ' ')
 		return (0);
-	var->x_size_piece = res;
+	var->y_size_piece = res;
 	res = 0;
 	while (str[off] >= '0' && str[off] <= '9')
 		res = res * 10 + str[off++] - '0';
-	if (!res || str[off])
+	if (!res || ft_strcmp(str + off, ":"))
 		return (0);
-	var->y_size_piece = res;
+	var->x_size_piece = res;
+	return (1);
+}
+
+int		ft_parse_piece(t_var *var, char *str)
+{
+	int		i;
+	int		j;
+
+	i = -1;
+	while (++i < var->y_size_piece && gnl(1, &str, 0) > 0)
+	{
+		j = -1;
+		while (++j < var->x_size_piece)
+		{
+			if (str[j] != '.' && str[j] != '*')
+				return (0);
+		}
+		if (str[j])
+			return (0);
+	}
+	if (gnl(1, &str, 0) > 0)
+		return (0);
 	return (1);
 }
 
@@ -137,15 +161,19 @@ int		ft_parse_input(t_var *var)
 	char *str;
 
 	str = NULL;
-	if (!(ft_easy_malloc(&(var->to_free), 0, INIT_EASY_FREE)))
-		return (0);
 	if (!(ft_parse_line_plateau(var, &str, 0, 0)))
 		return (0);
+	if (!(var->map))
+		if (!(ft_alloc_map(var)))
+			return (0);
 	if (!(ft_parse_map(var, str)))
 		return (0);
-	printf("ft_parse_map ok\n");
-	return (1);
-	if (!(ft_parse_piece(var, str, 0, 0)))
+	ft_putendl("ft_parse_map ok");
+	if (!(ft_parse_first_line_piece(var, str, 0, 0)))
+		return (0);
+	if (!(ft_alloc_piece(var)))
+		return (0);
+	if (!(ft_parse_piece(var, str)))
 		return (0);
 	return (1);
 }

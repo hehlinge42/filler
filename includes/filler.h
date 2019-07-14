@@ -35,7 +35,7 @@ typedef struct	s_var
 	int		turn;
 	int		nb_x;
 	int		nb_o;
-	void	**to_free;
+	t_list	**to_free;
 }				t_var;
 
 int				gnl(const int fd, char **line, int opt);

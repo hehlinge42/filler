@@ -42,7 +42,7 @@ static void		ft_free(t_gnl **begin_list, t_gnl *elem)
 static t_gnl	*find_fd(t_gnl **begin_list, int fd)
 {
 	t_gnl	*elem;
-	int		i;
+//	int		i;
 
 	elem = *begin_list;
 	while (elem)
@@ -53,10 +53,11 @@ static t_gnl	*find_fd(t_gnl **begin_list, int fd)
 	}
 	if (!(elem = (t_gnl *)malloc(sizeof(t_gnl))))
 		return (NULL);
+	ft_bzero(elem, sizeof(elem));
 	elem->fd = fd;
-	i = -1;
-	while (elem->buf[++i])
-		elem->buf[i] = 0;
+//	i = -1;
+//	while (elem->buf[++i])
+//		elem->buf[i] = 0;
 	elem->next = *begin_list;
 	*begin_list = elem;
 	return (elem);
