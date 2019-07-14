@@ -21,15 +21,27 @@ int		ft_alloc_map(t_var *var)
 
 	if (!(var->map = (char **)malloc(sizeof(char *) * var->y_max)))
 		return (0);
+	ft_bzero(var->map, sizeof(char *) * var->y_max);
 	begin_list = ft_lstnew((void *)var->map, sizeof(char *) * var->y_max);
 	var->to_free = &begin_list;
+	if (!(var->piece = (char **)malloc(sizeof(char *) * var->y_max)))
+		return (0);
+	ft_bzero(var->piece, sizeof(char *) * var->y_max);
+	ft_lstadd(var->to_free,
+		ft_lstnew((void *)var->piece, sizeof(char *) * var->y_max));
 	i = -1;
 	while (++i < var->y_max)
 	{
 		if (!(var->map[i] = (char *)malloc(sizeof(char) * (var->x_max + 1))))
 			return (0);
+		ft_bzero(var->map[i], sizeof(char) * (var->x_max + 1));
 		ft_lstadd(var->to_free,
 			ft_lstnew((void *)var->map[i], sizeof(char) * (var->x_max + 1)));
+		if (!(var->piece[i] = (char *)malloc(sizeof(char) * (var->x_max + 1))))
+			return (0);
+		ft_bzero(var->piece[i], sizeof(char) * (var->x_max + 1));
+		ft_lstadd(var->to_free,
+			ft_lstnew((void *)var->piece[i], sizeof(char) * (var->x_max + 1)));
 	}
 	ft_putendl("Map alloc");
 	return (1);
@@ -150,9 +162,8 @@ int		ft_parse_piece(t_var *var, char *str)
 		}
 		if (str[j])
 			return (0);
+		ft_strcpy(var->piece[i], str);
 	}
-	if (gnl(1, &str, 0) > 0)
-		return (0);
 	return (1);
 }
 
@@ -168,10 +179,7 @@ int		ft_parse_input(t_var *var)
 			return (0);
 	if (!(ft_parse_map(var, str)))
 		return (0);
-	ft_putendl("ft_parse_map ok");
 	if (!(ft_parse_first_line_piece(var, str, 0, 0)))
-		return (0);
-	if (!(ft_alloc_piece(var)))
 		return (0);
 	if (!(ft_parse_piece(var, str)))
 		return (0);
