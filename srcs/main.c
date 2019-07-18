@@ -81,7 +81,7 @@ int		main(void)
 	{
 		if (!ft_parse_input(&var))
 			return (ft_exit(&var, BAD_MAP));
-		ft_print_debug(&var);
+		ft_print_debug(var);
 		return (1);
 		if (!place_piece())
 			return (ft_exit(&var, FULL_MAP));

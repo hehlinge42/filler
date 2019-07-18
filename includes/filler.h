@@ -56,6 +56,6 @@ void			ft_clear_list(t_gnl **begin_list);
 void			*ft_easy_malloc(void ***to_free, int size, int opt);
 int				ft_init_point(t_var *var, int x, int y, char letter);
 int				ft_add_point(t_var *var, int x, int y, char letter);
-void			ft_print_debug(t_var *var);
+void			ft_print_debug(t_var var);
 
 # endif
