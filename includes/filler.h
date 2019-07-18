@@ -38,6 +38,8 @@ typedef struct	s_var
 	t_list	**to_free;
 }				t_var;
 
+# define PRINTENV ft_printf("%s -- %s -- line %d\n", __FILE__, __func__, __LINE__);
+
 int				gnl(const int fd, char **line, int opt);
 int				ft_parse_input(t_var *var);
 int				place_piece(void);
