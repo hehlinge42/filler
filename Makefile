@@ -18,7 +18,8 @@ NAME = hehlinge.filler
 
 SRCS = $(addprefix $(SRCDIR), $(SRCFILES))
 
-SRCFILES = main.c	parser.c	algo.c		gnl.c		memory.c
+SRCFILES =	main.c		parser.c	algo.c		gnl.c		memory.c\
+			points.c	debug.c
 
 SRCDIR = ./srcs/
 

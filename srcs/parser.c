@@ -59,12 +59,35 @@ int		ft_parse_line_map(t_var *var, char *str, int lin)
 			return (0);
 		else if (var->turn == 1 && (str[i] == 'x' || str[i] == 'o'))
 			return (0);
+		else if (str[i] == 'x')
+		{
+			if (!(ft_add_point(var, lin, i, 'X')))
+				return (0);
+		}
+		else if (str[i] == 'o')
+		{
+			if (!(ft_add_point(var, lin, i, 'O')))
+				return (0);
+		}
 		else if (var->turn == 1)
 		{
-			if (str[i] == 'X')
+			if (str[i] == 'X' && var->nb_x == 0)
+			{
+				if (!(ft_init_point(var, lin, i, 'X')))
+					return (0);
 				var->nb_x++;
-			else if (str[i] == 'O')
+			}
+			else if (str[i] == 'O' && var->nb_o == 0)
+			{
+				if (!(ft_init_point(var, lin, i, 'O')))
+					return (0);
 				var->nb_o++;
+			}
+			else if ((str[i] == 'X' && var->nb_x > 0)
+				|| (str[i] == 'O' && var->nb_o > 0))
+			{
+				return (0);
+			}
 		}
 	}
 	if (str[i])
@@ -91,10 +114,12 @@ int		ft_parse_map(t_var *var, char *str)
 	i = -1;
 	while (++i < var->y_max && gnl(1, &str, 0) > 0)
 	{
+		ft_printf("i = %d, y_max = %d\n", i, var->y_max);
 		if (str[0] != i / 100 + '0' || str[1] != (i % 100) / 10 + '0' || str[2]
 			!= i % 10 + '0' || str[3] != ' ' || !(ft_parse_line_map(var, str + 4, i)))
 			return (0);
 	}
+	ft_printf("sortie de boucle\n");
 	if (var->turn == 1 && (var->nb_o != 1 || var->nb_x != 1))
 		return (0);
 	return (1);

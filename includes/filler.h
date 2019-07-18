@@ -20,22 +20,31 @@
 
 # include "../libft/includes/libft.h"
 
+typedef struct	s_point
+{
+	int				x;
+	int				y;
+	struct s_point	*next;
+}				t_point;
+
 typedef struct	s_var
 {
-	char	player;
-	char	**map;
-	char	**piece;
-	int		x_max;
-	int		y_max;
-	int		x_size_piece;
-	int		y_size_piece;
-	int		x;
-	int		y;
-	int		exp_pieces;
-	int		turn;
-	int		nb_x;
-	int		nb_o;
-	t_list	**to_free;
+	char		player;
+	char		**map;
+	char		**piece;
+	int			x_max;
+	int			y_max;
+	int			x_size_piece;
+	int			y_size_piece;
+	int			x;
+	int			y;
+	int			exp_pieces;
+	int			turn;
+	int			nb_x;
+	int			nb_o;
+	t_point		**points_x;
+	t_point		**points_o;
+	t_list		**to_free;
 }				t_var;
 
 # define PRINTENV ft_printf("%s -- %s -- line %d\n", __FILE__, __func__, __LINE__);
@@ -45,5 +54,8 @@ int				ft_parse_input(t_var *var);
 int				place_piece(void);
 void			ft_clear_list(t_gnl **begin_list);
 void			*ft_easy_malloc(void ***to_free, int size, int opt);
+int				ft_init_point(t_var *var, int x, int y, char letter);
+int				ft_add_point(t_var *var, int x, int y, char letter);
+void			ft_print_debug(t_var *var);
 
 # endif
