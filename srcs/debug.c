@@ -15,19 +15,19 @@ void	ft_print_debug(t_var var)
 	while (++i < var.x_size_piece)
 		ft_printf("%s\n", var.piece[i]);
 	ft_printf("POINTS DE X\n");
-	begin_list = *(var.points_x);
+	printf("x : %d\n", (*(var.points_x))->x);
 	while (begin_list)
 	{
-		ft_printf("x = %d\n", begin_list->x);
-		ft_printf("y = %d\n\n", begin_list->y);
+		printf("x = %d\n", begin_list->x);
+		printf("y = %d\n\n", begin_list->y);
 		begin_list = begin_list->next;
 	}
 	ft_printf("POINTS DE O\n");
 	begin_list = *(var.points_o);
 	while (begin_list)
 	{
-		ft_printf("x = %d\n", begin_list->x);
-		ft_printf("y = %d\n\n", begin_list->y);
+		printf("x = %d\n", begin_list->x);
+		printf("y = %d\n\n", begin_list->y);
 		begin_list = begin_list->next;
 	}
 }

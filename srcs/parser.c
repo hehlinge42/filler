@@ -76,15 +76,16 @@ int		ft_parse_line_map(t_var *var, char *str, int lin)
 			{
 				if (!(ft_init_point(var, lin, i, 'X')))
 					return (0);
-				ft_printf("begin_list x: %d\n", (*(var->points_x))->x);
-				ft_printf("begin_list y: %d\n", (*(var->points_x))->y);
+				printf("begin_list x: %d, :%d\n",
+				(*(var->points_x))->x, (*(var->points_x))->y);
 				var->nb_x++;
 			}
 			else if (str[i] == 'O' && var->nb_o == 0)
 			{
 				if (!(ft_init_point(var, lin, i, 'O')))
 					return (0);
-				ft_printf("begin_list : %p\n", *(var->points_o));
+				printf("begin_list x: %d, :%d\n",
+				(*(var->points_x))->x, (*(var->points_x))->y);
 				var->nb_o++;
 			}
 			else if ((str[i] == 'X' && var->nb_x > 0)
@@ -214,5 +215,6 @@ int		ft_parse_input(t_var *var)
 		return (0);
 	if (!(ft_parse_piece(var, str)))
 		return (0);
+	ft_print_debug(*var);
 	return (1);
 }

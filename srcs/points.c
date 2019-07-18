@@ -1,14 +1,15 @@
 #include "filler.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 int		ft_init_point(t_var *var, int x, int y, char letter)
 {
 	t_point	*elem;
 
-	if (!(elem = (t_point *)malloc(sizeof(t_point))))
+	if (!(elem = (t_point *)malloc(sizeof(t_point) * 2)))
 		return (0);
 	//ft_lstadd(var->to_free, ft_lstnew((void *)elem, sizeof(void *)));
-	ft_bzero(elem, sizeof(t_point));
+	ft_memset(elem, 0, sizeof(t_point));
 	elem->x = x;
 	elem->y = y;
 	elem->next = NULL;
