@@ -7,7 +7,8 @@ int		ft_init_point(t_var *var, int x, int y, char letter)
 
 	if (!(elem = (t_point *)malloc(sizeof(t_point))))
 		return (0);
-	ft_lstadd(var->to_free, ft_lstnew((void *)elem, sizeof(t_point)));
+	//ft_lstadd(var->to_free, ft_lstnew((void *)elem, sizeof(void *)));
+	ft_bzero(elem, sizeof(t_point));
 	elem->x = x;
 	elem->y = y;
 	elem->next = NULL;
@@ -23,6 +24,7 @@ int		ft_add_point(t_var *var, int x, int y, char letter)
 	t_point	*elem;
 	if (!(elem = (t_point *)malloc(sizeof(t_point))))
 		return (0);
+	ft_bzero(elem, sizeof(t_point));
 	elem->x = x;
 	elem->y = y;
 	if (letter == 'X')

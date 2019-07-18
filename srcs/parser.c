@@ -52,6 +52,7 @@ int		ft_parse_line_map(t_var *var, char *str, int lin)
 	int		i;
 
 	i = -1;
+	ft_printf("parse_line\n");
 	while (++i < var->x_max)
 	{
 		if (str[i] != '.' && str[i] != 'X' && str[i] != 'O'
@@ -93,6 +94,7 @@ int		ft_parse_line_map(t_var *var, char *str, int lin)
 	if (str[i])
 		return (0);
 	ft_strcpy(var->map[lin], str);
+	ft_printf("i = %d\n", lin);
 	return (1);
 }
 
@@ -118,8 +120,9 @@ int		ft_parse_map(t_var *var, char *str)
 		if (str[0] != i / 100 + '0' || str[1] != (i % 100) / 10 + '0' || str[2]
 			!= i % 10 + '0' || str[3] != ' ' || !(ft_parse_line_map(var, str + 4, i)))
 			return (0);
+		ft_printf("i = %d, y_max = %d\n", i, var->y_max);
 	}
-	ft_printf("sortie de boucle\n");
+	ft_printf("sortie de boucle, i = %d\n", i);
 	if (var->turn == 1 && (var->nb_o != 1 || var->nb_x != 1))
 		return (0);
 	return (1);

@@ -7,27 +7,27 @@ void	ft_print_debug(t_var *var)
 	t_point	*begin_list;
 
 	i = -1;
-	printf("MAP");
+	ft_printf("MAP\n");
 	while (++i < var->x_max)
 		printf("%s\n", var->map[i]);
 	i = -1;
-	printf("PIECE");
+	ft_printf("PIECE\n");
 	while (++i < var->x_size_piece)
 		printf("%s\n", var->piece[i]);
-	printf("POINTS DE X");
+	ft_printf("POINTS DE X\n");
 	begin_list = *(var->points_x);
 	while (begin_list)
 	{
-		printf("x = %d\n", begin_list->x);
-		printf("y = %d\n\n", begin_list->y);
+		ft_printf("x = %d\n", begin_list->x);
+		ft_printf("y = %d\n\n", begin_list->y);
 		begin_list = begin_list->next;
 	}
-	printf("POINTS DE O");
+	ft_printf("POINTS DE O\n");
 	begin_list = *(var->points_o);
 	while (begin_list)
 	{
-		printf("x = %d\n", begin_list->x);
-		printf("y = %d\n\n", begin_list->y);
+		ft_printf("x = %d\n", begin_list->x);
+		ft_printf("y = %d\n\n", begin_list->y);
 		begin_list = begin_list->next;
 	}
 }

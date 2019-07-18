@@ -66,7 +66,7 @@ int		ft_exit(t_var *var, int opt)
 		ft_putendl("Bad map");
 	else if (opt == FULL_MAP)
 		ft_display(0, 0);
-	return (0);
+	return (1);
 }
 
 int		main(void)
@@ -82,10 +82,10 @@ int		main(void)
 		if (!ft_parse_input(&var))
 			return (ft_exit(&var, BAD_MAP));
 		ft_print_debug(&var);
-		return (0);
+		return (1);
 		if (!place_piece())
 			return (ft_exit(&var, FULL_MAP));
 		ft_display(var.x, var.y);
 	}
-	return (1);
+	return (0);
 }
