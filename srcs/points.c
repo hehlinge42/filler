@@ -102,45 +102,7 @@ void	ft_get_closest(t_lst	*point, t_var *var)
 		((t_point *)point->content)->x_owner,
 		((t_point *)point->content)->y_owner,
 		((t_point *)point->content)->dist);
-	
 }
-
-/*t_lst		ft_get_closest(t_lst	*point, t_var *var)
-{
-	t_lst		*tmp;
-	t_lst		*res;
-	int			min_dist;
-	int			dist;
-
-	min_dist = var->x_map + var->y_map;
-	if ((tmp = *((t_lst)var->points_o)))
-	{
-		while (tmp->next)
-		{
-			dist = abs(((t_point *)tmp->content)->x - point->x)
-				+ abs(((t_point *)tmp->content)->y - point->y);
-			if (dist < min_dist)
-			{
-				min_dist = dist;
-				res = tmp;
-			}
-		}
-	}
-	if ((tmp = *((t_lst)var->points_o)))
-	{
-		while (tmp->next)
-		{
-			dist = abs(((t_point *)tmp->content)->x - point->x)
-				+ abs(((t_point *)tmp->content)->y - point->y);
-			if (dist < min_dist)
-			{
-				min_dist = dist;
-				res = tmp;
-			}
-		}
-	}
-	return (res);
-}*/
 
 int			ft_get_points(t_var *var)
 {
