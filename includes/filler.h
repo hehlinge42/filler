@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:30:50 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/03 15:19:37 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/19 17:13:43 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct		s_point
 	int				x_owner;
 	int				y_owner;
 	int				dist;
+	int				available;
 }					t_point;
 
 typedef struct		s_var

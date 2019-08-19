@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/03 15:28:43 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/19 17:54:52 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_point		*ft_new_point(int x, int y, char c)
 	return (0);
 }
 
-void	ft_dist (t_point *tmp, t_lst *point, t_var *var)
+void	ft_dist(t_point *tmp, t_lst *point, t_var *var)
 {
 	int		test;
 
@@ -95,6 +95,7 @@ void	ft_get_closest(t_lst	*point, t_var *var)
 		}
 		square_nb++;
 	}
+	/*
 	ft_printf("Point x = %d, y = %d : Owner = %c, x_owner = %d, y_owner = %d, dist = %d\n",
 		((t_point *)point->content)->x,
 		((t_point *)point->content)->y,
@@ -102,45 +103,28 @@ void	ft_get_closest(t_lst	*point, t_var *var)
 		((t_point *)point->content)->x_owner,
 		((t_point *)point->content)->y_owner,
 		((t_point *)point->content)->dist);
-	
+	*/	
 }
 
-/*t_lst		ft_get_closest(t_lst	*point, t_var *var)
+void		ft_available(t_var *var)
 {
-	t_lst		*tmp;
-	t_lst		*res;
-	int			min_dist;
-	int			dist;
+	t_lst	*tmp;
 
-	min_dist = var->x_map + var->y_map;
-	if ((tmp = *((t_lst)var->points_o)))
+	tmp = var->player == 'X' ? *(var->points_x) : *(var->points_o);
+	while (tmp)
 	{
-		while (tmp->next)
-		{
-			dist = abs(((t_point *)tmp->content)->x - point->x)
-				+ abs(((t_point *)tmp->content)->y - point->y);
-			if (dist < min_dist)
-			{
-				min_dist = dist;
-				res = tmp;
-			}
-		}
+		((t_point *)tmp->content)->available = is_available(*var
+			, ((t_point *)tmp->content)->x, ((t_point *)tmp->content)->y);
+		tmp = tmp->next;
 	}
-	if ((tmp = *((t_lst)var->points_o)))
+	tmp = *var->points_n;
+	while (tmp)
 	{
-		while (tmp->next)
-		{
-			dist = abs(((t_point *)tmp->content)->x - point->x)
-				+ abs(((t_point *)tmp->content)->y - point->y);
-			if (dist < min_dist)
-			{
-				min_dist = dist;
-				res = tmp;
-			}
-		}
+		((t_point *)tmp->content)->available = is_available(*var
+			, ((t_point *)tmp->content)->x, ((t_point *)tmp->content)->y);
+		tmp = tmp->next;
 	}
-	return (res);
-}*/
+}
 
 int			ft_get_points(t_var *var)
 {
@@ -173,6 +157,6 @@ int			ft_get_points(t_var *var)
 			}
 		}
 	}
-	print_debug(*var, "123");
+	ft_available(var);
 	return (1);
 }

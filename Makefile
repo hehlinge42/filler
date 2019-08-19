@@ -6,7 +6,7 @@
 #    By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/02 21:32:05 by sikpenou          #+#    #+#              #
-#    Updated: 2019/08/02 14:36:43 by sikpenou         ###   ########.fr        #
+#    Updated: 2019/08/19 17:51:02 by sikpenou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,47 +43,44 @@ LIBDIR = libft/
 
 LIBFTPRINTF = libftprintf.a
 
-LIBFTPRINTFDIR = ./libft/ft_printf
+LIBFTPRINTFDIR = libft/ft_printf
 
 all: $(NAME)
 
-$(NAME): $(INCLS) $(SRCS) $(LIB)
-#
+$(NAME): $(INCLS) $(SRCS) $(LIB) $(LIBFTPRINTF)
 	@rm -f auteur
 	@echo hehlinge > auteur
 	@/bin/echo compiling source files
 	@mkdir -p objs
 	@make -j --no-print-directory objects
-#	@$(CC) $(CFLAGS) -I $(INCLS) -o $@ $(OBJS) $(LIBDIR)/$(LIB)
 	@$(CC) $(CFLAGS) -I $(INCLS) -o $@ $(OBJS) $(LIBDIR)/$(LIB) $(LIBFTPRINTFDIR)/$(LIBFTPRINTF)
-#	@clear
 
 $(LIB):
-	make -j --no-print-directory -C $(LIBDIR)
+	@make -j --no-print-directory -C $(LIBDIR)
+
+$(LIBFTPRINTF):
+	@make -j --no-print-directory -C $(LIBFTPRINTFDIR)
 
 objects: $(OBJS)
 
 $(OBJDIR)%.o: $(SRCDIR)%.c
-#
 	@$(CC) $(CFLAGS) -I $(INCLS) -I $(LIBINCLS) -o $@ -c $<
 
 clean: FORCE
-#
 	@rm -f $(OBJS)
-#	@rm -f "./objs/main.o"
-	make clean -j --no-print-directory -C $(LIBDIR)
+	@make clean -j --no-print-directory -C $(LIBDIR)
+	@make clean -j --no-print-directory -C $(LIBFTPRINTFDIR)
 	@echo "rm -f .o files"
 	@rm -f $(OBJS)
 
 fclean: clean
-#
 	@rm -f a.out
 	@rm -f test
 	rm -f libft/libft.a
+	rm -f $(LIBFPRINTFDIR)$(LIBFTPRINTF)
 	rm -f $(NAME)
 
 re: FORCE
-#
 	@make -j --no-print-directory fclean
 	@make -j --no-print-directory all
 
