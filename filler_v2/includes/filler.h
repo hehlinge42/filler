@@ -33,6 +33,7 @@ typedef struct		s_point
 typedef struct		s_var
 {
 	char			player;
+	char			enemy;
 	int				x_map;
 	int				y_map;
 	int				turn;
@@ -57,6 +58,7 @@ int				ft_get_points(t_var *var);
 int				place_piece(void);
 int				ft_init_point(t_var *var, int x, int y, char letter);
 int				abs(int n);
+int				is_available(t_var var, int o_x, int o_y);
 void			print_debug(t_var var, char *opt);
 
 # endif

@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "filler.h" 
+
 int			is_available(t_var var, int o_x, int o_y)
 {
 	int		count;

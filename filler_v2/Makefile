@@ -23,6 +23,7 @@ SRCFILES =	main.c				\
 			parser.c			\
 			debug.c				\
 			points.c			\
+			avail.c
 
 SRCDIR = ./srcs/
 
