@@ -28,7 +28,7 @@ char	*ft_itoa(int n)
 		count++;
 		i *= 10;
 	}
-	if (!(res = (char *)malloc(sizeof(char) * (count + 1))))
+	if (!(res = (char *)easymalloc(sizeof(char) * (count + 1))))
 		return (NULL);
 	res[count] = '\0';
 	while (--count >= 0)

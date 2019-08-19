@@ -13,13 +13,13 @@
 #include "../includes/libft.h"
 #include <stdlib.h>
 
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_lst	*ft_lstmap(t_lst *lst, t_lst *(*f)(t_lst *elem))
 {
-	t_list	*elem;
+	t_lst	*elem;
 
 	if (lst)
 	{
-		if (!(elem = (t_list *)malloc(sizeof(t_list))))
+		if (!(elem = (t_lst *)easymalloc(sizeof(t_lst))))
 			return (NULL);
 		elem = f(lst);
 		lst = lst->next;

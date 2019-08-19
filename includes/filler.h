@@ -6,56 +6,59 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:30:50 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/07/11 19:10:09 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/08/03 15:19:37 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FILLER_H
 # define FILLER_H
 
-# define INIT_EASY_FREE 1
 # define ERR_FIRST_LINE 1
 # define BAD_MAP 2
 # define FULL_MAP 3
 
-# include "../libft/includes/libft.h"
+#include "libft.h"
 
-typedef struct	s_point
+#include <stdio.h>
+typedef struct		s_point
 {
 	int				x;
 	int				y;
-	struct s_point	*next;
-}				t_point;
+	char			owner;
+	int				x_owner;
+	int				y_owner;
+	int				dist;
+}					t_point;
 
-typedef struct	s_var
+typedef struct		s_var
 {
-	char		player;
-	char		**map;
-	char		**piece;
-	int			x_max;
-	int			y_max;
-	int			x_size_piece;
-	int			y_size_piece;
-	int			x;
-	int			y;
-	int			exp_pieces;
-	int			turn;
-	int			nb_x;
-	int			nb_o;
-	t_point		**points_x;
-	t_point		**points_o;
-	t_list		**to_free;
-}				t_var;
+	char			player;
+	char			enemy;
+	int				x_map;
+	int				y_map;
+	int				turn;
+	int				x_piece;
+	int				y_piece;
+	int				x_pos;
+	int				y_pos;
+	int				exp_pieces;
+	int				nb_x;
+	int				nb_o;
+	char			**map;
+	char			**piece;
+	t_lst			**points_x;
+	t_lst			**points_o;
+	t_lst			**points_n;
+}					t_var;
 
-# define PRINTENV ft_printf("%s -- %s -- line %d\n", __FILE__, __func__, __LINE__);
+# define PRINTENV printf("%s -- %s -- line %d\n", __FILE__, __func__, __LINE__); fflush(0);
 
-int				gnl(const int fd, char **line, int opt);
 int				ft_parse_input(t_var *var);
+int				ft_get_points(t_var *var);
 int				place_piece(void);
-void			ft_clear_list(t_gnl **begin_list);
-void			*ft_easy_malloc(void ***to_free, int size, int opt);
 int				ft_init_point(t_var *var, int x, int y, char letter);
-int				ft_add_point(t_var *var, int x, int y, char letter);
-void			ft_print_debug(t_var var);
+int				abs(int n);
+int				is_available(t_var var, int o_x, int o_y);
+void			print_debug(t_var var, char *opt);
 
 # endif

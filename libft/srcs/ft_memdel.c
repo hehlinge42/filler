@@ -17,6 +17,6 @@ void	ft_memdel(void **ap)
 {
 	if (!ap)
 		return ;
-	free(*ap);
+	ft_free(*ap);
 	*ap = NULL;
 }

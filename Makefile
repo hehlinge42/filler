@@ -6,20 +6,24 @@
 #    By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/02 21:32:05 by sikpenou          #+#    #+#              #
-#    Updated: 2019/07/11 17:46:23 by hehlinge         ###   ########.fr        #
+#    Updated: 2019/08/02 14:36:43 by sikpenou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g3
 
 NAME = hehlinge.filler
 
 SRCS = $(addprefix $(SRCDIR), $(SRCFILES))
 
-SRCFILES =	main.c		parser.c	algo.c		gnl.c		memory.c\
-			points.c	debug.c
+SRCFILES =	main.c				\
+			support.c			\
+			parser.c			\
+			debug.c				\
+			points.c			\
+			avail.c
 
 SRCDIR = ./srcs/
 
@@ -27,56 +31,56 @@ OBJS = $(addprefix $(OBJDIR), $(OBJFILES))
 
 OBJFILES = $(SRCFILES:.c=.o)
 
-OBJDIR = ./objs/
+OBJDIR = objs/
 
-INCLS = $(INCLDIR)*.h
-
-INCLDIR = ./includes/
+INCLS = includes/
 
 LIB = libft.a
 
-LIBDIR = ./libft/
+LIBINCLS =  $(LIBDIR)$(INCLS)
+
+LIBDIR = libft/
 
 LIBFTPRINTF = libftprintf.a
 
 LIBFTPRINTFDIR = ./libft/ft_printf
 
-
 all: $(NAME)
-	@echo "\e[31mDEPENDENCY TO EXEC TO BE REMOVED\e[0m"
 
-$(NAME): $(INCLS) $(SRCS)
+$(NAME): $(INCLS) $(SRCS) $(LIB)
 #
 	@rm -f auteur
 	@echo hehlinge > auteur
-	@/bin/echo creating $(LIBDIR)$(LIB)
-	@make -j --no-print-directory -C $(LIBDIR)
 	@/bin/echo compiling source files
 	@mkdir -p objs
 	@make -j --no-print-directory objects
-	@$(CC) $(CFLAGS) -I $(INCLDIR) -o $@ $(OBJS) $(LIBDIR)/$(LIB) $(LIBFTPRINTFDIR)/$(LIBFTPRINTF)
+#	@$(CC) $(CFLAGS) -I $(INCLS) -o $@ $(OBJS) $(LIBDIR)/$(LIB)
+	@$(CC) $(CFLAGS) -I $(INCLS) -o $@ $(OBJS) $(LIBDIR)/$(LIB) $(LIBFTPRINTFDIR)/$(LIBFTPRINTF)
 #	@clear
+
+$(LIB):
+	make -j --no-print-directory -C $(LIBDIR)
 
 objects: $(OBJS)
 
 $(OBJDIR)%.o: $(SRCDIR)%.c
 #
-	@$(CC) $(CFLAGS) -I $(INCLDIR) -o $@ -c $<
+	@$(CC) $(CFLAGS) -I $(INCLS) -I $(LIBINCLS) -o $@ -c $<
 
 clean: FORCE
 #
 	@rm -f $(OBJS)
-	@echo "\e[31mlibft clean up - erase this and libft folder before push\e[0m"
-	@rm -f ./libft/*.o
-	@rm -f "./objs/main.o"
+#	@rm -f "./objs/main.o"
+	make clean -j --no-print-directory -C $(LIBDIR)
 	@echo "rm -f .o files"
+	@rm -f $(OBJS)
 
 fclean: clean
 #
 	@rm -f a.out
 	@rm -f test
+	rm -f libft/libft.a
 	rm -f $(NAME)
-	rm -f ft_printf
 
 re: FORCE
 #

@@ -43,7 +43,7 @@ char		**ft_strsplit(char const *s, char c)
 	int		end;
 
 	count = ft_word_count(s, c);
-	if (!s || !(res = (char **)malloc(sizeof(char *) * (count + 1))))
+	if (!s || !(res = (char **)easymalloc(sizeof(char *) * (count + 1))))
 		return (NULL);
 	res[count] = NULL;
 	i = -1;

@@ -18,7 +18,7 @@ char	*ft_strnew(size_t size)
 	size_t	i;
 	char	*str;
 
-	if (!(str = (char *)malloc(sizeof(char) * (size + 1))))
+	if (!(str = (char *)easymalloc(sizeof(char) * (size + 1))))
 		return (NULL);
 	str[size] = '\0';
 	i = 0;
