@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/03 15:28:43 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/19 17:54:52 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_point		*ft_new_point(int x, int y, char c)
 	return (0);
 }
 
-void	ft_dist (t_point *tmp, t_lst *point, t_var *var)
+void	ft_dist(t_point *tmp, t_lst *point, t_var *var)
 {
 	int		test;
 
@@ -104,6 +104,26 @@ void	ft_get_closest(t_lst	*point, t_var *var)
 		((t_point *)point->content)->dist);
 }
 
+void		ft_available(t_var *var)
+{
+	t_lst	*tmp;
+
+	tmp = var->player == 'X' ? *(var->points_x) : *(var->points_o);
+	while (tmp)
+	{
+		((t_point *)tmp->content)->available = is_available(*var
+			, ((t_point *)tmp->content)->x, ((t_point *)tmp->content)->y);
+		tmp = tmp->next;
+	}
+	tmp = *var->points_n;
+	while (tmp)
+	{
+		((t_point *)tmp->content)->available = is_available(*var
+			, ((t_point *)tmp->content)->x, ((t_point *)tmp->content)->y);
+		tmp = tmp->next;
+	}
+}
+
 int			ft_get_points(t_var *var)
 {
 	int		i;
@@ -135,6 +155,6 @@ int			ft_get_points(t_var *var)
 			}
 		}
 	}
-	print_debug(*var, "123");
+	ft_available(var);
 	return (1);
 }

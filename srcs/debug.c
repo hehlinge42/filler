@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:38:31 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/02 16:20:04 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/19 18:14:59 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 
 void	print_map(t_var var)
 {
-	PRINTENV
 	int			i;
 
 	i = -1;
@@ -49,35 +48,52 @@ void	print_piece(t_var var)
 
 void	print_points(t_var var)
 {
-	int		i;
+	int			i;
+	t_lst		*tmp;
 
 	i = 0;
-	printf("POINTS DE X\n");
-	while (*(var.points_x))
+	printf("ENEMY POINTS\n");
+	tmp = var.player == 'X' ? *(var.points_o) : *(var.points_x);
+	while (tmp)
 	{
-		printf("PT_X %d -- y: %d, x: %d\n"
-			, i++, ((t_point *)(*var.points_x)->content)->y
-			, ((t_point *)(*var.points_x)->content)->x);
-		*(var.points_x) = (*(var.points_x))->next;
+		printf("PT_ENEMY   %d -- y: %d, x: %d\n"
+			, i++, ((t_point *)tmp->content)->y
+			, ((t_point *)tmp->content)->x);
+		tmp = tmp->next;
 	}
 	i = 0;
-	printf("POINTS DE O\n");
-	while (*(var.points_o))
+	printf("PLAYER POINTS\n");
+	tmp = var.player == 'X' ? *(var.points_x) : *(var.points_o);
+	while (tmp)
 	{
-		printf("PT_O %d -- y: %d, x: %d\n"
-			, i++, ((t_point *)(*var.points_o)->content)->y
-			, ((t_point *)(*var.points_o)->content)->x);
-		*(var.points_o) = (*(var.points_o))->next;
+		printf("PT_PLAYER  %d -- y: %d\tx: %d\t%s\n"
+			, i++, ((t_point *)tmp->content)->y
+			, ((t_point *)tmp->content)->x
+			, ((t_point *)tmp->content)->available ? "-- available" : "");
+		tmp = tmp->next;
+	}
+	i = 0;
+	printf("NEUTRAL POINTS\n");
+	tmp = *(var.points_n);
+	while (tmp)
+	{
+		printf("PT_PLAYER  %d -- y: %d\tx: %d\t-- owner: %c%s\n"
+			, i++, ((t_point *)tmp->content)->y
+			, ((t_point *)tmp->content)->x
+			, ((t_point *)tmp->content)->owner
+			, ((t_point *)tmp->content)->available ? " -- available" : "");
+		tmp = tmp->next;
 	}
 }
 
 void	print_debug(t_var var, char *opt)
 {
-	printf("in debug, address of map: %p, *map: %p\n", var.map, *var.map);
+	printf("PLAYER: %c\nMAP:\n", var.player);
 	if (!*opt || ft_strchr(opt, '1'))
+	{
 		print_map(var);
-	if (!*opt || ft_strchr(opt, '2'))
 		print_piece(var);
-	if (!*opt || ft_strchr(opt, '3'))
+	}
+	if (!*opt || ft_strchr(opt, '2'))
 		print_points(var);
 }

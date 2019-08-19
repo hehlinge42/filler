@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:28:16 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/19 17:06:51 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/19 17:55:05 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ int		main(void)
 		{
 			if (!ft_parse_input(&var))
 				return (ft_exit(BAD_MAP));
-			print_debug(var, "12");
 			ft_get_points(&var);
+			print_debug(var, "123");
 			return (1);
 //		display could be in place piece
 //		ft_place_piece();
