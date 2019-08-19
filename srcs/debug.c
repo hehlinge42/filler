@@ -6,13 +6,54 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:38:31 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/19 18:30:19 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/19 19:36:56 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 #include "libft.h"
 #include <stdio.h>
+
+void	print_lines(t_var var, char *line)
+{
+	int			i;
+	int			pos;
+	char		*code;
+	t_lst		*tmp;
+	t_point		*point;
+
+	i = 0;
+	while (i < var.y_map)
+	{
+		printf("%d\t", i);
+		line = var.map[i];
+		tmp = *(var.points_n);
+		while (tmp)
+		{
+			point = tmp->content;
+			if (point->owner == var.enemy)
+				var.map[point->y][point->x] = ',';
+			else if (point->owner == '?')
+				var.map[point->y][point->x] = '?';
+			tmp = tmp->next;
+		}
+		pos = 0;
+		while (line[pos])
+		{
+			code = "\033[0m";
+			(line[pos] == var.player || line[pos] == var.player + 32)
+			 	? (code = "\033[1;31m") : 0;
+			(line[pos] == var.enemy || line[pos] == var.enemy + 32)
+				? (code = "\033[1;34m") : 0;
+			line[pos] == ',' ? (code = "\033[0;34m") : 0;
+			line[pos] == '.' ? (code = "\033[0;31m") : 0;
+			printf("%s%c\033[0m", code, line[pos]);
+			pos++;
+		}
+		printf("\n");
+		i++;
+	}
+}
 
 void	print_map(t_var var)
 {
@@ -24,9 +65,7 @@ void	print_map(t_var var)
 	while (++i < var.x_map)
 		printf("%c", i % 10 + 48);
 	printf("\n");
-	i = -1;
-	while (++i < var.y_map)
-		printf("%d\t%s\n", i, var.map[i]);
+	print_lines(var, "");
 	printf("\n");
 }
 
@@ -56,9 +95,9 @@ void	print_points(t_var var)
 	tmp = var.player == 'X' ? *(var.points_o) : *(var.points_x);
 	while (tmp)
 	{
-		printf("PT_ENEMY   %d -- y: %d\tx: %d\n"
-			, i++, ((t_point *)tmp->content)->y
-			, ((t_point *)tmp->content)->x);
+		printf("PT_ENEMY\t%d -\ty: %d\tx: %d\n"
+				, i++, ((t_point *)tmp->content)->y
+				, ((t_point *)tmp->content)->x);
 		tmp = tmp->next;
 	}
 	i = 0;
@@ -66,10 +105,10 @@ void	print_points(t_var var)
 	tmp = var.player == 'X' ? *(var.points_x) : *(var.points_o);
 	while (tmp)
 	{
-		printf("PT_PLAYER  %d -- y: %d\tx: %d\t%s\n"
-			, i++, ((t_point *)tmp->content)->y
-			, ((t_point *)tmp->content)->x
-			, ((t_point *)tmp->content)->available ? "-- available" : "");
+		printf("PT_PLAYER\t%d -\ty: %d\tx: %d\t%s\n"
+				, i++, ((t_point *)tmp->content)->y
+				, ((t_point *)tmp->content)->x
+				, ((t_point *)tmp->content)->available ? "-- available" : "");
 		tmp = tmp->next;
 	}
 	i = 0;
@@ -77,11 +116,11 @@ void	print_points(t_var var)
 	tmp = *(var.points_n);
 	while (tmp)
 	{
-		printf("PT_PLAYER  %d -- y: %d\tx: %d\t-- owner: %c%s\n"
-			, i++, ((t_point *)tmp->content)->y
-			, ((t_point *)tmp->content)->x
-			, ((t_point *)tmp->content)->owner
-			, ((t_point *)tmp->content)->available ? " -- available" : "");
+		printf("PT_NEUTRAL\t%d -\ty: %d\tx: %d\t-- owner: %c%s\n"
+				, i++, ((t_point *)tmp->content)->y
+				, ((t_point *)tmp->content)->x
+				, ((t_point *)tmp->content)->owner
+				, ((t_point *)tmp->content)->available ? " -- available" : "");
 		tmp = tmp->next;
 	}
 }
