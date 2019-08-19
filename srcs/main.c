@@ -71,13 +71,14 @@ int		main(void)
 			if (!ft_parse_input(&var))
 				return (ft_exit(BAD_MAP));
 			ft_get_points(&var);
-			print_debug(var, "123");
+			print_debug(var, "12");
 			ft_algo(&var);
-			return (1);
+			ft_printf("Chosen position : x = %d, y = %d\n", var.x_pos, var.y_pos);
+			return (0);
 //		display could be in place piece
 //		ft_place_piece();
 //		printf("%d %d\n", x, y);
 		}
 	}
-	return (0);
+	return (1);
 }

@@ -14,7 +14,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-void	print_lines(t_var var, char *line)
+void	print_lines(t_var var, char *line, int opt)
 {
 	int			i;
 	int			pos;
@@ -26,7 +26,10 @@ void	print_lines(t_var var, char *line)
 	while (i < var.y_map)
 	{
 		printf("%d\t", i);
-		line = var.map[i];
+		if (opt)
+			line = var.tmp[i];
+		else
+			line = var.map[i];
 		tmp = *(var.points_n);
 		while (tmp)
 		{
@@ -55,7 +58,7 @@ void	print_lines(t_var var, char *line)
 	}
 }
 
-void	print_map(t_var var)
+void	print_map(t_var var, int opt)
 {
 	int			i;
 
@@ -65,7 +68,7 @@ void	print_map(t_var var)
 	while (++i < var.x_map)
 		printf("%c", i % 10 + 48);
 	printf("\n");
-	print_lines(var, "");
+	print_lines(var, "", opt);
 	printf("\n");
 }
 
@@ -130,7 +133,10 @@ void	print_debug(t_var var, char *opt)
 	printf("PLAYER: %c\nMAP:\n", var.player);
 	if (!*opt || ft_strchr(opt, '1'))
 	{
-		print_map(var);
+		if (ft_strchr(opt, '3'))
+			print_map(var, 1);
+		else
+			print_map(var, 0);
 		print_piece(var);
 	}
 	if (!*opt || ft_strchr(opt, '2'))

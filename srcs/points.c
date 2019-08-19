@@ -32,7 +32,7 @@ void	ft_dist(t_point *tmp, t_lst *point, t_var *var)
 
 	//ft_printf("Entrée dans ft_dist : x = %d, y = %d\n", tmp->x, tmp->y);
 	//ft_printf("test = %d, dist = %d\n",  abs(((t_point *)point->content)->x - tmp->x)
-		//+ abs(((t_point *)point->content)->y - tmp->y),  ((t_point *)point->content)->dist);
+	//+ abs(((t_point *)point->content)->y - tmp->y),  ((t_point *)point->content)->dist);
 	if (tmp->x >= 0 && tmp->y >= 0 && tmp->x < var->x_map && tmp->y < var->y_map
 		&& var->map[tmp->y][tmp->x] != '.' && (test = abs(((t_point *)point->content)->x - tmp->x)
 		+ abs(((t_point *)point->content)->y - tmp->y)) <= ((t_point *)point->content)->dist)

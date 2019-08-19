@@ -46,6 +46,7 @@ typedef struct		s_var
 	int				nb_x;
 	int				nb_o;
 	char			**map;
+	char			**tmp;
 	char			**piece;
 	t_lst			**points_x;
 	t_lst			**points_o;

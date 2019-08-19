@@ -36,7 +36,8 @@ int		ft_parse_size(char *line, t_var *var, char *option)
 	while (line[pos] >= '0' && line[pos] <= '9')
 		pos++;
 	if ((ft_strcmp(option, "Piece ")
-		&& (var->map = (char **)easymalloc(sizeof(char *) * var->y_map)))
+		&& (var->map = (char **)easymalloc(sizeof(char *) * var->y_map))
+		&& (var->tmp = (char **)easymalloc(sizeof(char *) * var->y_map)))
 		|| (var->piece = (char **)easymalloc(sizeof(char *) * var->y_piece)))
 		if (line[pos] == ':' && line[pos + 1] == 0)
 			return (1);
@@ -65,6 +66,7 @@ int		ft_parse_map_l0(char *line, t_var var)
 
 int		ft_parse_map(int nb, char *line, t_var *var)
 {
+	ft_printf("Dans ft_parse_map\n");
 	if (nb > -1)
 	{
 		if (ft_atoi(line) == nb)
@@ -73,9 +75,11 @@ int		ft_parse_map(int nb, char *line, t_var *var)
 				line++;
 			if (*(line++) == ' ' && (int)ft_strlen(line) == var->x_map)
 			{
-				if ((var->map[nb] = (char *)easymalloc(var->x_map + 1)))
+				if ((var->map[nb] = (char *)easymalloc(var->x_map + 1))
+					&& (var->tmp[nb] = (char *)easymalloc(var->x_map + 1)))
 				{
 					ft_strcpy(var->map[nb], line);
+					ft_strcpy(var->tmp[nb], line);
 					while (*line == 'o' || *line == 'x' || *line == 'O'
 							|| *line == 'X' || *line == '.')
 						line++;
@@ -111,13 +115,13 @@ int		ft_parse_input(t_var *var)
 	if (get_next_line(0, &line) && ft_parse_size(line, var, "Plateau "))
 	{
 		ft_free((void **)&line);
-//		printf("size map ok, x: %d, y: %d\n", var->x_map, var->y_map);
+		ft_printf("size map ok, x: %d, y: %d\n", var->x_map, var->y_map);
 		nb = -1;
 		while (nb < var->y_map
 			&& get_next_line(0, &line) > -1 && ft_parse_map(nb, line, var))
 			nb++;
 		ft_free((void **)&line);
-//		printf("map ok\n");
+		ft_printf("map ok\n");
 		if (nb == var->y_map
 			&& get_next_line(0, &line) && ft_parse_size(line, var, "Piece "))
 		{
