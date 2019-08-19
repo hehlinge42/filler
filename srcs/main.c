@@ -72,6 +72,7 @@ int		main(void)
 				return (ft_exit(BAD_MAP));
 			ft_get_points(&var);
 			print_debug(var, "123");
+			ft_algo(&var);
 			return (1);
 //		display could be in place piece
 //		ft_place_piece();
