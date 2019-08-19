@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:38:31 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/19 18:14:59 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/19 18:30:19 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	print_points(t_var var)
 	tmp = var.player == 'X' ? *(var.points_o) : *(var.points_x);
 	while (tmp)
 	{
-		printf("PT_ENEMY   %d -- y: %d, x: %d\n"
+		printf("PT_ENEMY   %d -- y: %d\tx: %d\n"
 			, i++, ((t_point *)tmp->content)->y
 			, ((t_point *)tmp->content)->x);
 		tmp = tmp->next;
