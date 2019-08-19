@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:28:16 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/03 15:04:19 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/19 17:06:51 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ int		ft_parse_first_line(t_var *var)
 	pos = ft_strlen("$$$ exec p");
 	if (ft_strncmp(line, "$$$ exec p", pos))
 		return (0);
-	if ((var->player = line[pos] - 48) != 1 && var->player != 2)
+	if (line[pos] != '1' && line[pos] != '2')
 		return (0);
+	var->player = line[pos] == '1' ? 'O' : 'X';
+	var->enemy = line[pos] == '1' ? 'X' : 'O';
 	pos++;
 	if (ft_strcmp(line + pos, " : [players/hehlinge.filler]"))
 		return (0);
