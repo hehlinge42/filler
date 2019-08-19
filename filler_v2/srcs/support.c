@@ -24,7 +24,7 @@ int		ft_strlen(char *str)
 	return (0);
 }
 
-int		abs(int n)
+int		abs(int nb)
 {
 	return (nb < 0 ? -nb : nb);
 }

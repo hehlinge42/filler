@@ -40,6 +40,10 @@ LIBINCLS =  $(LIBDIR)$(INCLS)
 
 LIBDIR = libft/
 
+LIBFTPRINTF = libftprintf.a
+
+LIBFTPRINTFDIR = ./libft/ft_printf
+
 all: $(NAME)
 
 $(NAME): $(INCLS) $(SRCS) $(LIB)
@@ -49,7 +53,8 @@ $(NAME): $(INCLS) $(SRCS) $(LIB)
 	@/bin/echo compiling source files
 	@mkdir -p objs
 	@make -j --no-print-directory objects
-	@$(CC) $(CFLAGS) -I $(INCLS) -o $@ $(OBJS) $(LIBDIR)/$(LIB)
+#	@$(CC) $(CFLAGS) -I $(INCLS) -o $@ $(OBJS) $(LIBDIR)/$(LIB)
+	@$(CC) $(CFLAGS) -I $(INCLS) -o $@ $(OBJS) $(LIBDIR)/$(LIB) $(LIBFTPRINTFDIR)/$(LIBFTPRINTF)
 #	@clear
 
 $(LIB):

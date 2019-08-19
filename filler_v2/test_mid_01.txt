@@ -1,0 +1,8 @@
+$$$ exec p1 : [players/hehlinge.filler]
+Plateau 3 4:
+	0123
+000 X.O.
+001 ....
+002 ...O
+Piece 1 2:
+**

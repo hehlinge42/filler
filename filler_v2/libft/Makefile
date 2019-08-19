@@ -101,7 +101,7 @@ SRCS = 	ft_atoi.c \
 all: $(NAME)
 
 $(NAME): $(OBJS_LIB)
-#	@make -j --no-print-directory -C $(LIBFTPRINTFDIR)
+	@make -j --no-print-directory -C $(LIBFTPRINTFDIR)
 	@mkdir -p $(OBJ_DIR)
 	@echo "creating libft.a"
 	@ar rc $(NAME) $(OBJS_LIB)

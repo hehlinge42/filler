@@ -13,6 +13,7 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include "../ft_printf/includes/ft_printf.h"
 # include <string.h>
 # define BUFF_SIZE 1
 

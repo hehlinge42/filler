@@ -76,7 +76,9 @@ int		ft_parse_line_map(t_var *var, char *str, int lin)
 			{
 				if (!(ft_init_point(var, lin, i, 'X')))
 					return (0);
-				printf("begin_list x: %d, :%d\n",
+
+				printf("adress: %p\n", var->points_x);
+				printf("begin_list: %p, x: %d, :%d\n", *(var->points_x), 
 				(*(var->points_x))->x, (*(var->points_x))->y);
 				var->nb_x++;
 			}

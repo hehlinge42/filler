@@ -25,6 +25,9 @@ typedef struct		s_point
 	int				x;
 	int				y;
 	char			owner;
+	int				x_owner;
+	int				y_owner;
+	int				dist;
 }					t_point;
 
 typedef struct		s_var
