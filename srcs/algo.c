@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 16:16:19 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/20 16:17:00 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/20 17:17:06 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int		ft_check_change_ownership(t_var *var, t_point *pos, t_point *point_to_win)
 	int		test;
 
 	i = -1;
-	ft_printf("TESTED POINT : x = %d, y = %d, dist = %d\n", point_to_win->x, point_to_win->y);
+//	ft_printf("TESTED POINT : x = %d, y = %d, dist = %d\n", point_to_win->x, point_to_win->y, point_to_win->dist);
 	while (++i < var->x_piece)
 	{
 		j = -1;
@@ -55,8 +55,9 @@ int		ft_check_change_ownership(t_var *var, t_point *pos, t_point *point_to_win)
 					&& (test = abs(point_to_win->x - (i + pos->x))
 						+ abs(point_to_win->y - (j + pos->y))) < point_to_win->dist) // et que la distance est meilleure
 			{
+				ft_printf("OWNERSHIP CHANGED FOR Y: %d, X: %d\n"
+					, point_to_win->y, point_to_win->x);
 				ft_printf("test = %d, dist = %d\n", test, point_to_win->dist);
-				ft_printf("OWNERSHIP CHANGED\n");
 				// LE PROBLEME c'est que ici la valeur point->dist n'est pas bonne alors qu'elle a bien été écrite dans les fonctions précédentes
 				return (1);
 			}
@@ -70,8 +71,8 @@ int		ft_simulate(t_var *var, t_point *available_spot)
 	t_lst	*point_to_win;
 	int		count;
 
-	ft_printf("AVAILABLE PT : x = %d, y = %d\n",
-			available_spot->x, available_spot->y);
+	ft_printf("AVAILABLE PT : x = %d, y = %d (current owner: %c)\n",
+			available_spot->x, available_spot->y, available_spot->owner);
 	ft_place_piece(var, available_spot); // on place la piece dans tmp
 	point_to_win = *(var->pts_neutral);
 	count = 0;
