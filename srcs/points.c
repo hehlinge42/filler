@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/20 17:33:32 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/20 18:05:59 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	ft_dist(t_point *point, t_lst *tmp, t_var *var)
 			&& ((t_point *)point->content)->owner == var->enemy)))
 			*/
 		if (test == point->dist && var->map[y][x] != point->owner
-			&& var->map[y][x] + 32 != point->owner)
+			&& var->map[y][x] - 32 != point->owner)
 			point->owner = '?';
 		else
 		{
