@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:28:16 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/20 16:40:29 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/20 18:05:57 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,9 @@ int		main(void)
 			if (!ft_parse_input(&var))
 				return (ft_exit(BAD_MAP));
 			ft_get_points(&var);
-			print_debug(var, "1");
+	//		print_debug(var, "1");
 			ft_algo(&var);
-			ft_printf("Chosen position : x = %d, y = %d\n", var.x_pos, var.y_pos);
+			ft_printf("%d %d\n", var.x_pos, var.y_pos);
 			return (0);
 		}
 	}
