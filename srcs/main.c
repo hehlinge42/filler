@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:28:16 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/20 18:05:57 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/20 18:23:43 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <fcntl.h>
 
 int		ft_parse_first_line(t_var *var)
 {
@@ -60,7 +61,9 @@ int		ft_init_var(t_var *var)
 int		main(void)
 {
 	t_var	var;
-
+	int fd;
+	
+	fd = open("/Users/Hugo/Desktop/42/filler/debug.txt", O_WRONLY|O_APPEND|O_CREAT, 0644);
 	if (ft_init_var(&var))
 	{
 		if (!ft_parse_first_line(&var))
@@ -70,10 +73,10 @@ int		main(void)
 			if (!ft_parse_input(&var))
 				return (ft_exit(BAD_MAP));
 			ft_get_points(&var);
-	//		print_debug(var, "1");
+		//	print_debug(var, "1");
 			ft_algo(&var);
-			ft_printf("%d %d\n", var.x_pos, var.y_pos);
-			return (0);
+			printf("%d %d\n", var.y_pos, var.x_pos);
+			dprintf(fd, "%d %d\n", var.x_pos, var.y_pos);
 		}
 	}
 	return (1);
