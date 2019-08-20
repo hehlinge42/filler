@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   algo.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/19 16:16:19 by hehlinge          #+#    #+#             */
+/*   Updated: 2019/08/20 16:17:00 by sikpenou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "filler.h"
 
 void	ft_reset_piece(t_var *var, t_point *point)
@@ -53,7 +65,6 @@ int		ft_check_change_ownership(t_var *var, t_point *pos, t_point *point_to_win)
 	return (0);
 }
 
-
 int		ft_simulate(t_var *var, t_point *available_spot)
 {
 	t_lst	*point_to_win;
@@ -62,7 +73,7 @@ int		ft_simulate(t_var *var, t_point *available_spot)
 	ft_printf("AVAILABLE PT : x = %d, y = %d\n",
 			available_spot->x, available_spot->y);
 	ft_place_piece(var, available_spot); // on place la piece dans tmp
-	point_to_win = *(var->points_n);
+	point_to_win = *(var->pts_neutral);
 	count = 0;
 	while (point_to_win) // on boucle sur tous les points neutres
 	{
@@ -81,7 +92,7 @@ void	ft_algo(t_var *var)
 	int		count;
 	int		tmp;
 
-	point = *(var->points_n);
+	point = *(var->pts_neutral);
 	count = 0; // count c'est le meilleur nombre de points convertis jusqu'a maintenant
 	while (point) // on boucle sur tous les points neutre pour chercher les spots dispos
 	{
@@ -96,7 +107,7 @@ void	ft_algo(t_var *var)
 		point = point->next;
 	}
 	// si on est X il faut aussi boucler sur les points de X et vice versa avec O
-	point = var->player == 'X' ? *(var->points_x) : *(var->points_o);
+	point = *(var->pts_player);
 	while (point)
 	{
 		if (((t_point *)point->content)->available

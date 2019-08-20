@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:38:31 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/19 19:36:56 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/20 15:46:41 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	print_lines(t_var var, char *line, int opt)
 			line = var.tmp[i];
 		else
 			line = var.map[i];
-		tmp = *(var.points_n);
+		tmp = *(var.pts_neutral);
 		while (tmp)
 		{
 			point = tmp->content;
@@ -94,18 +94,9 @@ void	print_points(t_var var)
 	t_lst		*tmp;
 
 	i = 0;
-	printf("ENEMY POINTS\n");
-	tmp = var.player == 'X' ? *(var.points_o) : *(var.points_x);
-	while (tmp)
-	{
-		printf("PT_ENEMY\t%d -\ty: %d\tx: %d\n"
-				, i++, ((t_point *)tmp->content)->y
-				, ((t_point *)tmp->content)->x);
-		tmp = tmp->next;
-	}
 	i = 0;
 	printf("PLAYER POINTS\n");
-	tmp = var.player == 'X' ? *(var.points_x) : *(var.points_o);
+	tmp = *(var.pts_player);
 	while (tmp)
 	{
 		printf("PT_PLAYER\t%d -\ty: %d\tx: %d\t%s\n"
@@ -116,13 +107,14 @@ void	print_points(t_var var)
 	}
 	i = 0;
 	printf("NEUTRAL POINTS\n");
-	tmp = *(var.points_n);
+	tmp = *(var.pts_neutral);
 	while (tmp)
 	{
-		printf("PT_NEUTRAL\t%d -\ty: %d\tx: %d\t-- owner: %c%s\n"
+		printf("PT_NEUTRAL\t%d -\ty: %d\tx: %d\t-- owner: %c -- dist: %d%s\n"
 				, i++, ((t_point *)tmp->content)->y
 				, ((t_point *)tmp->content)->x
 				, ((t_point *)tmp->content)->owner
+				, ((t_point *)tmp->content)->dist
 				, ((t_point *)tmp->content)->available ? " -- available" : "");
 		tmp = tmp->next;
 	}

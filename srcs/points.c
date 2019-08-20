@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/19 17:54:52 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/20 16:12:28 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ t_point		*ft_new_point(int x, int y, char c)
 
 	if ((new = (t_point *)easymalloc(sizeof(*new))))
 	{
+		ft_memset(new, 0, sizeof(*new));
 		new->x = x;
 		new->y = y;
 		new->owner = c;
@@ -39,18 +40,18 @@ void	ft_dist(t_point *tmp, t_lst *point, t_var *var)
 	{
 		//ft_printf("Point valide trouvé, test = %d\n", test);
 		if (test == ((t_point *)point->content)->dist &&
-			(((var->map[tmp->y][tmp->x] == 'O' || var->map[tmp->y][tmp->x] == 'o') && ((t_point *)point->content)->owner == 'X')
-			|| ((var->map[tmp->y][tmp->x] == 'X' || var->map[tmp->y][tmp->x] == 'x') && ((t_point *)point->content)->owner == 'O')))
+			(((var->map[tmp->y][tmp->x] == var->enemy || var->map[tmp->y][tmp->x] == var->enemy + 32) && ((t_point *)point->content)->owner == var->player)
+			|| ((var->map[tmp->y][tmp->x] == var->player || var->map[tmp->y][tmp->x] == var->player + 32) && ((t_point *)point->content)->owner == var->enemy)))
 			((t_point *)point->content)->owner = '?';
 		else
 		{
 			((t_point *)point->content)->x_owner = tmp->x;
 			((t_point *)point->content)->y_owner = tmp->y;
 			((t_point *)point->content)->dist = test;
-			if (var->map[tmp->y][tmp->x] == 'O' || var->map[tmp->y][tmp->x] == 'o')
-				((t_point *)point->content)->owner = 'O';
-			else if (var->map[tmp->y][tmp->x] == 'X' || var->map[tmp->y][tmp->x] == 'x')
-				((t_point *)point->content)->owner = 'X';
+			if (var->map[tmp->y][tmp->x] == var->enemy || var->map[tmp->y][tmp->x] == 'o')
+				((t_point *)point->content)->owner = var->enemy;
+			else if (var->map[tmp->y][tmp->x] == var->player || var->map[tmp->y][tmp->x] == 'x')
+				((t_point *)point->content)->owner = var->player;
 		}
 	}
 	//ft_printf("Sortie de ft_distr\n");
@@ -95,6 +96,7 @@ void	ft_get_closest(t_lst	*point, t_var *var)
 		}
 		square_nb++;
 	}
+	/*
 	ft_printf("Point x = %d, y = %d : Owner = %c, x_owner = %d, y_owner = %d, dist = %d\n",
 		((t_point *)point->content)->x,
 		((t_point *)point->content)->y,
@@ -102,26 +104,41 @@ void	ft_get_closest(t_lst	*point, t_var *var)
 		((t_point *)point->content)->x_owner,
 		((t_point *)point->content)->y_owner,
 		((t_point *)point->content)->dist);
+		*/
+	/*
+	if (*var->pts_neutral)
+		printf("in get_cl, n start dist (%p): %d, n last dist: %d\n"
+			, ((t_point *)(*(var->pts_neutral))->content)
+			, ((t_point *)(*(var->pts_neutral))->content)->dist
+			,((t_point *)(*(var->pts_neutral))->last->content)->dist);
+		*/
 }
 
 void		ft_available(t_var *var)
 {
 	t_lst	*tmp;
 
-	tmp = var->player == 'X' ? *(var->points_x) : *(var->points_o);
+//	printf("dist ft start: %d\n", ((t_point *)(*var->pts_neut)->content)->dist);
+	tmp = *(var->pts_player);
 	while (tmp)
 	{
 		((t_point *)tmp->content)->available = is_available(*var
 			, ((t_point *)tmp->content)->x, ((t_point *)tmp->content)->y);
 		tmp = tmp->next;
 	}
-	tmp = *var->points_n;
+	tmp = *(var->pts_neutral);
 	while (tmp)
 	{
+//		printf("dist before assign: %d\n", ((t_point *)tmp->content)->dist);
 		((t_point *)tmp->content)->available = is_available(*var
 			, ((t_point *)tmp->content)->x, ((t_point *)tmp->content)->y);
 		tmp = tmp->next;
+//		printf("dist after  assign: %d\n", ((t_point *)tmp->content)->dist);
 	}
+	//this line is to SEGFAULT because i have the flemme to include the lib for
+	//exit
+//	tmp->next->next = NULL;
+//	printf("dist ft end  : %d\n", ((t_point *)(*var->pts_neut)->content)->dist);
 }
 
 int			ft_get_points(t_var *var)
@@ -137,20 +154,27 @@ int			ft_get_points(t_var *var)
 		j = -1;
 		while (++j < var->x_map && (c = var->map[i][j]))
 		{
-			if (c == 'o' || c == 'O')
-				if (!(ft_lstadd_new(var->points_o, (void *)ft_new_point(j, i, c)
-						, sizeof(t_point *))))
-					return (0);
-			if (c == 'x' || c == 'X')
-				if (!(ft_lstadd_new(var->points_x, (void *)ft_new_point(j, i, c)
-						, sizeof(t_point *))))
-					return (0);
-			if (c == '.')
+			if (*var->pts_neutral)
+				printf("line: %d, i: %d, j: %d, n start dist: %d, n last dist: %d\n"
+					, __LINE__, i, j
+					, ((t_point *)(*(var->pts_neutral))->content)->dist
+					,((t_point *)(*(var->pts_neutral))->last->content)->dist);
+			if (c == var->player || c == var->player + 32)
 			{
-				if (!(point = ft_lstadd_new(var->points_n, (void *)ft_new_point(j, i, c)
-						, sizeof(t_point *))))
+				if (!(ft_lstadd_new(var->pts_player, (void *)ft_new_point(j, i, c)
+						, sizeof(t_point))))
 					return (0);
-				//ft_printf("Enters ft_get_closest : x = %d, y = %d\n", j, i);
+			if (*var->pts_neutral)
+				printf("line: %d, i: %d, j: %d, n start dist: %d, n last dist: %d\n"
+					, __LINE__, i, j
+					, ((t_point *)(*(var->pts_neutral))->content)->dist,
+					((t_point *)(*(var->pts_neutral))->last->content)->dist);
+			}
+			else if (c == '.')
+			{
+				if (!(point = ft_lstadd_new(var->pts_neutral, (void *)ft_new_point(j, i, c)
+						, sizeof(t_point))))
+					return (0);
 				ft_get_closest(point, var);
 			}
 		}
