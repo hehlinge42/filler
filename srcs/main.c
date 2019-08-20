@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:28:16 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/20 15:45:07 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/20 16:40:29 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,15 +70,10 @@ int		main(void)
 			if (!ft_parse_input(&var))
 				return (ft_exit(BAD_MAP));
 			ft_get_points(&var);
-			printf("in main, new point dist: %d\n"
-				, ((t_point *)(*(var.pts_neutral))->last->content)->dist);
-			print_debug(var, "12");
+			print_debug(var, "1");
 			ft_algo(&var);
 			ft_printf("Chosen position : x = %d, y = %d\n", var.x_pos, var.y_pos);
 			return (0);
-//		display could be in place piece
-//		ft_place_piece();
-//		printf("%d %d\n", x, y);
 		}
 	}
 	return (1);

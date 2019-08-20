@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/20 16:12:28 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/20 17:33:32 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,31 +27,53 @@ t_point		*ft_new_point(int x, int y, char c)
 	return (0);
 }
 
-void	ft_dist(t_point *tmp, t_lst *point, t_var *var)
+// point est la ref, le point a convertir, et tmp est le point actuel pour
+// lequel on regarde si il fait basculer, on le recupere dans une liste
+void	ft_dist(t_point *point, t_lst *tmp, t_var *var)
 {
 	int		test;
+	int		x;
+	int		y;
 
-	//ft_printf("Entrée dans ft_dist : x = %d, y = %d\n", tmp->x, tmp->y);
-	//ft_printf("test = %d, dist = %d\n",  abs(((t_point *)point->content)->x - tmp->x)
-	//+ abs(((t_point *)point->content)->y - tmp->y),  ((t_point *)point->content)->dist);
-	if (tmp->x >= 0 && tmp->y >= 0 && tmp->x < var->x_map && tmp->y < var->y_map
-		&& var->map[tmp->y][tmp->x] != '.' && (test = abs(((t_point *)point->content)->x - tmp->x)
-		+ abs(((t_point *)point->content)->y - tmp->y)) <= ((t_point *)point->content)->dist)
+	x = point->x;
+	y = point->y;
+	point = tmp->content;
+	//ft_printf("Entrée dans ft_dist : x = %d, y = %d\n", x, y);
+	//ft_printf("test = %d, dist = %d\n",  abs(((t_point *)point->content)->x - x)
+	//+ abs(((t_point *)point->content)->y - y),  ((t_point *)point->content)->dist);
+	if (x >= 0 && y >= 0 && x < var->x_map && y < var->y_map
+		&& var->map[y][x] != '.' && (test = abs(point->x - x)
+		+ abs(point->y - y)) <= point->dist)
 	{
 		//ft_printf("Point valide trouvé, test = %d\n", test);
-		if (test == ((t_point *)point->content)->dist &&
-			(((var->map[tmp->y][tmp->x] == var->enemy || var->map[tmp->y][tmp->x] == var->enemy + 32) && ((t_point *)point->content)->owner == var->player)
-			|| ((var->map[tmp->y][tmp->x] == var->player || var->map[tmp->y][tmp->x] == var->player + 32) && ((t_point *)point->content)->owner == var->enemy)))
-			((t_point *)point->content)->owner = '?';
+		// le if en dessous dit aue si le test (la distance au point actuel) est
+		// egal a la distance a l'owner actuel, et si soit sur la map on a
+		// l'ennemi et en owner le player ou l'inverse alors on ne sait pas
+		// on peut resumer ça en si map != owner && map + 32 != owner je crois
+		 /*
+		if (test == ((t_point *)point->content)->dist
+			&& (((var->map[y][x] == var->enemy
+				|| var->map[y][x] == var->enemy + 32)
+			&& (((t_point *)point->content)->owner == var->player
+				|| var->map[y][x] == var->player + 32))
+			|| ((var->map[y][x] == var->player
+				|| var->map[y][x] == var->player + 32)
+			&& ((t_point *)point->content)->owner == var->enemy)))
+			*/
+		if (test == point->dist && var->map[y][x] != point->owner
+			&& var->map[y][x] - 32 != point->owner)
+			point->owner = '?';
 		else
 		{
-			((t_point *)point->content)->x_owner = tmp->x;
-			((t_point *)point->content)->y_owner = tmp->y;
-			((t_point *)point->content)->dist = test;
-			if (var->map[tmp->y][tmp->x] == var->enemy || var->map[tmp->y][tmp->x] == 'o')
-				((t_point *)point->content)->owner = var->enemy;
-			else if (var->map[tmp->y][tmp->x] == var->player || var->map[tmp->y][tmp->x] == 'x')
-				((t_point *)point->content)->owner = var->player;
+			point->x_owner = x;
+			point->y_owner = y;
+			point->dist = test;
+			if (var->map[y][x] == var->enemy
+				|| var->map[y][x] == var->enemy + 32)
+				point->owner = var->enemy;
+			else if (var->map[y][x] == var->player
+				|| var->map[y][x] == var->player + 32)
+				point->owner = var->player;
 		}
 	}
 	//ft_printf("Sortie de ft_distr\n");
@@ -154,21 +176,25 @@ int			ft_get_points(t_var *var)
 		j = -1;
 		while (++j < var->x_map && (c = var->map[i][j]))
 		{
+			/*
 			if (*var->pts_neutral)
 				printf("line: %d, i: %d, j: %d, n start dist: %d, n last dist: %d\n"
 					, __LINE__, i, j
 					, ((t_point *)(*(var->pts_neutral))->content)->dist
 					,((t_point *)(*(var->pts_neutral))->last->content)->dist);
+					*/
 			if (c == var->player || c == var->player + 32)
 			{
 				if (!(ft_lstadd_new(var->pts_player, (void *)ft_new_point(j, i, c)
 						, sizeof(t_point))))
 					return (0);
+			/*
 			if (*var->pts_neutral)
 				printf("line: %d, i: %d, j: %d, n start dist: %d, n last dist: %d\n"
 					, __LINE__, i, j
 					, ((t_point *)(*(var->pts_neutral))->content)->dist,
 					((t_point *)(*(var->pts_neutral))->last->content)->dist);
+					*/
 			}
 			else if (c == '.')
 			{

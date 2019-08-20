@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/25 17:00:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/02 16:14:38 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/20 16:34:23 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ int		ft_parse_map_l0(char *line, t_var var)
 
 int		ft_parse_map(int nb, char *line, t_var *var)
 {
-	ft_printf("Dans ft_parse_map\n");
 	if (nb > -1)
 	{
 		if (ft_atoi(line) == nb)
@@ -115,13 +114,11 @@ int		ft_parse_input(t_var *var)
 	if (get_next_line(0, &line) && ft_parse_size(line, var, "Plateau "))
 	{
 		ft_free((void **)&line);
-		ft_printf("size map ok, x: %d, y: %d\n", var->x_map, var->y_map);
 		nb = -1;
 		while (nb < var->y_map
 			&& get_next_line(0, &line) > -1 && ft_parse_map(nb, line, var))
 			nb++;
 		ft_free((void **)&line);
-		ft_printf("map ok\n");
 		if (nb == var->y_map
 			&& get_next_line(0, &line) && ft_parse_size(line, var, "Piece "))
 		{
