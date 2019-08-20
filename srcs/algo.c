@@ -40,8 +40,8 @@ int		ft_check_change_ownership(t_var *var, t_point *pos, t_point *point_to_win)
 		while (++j < var->y_piece)
 		{
 			if (var->tmp[j + pos->y][i + pos->x] == 'T' // si point temporaire
-				&& (test = abs(point_to_win->x - (i + pos->x))
-				+ abs(point_to_win->y - (j + pos->y))) < point_to_win->dist) // et que la distance est meilleure
+					&& (test = abs(point_to_win->x - (i + pos->x))
+						+ abs(point_to_win->y - (j + pos->y))) < point_to_win->dist) // et que la distance est meilleure
 			{
 				ft_printf("test = %d, dist = %d\n", test, point_to_win->dist);
 				ft_printf("OWNERSHIP CHANGED\n");
@@ -60,14 +60,14 @@ int		ft_simulate(t_var *var, t_point *available_spot)
 	int		count;
 
 	ft_printf("AVAILABLE PT : x = %d, y = %d\n",
-		available_spot->x, available_spot->y);
+			available_spot->x, available_spot->y);
 	ft_place_piece(var, available_spot); // on place la piece dans tmp
 	point_to_win = *(var->points_n);
 	count = 0;
 	while (point_to_win) // on boucle sur tous les points neutres
 	{
 		if (((t_point *)point_to_win->content)->owner != var->player // si le point n'est pas à nous
-			&& ft_check_change_ownership(var, available_spot, (t_point *)point_to_win->content)) // on regarde pour chaque point si on le gagne
+				&& ft_check_change_ownership(var, available_spot, (t_point *)point_to_win->content)) // on regarde pour chaque point si on le gagne
 			count++;
 		point_to_win = point_to_win->next;
 	}
@@ -86,7 +86,7 @@ void	ft_algo(t_var *var)
 	while (point) // on boucle sur tous les points neutre pour chercher les spots dispos
 	{
 		if (((t_point *)point->content)->available // si le point est disponible
-			&& ((tmp = ft_simulate(var, (t_point *)point->content)) > count))
+				&& ((tmp = ft_simulate(var, (t_point *)point->content)) > count))
 		{
 			var->x_pos = ((t_point *)point->content)->x;
 			var->y_pos = ((t_point *)point->content)->y;
@@ -95,34 +95,17 @@ void	ft_algo(t_var *var)
 		}
 		point = point->next;
 	}
-	if (var->player == 'X') // si on est X il faut aussi boucler sur les points de X et vice versa avec O
+	// si on est X il faut aussi boucler sur les points de X et vice versa avec O
+	point = var->player == 'X' ? *(var->points_x) : *(var->points_o);
+	while (point)
 	{
-		point = *(var->points_x);
-		while (point)
-		{
-			if (((t_point *)point->content)->available
+		if (((t_point *)point->content)->available
 				&& ((tmp = ft_simulate(var, (t_point *)point->content)) > count))
-			{
-				var->x_pos = ((t_point *)point->content)->x;
-				var->y_pos = ((t_point *)point->content)->y;
-				count = tmp;
-			}
-			point = point->next;
-		}
-	}
-	else
-	{
-		point = *(var->points_x);
-		while (point)
 		{
-			if (((t_point *)point->content)->available
-				&& ((tmp = ft_simulate(var, (t_point *)point->content)) > count))
-			{
-				var->x_pos = ((t_point *)point->content)->x;
-				var->y_pos = ((t_point *)point->content)->y;
-				count = tmp;
-			}
-			point = point->next;
+			var->x_pos = ((t_point *)point->content)->x;
+			var->y_pos = ((t_point *)point->content)->y;
+			count = tmp;
 		}
+		point = point->next;
 	}
 }
