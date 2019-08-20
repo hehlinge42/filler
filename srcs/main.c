@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:28:16 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/19 17:55:05 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/20 15:45:07 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,8 @@ int		ft_exit(int opt)
 int		ft_init_var(t_var *var)
 {
 	ft_memset(var, 0, sizeof(*var));
-	if ((var->points_x = (t_lst **)easymalloc(sizeof(*var->points_x)))
-		&& (var->points_o = (t_lst **)easymalloc(sizeof(*var->points_o)))
-		&& (var->points_n = (t_lst **)easymalloc(sizeof(*var->points_n))))
+	if ((var->pts_player = (t_lst **)easymalloc(sizeof(*var->pts_player)))
+		&& (var->pts_neutral = (t_lst **)easymalloc(sizeof(*var->pts_neutral))))
 		return (1);
 	return (0);
 }
@@ -71,6 +70,8 @@ int		main(void)
 			if (!ft_parse_input(&var))
 				return (ft_exit(BAD_MAP));
 			ft_get_points(&var);
+			printf("in main, new point dist: %d\n"
+				, ((t_point *)(*(var.pts_neutral))->last->content)->dist);
 			print_debug(var, "12");
 			ft_algo(&var);
 			ft_printf("Chosen position : x = %d, y = %d\n", var.x_pos, var.y_pos);
