@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:28:16 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/20 18:23:43 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/20 18:58:45 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,8 @@ int		main(void)
 	t_var	var;
 	int fd;
 	
-	fd = open("debug.txt", O_RDWR);
+	fd = open("debug.txt", O_WRONLY | O_APPEND | O_CREAT,0644);
+	dprintf(fd, "in func, time: %s\n", __TIME__);
 	if (ft_init_var(&var))
 	{
 		if (!ft_parse_first_line(&var))
@@ -71,10 +72,15 @@ int		main(void)
 		while (1)
 		{
 			if (!ft_parse_input(&var))
+			{
+				close(fd);
 				return (ft_exit(BAD_MAP));
+			}
 			ft_get_points(&var);
 		//	print_debug(var, "1");
 			ft_algo(&var);
+//			write(1, "8 2\n", 4);
+			ft_printf("%d %d\n", var.y_pos, var.x_pos);
 			dprintf(fd, "%d %d\n", var.x_pos, var.y_pos);
 		}
 	}

@@ -6,7 +6,7 @@
 #    By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/02 21:32:05 by sikpenou          #+#    #+#              #
-#    Updated: 2019/08/19 17:51:02 by sikpenou         ###   ########.fr        #
+#    Updated: 2019/08/20 18:59:19 by sikpenou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror -g3
 
-NAME = hehlinge.filler
+NAME = resources/players/hehlinge.filler
 
 SRCS = $(addprefix $(SRCDIR), $(SRCFILES))
 
