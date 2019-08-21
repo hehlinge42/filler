@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 16:44:50 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/19 16:44:55 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/21 16:51:36 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int			is_available(t_var var, int o_x, int o_y)
 
 	count = 0;
 	y = 0;
-	while (count < 2 && y < var.y_piece)
+	while (count < 2 && y < var.y_piece && y + o_y < var.y_map)
 	{
 		x = 0;
-		while (count < 2 && x < var.x_piece)
+		while (count < 2 && x < var.x_piece && x + o_x < var.x_map)
 		{
 			if (var.piece[y][x] != '.' && (x + o_x >= var.x_map || y + o_y
 					>= var.y_map || var.map[o_y + y][o_x + x] == var.enemy

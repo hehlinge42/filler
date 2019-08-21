@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:38:31 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/20 15:46:41 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/21 16:26:19 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,13 @@ void	print_points(t_var var)
 				, ((t_point *)tmp->content)->available ? " -- available" : "");
 		tmp = tmp->next;
 	}
+}
+
+void	print_point(t_point *point)
+{
+	printf("POINT %d-%d : address:  %p, owner: %c (%d-%d), dist: %d\n"
+		, point->y, point->x, point
+		, point->owner, point->y_owner, point->x_owner, point->dist);
 }
 
 void	print_debug(t_var var, char *opt)

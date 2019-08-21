@@ -1,6 +1,6 @@
-seed = 9110
+seed = 2363
+X: error on input
 O: error on input
-players/hehlinge.filler: Segfault at 67
-players/hcao.filler won
+players/hehlinge.filler won
 Score:
-67AGAINST81
+36AGAINST35
