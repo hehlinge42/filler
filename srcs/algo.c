@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 16:16:19 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/20 18:06:01 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/21 16:31:25 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void	ft_algo(t_var *var)
 	int		tmp;
 
 	point = *(var->pts_neutral);
-	count = 0; // count c'est le meilleur nombre de points convertis jusqu'a maintenant
+	count = -1; // count c'est le meilleur nombre de points convertis jusqu'a maintenant
 	while (point) // on boucle sur tous les points neutre pour chercher les spots dispos
 	{
 		if (((t_point *)point->content)->available // si le point est disponible

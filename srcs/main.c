@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:28:16 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/20 18:58:45 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/21 17:09:34 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,30 @@ int		ft_init_var(t_var *var)
 	return (0);
 }
 
+/*
+void	end_turn(t_var var)
+{
+	int		i;
+
+	ft_lstclr(var.pts_player);
+	ft_lstclr(var.pts_neutral);
+	i = var.y_map < var.y_piece ? var.y_piece : var.y_map;
+	while (i--)
+	{
+		if (i < var.y_map)
+		{
+			ft_free((void **)var.map[i]);
+			ft_free((void **)var.tmp[i]);
+		}
+		if (i < var.y_piece)
+			ft_free((void **)var.piece[i]);
+	}
+	ft_free((void **)var.map);
+	ft_free((void **)var.tmp);
+	ft_free((void **)var.piece);
+}
+*/
+
 int		main(void)
 {
 	t_var	var;
@@ -66,6 +90,8 @@ int		main(void)
 	fd = open("/Users/Hugo/Desktop/42/filler/debug.txt", O_WRONLY|O_APPEND|O_CREAT, 0644);
 	//fd = open("debug.txt", O_WRONLY | O_APPEND | O_CREAT,0644);
 	dprintf(fd, "in func, time: %s\n", __TIME__);
+	fd = open("debug.txt", O_WRONLY | O_CREAT,0644);
+//	dprintf(fd, "in func, time: %s\n", __TIME__);
 	if (ft_init_var(&var))
 	{
 		if (!ft_parse_first_line(&var))
@@ -84,10 +110,11 @@ int		main(void)
 //			write(1, "8 2\n", 4);
 			ft_printf("%d %d\n", var.y_pos, var.x_pos);
 			dprintf(fd, "%d %d\n", var.x_pos, var.y_pos);
-			write(fd, ft_itoa(var.x_pos), ft_strlen(ft_itoa(var.x_pos)));
-			write(fd, " ", 1);
-			write(fd, ft_itoa(var.y_pos), ft_strlen(ft_itoa(var.y_pos)));
-			write(fd, "\n", 1);
+			//write(fd, ft_itoa(var.x_pos), ft_strlen(ft_itoa(var.x_pos)));
+			//write(fd, " ", 1);
+			//write(fd, ft_itoa(var.y_pos), ft_strlen(ft_itoa(var.y_pos)));
+			//write(fd, "\n", 1);
+	//		dprintf(fd, "%d %d\n", var.x_pos, var.y_pos);
 		}
 	}
 	return (1);

@@ -1,6 +1,7 @@
 
 in func, time: 16:58:12
 1 8
+<<<<<<< HEAD
 1 8
 3 9
 3 9
@@ -1544,3 +1545,15 @@ in func, time: 16:58:12
 32 9
 25 9
 25 9
+=======
+in func, time: 18:48:27
+4 9
+in func, time: 16:27:02
+>>>>>>> 9889710a82933a0ebfc71342031c9561736b7e58
+in func, time: 17:20:26
+in func, time: 17:20:26
+in func, time: 17:20:26
+in func, time: 17:20:26
+in func, time: 17:20:26
+in func, time: 17:20:26
+in func, time: 17:20:26
