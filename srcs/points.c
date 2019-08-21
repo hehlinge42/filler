@@ -173,6 +173,7 @@ int			ft_get_points(t_var *var)
 	point = *var->pts_neutral;
 	while (point)
 	{
+		print_point(((t_point *)point->content));
 		if ((c = var->map[((t_point *)point->content)->y][((t_point *)point->content)->x]) != '.')
 		{
 			if (point == *var->pts_neutral)
@@ -190,6 +191,6 @@ int			ft_get_points(t_var *var)
 			, ((t_point *)point)->y);
 		point = point->next;
 	}
-	print_points(*var);
+	//print_points(*var);
 	return (1);
 }
