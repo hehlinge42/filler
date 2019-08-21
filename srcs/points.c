@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/21 18:59:42 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/21 19:23:05 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,12 +185,13 @@ int			ft_get_points(t_var *var)
 				ft_lstadd(var->pts_player, point);
 			else
 				ft_free((void **)point);
+			point = tmp;
 		}
 		tmp = point;
 		((t_point *)point)->available = is_available(*var, ((t_point *)point)->x
 			, ((t_point *)point)->y);
 		point = point->next;
 	}
-	//print_points(*var);
+	print_points(*var);
 	return (1);
 }
