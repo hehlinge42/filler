@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:38:31 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/21 18:52:43 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/21 19:44:49 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,9 +93,7 @@ void	print_point(t_point *point)
 	char	*available;
 
 	available = "";
-	if (point->owner == '.' || point->owner == '?')
-		available = point->available ? " -- available: YES"
-			: " -- available:  NO";
+	available = point->available ? " -- available: YES" : " -- available:  NO";
 	printf("POINT %d-%d : address:  %p, owner: %c (%d-%d), dist: %d%s\n"
 		, point->y, point->x, point
 		, point->owner, point->y_owner, point->x_owner, point->dist

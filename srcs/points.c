@@ -6,11 +6,22 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/21 19:23:05 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/21 19:42:40 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
+
+void		init_point(t_point *point, int x, int y, char c)
+{
+		ft_memset(point, 0, sizeof(*point));
+		point->x = x;
+		point->y = y;
+		point->owner = c;
+		point->x_owner = 0;
+		point->y_owner = 0;
+		point->dist = 0;
+}
 
 t_point		*ft_new_point(int x, int y, char c)
 {
@@ -18,10 +29,7 @@ t_point		*ft_new_point(int x, int y, char c)
 
 	if ((new = (t_point *)easymalloc(sizeof(*new))))
 	{
-		ft_memset(new, 0, sizeof(*new));
-		new->x = x;
-		new->y = y;
-		new->owner = c;
+		init_point(new, x, y, c);
 		return (new);
 	}
 	return (0);
@@ -165,33 +173,36 @@ void		ft_available(t_var *var)
 
 int			ft_get_points(t_var *var)
 {
-	char	c;
-	t_lst	*point;
-	t_lst	*tmp;
+	t_point		*point;
+	t_lst		*elem;
+	t_lst		*tmp;
 
 	//print_points(*var);
-	point = *var->pts_neutral;
-	while (point)
+	elem = *var->pts_neutral;
+	while (elem)
 	{
-		print_point(((t_point *)point->content));
-		if ((c = var->map[((t_point *)point->content)->y][((t_point *)point->content)->x]) != '.')
+	//	print_elem(((t_elem *)elem->content));
+		point = (t_point *)elem->content;
+		if ((point->owner = var->map[point->y][point->x]) != '.')
 		{
-			if (point == *var->pts_neutral)
+			if (elem == *var->pts_neutral)
 				*var->pts_neutral = ((t_lst *)*var->pts_neutral)->next;
 			else
-				tmp->next = point->next;
-			point->next = NULL;
-			if (c == var->player || c == var->player + 32)
-				ft_lstadd(var->pts_player, point);
+				tmp->next = elem->next;
+			elem->next = NULL;
+			if (point->owner == var->player || point->owner == var->player + 32)
+				ft_lstadd(var->pts_player, elem);
 			else
-				ft_free((void **)point);
-			point = tmp;
+				ft_free((void **)elem);
+			elem = tmp;
+			init_point(point, point->x, point->y, point->owner);
 		}
-		tmp = point;
-		((t_point *)point)->available = is_available(*var, ((t_point *)point)->x
-			, ((t_point *)point)->y);
-		point = point->next;
+		else
+			ft_get_closest(elem, var);
+		tmp = elem;
+		point->available = is_available(*var, point->x, point->y);
+		elem = elem->next;
 	}
-	print_points(*var);
+//	print_elems(*var);
 	return (1);
 }

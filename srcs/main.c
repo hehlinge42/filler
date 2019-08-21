@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:28:16 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/21 17:09:34 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/21 19:31:41 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,13 +107,8 @@ int		main(void)
 		//	print_debug(var, "1");
 			write(fd, "Dans ft_algo\n", ft_strlen("Dans ft_algo\n"));
 			ft_algo(&var);
-//			write(1, "8 2\n", 4);
 			ft_printf("%d %d\n", var.y_pos, var.x_pos);
 			dprintf(fd, "%d %d\n", var.x_pos, var.y_pos);
-			//write(fd, ft_itoa(var.x_pos), ft_strlen(ft_itoa(var.x_pos)));
-			//write(fd, " ", 1);
-			//write(fd, ft_itoa(var.y_pos), ft_strlen(ft_itoa(var.y_pos)));
-			//write(fd, "\n", 1);
 	//		dprintf(fd, "%d %d\n", var.x_pos, var.y_pos);
 		}
 	}
