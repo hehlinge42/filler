@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:28:16 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/20 18:23:43 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/20 18:58:45 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ int		main(void)
 	int fd;
 	
 	fd = open("/Users/Hugo/Desktop/42/filler/debug.txt", O_WRONLY|O_APPEND|O_CREAT, 0644);
+	//fd = open("debug.txt", O_WRONLY | O_APPEND | O_CREAT,0644);
+	dprintf(fd, "in func, time: %s\n", __TIME__);
 	if (ft_init_var(&var))
 	{
 		if (!ft_parse_first_line(&var))
@@ -71,12 +73,21 @@ int		main(void)
 		while (1)
 		{
 			if (!ft_parse_input(&var))
+			{
+				close(fd);
 				return (ft_exit(BAD_MAP));
+			}
 			ft_get_points(&var);
 		//	print_debug(var, "1");
+			write(fd, "Dans ft_algo\n", ft_strlen("Dans ft_algo\n"));
 			ft_algo(&var);
-			printf("%d %d\n", var.y_pos, var.x_pos);
+//			write(1, "8 2\n", 4);
+			ft_printf("%d %d\n", var.y_pos, var.x_pos);
 			dprintf(fd, "%d %d\n", var.x_pos, var.y_pos);
+			write(fd, ft_itoa(var.x_pos), ft_strlen(ft_itoa(var.x_pos)));
+			write(fd, " ", 1);
+			write(fd, ft_itoa(var.y_pos), ft_strlen(ft_itoa(var.y_pos)));
+			write(fd, "\n", 1);
 		}
 	}
 	return (1);
