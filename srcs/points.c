@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/20 18:05:59 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/21 18:29:47 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -165,46 +165,29 @@ void		ft_available(t_var *var)
 
 int			ft_get_points(t_var *var)
 {
-	int		i;
-	int		j;
 	char	c;
 	t_lst	*point;
+	t_lst	*tmp;
 
-	i = -1;
-	while (++i < var->y_map)
+	point = *var->pts_neutral;
+	while (point)
 	{
-		j = -1;
-		while (++j < var->x_map && (c = var->map[i][j]))
+		if ((c = var->map[((t_point *)point)->y][((t_point *)point)->x]) != '.')
 		{
-			/*
-			if (*var->pts_neutral)
-				printf("line: %d, i: %d, j: %d, n start dist: %d, n last dist: %d\n"
-					, __LINE__, i, j
-					, ((t_point *)(*(var->pts_neutral))->content)->dist
-					,((t_point *)(*(var->pts_neutral))->last->content)->dist);
-					*/
-			if (c == var->player || c == var->player + 32)
-			{
-				if (!(ft_lstadd_new(var->pts_player, (void *)ft_new_point(j, i, c)
-						, sizeof(t_point))))
-					return (0);
-			/*
-			if (*var->pts_neutral)
-				printf("line: %d, i: %d, j: %d, n start dist: %d, n last dist: %d\n"
-					, __LINE__, i, j
-					, ((t_point *)(*(var->pts_neutral))->content)->dist,
-					((t_point *)(*(var->pts_neutral))->last->content)->dist);
-					*/
-			}
-			else if (c == '.')
-			{
-				if (!(point = ft_lstadd_new(var->pts_neutral, (void *)ft_new_point(j, i, c)
-						, sizeof(t_point))))
-					return (0);
-				ft_get_closest(point, var);
-			}
+			if (point == *var->pts_neutral)
+				*var->pts_neutral = ((t_lst *)*var->pts_neutral)->next;
+			else
+				tmp->next = point->next;
+			point->next = NULL;
+			if (c == var->player)
+				ft_lstadd(var->pts_player, point);
+			else
+				ft_free((void **)point);
 		}
+		tmp = point;
+		((t_point *)point)->available = is_available(*var, ((t_point *)point)->x
+			, ((t_point *)point)->y);
+		point = point->next;
 	}
-	ft_available(var);
 	return (1);
 }

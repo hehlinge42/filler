@@ -1,5 +1,7 @@
-seed = 1081
+seed = 8322
 O: error on input
-players/superjeannot.filler won
+players/hehlinge.filler: Segfault at 0
+X: error on input
+players/hcao.filler won
 Score:
-29AGAINST29
+0AGAINST80
