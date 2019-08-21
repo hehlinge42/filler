@@ -59,5 +59,6 @@ int				abs(int n);
 int				is_available(t_var var, int o_x, int o_y);
 void			print_debug(t_var var, char *opt);
 void			ft_algo(t_var *var);
+t_point			*ft_new_point(int x, int y, char c);
 
 # endif

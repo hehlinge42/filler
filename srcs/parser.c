@@ -77,8 +77,8 @@ int		ft_parse_map(int nb, char *line, t_var *var)
 				if ((var->map[nb] = (char *)easymalloc(var->x_map + 1))
 					&& (var->tmp[nb] = (char *)easymalloc(var->x_map + 1)))
 				{
-					ft_strcpy(var->map[nb], line);
-					ft_strcpy(var->tmp[nb], line);
+					ft_strncpy(var->map[nb], line, var->x_map);
+					ft_strncpy(var->tmp[nb], line, var->x_map);
 					while (*line == 'o' || *line == 'x' || *line == 'O'
 							|| *line == 'X' || *line == '.')
 						line++;
@@ -105,6 +105,27 @@ int		ft_parse_piece(int nb, char *line, t_var *var)
 	return (0);
 }
 
+int		ft_init_neutral_points(t_var *var)
+{
+	int		i;
+	int		j;
+	t_lst	*point;
+
+	i = -1;
+	while (++i < var->y_map)
+	{
+		j = -1;
+		while (++j <var->x_map)
+		{
+			if (!(point = ft_lstadd_new(var->pts_neutral,
+				(void *)ft_new_point(j, i, '.'), sizeof(t_point))))
+				return (0);
+		}
+	}
+	var->turn = 1;
+	return (1);
+}
+
 int		ft_parse_input(t_var *var)
 {
 	char	*line;
@@ -114,6 +135,8 @@ int		ft_parse_input(t_var *var)
 	if (get_next_line(0, &line) && ft_parse_size(line, var, "Plateau "))
 	{
 		ft_free((void **)&line);
+		if (var->turn == 0)
+			ft_init_neutral_points(var);
 		nb = -1;
 		while (nb < var->y_map
 			&& get_next_line(0, &line) > -1 && ft_parse_map(nb, line, var))
@@ -123,7 +146,7 @@ int		ft_parse_input(t_var *var)
 			&& get_next_line(0, &line) && ft_parse_size(line, var, "Piece "))
 		{
 			ft_free((void **)&line);
-//		printf("size piece ok, x: %d, y: %d\n", var->x_piece, var->y_piece);
+//			printf("size piece ok, x: %d, y: %d\n", var->x_piece, var->y_piece);
 			nb = 0;
 			while (nb < var->y_piece
 				&& get_next_line(0, &line) && ft_parse_piece(nb, line, var))
