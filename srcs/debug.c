@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:38:31 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/21 16:26:19 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/21 18:52:43 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,20 @@ void	print_piece(t_var var)
 	printf("\n");
 }
 
+void	print_point(t_point *point)
+{
+	char	*available;
+
+	available = "";
+	if (point->owner == '.' || point->owner == '?')
+		available = point->available ? " -- available: YES"
+			: " -- available:  NO";
+	printf("POINT %d-%d : address:  %p, owner: %c (%d-%d), dist: %d%s\n"
+		, point->y, point->x, point
+		, point->owner, point->y_owner, point->x_owner, point->dist
+		, available);
+}
+
 void	print_points(t_var var)
 {
 	int			i;
@@ -99,10 +113,7 @@ void	print_points(t_var var)
 	tmp = *(var.pts_player);
 	while (tmp)
 	{
-		printf("PT_PLAYER\t%d -\ty: %d\tx: %d\t%s\n"
-				, i++, ((t_point *)tmp->content)->y
-				, ((t_point *)tmp->content)->x
-				, ((t_point *)tmp->content)->available ? "-- available" : "");
+		print_point(tmp->content);
 		tmp = tmp->next;
 	}
 	i = 0;
@@ -110,21 +121,9 @@ void	print_points(t_var var)
 	tmp = *(var.pts_neutral);
 	while (tmp)
 	{
-		printf("PT_NEUTRAL\t%d -\ty: %d\tx: %d\t-- owner: %c -- dist: %d%s\n"
-				, i++, ((t_point *)tmp->content)->y
-				, ((t_point *)tmp->content)->x
-				, ((t_point *)tmp->content)->owner
-				, ((t_point *)tmp->content)->dist
-				, ((t_point *)tmp->content)->available ? " -- available" : "");
+		print_point(tmp->content);
 		tmp = tmp->next;
 	}
-}
-
-void	print_point(t_point *point)
-{
-	printf("POINT %d-%d : address:  %p, owner: %c (%d-%d), dist: %d\n"
-		, point->y, point->x, point
-		, point->owner, point->y_owner, point->x_owner, point->dist);
 }
 
 void	print_debug(t_var var, char *opt)

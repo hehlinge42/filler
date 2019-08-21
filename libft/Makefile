@@ -6,7 +6,7 @@
 #    By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/10 16:35:23 by hehlinge          #+#    #+#              #
-#    Updated: 2019/08/02 16:31:19 by sikpenou         ###   ########.fr        #
+#    Updated: 2019/08/21 18:40:09 by sikpenou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ SRCS = 	ft_atoi.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 		ft_lstnew.c \
+		ft_print_list.c \
 		ft_malloc.c \
 		ft_memalloc.c \
 		ft_memccpy.c \

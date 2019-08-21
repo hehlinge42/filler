@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:35:34 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/03 14:56:19 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/21 18:39:20 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ void				ft_lstclr(t_lst **begin_lst);
 void				ft_lstdel(t_lst **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_lst **alst, void (*del)(void*, size_t));
 void				ft_lstiter(t_lst *lst, void (*f)(t_lst *elem));
+int					ft_print_list(t_lst *begin_list, int opt);
 void				ft_memdel(void **ap);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
