@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/21 18:29:47 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/21 18:59:42 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,7 +180,7 @@ int			ft_get_points(t_var *var)
 			else
 				tmp->next = point->next;
 			point->next = NULL;
-			if (c == var->player)
+			if (c == var->player || c == var->player + 32)
 				ft_lstadd(var->pts_player, point);
 			else
 				ft_free((void **)point);
