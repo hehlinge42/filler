@@ -120,6 +120,7 @@ int		ft_init_neutral_points(t_var *var)
 			if (!(point = ft_lstadd_new(var->pts_neutral,
 				(void *)ft_new_point(j, i, '.'), sizeof(t_point))))
 				return (0);
+			//print_point((t_point *)point->content);
 		}
 	}
 	var->turn = 1;
@@ -137,6 +138,7 @@ int		ft_parse_input(t_var *var)
 		ft_free((void **)&line);
 		if (var->turn == 0)
 			ft_init_neutral_points(var);
+		//print_points(*var);
 		nb = -1;
 		while (nb < var->y_map
 			&& get_next_line(0, &line) > -1 && ft_parse_map(nb, line, var))
