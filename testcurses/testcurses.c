@@ -1,6 +1,5 @@
 
 #include <curses.h>
-#include <stdio.h>
 #include <unistd.h>
 
 /*
@@ -46,7 +45,7 @@ int		get_owner(t_var var, WINDOW *win)
 	build_attribs(var, owners, win);
 }
 
-//pseudo main utilisant ncurses
+//pseudo main filler utilisant ncurses
 int		main(int ac, char **av)
 {
 	WINDOW		win;
@@ -72,10 +71,16 @@ int		main(int ac, char **av)
 
 void	print_stuff(int ctr)
 {
-	attron(COLOR_PAIR(ctr % 2 + 1));
+	attron(COLOR_PAIR((0 + ctr) % 4 + 1));
+	printw("test %d\n", ctr);
+	attron(COLOR_PAIR((1 + ctr) % 4 + 1));
+	printw("test %d\n", ctr);
+	attron(COLOR_PAIR((2 + ctr) % 4 + 1));
+	printw("test %d\n", ctr);
+	attron(COLOR_PAIR((3 + ctr) % 4 + 1));
 	printw("test %d\n", ctr);
 	refresh();
-	usleep(400000);
+	usleep(700000);
 	move(0, 0);
 }
 
@@ -88,9 +93,11 @@ int		main(int ac, char **av)
 	start_color();
 	win = newwin(10, 10, 0, 0);
 	init_pair(1, COLOR_RED, COLOR_BLACK);
-	init_pair(2, COLOR_CYAN, COLOR_BLACK);
+	init_pair(2, COLOR_BLACK, COLOR_RED);
+	init_pair(3, COLOR_CYAN, COLOR_BLACK);
+	init_pair(4, COLOR_BLACK, COLOR_CYAN);
 	ctr = -1;
-	while (++ctr < 10)
+	while (++ctr < 4)
 		print_stuff(ctr);
 	endwin();
 }
