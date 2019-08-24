@@ -102,11 +102,8 @@ void	print_point(t_point *point)
 
 void	print_points(t_var var)
 {
-	int			i;
 	t_lst		*tmp;
 
-	i = 0;
-	i = 0;
 	printf("PLAYER POINTS\n");
 	tmp = *(var.pts_player);
 	while (tmp)
@@ -114,7 +111,6 @@ void	print_points(t_var var)
 		print_point(tmp->content);
 		tmp = tmp->next;
 	}
-	i = 0;
 	printf("NEUTRAL POINTS\n");
 	tmp = *(var.pts_neutral);
 	while (tmp)

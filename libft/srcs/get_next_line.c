@@ -67,11 +67,11 @@ int				read_loop(char **line, int *pos, int fd)
 
 int				get_next_line(int fd, char **line)
 {
-	static char			*tab[OPEN_MAX] = {NULL};
+	static char			*tab[10] = {NULL};
 	int					pos;
 	int					ret;
 
-	if (!line || fd < 0 || fd >= OPEN_MAX || BUFF_SIZE < 1)
+	if (!line || fd < 0 || fd >= 10 || BUFF_SIZE < 1)
 		return (-1);
 	if (tab[fd] && !(*line = ft_strdup(tab[fd])) && tab[fd][0])
 	{
