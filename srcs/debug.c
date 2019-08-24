@@ -14,7 +14,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-void	print_lines(t_var var, char *line, int opt)
+void	print_lines(t_var var, char *line, int opt, int nocolor)
 {
 	int			i;
 	int			pos;
@@ -25,7 +25,7 @@ void	print_lines(t_var var, char *line, int opt)
 	i = 0;
 	while (i < var.y_map)
 	{
-		printf("%d\t", i);
+		dprintf(var.fd, "%d\t", i);
 		if (opt)
 			line = var.tmp[i];
 		else
@@ -50,26 +50,29 @@ void	print_lines(t_var var, char *line, int opt)
 				? (code = "\033[1;34m") : 0;
 			line[pos] == ',' ? (code = "\033[0;34m") : 0;
 			line[pos] == '.' ? (code = "\033[0;31m") : 0;
-			printf("%s%c\033[0m", code, line[pos]);
+			if (nocolor)
+				dprintf(var.fd, "%c", line[pos]);
+			else
+				dprintf(var.fd, "%s%c\033[0m", code, line[pos]);
 			pos++;
 		}
-		printf("\n");
+		dprintf(var.fd, "\n");
 		i++;
 	}
 }
 
-void	print_map(t_var var, int opt)
+void	print_map(t_var var, int opt, int nocolor)
 {
 	int			i;
 
 	i = -1;
-	printf("MAP -- x: %d, y: %d\n", var.x_map, var.y_map);
-	printf("\t");
+	dprintf(var.fd, "MAP -- x: %d, y: %d\n", var.x_map, var.y_map);
+	dprintf(var.fd, "\t");
 	while (++i < var.x_map)
-		printf("%c", i % 10 + 48);
-	printf("\n");
-	print_lines(var, "", opt);
-	printf("\n");
+		dprintf(var.fd, "%c", i % 10 + 48);
+	dprintf(var.fd, "\n");
+	print_lines(var, "", opt, nocolor);
+	dprintf(var.fd, "\n");
 }
 
 void	print_piece(t_var var)
@@ -77,24 +80,24 @@ void	print_piece(t_var var)
 	int			i;
 
 	i = -1;
-	printf("PIECE -- x: %d, y: %d\n", var.x_piece, var.y_piece);
-	printf("\t");
+	dprintf(var.fd, "PIECE -- x: %d, y: %d\n", var.x_piece, var.y_piece);
+	dprintf(var.fd, "\t");
 	while (++i < var.x_piece)
-		printf("%c", i % 10 + 48);
-	printf("\n");
+		dprintf(var.fd, "%c", i % 10 + 48);
+	dprintf(var.fd, "\n");
 	i = -1;
 	while (++i < var.y_piece)
-		printf("%d\t%s\n", i, var.piece[i]);
-	printf("\n");
+		dprintf(var.fd, "%d\t%s\n", i, var.piece[i]);
+	dprintf(var.fd, "\n");
 }
 
-void	print_point(t_point *point)
+void	print_point(t_point *point, int fd)
 {
 	char	*available;
 
 	available = "";
 	available = point->available ? " -- available: YES" : " -- available:  NO";
-	printf("POINT %d-%d : address:  %p, owner: %c (%d-%d), dist: %d%s\n"
+	dprintf(fd, "POINT %d-%d : address:  %p, owner: %c (%d-%d), dist: %d%s\n"
 		, point->y, point->x, point
 		, point->owner, point->y_owner, point->x_owner, point->dist
 		, available);
@@ -104,31 +107,44 @@ void	print_points(t_var var)
 {
 	t_lst		*tmp;
 
+<<<<<<< HEAD
 	printf("PLAYER POINTS\n");
+=======
+	i = 0;
+	i = 0;
+	dprintf(var.fd, "PLAYER POINTS\n");
+>>>>>>> 54a41d991871d318a14dd2d29e0b90f0840d8c21
 	tmp = *(var.pts_player);
 	while (tmp)
 	{
-		print_point(tmp->content);
+		print_point(tmp->content, var.fd);
 		tmp = tmp->next;
 	}
+<<<<<<< HEAD
 	printf("NEUTRAL POINTS\n");
+=======
+	i = 0;
+	dprintf(var.fd, "NEUTRAL POINTS\n");
+>>>>>>> 54a41d991871d318a14dd2d29e0b90f0840d8c21
 	tmp = *(var.pts_neutral);
 	while (tmp)
 	{
-		print_point(tmp->content);
+		print_point(tmp->content, var.fd);
 		tmp = tmp->next;
 	}
 }
 
 void	print_debug(t_var var, char *opt)
 {
-	printf("PLAYER: %c\nMAP:\n", var.player);
+	dprintf(var.fd, "PLAYER: %c\nMAP:\n", var.player);
 	if (!*opt || ft_strchr(opt, '1'))
 	{
 		if (ft_strchr(opt, '3'))
-			print_map(var, 1);
+			print_map(var, 1, 0);
+		else if (ft_strchr(opt, '4'))
+			print_map(var, 0, 1);
 		else
-			print_map(var, 0);
+			print_map(var, 0, 0);
 		print_piece(var);
 	}
 	if (!*opt || ft_strchr(opt, '2'))
