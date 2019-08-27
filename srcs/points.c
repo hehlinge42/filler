@@ -203,6 +203,13 @@ int			ft_get_points(t_var *var)
 		point->available = is_available(*var, point->x, point->y);
 		elem = elem->next;
 	}
+	elem = *var->pts_player;
+	while (elem)
+	{
+		point = (t_point *)elem->content;
+		point->available = is_available(*var, point->x, point->y);
+		elem = elem->next;
+	}
 //	print_elems(*var);
 	return (1);
 }

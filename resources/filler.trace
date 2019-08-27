@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-seed = 5298
+seed = 8062
+O: error on input
+players/hehlinge.filler: Segfault at 45
 players/hehlinge.filler won
 Score:
-8AGAINST0
-=======
-seed = 665
-players/superjeannot.filler won
-Score:
-2AGAINST159
->>>>>>> 54a41d991871d318a14dd2d29e0b90f0840d8c21
+45AGAINST33
