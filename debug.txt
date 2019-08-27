@@ -1,234 +1,294 @@
-in func, time: 18:01:24
- 17, y: 15
+PLAYER: O
+MAP:
+MAP -- x: 17, y: 15
 	01234567890123456
-0	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m
-1	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m
-2	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m
-3	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m
-4	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m
-5	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m
-6	[0;31m.[0m[0;31m.[0m[1;31mO[0m[1;31mO[0m[0;31m.[0m[0;31m.[0m[0;34m,[0m[0;34m,[0m[1;34mx[0m[1;34mx[0m[1;34mx[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m
-7	[0;31m.[0m[0;31m.[0m[1;31mO[0m[0;31m.[0m[0;31m.[0m[0;34m,[0m[0;34m,[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[0;34m,[0m[0;34m,[0m
-8	[0;31m.[0m[0;31m.[0m[1;31mO[0m[0;31m.[0m[0m?[0m[0;34m,[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m
-9	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;34m,[0m[0;34m,[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m
-10	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0m?[0m[0;34m,[0m[0;34m,[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m
-11	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m
-12	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[0;34m,[0m[0;34m,[0m
-13	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m
-14	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m[0;34m,[0m
+0	[1;31mo[0m[1;31mo[0m[1;31mO[0m[1;31mO[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m
+1	[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m
+2	[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m
+3	[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m
+4	[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m
+5	[0;31m.[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m
+6	[1;31mO[0m[1;31mO[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m
+7	[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[0;31m.[0m[0;31m.[0m
+8	[0;31m.[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[0;31m.[0m
+9	[0;31m.[0m[0;31m.[0m[0;31m.[0m[1;31mO[0m[1;31mO[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[0;31m.[0m
+10	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m
+11	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[1;31mO[0m[1;31mO[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m
+12	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[1;31mO[0m[1;31mO[0m[1;31mO[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[0;31m.[0m
+13	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[1;31mO[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[1;34mX[0m[0;31m.[0m
+14	[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[0;31m.[0m[1;34mX[0m[0;31m.[0m[1;34mX[0m[1;34mX[0m[0;31m.[0m[0;31m.[0m
 
-PIECE -- x: 3, y: 2
-	012
-0	.**
-1	.*.
+PIECE -- x: 2, y: 2
+	01
+0	*.
+1	*.
 
 PLAYER POINTS
-POINT 8-2 : address:  0x7ffe7bc0ab60, owner: O (0-0), dist: 0 -- available:  NO
-POINT 7-2 : address:  0x7ffe7bc09ea0, owner: O (0-0), dist: 0 -- available:  NO
-POINT 6-3 : address:  0x7ffe7bc092a0, owner: O (0-0), dist: 0 -- available:  NO
-POINT 6-2 : address:  0x7ffe7bc091e0, owner: O (0-0), dist: 0 -- available: YES
+POINT 0-1 : address:  0x7fb5a0d019f0, owner: o (0-0), dist: 0 -- available:  NO
+POINT 0-0 : address:  0x7fb5a0d01930, owner: o (0-0), dist: 0 -- available:  NO
 NEUTRAL POINTS
-POINT 0-0 : address:  0x7ffe7bc043e0, owner: O (6-2), dist: 8 -- available:  NO
-POINT 0-1 : address:  0x7ffe7bc044a0, owner: O (6-2), dist: 7 -- available:  NO
-POINT 0-2 : address:  0x7ffe7bc04560, owner: O (6-2), dist: 6 -- available:  NO
-POINT 0-3 : address:  0x7ffe7bc04620, owner: O (6-3), dist: 6 -- available:  NO
-POINT 0-4 : address:  0x7ffe7bc046e0, owner: O (6-3), dist: 7 -- available:  NO
-POINT 0-5 : address:  0x7ffe7bc047a0, owner: O (6-3), dist: 8 -- available:  NO
-POINT 0-6 : address:  0x7ffe7bc04860, owner: X (8-6), dist: 8 -- available:  NO
-POINT 0-7 : address:  0x7ffe7bc04920, owner: X (7-7), dist: 7 -- available:  NO
-POINT 0-8 : address:  0x7ffe7bc049e0, owner: X (6-8), dist: 6 -- available:  NO
-POINT 0-9 : address:  0x7ffe7bc04aa0, owner: X (6-9), dist: 6 -- available:  NO
-POINT 0-10 : address:  0x7ffe7bc04b60, owner: X (6-10), dist: 6 -- available:  NO
-POINT 0-11 : address:  0x7ffe7bc04c20, owner: X (6-11), dist: 6 -- available:  NO
-POINT 0-12 : address:  0x7ffe7bc04ce0, owner: X (6-12), dist: 6 -- available:  NO
-POINT 0-13 : address:  0x7ffe7bc04da0, owner: X (6-13), dist: 6 -- available:  NO
-POINT 0-14 : address:  0x7ffe7bc04e60, owner: X (7-14), dist: 7 -- available:  NO
-POINT 0-15 : address:  0x7ffe7bc04f20, owner: X (7-14), dist: 8 -- available:  NO
-POINT 0-16 : address:  0x7ffe7bc04fe0, owner: X (7-14), dist: 9 -- available:  NO
-POINT 1-0 : address:  0x7ffe7bc050a0, owner: O (6-2), dist: 7 -- available:  NO
-POINT 1-1 : address:  0x7ffe7bc05160, owner: O (6-2), dist: 6 -- available:  NO
-POINT 1-2 : address:  0x7ffe7bc05220, owner: O (6-2), dist: 5 -- available:  NO
-POINT 1-3 : address:  0x7ffe7bc052e0, owner: O (6-3), dist: 5 -- available:  NO
-POINT 1-4 : address:  0x7ffe7bc053a0, owner: O (6-3), dist: 6 -- available:  NO
-POINT 1-5 : address:  0x7ffe7bc05460, owner: O (6-3), dist: 7 -- available:  NO
-POINT 1-6 : address:  0x7ffe7bc05520, owner: X (8-6), dist: 7 -- available:  NO
-POINT 1-7 : address:  0x7ffe7bc055e0, owner: X (7-7), dist: 6 -- available:  NO
-POINT 1-8 : address:  0x7ffe7bc056a0, owner: X (6-8), dist: 5 -- available:  NO
-POINT 1-9 : address:  0x7ffe7bc05760, owner: X (6-9), dist: 5 -- available:  NO
-POINT 1-10 : address:  0x7ffe7bc05820, owner: X (6-10), dist: 5 -- available:  NO
-POINT 1-11 : address:  0x7ffe7bc058e0, owner: X (6-11), dist: 5 -- available:  NO
-POINT 1-12 : address:  0x7ffe7bc059a0, owner: X (6-12), dist: 5 -- available:  NO
-POINT 1-13 : address:  0x7ffe7bc05a60, owner: X (6-13), dist: 5 -- available:  NO
-POINT 1-14 : address:  0x7ffe7bc05b20, owner: X (7-14), dist: 6 -- available:  NO
-POINT 1-15 : address:  0x7ffe7bc05be0, owner: X (7-14), dist: 7 -- available:  NO
-POINT 1-16 : address:  0x7ffe7bc05ca0, owner: X (7-14), dist: 8 -- available:  NO
-POINT 2-0 : address:  0x7ffe7bc05d60, owner: O (6-2), dist: 6 -- available:  NO
-POINT 2-1 : address:  0x7ffe7bc05e20, owner: O (6-2), dist: 5 -- available:  NO
-POINT 2-2 : address:  0x7ffe7bc05ee0, owner: O (6-2), dist: 4 -- available:  NO
-POINT 2-3 : address:  0x7ffe7bc05fa0, owner: O (6-3), dist: 4 -- available:  NO
-POINT 2-4 : address:  0x7ffe7bc06060, owner: O (6-3), dist: 5 -- available:  NO
-POINT 2-5 : address:  0x7ffe7bc06120, owner: O (6-3), dist: 6 -- available:  NO
-POINT 2-6 : address:  0x7ffe7bc061e0, owner: X (8-6), dist: 6 -- available:  NO
-POINT 2-7 : address:  0x7ffe7bc062a0, owner: X (7-7), dist: 5 -- available:  NO
-POINT 2-8 : address:  0x7ffe7bc06360, owner: X (6-8), dist: 4 -- available:  NO
-POINT 2-9 : address:  0x7ffe7bc06420, owner: X (6-9), dist: 4 -- available:  NO
-POINT 2-10 : address:  0x7ffe7bc064e0, owner: X (6-10), dist: 4 -- available:  NO
-POINT 2-11 : address:  0x7ffe7bc065a0, owner: X (6-11), dist: 4 -- available:  NO
-POINT 2-12 : address:  0x7ffe7bc06660, owner: X (6-12), dist: 4 -- available:  NO
-POINT 2-13 : address:  0x7ffe7bc06720, owner: X (6-13), dist: 4 -- available:  NO
-POINT 2-14 : address:  0x7ffe7bc067e0, owner: X (7-14), dist: 5 -- available:  NO
-POINT 2-15 : address:  0x7ffe7bc068a0, owner: X (7-14), dist: 6 -- available:  NO
-POINT 2-16 : address:  0x7ffe7bc06960, owner: X (7-14), dist: 7 -- available:  NO
-POINT 3-0 : address:  0x7ffe7bc06a20, owner: O (6-2), dist: 5 -- available:  NO
-POINT 3-1 : address:  0x7ffe7bc06ae0, owner: O (6-2), dist: 4 -- available:  NO
-POINT 3-2 : address:  0x7ffe7bc06ba0, owner: O (6-2), dist: 3 -- available:  NO
-POINT 3-3 : address:  0x7ffe7bc06c60, owner: O (6-3), dist: 3 -- available:  NO
-POINT 3-4 : address:  0x7ffe7bc06d20, owner: O (6-3), dist: 4 -- available:  NO
-POINT 3-5 : address:  0x7ffe7bc06de0, owner: O (6-3), dist: 5 -- available:  NO
-POINT 3-6 : address:  0x7ffe7bc06ea0, owner: X (8-6), dist: 5 -- available:  NO
-POINT 3-7 : address:  0x7ffe7bc06f60, owner: X (7-7), dist: 4 -- available:  NO
-POINT 3-8 : address:  0x7ffe7bc07020, owner: X (6-8), dist: 3 -- available:  NO
-POINT 3-9 : address:  0x7ffe7bc070e0, owner: X (6-9), dist: 3 -- available:  NO
-POINT 3-10 : address:  0x7ffe7bc071a0, owner: X (6-10), dist: 3 -- available:  NO
-POINT 3-11 : address:  0x7ffe7bc07260, owner: X (6-11), dist: 3 -- available:  NO
-POINT 3-12 : address:  0x7ffe7bc07320, owner: X (6-12), dist: 3 -- available:  NO
-POINT 3-13 : address:  0x7ffe7bc073e0, owner: X (6-13), dist: 3 -- available:  NO
-POINT 3-14 : address:  0x7ffe7bc074a0, owner: X (7-14), dist: 4 -- available:  NO
-POINT 3-15 : address:  0x7ffe7bc07560, owner: X (7-14), dist: 5 -- available:  NO
-POINT 3-16 : address:  0x7ffe7bc07620, owner: X (7-14), dist: 6 -- available:  NO
-POINT 4-0 : address:  0x7ffe7bc076e0, owner: O (6-2), dist: 4 -- available:  NO
-POINT 4-1 : address:  0x7ffe7bc077a0, owner: O (6-2), dist: 3 -- available:  NO
-POINT 4-2 : address:  0x7ffe7bc07860, owner: O (6-2), dist: 2 -- available:  NO
-POINT 4-3 : address:  0x7ffe7bc07920, owner: O (6-3), dist: 2 -- available:  NO
-POINT 4-4 : address:  0x7ffe7bc079e0, owner: O (6-3), dist: 3 -- available:  NO
-POINT 4-5 : address:  0x7ffe7bc07aa0, owner: O (6-3), dist: 4 -- available:  NO
-POINT 4-6 : address:  0x7ffe7bc07b60, owner: X (8-6), dist: 4 -- available:  NO
-POINT 4-7 : address:  0x7ffe7bc07c20, owner: X (7-7), dist: 3 -- available:  NO
-POINT 4-8 : address:  0x7ffe7bc07ce0, owner: X (6-8), dist: 2 -- available:  NO
-POINT 4-9 : address:  0x7ffe7bc07da0, owner: X (6-9), dist: 2 -- available:  NO
-POINT 4-10 : address:  0x7ffe7bc07e60, owner: X (6-10), dist: 2 -- available:  NO
-POINT 4-11 : address:  0x7ffe7bc07f20, owner: X (6-11), dist: 2 -- available:  NO
-POINT 4-12 : address:  0x7ffe7bc07fe0, owner: X (6-12), dist: 2 -- available:  NO
-POINT 4-13 : address:  0x7ffe7bc080a0, owner: X (6-13), dist: 2 -- available:  NO
-POINT 4-14 : address:  0x7ffe7bc08160, owner: X (7-14), dist: 3 -- available:  NO
-POINT 4-15 : address:  0x7ffe7bc08220, owner: X (7-14), dist: 4 -- available:  NO
-POINT 4-16 : address:  0x7ffe7bc082e0, owner: X (7-14), dist: 5 -- available:  NO
-POINT 5-0 : address:  0x7ffe7bc083a0, owner: O (6-2), dist: 3 -- available:  NO
-POINT 5-1 : address:  0x7ffe7bc08460, owner: O (6-2), dist: 2 -- available: YES
-POINT 5-2 : address:  0x7ffe7bc08520, owner: O (6-2), dist: 1 -- available: YES
-POINT 5-3 : address:  0x7ffe7bc085e0, owner: O (6-3), dist: 1 -- available:  NO
-POINT 5-4 : address:  0x7ffe7bc086a0, owner: O (6-3), dist: 2 -- available:  NO
-POINT 5-5 : address:  0x7ffe7bc08760, owner: O (6-3), dist: 3 -- available:  NO
-POINT 5-6 : address:  0x7ffe7bc08820, owner: X (8-6), dist: 3 -- available:  NO
-POINT 5-7 : address:  0x7ffe7bc088e0, owner: X (7-7), dist: 2 -- available:  NO
-POINT 5-8 : address:  0x7ffe7bc089a0, owner: X (6-8), dist: 1 -- available:  NO
-POINT 5-9 : address:  0x7ffe7bc08a60, owner: X (6-9), dist: 1 -- available:  NO
-POINT 5-10 : address:  0x7ffe7bc08b20, owner: X (6-10), dist: 1 -- available:  NO
-POINT 5-11 : address:  0x7ffe7bc08be0, owner: X (6-11), dist: 1 -- available:  NO
-POINT 5-12 : address:  0x7ffe7bc08ca0, owner: X (6-12), dist: 1 -- available:  NO
-POINT 5-13 : address:  0x7ffe7bc08d60, owner: X (6-13), dist: 1 -- available:  NO
-POINT 5-14 : address:  0x7ffe7bc08e20, owner: X (7-14), dist: 2 -- available:  NO
-POINT 5-15 : address:  0x7ffe7bc08ee0, owner: X (7-14), dist: 3 -- available:  NO
-POINT 5-16 : address:  0x7ffe7bc08fa0, owner: X (6-13), dist: 4 -- available:  NO
-POINT 6-0 : address:  0x7ffe7bc09060, owner: O (6-2), dist: 2 -- available: YES
-POINT 6-1 : address:  0x7ffe7bc09120, owner: O (6-2), dist: 1 -- available:  NO
-POINT 6-4 : address:  0x7ffe7bc09360, owner: O (6-3), dist: 1 -- available:  NO
-POINT 6-5 : address:  0x7ffe7bc09420, owner: O (6-3), dist: 2 -- available:  NO
-POINT 6-6 : address:  0x7ffe7bc094e0, owner: X (8-6), dist: 2 -- available:  NO
-POINT 6-7 : address:  0x7ffe7bc095a0, owner: X (7-7), dist: 1 -- available:  NO
-POINT 6-14 : address:  0x7ffe7bc09ae0, owner: X (7-14), dist: 1 -- available:  NO
-POINT 6-15 : address:  0x7ffe7bc09ba0, owner: X (6-13), dist: 2 -- available:  NO
-POINT 6-16 : address:  0x7ffe7bc09c60, owner: X (6-13), dist: 3 -- available:  NO
-POINT 7-0 : address:  0x7ffe7bc09d20, owner: O (7-2), dist: 2 -- available: YES
-POINT 7-1 : address:  0x7ffe7bc09de0, owner: O (7-2), dist: 1 -- available:  NO
-POINT 7-3 : address:  0x7ffe7bc09f60, owner: O (7-2), dist: 1 -- available:  NO
-POINT 7-4 : address:  0x7ffe7bc0a020, owner: O (7-2), dist: 2 -- available:  NO
-POINT 7-5 : address:  0x7ffe7bc0a0e0, owner: X (7-7), dist: 2 -- available:  NO
-POINT 7-6 : address:  0x7ffe7bc0a1a0, owner: X (8-6), dist: 1 -- available:  NO
-POINT 7-15 : address:  0x7ffe7bc0a860, owner: X (7-14), dist: 1 -- available:  NO
-POINT 7-16 : address:  0x7ffe7bc0a920, owner: X (7-14), dist: 2 -- available:  NO
-POINT 8-0 : address:  0x7ffe7bc0a9e0, owner: O (8-2), dist: 2 -- available: YES
-POINT 8-1 : address:  0x7ffe7bc0aaa0, owner: O (8-2), dist: 1 -- available: YES
-POINT 8-3 : address:  0x7ffe7bc0ac20, owner: O (8-2), dist: 1 -- available:  NO
-POINT 8-4 : address:  0x7ffe7bc0ace0, owner: ? (8-2), dist: 2 -- available:  NO
-POINT 8-5 : address:  0x7ffe7bc0ada0, owner: X (8-6), dist: 1 -- available:  NO
-POINT 8-13 : address:  0x7ffe7bc0b3a0, owner: X (9-13), dist: 1 -- available:  NO
-POINT 8-14 : address:  0x7ffe7bc0b460, owner: X (7-14), dist: 1 -- available:  NO
-POINT 8-15 : address:  0x7ffe7bc0b520, owner: X (7-14), dist: 2 -- available:  NO
-POINT 8-16 : address:  0x7ffe7bc0b5e0, owner: X (7-14), dist: 3 -- available:  NO
-POINT 9-0 : address:  0x7ffe7bc0b6a0, owner: O (8-2), dist: 3 -- available:  NO
-POINT 9-1 : address:  0x7ffe7bc0b760, owner: O (8-2), dist: 2 -- available:  NO
-POINT 9-2 : address:  0x7ffe7bc0b820, owner: O (8-2), dist: 1 -- available:  NO
-POINT 9-3 : address:  0x7ffe7bc0b8e0, owner: O (8-2), dist: 2 -- available:  NO
-POINT 9-4 : address:  0x7ffe7bc0b9a0, owner: X (9-6), dist: 2 -- available:  NO
-POINT 9-5 : address:  0x7ffe7bc0ba60, owner: X (9-6), dist: 1 -- available:  NO
-POINT 9-14 : address:  0x7ffe7bc0c120, owner: X (9-13), dist: 1 -- available:  NO
-POINT 9-15 : address:  0x7ffe7bc0c1e0, owner: X (9-13), dist: 2 -- available:  NO
-POINT 9-16 : address:  0x7ffe7bc0c2a0, owner: X (9-13), dist: 3 -- available:  NO
-POINT 10-0 : address:  0x7ffe7bc0c360, owner: O (8-2), dist: 4 -- available:  NO
-POINT 10-1 : address:  0x7ffe7bc0c420, owner: O (8-2), dist: 3 -- available:  NO
-POINT 10-2 : address:  0x7ffe7bc0c4e0, owner: O (8-2), dist: 2 -- available:  NO
-POINT 10-3 : address:  0x7ffe7bc0c5a0, owner: ? (8-2), dist: 3 -- available:  NO
-POINT 10-4 : address:  0x7ffe7bc0c660, owner: X (10-6), dist: 2 -- available:  NO
-POINT 10-5 : address:  0x7ffe7bc0c720, owner: X (10-6), dist: 1 -- available:  NO
-POINT 10-14 : address:  0x7ffe7bc0cde0, owner: X (10-13), dist: 1 -- available:  NO
-POINT 10-15 : address:  0x7ffe7bc0cea0, owner: X (10-13), dist: 2 -- available:  NO
-POINT 10-16 : address:  0x7ffe7bc0cf60, owner: X (10-13), dist: 3 -- available:  NO
-POINT 11-0 : address:  0x7ffe7bc0d020, owner: O (8-2), dist: 5 -- available:  NO
-POINT 11-1 : address:  0x7ffe7bc0d0e0, owner: O (8-2), dist: 4 -- available:  NO
-POINT 11-2 : address:  0x7ffe7bc0d1a0, owner: O (8-2), dist: 3 -- available:  NO
-POINT 11-3 : address:  0x7ffe7bc0d260, owner: X (11-6), dist: 3 -- available:  NO
-POINT 11-4 : address:  0x7ffe7bc0d320, owner: X (11-6), dist: 2 -- available:  NO
-POINT 11-5 : address:  0x7ffe7bc0d3e0, owner: X (11-6), dist: 1 -- available:  NO
-POINT 11-14 : address:  0x7ffe7bc0daa0, owner: X (12-14), dist: 1 -- available:  NO
-POINT 11-15 : address:  0x7ffe7bc0db60, owner: X (11-13), dist: 2 -- available:  NO
-POINT 11-16 : address:  0x7ffe7bc0dc20, owner: X (11-13), dist: 3 -- available:  NO
-POINT 12-0 : address:  0x7ffe7bc0dce0, owner: O (8-2), dist: 6 -- available:  NO
-POINT 12-1 : address:  0x7ffe7bc0dda0, owner: O (8-2), dist: 5 -- available:  NO
-POINT 12-2 : address:  0x7ffe7bc0de60, owner: O (8-2), dist: 4 -- available:  NO
-POINT 12-3 : address:  0x7ffe7bc0df20, owner: X (11-6), dist: 4 -- available:  NO
-POINT 12-4 : address:  0x7ffe7bc0dfe0, owner: X (11-6), dist: 3 -- available:  NO
-POINT 12-5 : address:  0x7ffe7bc0e0a0, owner: X (11-6), dist: 2 -- available:  NO
-POINT 12-6 : address:  0x7ffe7bc0e160, owner: X (11-6), dist: 1 -- available:  NO
-POINT 12-7 : address:  0x7ffe7bc0e220, owner: X (12-8), dist: 1 -- available:  NO
-POINT 12-15 : address:  0x7ffe7bc0e820, owner: X (12-14), dist: 1 -- available:  NO
-POINT 12-16 : address:  0x7ffe7bc0e8e0, owner: X (12-14), dist: 2 -- available:  NO
-POINT 13-0 : address:  0x7ffe7bc0e9a0, owner: O (8-2), dist: 7 -- available:  NO
-POINT 13-1 : address:  0x7ffe7bc0ea60, owner: O (8-2), dist: 6 -- available:  NO
-POINT 13-2 : address:  0x7ffe7bc0eb20, owner: O (8-2), dist: 5 -- available:  NO
-POINT 13-3 : address:  0x7ffe7bc0ebe0, owner: X (11-6), dist: 5 -- available:  NO
-POINT 13-4 : address:  0x7ffe7bc0eca0, owner: X (11-6), dist: 4 -- available:  NO
-POINT 13-5 : address:  0x7ffe7bc0ed60, owner: X (11-6), dist: 3 -- available:  NO
-POINT 13-6 : address:  0x7ffe7bc0ee20, owner: X (11-6), dist: 2 -- available:  NO
-POINT 13-7 : address:  0x7ffe7bc0eee0, owner: X (11-7), dist: 2 -- available:  NO
-POINT 13-8 : address:  0x7ffe7bc0efa0, owner: X (12-8), dist: 1 -- available:  NO
-POINT 13-9 : address:  0x7ffe7bc0f060, owner: X (12-9), dist: 1 -- available:  NO
-POINT 13-10 : address:  0x7ffe7bc0f120, owner: X (12-10), dist: 1 -- available:  NO
-POINT 13-11 : address:  0x7ffe7bc0f1e0, owner: X (12-11), dist: 1 -- available:  NO
-POINT 13-12 : address:  0x7ffe7bc0f2a0, owner: X (12-12), dist: 1 -- available:  NO
-POINT 13-13 : address:  0x7ffe7bc0f360, owner: X (12-13), dist: 1 -- available:  NO
-POINT 13-14 : address:  0x7ffe7bc0f420, owner: X (12-14), dist: 1 -- available:  NO
-POINT 13-15 : address:  0x7ffe7bc0f4e0, owner: X (12-14), dist: 2 -- available:  NO
-POINT 13-16 : address:  0x7ffe7bc0f5a0, owner: X (12-14), dist: 3 -- available:  NO
-POINT 14-0 : address:  0x7ffe7bc0f660, owner: O (8-2), dist: 8 -- available:  NO
-POINT 14-1 : address:  0x7ffe7bc0f720, owner: O (8-2), dist: 7 -- available:  NO
-POINT 14-2 : address:  0x7ffe7bc0f7e0, owner: O (8-2), dist: 6 -- available:  NO
-POINT 14-3 : address:  0x7ffe7bc0f8a0, owner: X (11-6), dist: 6 -- available:  NO
-POINT 14-4 : address:  0x7ffe7bc0f960, owner: X (11-6), dist: 5 -- available:  NO
-POINT 14-5 : address:  0x7ffe7bc0fa20, owner: X (11-6), dist: 4 -- available:  NO
-POINT 14-6 : address:  0x7ffe7bc0fae0, owner: X (11-6), dist: 3 -- available:  NO
-POINT 14-7 : address:  0x7ffe7bc0fba0, owner: X (11-7), dist: 3 -- available:  NO
-POINT 14-8 : address:  0x7ffe7bc0fc60, owner: X (12-8), dist: 2 -- available:  NO
-POINT 14-9 : address:  0x7ffe7bc0fd20, owner: X (12-9), dist: 2 -- available:  NO
-POINT 14-10 : address:  0x7ffe7bc0fde0, owner: X (12-10), dist: 2 -- available:  NO
-POINT 14-11 : address:  0x7ffe7bc0fea0, owner: X (12-11), dist: 2 -- available:  NO
-POINT 14-12 : address:  0x7ffe7bc0ff60, owner: X (12-12), dist: 2 -- available:  NO
-POINT 14-13 : address:  0x7ffe7bc10020, owner: X (12-13), dist: 2 -- available:  NO
-POINT 14-14 : address:  0x7ffe7bc100e0, owner: X (12-14), dist: 2 -- available:  NO
-POINT 14-15 : address:  0x7ffe7bc101a0, owner: X (12-14), dist: 3 -- available:  NO
-POINT 14-16 : address:  0x7ffe7bc10260, owner: X (12-14), dist: 4 -- available:  NO
+POINT 0-1 : address:  0x7fb5a0d019f0, owner: o (0-0), dist: 0 -- available:  NO
+POINT 0-0 : address:  0x7fb5a0d01930, owner: o (0-0), dist: 0 -- available:  NO
 Dans ft_algo
-2 5
+0 0
+
+
+
+
+
+0x7fa429c04500, owner: . (0-0), dist: 0 -- available:  NO
+POINT 0-5 : address:  0x7fa429c045c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 0-6 : address:  0x7fa429c04680, owner: . (0-0), dist: 0 -- available:  NO
+POINT 0-7 : address:  0x7fa429c04740, owner: . (0-0), dist: 0 -- available:  NO
+POINT 0-8 : address:  0x7fa429c04800, owner: . (0-0), dist: 0 -- available:  NO
+POINT 0-9 : address:  0x7fa429c048c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 0-10 : address:  0x7fa429c04980, owner: . (0-0), dist: 0 -- available:  NO
+POINT 0-11 : address:  0x7fa429c04a40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 0-12 : address:  0x7fa429c04b00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 0-13 : address:  0x7fa429c04bc0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 0-14 : address:  0x7fa429c04c80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 0-15 : address:  0x7fa429c04d40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 0-16 : address:  0x7fa429c04e00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-0 : address:  0x7fa429c04ec0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-1 : address:  0x7fa429c04f80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-2 : address:  0x7fa429c05040, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-3 : address:  0x7fa429c05100, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-4 : address:  0x7fa429c051c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-5 : address:  0x7fa429d000e0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-6 : address:  0x7fa429c05240, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-7 : address:  0x7fa429c05300, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-8 : address:  0x7fa429c053c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-9 : address:  0x7fa429c05480, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-10 : address:  0x7fa429c05540, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-11 : address:  0x7fa429c05600, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-12 : address:  0x7fa429c056c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-13 : address:  0x7fa429c05780, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-14 : address:  0x7fa429c05840, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-15 : address:  0x7fa429c05900, owner: . (0-0), dist: 0 -- available:  NO
+POINT 1-16 : address:  0x7fa429c059c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-0 : address:  0x7fa429c05a80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-1 : address:  0x7fa429c05b40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-2 : address:  0x7fa429c05c00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-3 : address:  0x7fa429c05cc0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-4 : address:  0x7fa429c05d80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-5 : address:  0x7fa429c05e40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-6 : address:  0x7fa429c05f00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-7 : address:  0x7fa429c05fc0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-8 : address:  0x7fa429c06080, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-9 : address:  0x7fa429d001a0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-10 : address:  0x7fa429d00260, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-11 : address:  0x7fa429d00320, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-12 : address:  0x7fa429d003e0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-13 : address:  0x7fa429d004a0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-14 : address:  0x7fa429d00560, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-15 : address:  0x7fa429d00620, owner: . (0-0), dist: 0 -- available:  NO
+POINT 2-16 : address:  0x7fa429d006e0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-0 : address:  0x7fa429d007a0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-1 : address:  0x7fa429d00860, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-2 : address:  0x7fa429d00920, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-3 : address:  0x7fa429c06100, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-4 : address:  0x7fa429c061c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-5 : address:  0x7fa429c06280, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-6 : address:  0x7fa429c06340, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-7 : address:  0x7fa429c06400, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-8 : address:  0x7fa429c064c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-9 : address:  0x7fa429c06580, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-10 : address:  0x7fa429c06640, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-11 : address:  0x7fa429c06700, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-12 : address:  0x7fa429c067c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-13 : address:  0x7fa429c06880, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-14 : address:  0x7fa429c06940, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-15 : address:  0x7fa429c06a00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 3-16 : address:  0x7fa429c06ac0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-0 : address:  0x7fa429c06b80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-1 : address:  0x7fa429c06c40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-2 : address:  0x7fa429c06d00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-3 : address:  0x7fa429c06dc0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-4 : address:  0x7fa429c06e80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-5 : address:  0x7fa429c06f40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-6 : address:  0x7fa429c07000, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-7 : address:  0x7fa429c070c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-8 : address:  0x7fa429c07180, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-9 : address:  0x7fa429c07240, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-10 : address:  0x7fa429c07300, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-11 : address:  0x7fa429c073c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-12 : address:  0x7fa429c07480, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-13 : address:  0x7fa429c07540, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-14 : address:  0x7fa429c07600, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-15 : address:  0x7fa429c076c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 4-16 : address:  0x7fa429c07780, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-0 : address:  0x7fa429c07840, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-1 : address:  0x7fa429c07900, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-2 : address:  0x7fa429c079c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-3 : address:  0x7fa429c07a80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-4 : address:  0x7fa429c07b40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-5 : address:  0x7fa429c07c00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-6 : address:  0x7fa429c07cc0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-7 : address:  0x7fa429c07d80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-8 : address:  0x7fa429c07e40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-9 : address:  0x7fa429c07f00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-10 : address:  0x7fa429c07fc0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-11 : address:  0x7fa429c08080, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-12 : address:  0x7fa429c08140, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-13 : address:  0x7fa429c08200, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-14 : address:  0x7fa429c082c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-15 : address:  0x7fa429c08380, owner: . (0-0), dist: 0 -- available:  NO
+POINT 5-16 : address:  0x7fa429c08440, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-0 : address:  0x7fa429c08500, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-1 : address:  0x7fa429c085c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-2 : address:  0x7fa429c08680, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-3 : address:  0x7fa429c08740, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-4 : address:  0x7fa429c08800, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-5 : address:  0x7fa429c088c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-6 : address:  0x7fa429c08980, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-7 : address:  0x7fa429c08a40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-8 : address:  0x7fa429c08b00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-9 : address:  0x7fa429c08bc0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-10 : address:  0x7fa429c08c80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-11 : address:  0x7fa429c08d40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-12 : address:  0x7fa429c08e00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-13 : address:  0x7fa429c08ec0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-14 : address:  0x7fa429c08f80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-15 : address:  0x7fa429c09040, owner: . (0-0), dist: 0 -- available:  NO
+POINT 6-16 : address:  0x7fa429c09100, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-0 : address:  0x7fa429c091c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-1 : address:  0x7fa429c09280, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-2 : address:  0x7fa429c09340, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-3 : address:  0x7fa429c09400, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-4 : address:  0x7fa429c094c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-5 : address:  0x7fa429c09580, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-6 : address:  0x7fa429c09640, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-7 : address:  0x7fa429c09700, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-8 : address:  0x7fa429c097c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-9 : address:  0x7fa429c09880, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-10 : address:  0x7fa429c09940, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-11 : address:  0x7fa429c09a00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-12 : address:  0x7fa429c09ac0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-13 : address:  0x7fa429c09b80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-14 : address:  0x7fa429c09c40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-15 : address:  0x7fa429c09d00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 7-16 : address:  0x7fa429c09dc0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-0 : address:  0x7fa429c09e80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-1 : address:  0x7fa429c09f40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-2 : address:  0x7fa429c0a000, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-3 : address:  0x7fa429c0a0c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-4 : address:  0x7fa429c0a180, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-5 : address:  0x7fa429c0a240, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-6 : address:  0x7fa429c0a300, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-7 : address:  0x7fa429c0a3c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-8 : address:  0x7fa429c0a480, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-9 : address:  0x7fa429c0a540, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-10 : address:  0x7fa429c0a600, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-11 : address:  0x7fa429c0a6c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-12 : address:  0x7fa429c0a780, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-13 : address:  0x7fa429c0a840, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-14 : address:  0x7fa429c0a900, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-15 : address:  0x7fa429c0a9c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 8-16 : address:  0x7fa429c0aa80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-0 : address:  0x7fa429c0ab40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-1 : address:  0x7fa429c0ac00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-2 : address:  0x7fa429c0acc0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-3 : address:  0x7fa429c0ad80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-4 : address:  0x7fa429c0ae40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-5 : address:  0x7fa429c0af00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-6 : address:  0x7fa429c0afc0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-7 : address:  0x7fa429c0b080, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-8 : address:  0x7fa429c0b140, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-9 : address:  0x7fa429c0b200, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-10 : address:  0x7fa429c0b2c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-11 : address:  0x7fa429c0b380, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-12 : address:  0x7fa429c0b440, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-13 : address:  0x7fa429c0b500, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-14 : address:  0x7fa429c0b5c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-15 : address:  0x7fa429c0b680, owner: . (0-0), dist: 0 -- available:  NO
+POINT 9-16 : address:  0x7fa429c0b740, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-0 : address:  0x7fa429c0b800, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-1 : address:  0x7fa429c0b8c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-2 : address:  0x7fa429c0b980, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-3 : address:  0x7fa429c0ba40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-4 : address:  0x7fa429c0bb00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-5 : address:  0x7fa429c0bbc0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-6 : address:  0x7fa429c0bc80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-7 : address:  0x7fa429c0bd40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-8 : address:  0x7fa429c0be00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-9 : address:  0x7fa429c0bec0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-10 : address:  0x7fa429c0bf80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-11 : address:  0x7fa429c0c040, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-12 : address:  0x7fa429c0c100, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-13 : address:  0x7fa429c0c1c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-14 : address:  0x7fa429c0c280, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-15 : address:  0x7fa429c0c340, owner: . (0-0), dist: 0 -- available:  NO
+POINT 10-16 : address:  0x7fa429c0c400, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-0 : address:  0x7fa429c0c4c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-1 : address:  0x7fa429c0c580, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-2 : address:  0x7fa429c0c640, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-3 : address:  0x7fa429c0c700, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-4 : address:  0x7fa429c0c7c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-5 : address:  0x7fa429c0c880, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-6 : address:  0x7fa429c0c940, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-7 : address:  0x7fa429c0ca00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-8 : address:  0x7fa429c0cac0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-9 : address:  0x7fa429c0cb80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-10 : address:  0x7fa429c0cc40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-11 : address:  0x7fa429c0cd00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-12 : address:  0x7fa429c0cdc0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-13 : address:  0x7fa429c0ce80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-14 : address:  0x7fa429c0cf40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-15 : address:  0x7fa429c0d000, owner: . (0-0), dist: 0 -- available:  NO
+POINT 11-16 : address:  0x7fa429c0d0c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-0 : address:  0x7fa429c0d180, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-1 : address:  0x7fa429c0d240, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-2 : address:  0x7fa429c0d300, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-3 : address:  0x7fa429c0d3c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-4 : address:  0x7fa429c0d480, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-5 : address:  0x7fa429c0d540, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-6 : address:  0x7fa429c0d600, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-7 : address:  0x7fa429c0d6c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-8 : address:  0x7fa429c0d780, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-9 : address:  0x7fa429c0d840, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-10 : address:  0x7fa429c0d900, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-11 : address:  0x7fa429c0d9c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-12 : address:  0x7fa429c0da80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-13 : address:  0x7fa429c0db40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-14 : address:  0x7fa429c0dc00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-15 : address:  0x7fa429c0dcc0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 12-16 : address:  0x7fa429c0dd80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-0 : address:  0x7fa429c0de40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-1 : address:  0x7fa429c0df00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-2 : address:  0x7fa429c0dfc0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-3 : address:  0x7fa429c0e080, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-4 : address:  0x7fa429c0e140, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-5 : address:  0x7fa429c0e200, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-6 : address:  0x7fa429c0e2c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-7 : address:  0x7fa429c0e380, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-8 : address:  0x7fa429c0e440, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-9 : address:  0x7fa429c0e500, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-10 : address:  0x7fa429c0e5c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-11 : address:  0x7fa429c0e680, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-12 : address:  0x7fa429c0e740, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-13 : address:  0x7fa429c0e800, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-14 : address:  0x7fa429c0e8c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-15 : address:  0x7fa429c0e980, owner: . (0-0), dist: 0 -- available:  NO
+POINT 13-16 : address:  0x7fa429c0ea40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-0 : address:  0x7fa429c0eb00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-1 : address:  0x7fa429c0ebc0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-2 : address:  0x7fa429c0ec80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-3 : address:  0x7fa429c0ed40, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-4 : address:  0x7fa429c0ee00, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-5 : address:  0x7fa429c0eec0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-6 : address:  0x7fa429c0ef80, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-7 : address:  0x7fa429c0f040, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-8 : address:  0x7fa429c0f100, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-9 : address:  0x7fa429c0f1c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-10 : address:  0x7fa429c0f280, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-11 : address:  0x7fa429c0f340, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-12 : address:  0x7fa429c0f400, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-13 : address:  0x7fa429c0f4c0, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-14 : address:  0x7fa429c0f580, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-15 : address:  0x7fa429c0f640, owner: . (0-0), dist: 0 -- available:  NO
+POINT 14-16 : address:  0x7fa429f000a0, owner: . (0-0), dist: 0 -- available:  NO
+Dans ft_algo
+0 0
 
 
 

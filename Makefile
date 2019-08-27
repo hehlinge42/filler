@@ -14,8 +14,8 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror -g3
 
-NAME = resources/players/hehlinge.filler
-#NAME = hehlinge.filler
+#NAME = resources/players/hehlinge.filler
+NAME = hehlinge.filler
 
 SRCS = $(addprefix $(SRCDIR), $(SRCFILES))
 
