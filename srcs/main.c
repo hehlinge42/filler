@@ -107,7 +107,6 @@ int		main(void)
 			}
 			ft_get_points(&var);
 			print_debug(var, "12");
-			ft_putendl("get points ok");
 			write(var.fd, "Dans ft_algo\n", ft_strlen("Dans ft_algo\n"));
 			//print_points(var);
 			ft_algo(&var);

@@ -176,32 +176,35 @@ int			ft_get_points(t_var *var)
 	t_point		*point;
 	t_lst		*elem;
 	t_lst		*tmp;
+	t_lst		*prec;
 
-	//print_points(*var);
 	elem = *var->pts_neutral;
+	prec = 0;
 	while (elem)
 	{
-		//	print_elem(((t_elem *)elem->content));
 		point = (t_point *)elem->content;
 		if ((point->owner = var->map[point->y][point->x]) != '.')
 		{
+			tmp = elem->next;
 			if (elem == *var->pts_neutral)
 				*var->pts_neutral = ((t_lst *)*var->pts_neutral)->next;
 			else
-				tmp->next = elem->next;
+				prec->next = elem->next;
 			elem->next = NULL;
 			if (point->owner == var->player || point->owner == var->player + 32)
 				ft_lstadd(var->pts_player, elem);
 			else
 				ft_free((void **)elem);
-			elem = tmp;
 			init_point(point, point->x, point->y, point->owner);
 		}
 		else
+		{
+			prec = elem;
+			tmp = elem->next;
 			ft_get_closest(elem, var);
-		tmp = elem;
-		point->available = is_available(*var, point->x, point->y);
-		elem = elem->next;
+			point->available = is_available(*var, point->x, point->y);
+		}
+		elem = tmp;
 	}
 	elem = *var->pts_player;
 	while (elem)
