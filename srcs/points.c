@@ -186,11 +186,7 @@ int			ft_get_points(t_var *var)
 		if ((point->owner = var->map[point->y][point->x]) != '.')
 		{
 			if (elem == *var->pts_neutral)
-			{
-				tmp = elem->next;
-				//ft_putendl("premier point");
 				*var->pts_neutral = ((t_lst *)*var->pts_neutral)->next;
-			}
 			else
 				tmp->next = elem->next;
 			elem->next = NULL;
