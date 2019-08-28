@@ -185,6 +185,7 @@ int			ft_get_points(t_var *var)
 		point = (t_point *)elem->content;
 		if ((point->owner = var->map[point->y][point->x]) != '.')
 		{
+			(var->nb_neutral)--;
 			tmp = elem->next;
 			if (elem == *var->pts_neutral)
 				*var->pts_neutral = ((t_lst *)*var->pts_neutral)->next;
@@ -192,9 +193,16 @@ int			ft_get_points(t_var *var)
 				prec->next = elem->next;
 			elem->next = NULL;
 			if (point->owner == var->player || point->owner == var->player + 32)
+			{
+				(var->nb_player)++;
 				ft_lstadd(var->pts_player, elem);
+			}
 			else
+			{
+				(var->nb_enemy)++;
+				var->enemy_is_playing = 1;
 				ft_free((void **)elem);
+			}
 			init_point(point, point->x, point->y, point->owner);
 		}
 		else

@@ -42,6 +42,10 @@ typedef struct		s_var
 	int				y_piece;
 	int				x_pos;
 	int				y_pos;
+	int				nb_player;
+	int				nb_enemy;
+	int				nb_neutral;
+	int				enemy_is_playing;
 	char			**map;
 	char			**tmp;
 	char			**piece;

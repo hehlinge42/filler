@@ -104,6 +104,8 @@ void	ft_algo(t_var *var)
 			var->x_pos = ((t_point *)point->content)->x;
 			var->y_pos = ((t_point *)point->content)->y;
 			count = tmp;
+			if (!(var->enemy_is_playing))
+				return ;
 			// si on améliore le meilleur nombre de points convertis on update le meilleur point
 		}
 		point = point->next;
@@ -118,6 +120,9 @@ void	ft_algo(t_var *var)
 			var->x_pos = ((t_point *)point->content)->x;
 			var->y_pos = ((t_point *)point->content)->y;
 			count = tmp;
+			if (!(var->enemy_is_playing))
+				return ;
+
 		}
 		point = point->next;
 	}

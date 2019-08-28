@@ -123,6 +123,7 @@ int		ft_init_neutral_points(t_var *var)
 			//print_point((t_point *)point->content);
 		}
 	}
+	var->nb_neutral = var->x_map * var->y_map;
 	var->turn = 1;
 	return (1);
 }
@@ -133,6 +134,7 @@ int		ft_parse_input(t_var *var)
 	int		nb;
 
 //	printf("in input\n");
+	var->enemy_is_playing = (var->turn) ? 0 : 1;
 	if (get_next_line(0, &line) && ft_parse_size(line, var, "Plateau "))
 	{
 		ft_free((void **)&line);
