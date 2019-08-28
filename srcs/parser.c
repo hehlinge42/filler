@@ -109,9 +109,11 @@ int		ft_init_neutral_points(t_var *var)
 {
 	int		i;
 	int		j;
+	int		init_dist;
 	t_lst	*point;
 
 	i = -1;
+	init_dist = (var->y_map > var->x_map) ? var->y_map : var->x_map;
 	while (++i < var->y_map)
 	{
 		j = -1;
@@ -120,6 +122,7 @@ int		ft_init_neutral_points(t_var *var)
 			if (!(point = ft_lstadd_new(var->pts_neutral,
 				(void *)ft_new_point(j, i, '.'), sizeof(t_point))))
 				return (0);
+			((t_point *)point->content)->dist = init_dist;
 			//print_point((t_point *)point->content);
 		}
 	}

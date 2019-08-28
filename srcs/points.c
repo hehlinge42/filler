@@ -171,6 +171,31 @@ void		ft_available(t_var *var)
 //	printf("dist ft end  : %d\n", ((t_point *)(*var->pts_neut)->content)->dist);
 }
 
+void		ft_test_dist(t_var *var, t_point *pivot)
+{
+	t_lst	*elem;
+	t_point	*point;
+	int		test;
+
+	elem = *var->pts_neutral;
+	while (elem)
+	{
+		point = (t_point *)elem->content;
+		if ((test = abs(point->x - pivot->x) + abs(point->y - pivot->y)) < point->dist)
+		{
+			point->owner = pivot->owner;
+			point->dist = test;
+			point->x_owner = pivot->x;
+			point->y_owner = pivot->y;
+		}
+		else if (test == point->dist && point->owner != pivot->owner)
+		{
+			point->owner = '?';
+		}
+		elem = elem->next;
+	}
+}
+
 int			ft_get_points(t_var *var)
 {
 	t_point		*point;
@@ -204,12 +229,13 @@ int			ft_get_points(t_var *var)
 				ft_free((void **)elem);
 			}
 			init_point(point, point->x, point->y, point->owner);
+			ft_test_dist(var, point);
 		}
 		else
 		{
 			prec = elem;
 			tmp = elem->next;
-			ft_get_closest(elem, var);
+			//ft_get_closest(elem, var);
 			point->available = is_available(*var, point->x, point->y);
 		}
 		elem = tmp;
