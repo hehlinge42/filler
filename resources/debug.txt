@@ -1,931 +1,30 @@
 enemy_is_playing = 1
 Dans ft_algo
-2 3
+2 8
 
 
 
 
 
-2 3
+2 8
 enemy_is_playing = 0
 Dans ft_algo
-2 3
+3 7
 
 
 
 
 
-2 3
+3 7
 enemy_is_playing = 0
 Dans ft_algo
-4 4
+3 8
 
 
 
 
 
-4 4
-enemy_is_playing = 0
-Dans ft_algo
-6 3
-
-
-
-
-
-6 3
-enemy_is_playing = 0
-Dans ft_algo
-6 5
-
-
-
-
-
-6 5
-enemy_is_playing = 0
-Dans ft_algo
-8 4
-
-
-
-
-
-8 4
-enemy_is_playing = 0
-Dans ft_algo
-9 5
-
-
-
-
-
-9 5
-enemy_is_playing = 0
-Dans ft_algo
-11 5
-
-
-
-
-
-11 5
-enemy_is_playing = 0
-Dans ft_algo
-9 5
-
-
-
-
-
-9 5
-enemy_is_playing = 0
-Dans ft_algo
-10 7
-
-
-
-
-
-10 7
-enemy_is_playing = 0
-Dans ft_algo
-11 4
-
-
-
-
-
-11 4
-enemy_is_playing = 0
-Dans ft_algo
-14 5
-
-
-
-
-
-14 5
-enemy_is_playing = 0
-Dans ft_algo
-13 5
-
-
-
-
-
-13 5
-enemy_is_playing = 0
-Dans ft_algo
-12 8
-
-
-
-
-
-12 8
-enemy_is_playing = 0
-Dans ft_algo
-15 9
-
-
-
-
-
-15 9
-enemy_is_playing = 0
-Dans ft_algo
-12 11
-
-
-
-
-
-12 11
-enemy_is_playing = 0
-Dans ft_algo
-15 9
-
-
-
-
-
-15 9
-enemy_is_playing = 0
-Dans ft_algo
-15 13
-
-
-
-
-
-15 13
-enemy_is_playing = 0
-Dans ft_algo
-18 10
-
-
-
-
-
-18 10
-enemy_is_playing = 0
-Dans ft_algo
-14 14
-
-
-
-
-
-14 14
-enemy_is_playing = 0
-Dans ft_algo
-20 9
-
-
-
-
-
-20 9
-enemy_is_playing = 0
-Dans ft_algo
-12 16
-
-
-
-
-
-12 16
-enemy_is_playing = 0
-Dans ft_algo
-17 7
-
-
-
-
-
-17 7
-enemy_is_playing = 0
-Dans ft_algo
-12 17
-
-
-
-
-
-12 17
-enemy_is_playing = 0
-Dans ft_algo
-18 8
-
-
-
-
-
-18 8
-enemy_is_playing = 0
-Dans ft_algo
-11 16
-
-
-
-
-
-11 16
-enemy_is_playing = 0
-Dans ft_algo
-21 9
-
-
-
-
-
-21 9
-enemy_is_playing = 0
-Dans ft_algo
-11 17
-
-
-
-
-
-11 17
-enemy_is_playing = 0
-Dans ft_algo
-26 6
-
-
-
-
-
-26 6
-enemy_is_playing = 0
-Dans ft_algo
-11 17
-
-
-
-
-
-11 17
-enemy_is_playing = 0
-Dans ft_algo
-30 9
-
-
-
-
-
-30 9
-enemy_is_playing = 0
-Dans ft_algo
-10 16
-
-
-
-
-
-10 16
-enemy_is_playing = 0
-Dans ft_algo
-33 8
-
-
-
-
-
-33 8
-enemy_is_playing = 0
-Dans ft_algo
-7 18
-
-
-
-
-
-7 18
-enemy_is_playing = 0
-Dans ft_algo
-33 6
-
-
-
-
-
-33 6
-enemy_is_playing = 0
-Dans ft_algo
-3 18
-
-
-
-
-
-3 18
-enemy_is_playing = 0
-Dans ft_algo
-33 8
-
-
-
-
-
-33 8
-enemy_is_playing = 0
-Dans ft_algo
-4 18
-
-
-
-
-
-4 18
-enemy_is_playing = 0
-Dans ft_algo
-14 16
-
-
-
-
-
-14 16
-enemy_is_playing = 0
-Dans ft_algo
-5 17
-
-
-
-
-
-5 17
-enemy_is_playing = 0
-Dans ft_algo
-26 7
-
-
-
-
-
-26 7
-enemy_is_playing = 0
-Dans ft_algo
-35 6
-
-
-
-
-
-35 6
-enemy_is_playing = 0
-Dans ft_algo
-5 15
-
-
-
-
-
-5 15
-enemy_is_playing = 0
-Dans ft_algo
-31 6
-
-
-
-
-
-31 6
-enemy_is_playing = 0
-Dans ft_algo
-5 13
-
-
-
-
-
-5 13
-enemy_is_playing = 0
-Dans ft_algo
-29 3
-
-
-
-
-
-29 3
-enemy_is_playing = 0
-Dans ft_algo
-3 14
-
-
-
-
-
-3 14
-enemy_is_playing = 0
-Dans ft_algo
-33 2
-
-
-
-
-
-33 2
-enemy_is_playing = 0
-Dans ft_algo
-17 5
-
-
-
-
-
-17 5
-enemy_is_playing = 0
-Dans ft_algo
-0 11
-
-
-
-
-
-0 11
-enemy_is_playing = 0
-Dans ft_algo
-20 2
-
-
-
-
-
-20 2
-enemy_is_playing = 0
-Dans ft_algo
-5 18
-
-
-
-
-
-5 18
-enemy_is_playing = 0
-Dans ft_algo
-18 1
-
-
-
-
-
-18 1
-enemy_is_playing = 0
-Dans ft_algo
-4 12
-
-
-
-
-
-4 12
-enemy_is_playing = 0
-Dans ft_algo
-24 2
-
-
-
-
-
-24 2
-enemy_is_playing = 0
-Dans ft_algo
-5 20
-
-
-
-
-
-5 20
-enemy_is_playing = 0
-Dans ft_algo
-2 11
-
-
-
-
-
-2 11
-enemy_is_playing = 0
-Dans ft_algo
-33 1
-
-
-
-
-
-33 1
-enemy_is_playing = 0
-Dans ft_algo
-5 21
-
-
-
-
-
-5 21
-enemy_is_playing = 0
-Dans ft_algo
-9 4
-
-
-
-
-
-9 4
-enemy_is_playing = 0
-Dans ft_algo
-22 11
-
-
-
-
-
-22 11
-enemy_is_playing = 0
-Dans ft_algo
-17 2
-
-
-
-
-
-17 2
-enemy_is_playing = 0
-Dans ft_algo
-23 12
-
-
-
-
-
-23 12
-enemy_is_playing = 0
-Dans ft_algo
-0 3
-
-
-
-
-
-0 3
-enemy_is_playing = 0
-Dans ft_algo
-10 3
-
-
-
-
-
-10 3
-enemy_is_playing = 0
-Dans ft_algo
-4 20
-
-
-
-
-
-4 20
-enemy_is_playing = 0
-Dans ft_algo
-11 2
-
-
-
-
-
-11 2
-enemy_is_playing = 0
-Dans ft_algo
-6 11
-
-
-
-
-
-6 11
-enemy_is_playing = 0
-Dans ft_algo
-2 4
-
-
-
-
-
-2 4
-enemy_is_playing = 0
-Dans ft_algo
-25 1
-
-
-
-
-
-25 1
-enemy_is_playing = 0
-Dans ft_algo
-20 13
-
-
-
-
-
-20 13
-enemy_is_playing = 0
-Dans ft_algo
-2 5
-
-
-
-
-
-2 5
-enemy_is_playing = 0
-Dans ft_algo
-35 2
-
-
-
-
-
-35 2
-enemy_is_playing = 0
-Dans ft_algo
-2 21
-
-
-
-
-
-2 21
-enemy_is_playing = 0
-Dans ft_algo
-0 2
-
-
-
-
-
-0 2
-enemy_is_playing = 0
-Dans ft_algo
-15 2
-
-
-
-
-
-15 2
-enemy_is_playing = 0
-Dans ft_algo
-0 12
-
-
-
-
-
-0 12
-enemy_is_playing = 0
-Dans ft_algo
-1 21
-
-
-
-
-
-1 21
-enemy_is_playing = 0
-Dans ft_algo
-36 2
-
-
-
-
-
-36 2
-enemy_is_playing = 0
-Dans ft_algo
-31 4
-
-
-
-
-
-31 4
-enemy_is_playing = 0
-Dans ft_algo
-2 7
-
-
-
-
-
-2 7
-enemy_is_playing = 0
-Dans ft_algo
-8 12
-
-
-
-
-
-8 12
-8 0
-enemy_is_playing = 0
-Dans ft_algo
-27 13
-
-
-
-
-
-27 13
-enemy_is_playing = 0
-Dans ft_algo
-21 16
-
-
-
-
-
-21 16
-enemy_is_playing = 0
-Dans ft_algo
-30 10
-
-
-
-
-
-30 10
-enemy_is_playing = 0
-Dans ft_algo
-11 1
-
-
-
-
-
-11 1
-enemy_is_playing = 0
-Dans ft_algo
-1 2
-
-
-
-
-
-1 2
-enemy_is_playing = 0
-Dans ft_algo
-2 4
-
-
-
-
-
-2 4
-enemy_is_playing = 0
-Dans ft_algo
-12 10
-
-
-
-
-
-12 10
-enemy_is_playing = 0
-Dans ft_algo
-1 0
-
-
-
-
-
-1 0
-enemy_is_playing = 0
-Dans ft_algo
-16 0
-
-
-
-
-
-16 0
-enemy_is_playing = 0
-Dans ft_algo
-10 1
-
-
-
-
-
-10 1
-enemy_is_playing = 0
-Dans ft_algo
-23 0
-
-
-
-
-
-23 0
-enemy_is_playing = 0
-Dans ft_algo
-2 17
-
-
-
-
-
-2 17
-enemy_is_playing = 0
-Dans ft_algo
-23 7
-
-
-
-
-
-23 7
-enemy_is_playing = 0
-Dans ft_algo
-0 8
-
-
-
-
-
-0 8
-enemy_is_playing = 0
-Dans ft_algo
-22 6
-
-
-
-
-
-22 6
-enemy_is_playing = 0
-Dans ft_algo
-24 16
-
-
-
-
-
-24 16
-enemy_is_playing = 0
-Dans ft_algo
-6 1
-
-
-
-
-
-6 1
-enemy_is_playing = 0
-Dans ft_algo
-14 16
-
-
-
-
-
-14 16
-enemy_is_playing = 0
-Dans ft_algo
-29 8
-
-
-
-
-
-29 8
-enemy_is_playing = 0
-Dans ft_algo
-6 6
-
-
-
-
-
-6 6
-enemy_is_playing = 0
-Dans ft_algo
-8 7
-
-
-
-
-
-8 7
+3 8
 enemy_is_playing = 0
 Dans ft_algo
 2 6
@@ -937,103 +36,112 @@ Dans ft_algo
 2 6
 enemy_is_playing = 0
 Dans ft_algo
-20 12
+3 5
 
 
 
 
 
-20 12
+3 5
 enemy_is_playing = 0
 Dans ft_algo
-16 7
+2 5
 
 
 
 
 
-16 7
+2 5
 enemy_is_playing = 0
 Dans ft_algo
-7 0
+1 4
 
 
 
 
 
-7 0
+1 4
 enemy_is_playing = 0
 Dans ft_algo
-9 11
+2 3
 
 
 
 
 
-9 11
+2 3
 enemy_is_playing = 0
 Dans ft_algo
-28 0
+1 3
 
 
 
 
 
-28 0
+1 3
 enemy_is_playing = 0
 Dans ft_algo
-24 7
+1 2
 
 
 
 
 
-24 7
+1 2
 enemy_is_playing = 0
 Dans ft_algo
-13 7
+1 2
 
 
 
 
 
-13 7
+1 2
 enemy_is_playing = 0
 Dans ft_algo
-20 13
+0 4
 
 
 
 
 
-20 13
+0 4
 enemy_is_playing = 0
 Dans ft_algo
-9 9
+0 2
 
 
 
 
 
-9 9
+0 2
 enemy_is_playing = 0
 Dans ft_algo
-22 8
+1 1
 
 
 
 
 
-22 8
+1 1
 enemy_is_playing = 0
 Dans ft_algo
-11 12
+2 1
 
 
 
 
 
-11 12
+2 1
+enemy_is_playing = 0
+Dans ft_algo
+1 1
+
+
+
+
+
+1 1
 enemy_is_playing = 0
 Dans ft_algo
 1 0
@@ -1045,139 +153,13 @@ Dans ft_algo
 1 0
 enemy_is_playing = 0
 Dans ft_algo
-3 0
+2 0
 
 
 
 
 
-3 0
-enemy_is_playing = 0
-Dans ft_algo
-10 0
-
-
-
-
-
-10 0
-enemy_is_playing = 0
-Dans ft_algo
-7 18
-
-
-
-
-
-7 18
-enemy_is_playing = 0
-Dans ft_algo
-0 14
-
-
-
-
-
-0 14
-enemy_is_playing = 0
-Dans ft_algo
-15 0
-
-
-
-
-
-15 0
-enemy_is_playing = 0
-Dans ft_algo
-22 2
-
-
-
-
-
-22 2
-enemy_is_playing = 0
-Dans ft_algo
-18 1
-
-
-
-
-
-18 1
-enemy_is_playing = 0
-Dans ft_algo
-3 4
-
-
-
-
-
-3 4
-enemy_is_playing = 0
-Dans ft_algo
-1 6
-
-
-
-
-
-1 6
-enemy_is_playing = 0
-Dans ft_algo
-0 5
-
-
-
-
-
-0 5
-enemy_is_playing = 0
-Dans ft_algo
-0 11
-
-
-
-
-
-0 11
-enemy_is_playing = 0
-Dans ft_algo
-5 11
-
-
-
-
-
-5 11
-enemy_is_playing = 0
-Dans ft_algo
-25 14
-
-
-
-
-
-25 14
-enemy_is_playing = 0
-Dans ft_algo
-5 0
-
-
-
-
-
-5 0
-enemy_is_playing = 0
-Dans ft_algo
-16 2
-
-
-
-
-
-16 2
+2 0
 enemy_is_playing = 0
 Dans ft_algo
 0 0
@@ -1189,22 +171,13 @@ Dans ft_algo
 0 0
 enemy_is_playing = 0
 Dans ft_algo
-5 0
+3 0
 
 
 
 
 
-5 0
-enemy_is_playing = 0
-Dans ft_algo
-14 0
-
-
-
-
-
-14 0
+3 0
 enemy_is_playing = 0
 Dans ft_algo
 3 0
@@ -1216,67 +189,49 @@ Dans ft_algo
 3 0
 enemy_is_playing = 0
 Dans ft_algo
-29 0
+3 0
 
 
 
 
 
-29 0
+3 0
 enemy_is_playing = 0
 Dans ft_algo
-6 0
+0 3
 
 
 
 
 
-6 0
+0 3
 enemy_is_playing = 0
 Dans ft_algo
-11 0
+1 6
 
 
 
 
 
-11 0
+1 6
 enemy_is_playing = 0
 Dans ft_algo
-13 0
+0 4
 
 
 
 
 
-13 0
+0 4
 enemy_is_playing = 0
 Dans ft_algo
-10 0
+0 5
 
 
 
 
 
-10 0
-enemy_is_playing = 0
-Dans ft_algo
-11 0
-
-
-
-
-
-11 0
-enemy_is_playing = 0
-Dans ft_algo
-5 2
-
-
-
-
-
-5 2
+0 5
 enemy_is_playing = 0
 Dans ft_algo
 4 4
@@ -1286,105 +241,6 @@ Dans ft_algo
 
 
 4 4
-enemy_is_playing = 0
-Dans ft_algo
-21 3
-
-
-
-
-
-21 3
-enemy_is_playing = 0
-Dans ft_algo
-24 0
-
-
-
-
-
-24 0
-enemy_is_playing = 0
-Dans ft_algo
-21 0
-
-
-
-
-
-21 0
-enemy_is_playing = 0
-Dans ft_algo
-12 3
-
-
-
-
-
-12 3
-enemy_is_playing = 0
-Dans ft_algo
-12 7
-
-
-
-
-
-12 7
-enemy_is_playing = 0
-Dans ft_algo
-21 0
-
-
-
-
-
-21 0
-enemy_is_playing = 0
-Dans ft_algo
-27 0
-
-
-
-
-
-27 0
-enemy_is_playing = 0
-Dans ft_algo
-15 3
-
-
-
-
-
-15 3
-enemy_is_playing = 0
-Dans ft_algo
-11 2
-
-
-
-
-
-11 2
-enemy_is_playing = 0
-Dans ft_algo
-20 4
-
-
-
-
-
-20 4
-enemy_is_playing = 0
-Dans ft_algo
-15 2
-
-
-
-
-
-15 2
 enemy_is_playing = 0
 Dans ft_algo
 3 4
@@ -1396,31 +252,94 @@ Dans ft_algo
 3 4
 enemy_is_playing = 0
 Dans ft_algo
-4 4
+0 6
 
 
 
 
 
-4 4
+0 6
 enemy_is_playing = 0
 Dans ft_algo
-28 5
+4 3
 
 
 
 
 
-28 5
+4 3
 enemy_is_playing = 0
 Dans ft_algo
-10 5
+4 2
 
 
 
 
 
-10 5
+4 2
+enemy_is_playing = 0
+Dans ft_algo
+4 2
+
+
+
+
+
+4 2
+enemy_is_playing = 0
+Dans ft_algo
+6 2
+
+
+
+
+
+6 2
+enemy_is_playing = 0
+Dans ft_algo
+0 8
+
+
+
+
+
+0 8
+enemy_is_playing = 0
+Dans ft_algo
+5 2
+
+
+
+
+
+5 2
+enemy_is_playing = 0
+Dans ft_algo
+3 4
+
+
+
+
+
+3 4
+enemy_is_playing = 0
+Dans ft_algo
+6 1
+
+
+
+
+
+6 1
+enemy_is_playing = 0
+Dans ft_algo
+7 0
+
+
+
+
+
+7 0
 enemy_is_playing = 0
 Dans ft_algo
 4 7
@@ -1432,76 +351,31 @@ Dans ft_algo
 4 7
 enemy_is_playing = 0
 Dans ft_algo
-10 0
+6 0
 
 
 
 
 
-10 0
+6 0
 enemy_is_playing = 0
 Dans ft_algo
-20 9
+6 1
 
 
 
 
 
-20 9
+6 1
 enemy_is_playing = 0
 Dans ft_algo
-21 0
+0 7
 
 
 
 
 
-21 0
-enemy_is_playing = 0
-Dans ft_algo
-19 4
-
-
-
-
-
-19 4
-enemy_is_playing = 0
-Dans ft_algo
-3 10
-
-
-
-
-
-3 10
-enemy_is_playing = 0
-Dans ft_algo
-0 4
-
-
-
-
-
-0 4
-enemy_is_playing = 0
-Dans ft_algo
-0 1
-
-
-
-
-
-0 1
-enemy_is_playing = 0
-Dans ft_algo
-22 3
-
-
-
-
-
-22 3
+0 7
 enemy_is_playing = 0
 Dans ft_algo
 0 6
@@ -1513,6 +387,510 @@ Dans ft_algo
 0 6
 enemy_is_playing = 0
 Dans ft_algo
+4 6
+
+
+
+
+
+4 6
+enemy_is_playing = 0
+Dans ft_algo
+5 6
+
+
+
+
+
+5 6
+enemy_is_playing = 0
+Dans ft_algo
+6 7
+
+
+
+
+
+6 7
+enemy_is_playing = 0
+Dans ft_algo
+6 6
+
+
+
+
+
+6 6
+enemy_is_playing = 0
+Dans ft_algo
+6 5
+
+
+
+
+
+6 5
+enemy_is_playing = 0
+Dans ft_algo
+6 4
+
+
+
+
+
+6 4
+enemy_is_playing = 0
+Dans ft_algo
+7 4
+
+
+
+
+
+7 4
+enemy_is_playing = 0
+Dans ft_algo
+6 4
+
+
+
+
+
+6 4
+enemy_is_playing = 0
+Dans ft_algo
+6 6
+
+
+
+
+
+6 6
+enemy_is_playing = 0
+Dans ft_algo
+8 3
+
+
+
+
+
+8 3
+enemy_is_playing = 0
+Dans ft_algo
+8 3
+
+
+
+
+
+8 3
+enemy_is_playing = 0
+Dans ft_algo
+10 2
+
+
+
+
+
+10 2
+enemy_is_playing = 0
+Dans ft_algo
+10 1
+
+
+
+
+
+10 1
+enemy_is_playing = 0
+Dans ft_algo
+9 1
+
+
+
+
+
+9 1
+enemy_is_playing = 0
+Dans ft_algo
+9 0
+
+
+
+
+
+9 0
+enemy_is_playing = 0
+Dans ft_algo
+10 0
+
+
+
+
+
+10 0
+enemy_is_playing = 0
+Dans ft_algo
+8 2
+
+
+
+
+
+8 2
+enemy_is_playing = 0
+Dans ft_algo
+11 0
+
+
+
+
+
+11 0
+enemy_is_playing = 0
+Dans ft_algo
+0 8
+
+
+
+
+
+0 8
+enemy_is_playing = 0
+Dans ft_algo
+12 0
+
+
+
+
+
+12 0
+enemy_is_playing = 0
+Dans ft_algo
+13 0
+
+
+
+
+
+13 0
+enemy_is_playing = 0
+Dans ft_algo
+12 1
+
+
+
+
+
+12 1
+enemy_is_playing = 0
+Dans ft_algo
+12 0
+
+
+
+
+
+12 0
+enemy_is_playing = 0
+Dans ft_algo
+12 3
+
+
+
+
+
+12 3
+enemy_is_playing = 0
+Dans ft_algo
+8 1
+
+
+
+
+
+8 1
+enemy_is_playing = 0
+Dans ft_algo
+15 0
+
+
+
+
+
+15 0
+enemy_is_playing = 0
+Dans ft_algo
+0 8
+
+
+
+
+
+0 8
+enemy_is_playing = 0
+Dans ft_algo
+8 1
+
+
+
+
+
+8 1
+enemy_is_playing = 0
+Dans ft_algo
+0 9
+
+
+
+
+
+0 9
+enemy_is_playing = 0
+Dans ft_algo
+0 10
+
+
+
+
+
+0 10
+enemy_is_playing = 0
+Dans ft_algo
+1 10
+
+
+
+
+
+1 10
+enemy_is_playing = 0
+Dans ft_algo
+3 10
+
+
+
+
+
+3 10
+enemy_is_playing = 0
+Dans ft_algo
+3 9
+
+
+
+
+
+3 9
+enemy_is_playing = 0
+Dans ft_algo
+3 9
+
+
+
+
+
+3 9
+enemy_is_playing = 0
+Dans ft_algo
+5 10
+
+
+
+
+
+5 10
+enemy_is_playing = 0
+Dans ft_algo
+3 11
+
+
+
+
+
+3 11
+enemy_is_playing = 0
+Dans ft_algo
+3 11
+
+
+
+
+
+3 11
+enemy_is_playing = 0
+Dans ft_algo
+1 11
+
+
+
+
+
+1 11
+enemy_is_playing = 0
+Dans ft_algo
+2 11
+
+
+
+
+
+2 11
+enemy_is_playing = 0
+Dans ft_algo
+1 11
+
+
+
+
+
+1 11
+enemy_is_playing = 0
+Dans ft_algo
+4 12
+
+
+
+
+
+4 12
+enemy_is_playing = 0
+Dans ft_algo
+6 12
+
+
+
+
+
+6 12
+enemy_is_playing = 0
+Dans ft_algo
+0 11
+
+
+
+
+
+0 11
+enemy_is_playing = 0
+Dans ft_algo
+7 12
+
+
+
+
+
+7 12
+enemy_is_playing = 0
+Dans ft_algo
+0 12
+
+
+
+
+
+0 12
+enemy_is_playing = 0
+Dans ft_algo
+6 11
+
+
+
+
+
+6 11
+enemy_is_playing = 0
+Dans ft_algo
+7 10
+
+
+
+
+
+7 10
+enemy_is_playing = 0
+Dans ft_algo
+6 9
+
+
+
+
+
+6 9
+enemy_is_playing = 0
+Dans ft_algo
+7 9
+
+
+
+
+
+7 9
+enemy_is_playing = 0
+Dans ft_algo
+7 8
+
+
+
+
+
+7 8
+enemy_is_playing = 0
+Dans ft_algo
+6 11
+
+
+
+
+
+6 11
+enemy_is_playing = 0
+Dans ft_algo
+8 7
+
+
+
+
+
+8 7
+enemy_is_playing = 0
+Dans ft_algo
+3 13
+
+
+
+
+
+3 13
+enemy_is_playing = 0
+Dans ft_algo
+1 13
+
+
+
+
+
+1 13
+enemy_is_playing = 0
+Dans ft_algo
+0 13
+
+
+
+
+
+0 13
+enemy_is_playing = 0
+Dans ft_algo
+10 6
+
+
+
+
+
+10 6
+enemy_is_playing = 0
+Dans ft_algo
 10 5
 
 
@@ -1522,103 +900,247 @@ Dans ft_algo
 10 5
 enemy_is_playing = 0
 Dans ft_algo
-8 14
+10 4
 
 
 
 
 
-8 14
+10 4
 enemy_is_playing = 0
 Dans ft_algo
-25 8
+9 5
 
 
 
 
 
-25 8
+9 5
 enemy_is_playing = 0
 Dans ft_algo
-0 4
+9 5
 
 
 
 
 
-0 4
+9 5
 enemy_is_playing = 0
 Dans ft_algo
-0 1
+11 4
 
 
 
 
 
-0 1
+11 4
 enemy_is_playing = 0
 Dans ft_algo
-12 14
+9 6
 
 
 
 
 
-12 14
+9 6
 enemy_is_playing = 0
 Dans ft_algo
-16 11
+10 4
 
 
 
 
 
-16 11
+10 4
 enemy_is_playing = 0
 Dans ft_algo
-11 2
+11 5
 
 
 
 
 
-11 2
+11 5
 enemy_is_playing = 0
 Dans ft_algo
-20 7
+7 8
 
 
 
 
 
-20 7
+7 8
 enemy_is_playing = 0
 Dans ft_algo
-27 8
+13 6
 
 
 
 
 
-27 8
+13 6
 enemy_is_playing = 0
 Dans ft_algo
-25 11
+6 11
 
 
 
 
 
-25 11
+6 11
 enemy_is_playing = 0
 Dans ft_algo
-31 3
+12 5
 
 
 
 
 
-31 3
+12 5
+enemy_is_playing = 0
+Dans ft_algo
+14 4
+
+
+
+
+
+14 4
+enemy_is_playing = 0
+Dans ft_algo
+8 10
+
+
+
+
+
+8 10
+enemy_is_playing = 0
+Dans ft_algo
+13 4
+
+
+
+
+
+13 4
+enemy_is_playing = 0
+Dans ft_algo
+0 13
+
+
+
+
+
+0 13
+enemy_is_playing = 0
+Dans ft_algo
+10 10
+
+
+
+
+
+10 10
+enemy_is_playing = 0
+Dans ft_algo
+10 10
+
+
+
+
+
+10 10
+enemy_is_playing = 0
+Dans ft_algo
+10 9
+
+
+
+
+
+10 9
+enemy_is_playing = 0
+Dans ft_algo
+12 8
+
+
+
+
+
+12 8
+enemy_is_playing = 0
+Dans ft_algo
+12 8
+
+
+
+
+
+12 8
+enemy_is_playing = 0
+Dans ft_algo
+10 8
+
+
+
+
+
+10 8
+enemy_is_playing = 0
+Dans ft_algo
+10 8
+
+
+
+
+
+10 8
+enemy_is_playing = 0
+Dans ft_algo
+13 7
+
+
+
+
+
+13 7
+enemy_is_playing = 0
+Dans ft_algo
+13 7
+
+
+
+
+
+13 7
+enemy_is_playing = 0
+Dans ft_algo
+11 9
+
+
+
+
+
+11 9
+enemy_is_playing = 0
+Dans ft_algo
+12 9
+
+
+
+
+
+12 9
+enemy_is_playing = 0
+Dans ft_algo
+10 9
+
+
+
+
+
+10 9
 enemy_is_playing = 0
 Dans ft_algo
 9 10
@@ -1630,13 +1152,588 @@ Dans ft_algo
 9 10
 enemy_is_playing = 0
 Dans ft_algo
-17 11
+11 11
 
 
 
 
 
-17 11
+11 11
+enemy_is_playing = 0
+Dans ft_algo
+15 3
+
+
+
+
+
+15 3
+enemy_is_playing = 0
+Dans ft_algo
+13 10
+
+
+
+
+
+13 10
+enemy_is_playing = 0
+Dans ft_algo
+8 12
+
+
+
+
+
+8 12
+enemy_is_playing = 0
+Dans ft_algo
+8 13
+
+
+
+
+
+8 13
+enemy_is_playing = 0
+Dans ft_algo
+8 13
+
+
+
+
+
+8 13
+enemy_is_playing = 0
+Dans ft_algo
+10 13
+
+
+
+
+
+10 13
+enemy_is_playing = 0
+Dans ft_algo
+8 10
+
+
+
+
+
+8 10
+enemy_is_playing = 0
+Dans ft_algo
+8 10
+
+
+
+
+
+8 10
+ng = 0
+Dans ft_algo
+12 6
+
+
+
+
+
+12 6
+enemy_is_playing = 0
+Dans ft_algo
+4 13
+
+
+
+
+
+4 13
+enemy_is_playing = 0
+Dans ft_algo
+12 6
+
+
+
+
+
+12 6
+enemy_is_playing = 0
+Dans ft_algo
+13 6
+
+
+
+
+
+13 6
+enemy_is_playing = 0
+Dans ft_algo
+3 13
+
+
+
+
+
+3 13
+enemy_is_playing = 0
+Dans ft_algo
+13 6
+
+
+
+
+
+13 6
+enemy_is_playing = 0
+Dans ft_algo
+3 13
+
+
+
+
+
+3 13
+enemy_is_playing = 0
+Dans ft_algo
+2 13
+
+
+
+
+
+2 13
+enemy_is_playing = 0
+Dans ft_algo
+0 12
+
+
+
+
+
+0 12
+enemy_is_playing = 0
+Dans ft_algo
+15 0
+
+
+
+
+
+15 0
+enemy_is_playing = 0
+Dans ft_algo
+10 11
+
+
+
+
+
+10 11
+enemy_is_playing = 0
+Dans ft_algo
+10 11
+
+
+
+
+
+10 11
+aying = 0
+Dans ft_algo
+32 16
+
+
+
+
+
+32 16
+enemy_is_playing = 0
+Dans ft_algo
+35 15
+
+
+
+
+
+35 15
+enemy_is_playing = 0
+Dans ft_algo
+31 15
+
+
+
+
+
+31 15
+enemy_is_playing = 0
+Dans ft_algo
+21 20
+
+
+
+
+
+21 20
+enemy_is_playing = 0
+Dans ft_algo
+21 20
+
+
+
+
+
+21 20
+ ft_algo
+0 9
+
+
+
+
+
+0 9
+enemy_is_playing = 0
+Dans ft_algo
+28 7
+
+
+
+
+
+28 7
+enemy_is_playing = 0
+Dans ft_algo
+0 5
+
+
+
+
+
+0 5
+enemy_is_playing = 0
+Dans ft_algo
+33 8
+
+
+
+
+
+33 8
+enemy_is_playing = 0
+Dans ft_algo
+21 8
+
+
+
+
+
+21 8
+enemy_is_playing = 0
+Dans ft_algo
+37 3
+
+
+
+
+
+37 3
+enemy_is_playing = 0
+Dans ft_algo
+28 7
+
+
+
+
+
+28 7
+enemy_is_playing = 0
+Dans ft_algo
+8 9
+
+
+
+
+
+8 9
+enemy_is_playing = 0
+Dans ft_algo
+32 9
+
+
+
+
+
+32 9
+enemy_is_playing = 0
+Dans ft_algo
+29 9
+
+
+
+
+
+29 9
+enemy_is_playing = 0
+Dans ft_algo
+15 9
+
+
+
+
+
+15 9
+enemy_is_playing = 0
+Dans ft_algo
+29 9
+
+
+
+
+
+29 9
+enemy_is_playing = 0
+Dans ft_algo
+5 10
+
+
+
+
+
+5 10
+enemy_is_playing = 0
+Dans ft_algo
+0 11
+
+
+
+
+
+0 11
+enemy_is_playing = 0
+Dans ft_algo
+11 10
+
+
+
+
+
+11 10
+enemy_is_playing = 0
+Dans ft_algo
+9 11
+
+
+
+
+
+9 11
+enemy_is_playing = 0
+Dans ft_algo
+8 9
+
+
+
+
+
+8 9
+enemy_is_playing = 0
+Dans ft_algo
+0 10
+
+
+
+
+
+0 10
+enemy_is_playing = 0
+Dans ft_algo
+6 11
+
+
+
+
+
+6 11
+enemy_is_playing = 0
+Dans ft_algo
+4 10
+
+
+
+
+
+4 10
+enemy_is_playing = 0
+Dans ft_algo
+11 10
+
+
+
+
+
+11 10
+enemy_is_playing = 0
+Dans ft_algo
+8 9
+
+
+
+
+
+8 9
+enemy_is_playing = 0
+Dans ft_algo
+8 9
+
+
+
+
+
+8 9
+enemy_is_playing = 0
+Dans ft_algo
+24 11
+
+
+
+
+
+24 11
+enemy_is_playing = 0
+Dans ft_algo
+29 11
+
+
+
+
+
+29 11
+enemy_is_playing = 0
+Dans ft_algo
+25 11
+
+
+
+
+
+25 11
+enemy_is_playing = 0
+Dans ft_algo
+22 5
+
+
+
+
+
+22 5
+enemy_is_playing = 0
+Dans ft_algo
+0 5
+
+
+
+
+
+0 5
+enemy_is_playing = 0
+Dans ft_algo
+12 5
+
+
+
+
+
+12 5
+enemy_is_playing = 0
+Dans ft_algo
+31 11
+
+
+
+
+
+31 11
+enemy_is_playing = 0
+Dans ft_algo
+0 7
+
+
+
+
+
+0 7
+enemy_is_playing = 0
+Dans ft_algo
+0 12
+
+
+
+
+
+0 12
+enemy_is_playing = 0
+Dans ft_algo
+18 11
+
+
+
+
+
+18 11
+enemy_is_playing = 0
+Dans ft_algo
+24 11
+
+
+
+
+
+24 11
+enemy_is_playing = 0
+Dans ft_algo
+6 11
+
+
+
+
+
+6 11
+enemy_is_playing = 0
+Dans ft_algo
+28 11
+
+
+
+
+
+28 11
+enemy_is_playing = 0
+Dans ft_algo
+12 12
+
+
+
+
+
+12 12
+enemy_is_playing = 0
+Dans ft_algo
+22 5
+
+
+
+
+
+22 5
+enemy_is_playing = 0
+Dans ft_algo
+16 12
+
+
+
+
+
+16 12
 enemy_is_playing = 0
 Dans ft_algo
 22 13
@@ -1648,6 +1745,1561 @@ Dans ft_algo
 22 13
 enemy_is_playing = 0
 Dans ft_algo
+28 12
+
+
+
+
+
+28 12
+enemy_is_playing = 0
+Dans ft_algo
+0 12
+
+
+
+
+
+0 12
+enemy_is_playing = 0
+Dans ft_algo
+0 12
+
+
+
+
+
+0 12
+enemy_is_playing = 0
+Dans ft_algo
+37 3
+
+
+
+
+
+37 3
+enemy_is_playing = 0
+Dans ft_algo
+13 13
+
+
+
+
+
+13 13
+enemy_is_playing = 0
+Dans ft_algo
+18 11
+
+
+
+
+
+18 11
+enemy_is_playing = 0
+Dans ft_algo
+34 5
+
+
+
+
+
+34 5
+enemy_is_playing = 0
+Dans ft_algo
+12 13
+
+
+
+
+
+12 13
+enemy_is_playing = 0
+Dans ft_algo
+9 13
+
+
+
+
+
+9 13
+enemy_is_playing = 0
+Dans ft_algo
+8 13
+
+
+
+
+
+8 13
+enemy_is_playing = 0
+Dans ft_algo
+12 6
+
+
+
+
+
+12 6
+enemy_is_playing = 0
+Dans ft_algo
+9 13
+
+
+
+
+
+9 13
+enemy_is_playing = 0
+Dans ft_algo
+3 13
+
+
+
+
+
+3 13
+enemy_is_playing = 0
+Dans ft_algo
+3 14
+
+
+
+
+
+3 14
+enemy_is_playing = 0
+Dans ft_algo
+12 6
+
+
+
+
+
+12 6
+enemy_is_playing = 0
+Dans ft_algo
+5 7
+
+
+
+
+
+5 7
+enemy_is_playing = 0
+Dans ft_algo
+12 12
+
+
+
+
+
+12 12
+enemy_is_playing = 0
+Dans ft_algo
+29 13
+
+
+
+
+
+29 13
+enemy_is_playing = 0
+Dans ft_algo
+16 14
+
+
+
+
+
+16 14
+enemy_is_playing = 0
+Dans ft_algo
+20 13
+
+
+
+
+
+20 13
+enemy_is_playing = 0
+Dans ft_algo
+10 7
+
+
+
+
+
+10 7
+enemy_is_playing = 0
+Dans ft_algo
+0 13
+
+
+
+
+
+0 13
+enemy_is_playing = 0
+Dans ft_algo
+21 15
+
+
+
+
+
+21 15
+enemy_is_playing = 0
+Dans ft_algo
+5 13
+
+
+
+
+
+5 13
+enemy_is_playing = 0
+Dans ft_algo
+36 7
+
+
+
+
+
+36 7
+enemy_is_playing = 0
+Dans ft_algo
+32 10
+
+
+
+
+
+32 10
+enemy_is_playing = 0
+Dans ft_algo
+12 15
+
+
+
+
+
+12 15
+enemy_is_playing = 0
+Dans ft_algo
+26 14
+
+
+
+
+
+26 14
+enemy_is_playing = 0
+Dans ft_algo
+29 15
+
+
+
+
+
+29 15
+enemy_is_playing = 0
+Dans ft_algo
+5 13
+
+
+
+
+
+5 13
+enemy_is_playing = 0
+Dans ft_algo
+0 13
+
+
+
+
+
+0 13
+enemy_is_playing = 0
+Dans ft_algo
+21 8
+
+
+
+
+
+21 8
+enemy_is_playing = 0
+Dans ft_algo
+28 13
+
+
+
+
+
+28 13
+enemy_is_playing = 0
+Dans ft_algo
+12 15
+
+
+
+
+
+12 15
+enemy_is_playing = 0
+Dans ft_algo
+8 9
+
+
+
+
+
+8 9
+enemy_is_playing = 0
+Dans ft_algo
+16 14
+
+
+
+
+
+16 14
+enemy_is_playing = 0
+Dans ft_algo
+1 16
+
+
+
+
+
+1 16
+enemy_is_playing = 0
+Dans ft_algo
+3 14
+
+
+
+
+
+3 14
+enemy_is_playing = 0
+Dans ft_algo
+12 13
+
+
+
+
+
+12 13
+enemy_is_playing = 0
+Dans ft_algo
+26 14
+
+
+
+
+
+26 14
+enemy_is_playing = 0
+Dans ft_algo
+0 16
+
+
+
+
+
+0 16
+enemy_is_playing = 0
+Dans ft_algo
+12 12
+
+
+
+
+
+12 12
+enemy_is_playing = 0
+Dans ft_algo
+8 16
+
+
+
+
+
+8 16
+enemy_is_playing = 0
+Dans ft_algo
+0 16
+
+
+
+
+
+0 16
+enemy_is_playing = 0
+Dans ft_algo
+3 15
+
+
+
+
+
+3 15
+enemy_is_playing = 0
+Dans ft_algo
+33 8
+
+
+
+
+
+33 8
+enemy_is_playing = 0
+Dans ft_algo
+11 16
+
+
+
+
+
+11 16
+enemy_is_playing = 0
+Dans ft_algo
+22 17
+
+
+
+
+
+22 17
+enemy_is_playing = 0
+Dans ft_algo
+4 10
+
+
+
+
+
+4 10
+enemy_is_playing = 0
+Dans ft_algo
+0 16
+
+
+
+
+
+0 16
+enemy_is_playing = 0
+Dans ft_algo
+21 16
+
+
+
+
+
+21 16
+enemy_is_playing = 0
+Dans ft_algo
+7 16
+
+
+
+
+
+7 16
+enemy_is_playing = 0
+Dans ft_algo
+15 16
+
+
+
+
+
+15 16
+enemy_is_playing = 0
+Dans ft_algo
+32 10
+
+
+
+
+
+32 10
+enemy_is_playing = 0
+Dans ft_algo
+15 16
+
+
+
+
+
+15 16
+enemy_is_playing = 0
+Dans ft_algo
+12 13
+
+
+
+
+
+12 13
+enemy_is_playing = 0
+Dans ft_algo
+31 17
+
+
+
+
+
+31 17
+enemy_is_playing = 0
+Dans ft_algo
+28 13
+
+
+
+
+
+28 13
+enemy_is_playing = 0
+Dans ft_algo
+18 10
+
+
+
+
+
+18 10
+enemy_is_playing = 0
+Dans ft_algo
+23 13
+
+
+
+
+
+23 13
+enemy_is_playing = 0
+Dans ft_algo
+2 15
+
+
+
+
+
+2 15
+enemy_is_playing = 0
+Dans ft_algo
+10 14
+
+
+
+
+
+10 14
+enemy_is_playing = 0
+Dans ft_algo
+0 12
+
+
+
+
+
+0 12
+enemy_is_playing = 0
+Dans ft_algo
+33 16
+
+
+
+
+
+33 16
+enemy_is_playing = 0
+Dans ft_algo
+22 15
+
+
+
+
+
+22 15
+enemy_is_playing = 0
+Dans ft_algo
+18 11
+
+
+
+
+
+18 11
+enemy_is_playing = 0
+Dans ft_algo
+33 14
+
+
+
+
+
+33 14
+enemy_is_playing = 0
+Dans ft_algo
+0 12
+
+
+
+
+
+0 12
+enemy_is_playing = 0
+Dans ft_algo
+23 13
+
+
+
+
+
+23 13
+enemy_is_playing = 0
+Dans ft_algo
+33 14
+
+
+
+
+
+33 14
+enemy_is_playing = 0
+Dans ft_algo
+36 12
+
+
+
+
+
+36 12
+enemy_is_playing = 0
+Dans ft_algo
+11 18
+
+
+
+
+
+11 18
+enemy_is_playing = 0
+Dans ft_algo
+32 16
+
+
+
+
+
+32 16
+enemy_is_playing = 0
+Dans ft_algo
+8 18
+
+
+
+
+
+8 18
+enemy_is_playing = 0
+Dans ft_algo
+7 16
+
+
+
+
+
+7 16
+enemy_is_playing = 0
+Dans ft_algo
+4 18
+
+
+
+
+
+4 18
+enemy_is_playing = 0
+Dans ft_algo
+11 19
+
+
+
+
+
+11 19
+enemy_is_playing = 0
+Dans ft_algo
+0 17
+
+
+
+
+
+0 17
+enemy_is_playing = 0
+Dans ft_algo
+7 16
+
+
+
+
+
+7 16
+enemy_is_playing = 0
+Dans ft_algo
+36 12
+
+
+
+
+
+36 12
+enemy_is_playing = 0
+Dans ft_algo
+12 12
+
+
+
+
+
+12 12
+enemy_is_playing = 0
+Dans ft_algo
+38 12
+
+
+
+
+
+38 12
+enemy_is_playing = 0
+Dans ft_algo
+22 15
+
+
+
+
+
+22 15
+enemy_is_playing = 0
+Dans ft_algo
+35 12
+
+
+
+
+
+35 12
+enemy_is_playing = 0
+Dans ft_algo
+28 19
+
+
+
+
+
+28 19
+enemy_is_playing = 0
+Dans ft_algo
+34 13
+
+
+
+
+
+34 13
+enemy_is_playing = 0
+Dans ft_algo
+38 11
+
+
+
+
+
+38 11
+enemy_is_playing = 0
+Dans ft_algo
+12 12
+
+
+
+
+
+12 12
+enemy_is_playing = 0
+Dans ft_algo
+12 18
+
+
+
+
+
+12 18
+enemy_is_playing = 0
+Dans ft_algo
+19 19
+
+
+
+
+
+19 19
+enemy_is_playing = 0
+Dans ft_algo
+29 17
+
+
+
+
+
+29 17
+enemy_is_playing = 0
+Dans ft_algo
+35 12
+
+
+
+
+
+35 12
+enemy_is_playing = 0
+Dans ft_algo
+4 19
+
+
+
+
+
+4 19
+enemy_is_playing = 0
+Dans ft_algo
+32 16
+
+
+
+
+
+32 16
+enemy_is_playing = 0
+Dans ft_algo
+8 20
+
+
+
+
+
+8 20
+enemy_is_playing = 0
+Dans ft_algo
+27 19
+
+
+
+
+
+27 19
+enemy_is_playing = 0
+Dans ft_algo
+7 16
+
+
+
+
+
+7 16
+enemy_is_playing = 0
+Dans ft_algo
+25 19
+
+
+
+
+
+25 19
+enemy_is_playing = 0
+Dans ft_algo
+29 16
+
+
+
+
+
+29 16
+enemy_is_playing = 0
+Dans ft_algo
+33 18
+
+
+
+
+
+33 18
+enemy_is_playing = 0
+Dans ft_algo
+3 20
+
+
+
+
+
+3 20
+enemy_is_playing = 0
+Dans ft_algo
+23 13
+
+
+
+
+
+23 13
+enemy_is_playing = 0
+Dans ft_algo
+10 14
+
+
+
+
+
+10 14
+enemy_is_playing = 0
+Dans ft_algo
+32 19
+
+
+
+
+
+32 19
+enemy_is_playing = 0
+Dans ft_algo
+34 13
+
+
+
+
+
+34 13
+enemy_is_playing = 0
+Dans ft_algo
+12 18
+
+
+
+
+
+12 18
+enemy_is_playing = 0
+Dans ft_algo
+4 19
+
+
+
+
+
+4 19
+enemy_is_playing = 0
+Dans ft_algo
+16 18
+
+
+
+
+
+16 18
+enemy_is_playing = 0
+Dans ft_algo
+2 20
+
+
+
+
+
+2 20
+enemy_is_playing = 0
+Dans ft_algo
+2 20
+
+
+
+
+
+2 20
+enemy_is_playing = 0
+Dans ft_algo
+34 19
+
+
+
+
+
+34 19
+enemy_is_playing = 0
+Dans ft_algo
+1 20
+
+
+
+
+
+1 20
+enemy_is_playing = 0
+Dans ft_algo
+0 20
+
+
+
+
+
+0 20
+enemy_is_playing = 0
+Dans ft_algo
+22 20
+
+
+
+
+
+22 20
+enemy_is_playing = 0
+Dans ft_algo
+17 20
+
+
+
+
+
+17 20
+enemy_is_playing = 0
+Dans ft_algo
+17 20
+
+
+
+
+
+17 20
+ = 0
+Dans ft_algo
+0 19
+
+
+
+
+
+0 19
+enemy_is_playing = 0
+Dans ft_algo
+34 19
+
+
+
+
+
+34 19
+enemy_is_playing = 0
+Dans ft_algo
+18 18
+
+
+
+
+
+18 18
+enemy_is_playing = 0
+Dans ft_algo
+18 18
+
+
+
+
+
+18 18
+ 37
+
+enemy_is_penemy_is_playing = 0
+Dans ft_algo
+30 63
+
+enemy_is_penemy_is_playing = 0
+Dans ft_algo
+69 3
+
+
+enemy_isenemy_is_playing = 0
+Dans ft_algo
+80 12
+
+
+
+enemy_isenemy_is_playing = 0
+Dans ft_algo
+60 0
+
+
+enemy_isenemy_is_playing = 0
+Dans ft_algo
+63 38
+
+enemy_is_penemy_is_playing = 0
+Dans ft_algo
+64 1
+
+
+enemy_isenemy_is_playing = 0
+Dans ft_algo
+15 9
+
+
+
+
+enemy_enemy_is_playing = 0
+Dans ft_algo
+23 52
+
+
+
+
+
+enemy_enemy_is_playing = 0
+Dans ft_algo
+43 21
+
+
+
+enemy_isenemy_is_playing = 0
+Dans ft_algo
+31 0
+
+
+
+
+enemy_enemy_is_playing = 0
+Dans ft_algo
+28 0
+
+
+
+
+
+2enemenemy_is_playing = 0
+Dans ft_algo
+34 34
+
+
+
+
+
+34enemenemy_is_playing = 0
+Dans ft_algo
+21 0
+
+
+
+
+
+21 enenemy_is_playing = 0
+Dans ft_algo
+52 31
+
+
+
+
+
+52enemenemy_is_playing = 0
+Dans ft_algo
+71 14
+
+
+
+
+
+71enemenemy_is_playing = 0
+Dans ft_algo
+71 22
+
+
+
+
+
+enemy_enemy_is_playing = 0
+Dans ft_algo
+42 50
+
+
+
+enemy_isenemy_is_playing = 0
+Dans ft_algo
+23 51
+
+enemy_is_penemy_is_playing = 0
+Dans ft_algo
+86 0
+enemy_is_penemy_is_playing = 0
+Dans ft_algo
+14 0
+
+
+enemy_isenemy_is_playing = 0
+Dans ft_algo
+76 33
+
+
+
+enemy_isenemy_is_playing = 0
+Dans ft_algo
+84 2
+
+
+enemy_isenemy_is_playing = 0
+Dans ft_algo
+12 26
+
+
+
+enemy_isenemy_is_playing = 0
+Dans ft_algo
+42 42
+
+enemy_is_penemy_is_playing = 0
+Dans ft_algo
+30 50
+
+enemy_is_penemy_is_playing = 0
+Dans ft_algo
+39 60
+
+enemy_is_penemy_is_playing = 0
+Dans ft_algo
+40 37
+
+enemy_is_penemy_is_playing = 0
+Dans ft_algo
+30 39
+
+enemy_is_penemy_is_playing = 0
+Dans ft_algo
+50 54enemy_is_plaenemy_is_playing = 0
+Dans ft_algo
+63 enemy_is_playienemy_is_playing = 0
+Dans ft_algo
+37 enemy_is_playienemy_is_playing = 0
+Dans ft_algo
+4enemy_is_playingenemy_is_playing = 0
+Dans ft_algo
+6enemy_is_playienemy_is_playing = 0
+Dans ft_algo
+3enemy_is_playingenemy_is_playing = 0
+Dans ft_algoenemy_is_playing =enemy_is_playing = 0
+Dans ft_alenemy_is_playing =enemy_is_playing = 0
+Dans ft_algoenemy_is_playing =enemy_is_playing = 0
+Dans ft_algoenemy_is_playing =enemy_is_playing = 0
+Dans ft_algoenemy_is_playing =enemy_is_playing = 0
+Dans ft_algoenemy_is_playing =enemy_is_playing = 0
+Dans ft_alenemy_is_playing = 0enemy_is_playing = 0
+Dans ft_enemy_is_playing = 0
+Denemy_is_playing = 0
+Dans ft_enemy_is_playing = 0
+Denemy_is_playing = 0
+Dans fenemy_is_playing = 0
+Denemy_is_playing = 0
+Dans ft_enemy_is_playing = 0enemy_is_playing = 0
+Dans ft_alenemy_is_playing = 0enemy_is_playing = 0
+Dans ft_enemy_is_playing = 0
+Denemy_is_playing = 0
+Dans ft_enemy_is_playing = 0
+Denemy_is_playing = 0
+Dans ft_enemy_is_playing = 0
+Denemy_is_playing = 0
+Dans ft_enemy_is_playing = 0enemy_is_playing = 0
+Dans ft_enemy_is_playing = 0enemy_is_playing = 0
+Dans ft_enemy_is_playing = 0
+Denemy_is_playing = 0
+Dans fenemy_is_playing = 0
+Denemy_is_playing = 0
+Dans ft_enemy_is_playing = 0enemy_is_playing = 0
+Dans ft_enemy_is_playing = 0
+Denemy_is_playing = 0
+Dans fenemy_is_playing = 0
+Dans ft_algo
+0 0
+
+
+
+
+
+0 0
+enemy_is_playing = 0
+Dans ft_algo
+20 0
+
+
+
+
+
+20 0
+enemy_is_playing = 0
+Dans ft_algo
+37 0
+
+
+
+
+
+37 0
+enemy_is_playing = 0
+Dans ft_algo
+18 0
+
+
+
+
+
+18 0
+enemy_is_playing = 0
+Dans ft_algo
+7 0
+
+
+
+
+
+7 0
+enemy_is_playing = 0
+Dans ft_algo
+7 0
+
+
+
+
+
+7 0
+enemy_is_playing = 0
+Dans ft_algo
+10 0
+
+
+
+
+
+10 0
+enemy_is_playing = 0
+Dans ft_algo
+0 0
+
+
+
+
+
+0 0
+enemy_is_playing = 0
+Dans ft_algo
+6 0
+
+
+
+
+
+6 0
+enemy_is_playing = 0
+Dans ft_algo
+3 0
+
+
+
+
+
+3 0
+enemy_is_playing = 0
+Dans ft_algo
+3 0
+
+
+
+
+
+3 0
+enemy_is_playing = 0
+Dans ft_algo
+10 0
+
+
+
+
+
+10 0
+enemy_is_playing = 0
+Dans ft_algo
+70 0
+
+
+
+
+
+70 0
+enemy_is_playing = 0
+Dans ft_algo
+2 3
+
+
+
+
+
+2 3
+enemy_is_playing = 0
+Dans ft_algo
+2 0
+
+
+
+
+
+2 0
+enemy_is_playing = 0
+Dans ft_algo
+1 0
+
+
+
+
+
+1 0
+enemy_is_playing = 0
+Dans ft_algo
+0 3
+
+
+
+
+
+0 3
+enemy_is_playing = 0
+Dans ft_algo
+6 3
+
+
+
+
+
+6 3
+enemy_is_playing = 0
+Dans ft_algo
+1 0
+
+
+
+
+
+1 0
+enemy_is_playing = 0
+Dans ft_algo
+0 0
+
+
+
+
+
+0 0
+enemy_is_playing = 0
+Dans ft_algo
+13 0
+
+
+
+
+
+13 0
+enemy_is_playing = 0
+Dans ft_algo
+30 0
+
+
+
+
+
+30 0
+enemy_is_playing = 0
+Dans ft_algo
+31 0
+
+
+
+
+
+31 0
+enemy_is_playing = 0
+Dans ft_algo
+9 1
+
+
+
+
+
+9 1
+enemy_is_playing = 0
+Dans ft_algo
+6 1
+
+
+
+
+
+6 1
+enemy_is_playing = 0
+Dans ft_algo
+83 7
+
+
+
+
+
+83 7
+enemy_is_playing = 0
+Dans ft_algo
+1 0
+
+
+
+
+
+1 0
+enemy_is_playing = 0
+Dans ft_algo
+0 0
+
+
+
+
+
+0 0
+enemy_is_playing = 0
+Dans ft_algo
+30 0
+
+
+
+
+
+30 0
+enemy_is_playing = 0
+Dans ft_algo
+32 0
+
+
+
+
+
+32 0
+enemy_is_playing = 0
+Dans ft_algo
 28 0
 
 
@@ -1657,31 +3309,1885 @@ Dans ft_algo
 28 0
 enemy_is_playing = 0
 Dans ft_algo
-19 4
+67 0
 
 
 
 
 
-19 4
+67 0
 enemy_is_playing = 0
 Dans ft_algo
-19 15
+15 0
 
 
 
 
 
-19 15
+15 0
 enemy_is_playing = 0
 Dans ft_algo
-15 7
+3 0
 
 
 
 
 
-15 7
+3 0
+enemy_is_playing = 0
+Dans ft_algo
+51 0
+
+
+
+
+
+51 0
+enemy_is_playing = 0
+Dans ft_algo
+0 0
+
+
+
+
+
+0 0
+enemy_is_playing = 0
+Dans ft_algo
+1 18
+
+
+
+
+
+1 18
+enemy_is_playing = 0
+Dans ft_algo
+48 0
+
+
+
+
+
+48 0
+enemy_is_playing = 0
+Dans ft_algo
+4 1
+
+
+
+
+
+4 1
+enemy_is_playing = 0
+Dans ft_algo
+0 1
+
+
+
+
+
+0 1
+enemy_is_playing = 0
+Dans ft_algo
+52 13
+
+
+
+
+
+52 13
+enemy_is_playing = 0
+Dans ft_algo
+1 0
+
+
+
+
+
+1 0
+enemy_is_playing = 0
+Dans ft_algo
+1 0
+
+
+
+
+
+1 0
+enemy_is_playing = 0
+Dans ft_algo
+55 2
+
+
+
+
+
+55 2
+enemy_is_playing = 0
+Dans ft_algo
+0 6
+
+
+
+
+
+0 6
+enemy_is_playing = 0
+Dans ft_algo
+0 0
+
+
+
+
+
+0 0
+enemy_is_playing = 0
+Dans ft_algo
+31 0
+
+
+
+
+
+31 0
+enemy_is_playing = 0
+Dans ft_algo
+14 0
+
+
+
+
+
+14 0
+enemy_is_playing = 0
+Dans ft_algo
+2 0
+
+
+
+
+
+2 0
+enemy_is_playing = 0
+Dans ft_algo
+3 3
+
+
+
+
+
+3 3
+enemy_is_playing = 0
+Dans ft_algo
+6 14
+
+
+
+
+
+6 14
+enemy_is_playing = 0
+Dans ft_algo
+1 12
+
+
+
+
+
+1 12
+enemy_is_playing = 0
+Dans ft_algo
+8 16
+
+
+
+
+
+8 16
+enemy_is_playing = 0
+Dans ft_algo
+13 0
+
+
+
+
+
+13 0
+enemy_is_playing = 0
+Dans ft_algo
+58 0
+
+
+
+
+
+58 0
+enemy_is_playing = 0
+Dans ft_algo
+0 17
+
+
+
+
+
+0 17
+enemy_is_playing = 0
+Dans ft_algo
+88 8
+
+
+
+
+
+88 8
+enemy_is_playing = 0
+Dans ft_algo
+72 10
+
+
+
+
+
+72 10
+enemy_is_playing = 0
+Dans ft_algo
+30 0
+
+
+
+
+
+30 0
+enemy_is_playing = 0
+Dans ft_algo
+30 0
+
+
+
+
+
+30 0
+enemy_is_playing = 0
+Dans ft_algo
+70 0
+
+
+
+
+
+70 0
+enemy_is_playing = 0
+Dans ft_algo
+0 0
+
+
+
+
+
+0 0
+enemy_is_playing = 0
+Dans ft_algo
+0 11
+
+
+
+
+
+0 11
+enemy_is_playing = 0
+Dans ft_algo
+27 0
+
+
+
+
+
+27 0
+enemy_is_playing = 0
+Dans ft_algo
+72 5
+
+
+
+
+
+72 5
+enemy_is_playing = 0
+Dans ft_algo
+0 0
+
+
+
+
+
+0 0
+enemy_is_playing = 0
+Dans ft_algo
+33 0
+
+
+
+
+
+33 0
+enemy_is_playing = 0
+Dans ft_algo
+95 0
+
+
+
+
+
+95 0
+enemy_is_playing = 0
+Dans ft_algo
+31 0
+
+
+
+
+
+31 0
+enemy_is_playing = 0
+Dans ft_algo
+14 2
+
+
+
+
+
+14 2
+enemy_is_playing = 0
+Dans ft_algo
+1 4
+
+
+
+
+
+1 4
+enemy_is_playing = 0
+Dans ft_algo
+5 11
+
+
+
+
+
+5 11
+enemy_is_playing = 0
+Dans ft_algo
+33 0
+
+
+
+
+
+33 0
+enemy_is_playing = 0
+Dans ft_algo
+56 12
+
+
+
+
+
+56 12
+enemy_is_playing = 0
+Dans ft_algo
+74 12
+
+
+
+
+
+74 12
+enemy_is_playing = 0
+Dans ft_algo
+0 0
+
+
+
+
+
+0 0
+enemy_is_playing = 0
+Dans ft_algo
+91 11
+
+
+
+
+
+91 11
+enemy_is_playing = 0
+Dans ft_algo
+0 22
+
+
+
+
+
+0 22
+enemy_is_playing = 0
+Dans ft_algo
+74 2
+
+
+
+
+
+74 2
+enemy_is_playing = 0
+Dans ft_algo
+34 4
+
+
+
+
+
+34 4
+enemy_is_playing = 0
+Dans ft_algo
+31 0
+
+
+
+
+
+31 0
+enemy_is_playing = 0
+Dans ft_algo
+36 0
+
+
+
+
+
+36 0
+enemy_is_playing = 0
+Dans ft_algo
+27 0
+
+
+
+
+
+27 0
+enemy_is_playing = 0
+Dans ft_algo
+13 0
+
+
+
+
+
+13 0
+enemy_is_playing = 0
+Dans ft_algo
+80 1
+
+
+
+
+
+80 1
+enemy_is_playing = 0
+Dans ft_algo
+95 0
+
+
+
+
+
+95 0
+enemy_is_playing = 0
+Dans ft_algo
+44 0
+
+
+
+
+
+44 0
+enemy_is_playing = 0
+Dans ft_algo
+0 0
+
+
+
+
+
+0 0
+enemy_is_playing = 0
+Dans ft_algo
+46 2
+
+
+
+
+
+46 2
+enemy_is_playing = 0
+Dans ft_algo
+51 0
+
+
+
+
+
+51 0
+enemy_is_playing = 0
+Dans ft_algo
+51 0
+
+
+
+
+
+51 0
+enemy_is_playing = 0
+Dans ft_algo
+47 0
+
+
+
+
+
+47 0
+enemy_is_playing = 0
+Dans ft_algo
+3 3
+
+
+
+
+
+3 3
+enemy_is_playing = 0
+Dans ft_algo
+0 0
+
+
+
+
+
+0 0
+enemy_is_playing = 0
+Dans ft_algo
+13 13
+
+
+
+
+
+13 13
+enemy_is_playing = 0
+Dans ft_algo
+81 20
+
+
+
+
+
+81 20
+enemy_is_playing = 0
+Dans ft_algo
+9 23
+
+
+
+
+
+9 23
+enemy_is_playing = 0
+Dans ft_algo
+38 4
+
+
+
+
+
+38 4
+enemy_is_playing = 0
+Dans ft_algo
+55 0
+
+
+
+
+
+55 0
+enemy_is_playing = 0
+Dans ft_algo
+3 3
+
+
+
+
+
+3 3
+enemy_is_playing = 0
+Dans ft_algo
+90 19
+
+
+
+
+
+90 19
+enemy_is_playing = 0
+Dans ft_algo
+29 0
+
+
+
+
+
+29 0
+enemy_is_playing = 0
+Dans ft_algo
+77 24
+
+
+
+
+
+77 24
+enemy_is_playing = 0
+Dans ft_algo
+1 23
+
+
+
+
+
+1 23
+enemy_is_playing = 0
+Dans ft_algo
+9 1
+
+
+
+
+
+9 1
+enemy_is_playing = 0
+Dans ft_algo
+1 24
+
+
+
+
+
+1 24
+enemy_is_playing = 0
+Dans ft_algo
+27 0
+
+
+
+
+
+27 0
+enemy_is_playing = 0
+Dans ft_algo
+53 2
+
+
+
+
+
+53 2
+enemy_is_playing = 0
+Dans ft_algo
+72 16
+
+
+
+
+
+72 16
+enemy_is_playing = 0
+Dans ft_algo
+8 23
+
+
+
+
+
+8 23
+enemy_is_playing = 0
+Dans ft_algo
+44 0
+
+
+
+
+
+44 0
+enemy_is_playing = 0
+Dans ft_algo
+87 1
+
+
+
+
+
+87 1
+enemy_is_playing = 0
+Dans ft_algo
+88 5
+
+
+
+
+
+88 5
+enemy_is_playing = 0
+Dans ft_algo
+80 1
+
+
+
+
+
+80 1
+enemy_is_playing = 0
+Dans ft_algo
+4 3
+
+
+
+
+
+4 3
+enemy_is_playing = 0
+Dans ft_algo
+54 0
+
+
+
+
+
+54 0
+enemy_is_playing = 0
+Dans ft_algo
+56 0
+
+
+
+
+
+56 0
+enemy_is_playing = 0
+Dans ft_algo
+53 0
+
+
+
+
+
+53 0
+enemy_is_playing = 0
+Dans ft_algo
+0 28
+
+
+
+
+
+0 28
+enemy_is_playing = 0
+Dans ft_algo
+44 0
+
+
+
+
+
+44 0
+enemy_is_playing = 0
+Dans ft_algo
+19 12
+
+
+
+
+
+19 12
+enemy_is_playing = 0
+Dans ft_algo
+63 3
+
+
+
+
+
+63 3
+enemy_is_playing = 0
+Dans ft_algo
+93 20
+
+
+
+
+
+93 20
+enemy_is_playing = 0
+Dans ft_algo
+3 29
+
+
+
+
+
+3 29
+enemy_is_playing = 0
+Dans ft_algo
+13 0
+
+
+
+
+
+13 0
+enemy_is_playing = 0
+Dans ft_algo
+0 4
+
+
+
+
+
+0 4
+enemy_is_playing = 0
+Dans ft_algo
+27 4
+
+
+
+
+
+27 4
+enemy_is_playing = 0
+Dans ft_algo
+54 5
+
+
+
+
+
+54 5
+enemy_is_playing = 0
+Dans ft_algo
+1 16
+
+
+
+
+
+1 16
+enemy_is_playing = 0
+Dans ft_algo
+0 5
+
+
+
+
+
+0 5
+enemy_is_playing = 0
+Dans ft_algo
+5 6
+
+
+
+
+
+5 6
+enemy_is_playing = 0
+Dans ft_algo
+91 22
+
+
+
+
+
+91 22
+enemy_is_playing = 0
+Dans ft_algo
+79 0
+
+
+
+
+
+79 0
+enemy_is_playing = 0
+Dans ft_algo
+47 0
+
+
+
+
+
+47 0
+enemy_is_playing = 0
+Dans ft_algo
+44 0
+
+
+
+
+
+44 0
+enemy_is_playing = 0
+Dans ft_algo
+28 0
+
+
+
+
+
+28 0
+enemy_is_playing = 0
+Dans ft_algo
+5 11
+
+
+
+
+
+5 11
+enemy_is_playing = 0
+Dans ft_algo
+52 0
+
+
+
+
+
+52 0
+enemy_is_playing = 0
+Dans ft_algo
+0 18
+
+
+
+
+
+0 18
+enemy_is_playing = 0
+Dans ft_algo
+0 27
+
+
+
+
+
+0 27
+enemy_is_playing = 0
+Dans ft_algo
+44 0
+
+
+
+
+
+44 0
+enemy_is_playing = 0
+Dans ft_algo
+27 0
+
+
+
+
+
+27 0
+enemy_is_playing = 0
+Dans ft_algo
+35 4
+
+
+
+
+
+35 4
+enemy_is_playing = 0
+Dans ft_algo
+80 2
+
+
+
+
+
+80 2
+enemy_is_playing = 0
+Dans ft_algo
+0 27
+
+
+
+
+
+0 27
+enemy_is_playing = 0
+Dans ft_algo
+68 15
+
+
+
+
+
+68 15
+enemy_is_playing = 0
+Dans ft_algo
+52 0
+
+
+
+
+
+52 0
+enemy_is_playing = 0
+Dans ft_algo
+44 0
+
+
+
+
+
+44 0
+enemy_is_playing = 0
+Dans ft_algo
+83 2
+
+
+
+
+
+83 2
+enemy_is_playing = 0
+Dans ft_algo
+3 3
+
+
+
+
+
+3 3
+enemy_is_playing = 0
+Dans ft_algo
+62 13
+
+
+
+
+
+62 13
+enemy_is_playing = 0
+Dans ft_algo
+51 16
+
+
+
+
+
+51 16
+enemy_is_playing = 0
+Dans ft_algo
+76 26
+
+
+
+
+
+76 26
+enemy_is_playing = 0
+Dans ft_algo
+52 0
+
+
+
+
+
+52 0
+enemy_is_playing = 0
+Dans ft_algo
+55 0
+
+
+
+
+
+55 0
+enemy_is_playing = 0
+Dans ft_algo
+87 11
+
+
+
+
+
+87 11
+enemy_is_playing = 0
+Dans ft_algo
+64 30
+
+
+
+
+
+64 30
+enemy_is_playing = 0
+Dans ft_algo
+64 27
+
+
+
+
+
+64 27
+enemy_is_playing = 0
+Dans ft_algo
+90 26
+
+
+
+
+
+90 26
+enemy_is_playing = 0
+Dans ft_algo
+74 33
+
+
+
+
+
+74 33
+enemy_is_playing = 0
+Dans ft_algo
+5 3
+
+
+
+
+
+5 3
+enemy_is_playing = 0
+Dans ft_algo
+1 5
+
+
+
+
+
+1 5
+enemy_is_playing = 0
+Dans ft_algo
+44 0
+
+
+
+
+
+44 0
+enemy_is_playing = 0
+Dans ft_algo
+27 13
+
+
+
+
+
+27 13
+enemy_is_playing = 0
+Dans ft_algo
+8 17
+
+
+
+
+
+8 17
+enemy_is_playing = 0
+Dans ft_algo
+63 3
+
+
+
+
+
+63 3
+enemy_is_playing = 0
+Dans ft_algo
+50 0
+
+
+
+
+
+50 0
+enemy_is_playing = 0
+Dans ft_algo
+3 3
+
+
+
+
+
+3 3
+enemy_is_playing = 0
+Dans ft_algo
+93 20
+
+
+
+
+
+93 20
+enemy_is_playing = 0
+Dans ft_algo
+84 5
+
+
+
+
+
+84 5
+enemy_is_playing = 0
+Dans ft_algo
+59 0
+
+
+
+
+
+59 0
+enemy_is_playing = 0
+Dans ft_algo
+0 30
+
+
+
+
+
+0 30
+enemy_is_playing = 0
+Dans ft_algo
+3 27
+
+
+
+
+
+3 27
+enemy_is_playing = 0
+Dans ft_algo
+83 0
+
+
+
+
+
+83 0
+enemy_is_playing = 0
+Dans ft_algo
+49 0
+
+
+
+
+
+49 0
+enemy_is_playing = 0
+Dans ft_algo
+38 17
+
+
+
+
+
+38 17
+enemy_is_playing = 0
+Dans ft_algo
+86 34
+
+
+
+
+
+86 34
+enemy_is_playing = 0
+Dans ft_algo
+81 34
+
+
+
+
+
+81 34
+enemy_is_playing = 0
+Dans ft_algo
+8 31
+
+
+
+
+
+8 31
+enemy_is_playing = 0
+Dans ft_algo
+88 27
+
+
+
+
+
+88 27
+enemy_is_playing = 0
+Dans ft_algo
+87 18
+
+
+
+
+
+87 18
+enemy_is_playing = 0
+Dans ft_algo
+70 7
+
+
+
+
+
+70 7
+enemy_is_playing = 0
+Dans ft_algo
+18 11
+
+
+
+
+
+18 11
+enemy_is_playing = 0
+Dans ft_algo
+33 15
+
+
+
+
+
+33 15
+enemy_is_playing = 0
+Dans ft_algo
+60 14
+
+
+
+
+
+60 14
+enemy_is_playing = 0
+Dans ft_algo
+87 1
+
+
+
+
+
+87 1
+enemy_is_playing = 0
+Dans ft_algo
+31 22
+
+
+
+
+
+31 22
+enemy_is_playing = 0
+Dans ft_algo
+10 6
+
+
+
+
+
+10 6
+enemy_is_playing = 0
+Dans ft_algo
+21 2
+
+
+
+
+
+21 2
+enemy_is_playing = 0
+Dans ft_algo
+87 0
+
+
+
+
+
+87 0
+enemy_is_playing = 0
+Dans ft_algo
+76 30
+
+
+
+
+
+76 30
+enemy_is_playing = 0
+Dans ft_algo
+64 9
+
+
+
+
+
+64 9
+enemy_is_playing = 0
+Dans ft_algo
+50 0
+
+
+
+
+
+50 0
+enemy_is_playing = 0
+Dans ft_algo
+79 12
+
+
+
+
+
+79 12
+enemy_is_playing = 0
+Dans ft_algo
+44 22
+
+
+
+
+
+44 22
+enemy_is_playing = 0
+Dans ft_algo
+95 0
+
+
+
+
+
+95 0
+enemy_is_playing = 0
+Dans ft_algo
+66 35
+
+
+
+
+
+66 35
+enemy_is_playing = 0
+Dans ft_algo
+94 0
+
+
+
+
+
+94 0
+enemy_is_playing = 0
+Dans ft_algo
+1 16
+
+
+
+
+
+1 16
+enemy_is_playing = 0
+Dans ft_algo
+0 35
+
+
+
+
+
+0 35
+enemy_is_playing = 0
+Dans ft_algo
+37 11
+
+
+
+
+
+37 11
+enemy_is_playing = 0
+Dans ft_algo
+84 36
+
+
+
+
+
+84 36
+enemy_is_playing = 0
+Dans ft_algo
+17 15
+
+
+
+
+
+17 15
+enemy_is_playing = 0
+Dans ft_algo
+44 26
+
+
+
+
+
+44 26
+enemy_is_playing = 0
+Dans ft_algo
+50 18
+
+
+
+
+
+50 18
+enemy_is_playing = 0
+Dans ft_algo
+75 36
+
+
+
+
+
+75 36
+enemy_is_playing = 0
+Dans ft_algo
+48 6
+
+
+
+
+
+48 6
+enemy_is_playing = 0
+Dans ft_algo
+21 2
+
+
+
+
+
+21 2
+enemy_is_playing = 0
+Dans ft_algo
+81 0
+
+
+
+
+
+81 0
+enemy_is_playing = 0
+Dans ft_algo
+3 32
+
+
+
+
+
+3 32
+enemy_is_playing = 0
+Dans ft_algo
+89 27
+
+
+
+
+
+89 27
+enemy_is_playing = 0
+Dans ft_algo
+36 12
+
+
+
+
+
+36 12
+enemy_is_playing = 0
+Dans ft_algo
+84 0
+
+
+
+
+
+84 0
+enemy_is_playing = 0
+Dans ft_algo
+8 17
+
+
+
+
+
+8 17
+enemy_is_playing = 0
+Dans ft_algo
+56 14
+
+
+
+
+
+56 14
+enemy_is_playing = 0
+Dans ft_algo
+71 7
+
+
+
+
+
+71 7
+enemy_is_playing = 0
+Dans ft_algo
+74 40
+
+
+
+
+
+74 40
+enemy_is_playing = 0
+Dans ft_algo
+76 27
+
+
+
+
+
+76 27
+enemy_is_playing = 0
+Dans ft_algo
+32 17
+
+
+
+
+
+32 17
+enemy_is_playing = 0
+Dans ft_algo
+49 0
+
+
+
+
+
+49 0
+enemy_is_playing = 0
+Dans ft_algo
+0 40
+
+
+
+
+
+0 40
+enemy_is_playing = 0
+Dans ft_algo
+41 25
+
+
+
+
+
+41 25
+enemy_is_playing = 0
+Dans ft_algo
+77 0
+
+
+
+
+
+77 0
+enemy_is_playing = 0
+Dans ft_algo
+45 18
+
+
+
+
+
+45 18
+enemy_is_playing = 0
+Dans ft_algo
+95 23
+
+
+
+
+
+95 23
+enemy_is_playing = 0
+Dans ft_algo
+28 18
+
+
+
+
+
+28 18
+enemy_is_playing = 0
+Dans ft_algo
+87 17
+
+
+
+
+
+87 17
+enemy_is_playing = 0
+Dans ft_algo
+8 27
+
+
+
+
+
+8 27
+enemy_is_playing = 0
+Dans ft_algo
+21 16
+
+
+
+
+
+21 16
+enemy_is_playing = 0
+Dans ft_algo
+59 0
+
+
+
+
+
+59 0
+enemy_is_playing = 0
+Dans ft_algo
+80 29
+
+
+
+
+
+80 29
+enemy_is_playing = 0
+Dans ft_algo
+1 32
+
+
+
+
+
+1 32
+enemy_is_playing = 0
+Dans ft_algo
+3 3
+
+
+
+
+
+3 3
+enemy_is_playing = 0
+Dans ft_algo
+84 21
+
+
+
+
+
+84 21
+enemy_is_playing = 0
+Dans ft_algo
+18 18
+
+
+
+
+
+18 18
+enemy_is_playing = 0
+Dans ft_algo
+9 3
+
+
+
+
+
+9 3
+enemy_is_playing = 0
+Dans ft_algo
+18 6
+
+
+
+
+
+18 6
+enemy_is_playing = 0
+Dans ft_algo
+80 34
+
+
+
+
+
+80 34
+enemy_is_playing = 0
+Dans ft_algo
+0 4
+
+
+
+
+
+0 4
+enemy_is_playing = 0
+Dans ft_algo
+41 34
+
+
+
+
+
+41 34
 enemy_is_playing = 0
 Dans ft_algo
 0 16
@@ -1693,10 +5199,8686 @@ Dans ft_algo
 0 16
 enemy_is_playing = 0
 Dans ft_algo
-0 16
+18 18
 
 
 
 
 
-0 16
+18 18
+enemy_is_playing = 0
+Dans ft_algo
+61 17
+
+
+
+
+
+61 17
+enemy_is_playing = 0
+Dans ft_algo
+67 0
+
+
+
+
+
+67 0
+enemy_is_playing = 0
+Dans ft_algo
+15 14
+
+
+
+
+
+15 14
+enemy_is_playing = 0
+Dans ft_algo
+91 40
+
+
+
+
+
+91 40
+enemy_is_playing = 0
+Dans ft_algo
+12 13
+
+
+
+
+
+12 13
+enemy_is_playing = 0
+Dans ft_algo
+25 5
+
+
+
+
+
+25 5
+enemy_is_playing = 0
+Dans ft_algo
+81 16
+
+
+
+
+
+81 16
+enemy_is_playing = 0
+Dans ft_algo
+29 14
+
+
+
+
+
+29 14
+enemy_is_playing = 0
+Dans ft_algo
+9 1
+
+
+
+
+
+9 1
+enemy_is_playing = 0
+Dans ft_algo
+30 3
+
+
+
+
+
+30 3
+enemy_is_playing = 0
+Dans ft_algo
+26 13
+
+
+
+
+
+26 13
+enemy_is_playing = 0
+Dans ft_algo
+28 25
+
+
+
+
+
+28 25
+enemy_is_playing = 0
+Dans ft_algo
+4 19
+
+
+
+
+
+4 19
+enemy_is_playing = 0
+Dans ft_algo
+60 21
+
+
+
+
+
+60 21
+enemy_is_playing = 0
+Dans ft_algo
+27 4
+
+
+
+
+
+27 4
+enemy_is_playing = 0
+Dans ft_algo
+70 39
+
+
+
+
+
+70 39
+enemy_is_playing = 0
+Dans ft_algo
+72 19
+
+
+
+
+
+72 19
+enemy_is_playing = 0
+Dans ft_algo
+0 4
+
+
+
+
+
+0 4
+enemy_is_playing = 0
+Dans ft_algo
+84 27
+
+
+
+
+
+84 27
+enemy_is_playing = 0
+Dans ft_algo
+69 3
+
+
+
+
+
+69 3
+enemy_is_playing = 0
+Dans ft_algo
+25 5
+
+
+
+
+
+25 5
+enemy_is_playing = 0
+Dans ft_algo
+97 2
+
+
+
+
+
+97 2
+enemy_is_playing = 0
+Dans ft_algo
+91 39
+
+
+
+
+
+91 39
+enemy_is_playing = 0
+Dans ft_algo
+79 3
+
+
+
+
+
+79 3
+enemy_is_playing = 0
+Dans ft_algo
+0 25
+
+
+
+
+
+0 25
+enemy_is_playing = 0
+Dans ft_algo
+5 6
+
+
+
+
+
+5 6
+enemy_is_playing = 0
+Dans ft_algo
+20 39
+
+
+
+
+
+20 39
+enemy_is_playing = 0
+Dans ft_algo
+69 27
+
+
+
+
+
+69 27
+enemy_is_playing = 0
+Dans ft_algo
+50 22
+
+
+
+
+
+50 22
+enemy_is_playing = 0
+Dans ft_algo
+37 34
+
+
+
+
+
+37 34
+enemy_is_playing = 0
+Dans ft_algo
+56 33
+
+
+
+
+
+56 33
+enemy_is_playing = 0
+Dans ft_algo
+45 18
+
+
+
+
+
+45 18
+enemy_is_playing = 0
+Dans ft_algo
+21 16
+
+
+
+
+
+21 16
+enemy_is_playing = 0
+Dans ft_algo
+36 30
+
+
+
+
+
+36 30
+enemy_is_playing = 0
+Dans ft_algo
+78 41
+
+
+
+
+
+78 41
+enemy_is_playing = 0
+Dans ft_algo
+86 1
+
+
+
+
+
+86 1
+enemy_is_playing = 0
+Dans ft_algo
+10 6
+
+
+
+
+
+10 6
+enemy_is_playing = 0
+Dans ft_algo
+57 12
+
+
+
+
+
+57 12
+enemy_is_playing = 0
+Dans ft_algo
+0 17
+
+
+
+
+
+0 17
+enemy_is_playing = 0
+Dans ft_algo
+88 30
+
+
+
+
+
+88 30
+enemy_is_playing = 0
+Dans ft_algo
+22 36
+
+
+
+
+
+22 36
+enemy_is_playing = 0
+Dans ft_algo
+73 41
+
+
+
+
+
+73 41
+enemy_is_playing = 0
+Dans ft_algo
+75 34
+
+
+
+
+
+75 34
+enemy_is_playing = 0
+Dans ft_algo
+72 45
+
+
+
+
+
+72 45
+enemy_is_playing = 0
+Dans ft_algo
+57 42
+
+
+
+
+
+57 42
+enemy_is_playing = 0
+Dans ft_algo
+89 22
+
+
+
+
+
+89 22
+enemy_is_playing = 0
+Dans ft_algo
+52 13
+
+
+
+
+
+52 13
+enemy_is_playing = 0
+Dans ft_algo
+37 10
+
+
+
+
+
+37 10
+enemy_is_playing = 0
+Dans ft_algo
+47 20
+
+
+
+
+
+47 20
+enemy_is_playing = 0
+Dans ft_algo
+84 27
+
+
+
+
+
+84 27
+enemy_is_playing = 0
+Dans ft_algo
+43 25
+
+
+
+
+
+43 25
+enemy_is_playing = 0
+Dans ft_algo
+15 27
+
+
+
+
+
+15 27
+enemy_is_playing = 0
+Dans ft_algo
+34 24
+
+
+
+
+
+34 24
+enemy_is_playing = 0
+Dans ft_algo
+37 5
+
+
+
+
+
+37 5
+enemy_is_playing = 0
+Dans ft_algo
+56 27
+
+
+
+
+
+56 27
+enemy_is_playing = 0
+Dans ft_algo
+70 39
+
+
+
+
+
+70 39
+enemy_is_playing = 0
+Dans ft_algo
+61 3
+
+
+
+
+
+61 3
+enemy_is_playing = 0
+Dans ft_algo
+45 18
+
+
+
+
+
+45 18
+enemy_is_playing = 0
+Dans ft_algo
+81 18
+
+
+
+
+
+81 18
+enemy_is_playing = 0
+Dans ft_algo
+76 29
+
+
+
+
+
+76 29
+enemy_is_playing = 0
+Dans ft_algo
+14 34
+
+
+
+
+
+14 34
+enemy_is_playing = 0
+Dans ft_algo
+11 6
+
+
+
+
+
+11 6
+enemy_is_playing = 0
+Dans ft_algo
+47 34
+
+
+
+
+
+47 34
+enemy_is_playing = 0
+Dans ft_algo
+70 8
+
+
+
+
+
+70 8
+enemy_is_playing = 0
+Dans ft_algo
+79 41
+
+
+
+
+
+79 41
+enemy_is_playing = 0
+Dans ft_algo
+78 45
+
+
+
+
+
+78 45
+enemy_is_playing = 0
+Dans ft_algo
+27 4
+
+
+
+
+
+27 4
+enemy_is_playing = 0
+Dans ft_algo
+59 0
+
+
+
+
+
+59 0
+enemy_is_playing = 0
+Dans ft_algo
+89 45
+
+
+
+
+
+89 45
+enemy_is_playing = 0
+Dans ft_algo
+30 31
+
+
+
+
+
+30 31
+enemy_is_playing = 0
+Dans ft_algo
+0 49
+
+
+
+
+
+0 49
+enemy_is_playing = 0
+Dans ft_algo
+92 4
+
+
+
+
+
+92 4
+enemy_is_playing = 0
+Dans ft_algo
+73 27
+
+
+
+
+
+73 27
+enemy_is_playing = 0
+Dans ft_algo
+7 30
+
+
+
+
+
+7 30
+enemy_is_playing = 0
+Dans ft_algo
+34 22
+
+
+
+
+
+34 22
+enemy_is_playing = 0
+Dans ft_algo
+43 1
+
+
+
+
+
+43 1
+enemy_is_playing = 0
+Dans ft_algo
+0 34
+
+
+
+
+
+0 34
+enemy_is_playing = 0
+Dans ft_algo
+63 47
+
+
+
+
+
+63 47
+enemy_is_playing = 0
+Dans ft_algo
+76 15
+
+
+
+
+
+76 15
+enemy_is_playing = 0
+Dans ft_algo
+81 47
+
+
+
+
+
+81 47
+enemy_is_playing = 0
+Dans ft_algo
+36 38
+
+
+
+
+
+36 38
+enemy_is_playing = 0
+Dans ft_algo
+17 39
+
+
+
+
+
+17 39
+enemy_is_playing = 0
+Dans ft_algo
+86 1
+
+
+
+
+
+86 1
+enemy_is_playing = 0
+Dans ft_algo
+8 16
+
+
+
+
+
+8 16
+enemy_is_playing = 0
+Dans ft_algo
+8 16
+
+
+
+
+
+8 16
+enemy_is_playing = 0
+Dans ft_algo
+28 10
+
+
+
+
+
+28 10
+enemy_is_playing = 0
+Dans ft_algo
+89 46
+
+
+
+
+
+89 46
+enemy_is_playing = 0
+Dans ft_algo
+47 25
+
+
+
+
+
+47 25
+enemy_is_playing = 0
+Dans ft_algo
+32 6
+
+
+
+
+
+32 6
+enemy_is_playing = 0
+Dans ft_algo
+73 41
+
+
+
+
+
+73 41
+enemy_is_playing = 0
+Dans ft_algo
+65 38
+
+
+
+
+
+65 38
+enemy_is_playing = 0
+Dans ft_algo
+91 29
+
+
+
+
+
+91 29
+enemy_is_playing = 0
+Dans ft_algo
+90 40
+
+
+
+
+
+90 40
+enemy_is_playing = 0
+Dans ft_algo
+81 16
+
+
+
+
+
+81 16
+enemy_is_playing = 0
+Dans ft_algo
+0 34
+
+
+
+
+
+0 34
+enemy_is_playing = 0
+Dans ft_algo
+84 43
+
+
+
+
+
+84 43
+enemy_is_playing = 0
+Dans ft_algo
+0 38
+
+
+
+
+
+0 38
+enemy_is_playing = 0
+Dans ft_algo
+66 22
+
+
+
+
+
+66 22
+enemy_is_playing = 0
+Dans ft_algo
+3 19
+
+
+
+
+
+3 19
+enemy_is_playing = 0
+Dans ft_algo
+71 49
+
+
+
+
+
+71 49
+enemy_is_playing = 0
+Dans ft_algo
+31 36
+
+
+
+
+
+31 36
+enemy_is_playing = 0
+Dans ft_algo
+30 3
+
+
+
+
+
+30 3
+enemy_is_playing = 0
+Dans ft_algo
+60 44
+
+
+
+
+
+60 44
+enemy_is_playing = 0
+Dans ft_algo
+42 40
+
+
+
+
+
+42 40
+enemy_is_playing = 0
+Dans ft_algo
+42 28
+
+
+
+
+
+42 28
+enemy_is_playing = 0
+Dans ft_algo
+78 49
+
+
+
+
+
+78 49
+enemy_is_playing = 0
+Dans ft_algo
+42 28
+
+
+
+
+
+42 28
+enemy_is_playing = 0
+Dans ft_algo
+3 13
+
+
+
+
+
+3 13
+enemy_is_playing = 0
+Dans ft_algo
+22 29
+
+
+
+
+
+22 29
+enemy_is_playing = 0
+Dans ft_algo
+59 48
+
+
+
+
+
+59 48
+enemy_is_playing = 0
+Dans ft_algo
+56 50
+
+
+
+
+
+56 50
+enemy_is_playing = 0
+Dans ft_algo
+72 3
+
+
+
+
+
+72 3
+enemy_is_playing = 0
+Dans ft_algo
+0 25
+
+
+
+
+
+0 25
+enemy_is_playing = 0
+Dans ft_algo
+45 47
+
+
+
+
+
+45 47
+enemy_is_playing = 0
+Dans ft_algo
+81 47
+
+
+
+
+
+81 47
+enemy_is_playing = 0
+Dans ft_algo
+20 33
+
+
+
+
+
+20 33
+enemy_is_playing = 0
+Dans ft_algo
+66 0
+
+
+
+
+
+66 0
+enemy_is_playing = 0
+Dans ft_algo
+0 47
+
+
+
+
+
+0 47
+enemy_is_playing = 0
+Dans ft_algo
+0 52
+
+
+
+
+
+0 52
+enemy_is_playing = 0
+Dans ft_algo
+52 13
+
+
+
+
+
+52 13
+enemy_is_playing = 0
+Dans ft_algo
+77 24
+
+
+
+
+
+77 24
+enemy_is_playing = 0
+Dans ft_algo
+9 26
+
+
+
+
+
+9 26
+enemy_is_playing = 0
+Dans ft_algo
+88 29
+
+
+
+
+
+88 29
+enemy_is_playing = 0
+Dans ft_algo
+25 8
+
+
+
+
+
+25 8
+enemy_is_playing = 0
+Dans ft_algo
+0 49
+
+
+
+
+
+0 49
+enemy_is_playing = 0
+Dans ft_algo
+0 41
+
+
+
+
+
+0 41
+enemy_is_playing = 0
+Dans ft_algo
+76 51
+
+
+
+
+
+76 51
+enemy_is_playing = 0
+Dans ft_algo
+7 38
+
+
+
+
+
+7 38
+enemy_is_playing = 0
+Dans ft_algo
+58 27
+
+
+
+
+
+58 27
+enemy_is_playing = 0
+Dans ft_algo
+66 0
+
+
+
+
+
+66 0
+enemy_is_playing = 0
+Dans ft_algo
+81 18
+
+
+
+
+
+81 18
+enemy_is_playing = 0
+Dans ft_algo
+90 39
+
+
+
+
+
+90 39
+enemy_is_playing = 0
+Dans ft_algo
+0 38
+
+
+
+
+
+0 38
+enemy_is_playing = 0
+Dans ft_algo
+27 4
+
+
+
+
+
+27 4
+enemy_is_playing = 0
+Dans ft_algo
+76 50
+
+
+
+
+
+76 50
+enemy_is_playing = 0
+Dans ft_algo
+81 0
+
+
+
+
+
+81 0
+enemy_is_playing = 0
+Dans ft_algo
+0 50
+
+
+
+
+
+0 50
+enemy_is_playing = 0
+Dans ft_algo
+86 46
+
+
+
+
+
+86 46
+enemy_is_playing = 0
+Dans ft_algo
+33 21
+
+
+
+
+
+33 21
+enemy_is_playing = 0
+Dans ft_algo
+69 47
+
+
+
+
+
+69 47
+enemy_is_playing = 0
+Dans ft_algo
+27 24
+
+
+
+
+
+27 24
+enemy_is_playing = 0
+Dans ft_algo
+24 6
+
+
+
+
+
+24 6
+enemy_is_playing = 0
+Dans ft_algo
+40 42
+
+
+
+
+
+40 42
+enemy_is_playing = 0
+Dans ft_algo
+81 18
+
+
+
+
+
+81 18
+enemy_is_playing = 0
+Dans ft_algo
+3 32
+
+
+
+
+
+3 32
+enemy_is_playing = 0
+Dans ft_algo
+40 6
+
+
+
+
+
+40 6
+enemy_is_playing = 0
+Dans ft_algo
+61 40
+
+
+
+
+
+61 40
+enemy_is_playing = 0
+Dans ft_algo
+0 43
+
+
+
+
+
+0 43
+enemy_is_playing = 0
+Dans ft_algo
+78 41
+
+
+
+
+
+78 41
+enemy_is_playing = 0
+Dans ft_algo
+38 19
+
+
+
+
+
+38 19
+enemy_is_playing = 0
+Dans ft_algo
+77 44
+
+
+
+
+
+77 44
+enemy_is_playing = 0
+Dans ft_algo
+83 3
+
+
+
+
+
+83 3
+enemy_is_playing = 0
+Dans ft_algo
+24 21
+
+
+
+
+
+24 21
+enemy_is_playing = 0
+Dans ft_algo
+81 47
+
+
+
+
+
+81 47
+enemy_is_playing = 0
+Dans ft_algo
+46 14
+
+
+
+
+
+46 14
+enemy_is_playing = 0
+Dans ft_algo
+35 29
+
+
+
+
+
+35 29
+enemy_is_playing = 0
+Dans ft_algo
+11 49
+
+
+
+
+
+11 49
+enemy_is_playing = 0
+Dans ft_algo
+88 52
+
+
+
+
+
+88 52
+enemy_is_playing = 0
+Dans ft_algo
+46 2
+
+
+
+
+
+46 2
+enemy_is_playing = 0
+Dans ft_algo
+46 2
+
+
+
+
+
+46 2
+enemy_is_playing = 0
+Dans ft_algo
+78 42
+
+
+
+
+
+78 42
+enemy_is_playing = 0
+Dans ft_algo
+65 56
+
+
+
+
+
+65 56
+enemy_is_playing = 0
+Dans ft_algo
+26 18
+
+
+
+
+
+26 18
+enemy_is_playing = 0
+Dans ft_algo
+60 45
+
+
+
+
+
+60 45
+enemy_is_playing = 0
+Dans ft_algo
+76 29
+
+
+
+
+
+76 29
+enemy_is_playing = 0
+Dans ft_algo
+95 33
+
+
+
+
+
+95 33
+enemy_is_playing = 0
+Dans ft_algo
+1 31
+
+
+
+
+
+1 31
+enemy_is_playing = 0
+Dans ft_algo
+64 1
+
+
+
+
+
+64 1
+enemy_is_playing = 0
+Dans ft_algo
+15 27
+
+
+
+
+
+15 27
+enemy_is_playing = 0
+Dans ft_algo
+0 55
+
+
+
+
+
+0 55
+enemy_is_playing = 0
+Dans ft_algo
+24 19
+
+
+
+
+
+24 19
+enemy_is_playing = 0
+Dans ft_algo
+3 23
+
+
+
+
+
+3 23
+enemy_is_playing = 0
+Dans ft_algo
+44 46
+
+
+
+
+
+44 46
+enemy_is_playing = 0
+Dans ft_algo
+51 11
+
+
+
+
+
+51 11
+enemy_is_playing = 0
+Dans ft_algo
+92 44
+
+
+
+
+
+92 44
+enemy_is_playing = 0
+Dans ft_algo
+71 55
+
+
+
+
+
+71 55
+enemy_is_playing = 0
+Dans ft_algo
+55 4
+
+
+
+
+
+55 4
+enemy_is_playing = 0
+Dans ft_algo
+61 17
+
+
+
+
+
+61 17
+enemy_is_playing = 0
+Dans ft_algo
+64 35
+
+
+
+
+
+64 35
+enemy_is_playing = 0
+Dans ft_algo
+11 6
+
+
+
+
+
+11 6
+enemy_is_playing = 0
+Dans ft_algo
+0 56
+
+
+
+
+
+0 56
+enemy_is_playing = 0
+Dans ft_algo
+79 2
+
+
+
+
+
+79 2
+enemy_is_playing = 0
+Dans ft_algo
+92 17
+
+
+
+
+
+92 17
+enemy_is_playing = 0
+Dans ft_algo
+97 1
+
+
+
+
+
+97 1
+enemy_is_playing = 0
+Dans ft_algo
+0 53
+
+
+
+
+
+0 53
+enemy_is_playing = 0
+Dans ft_algo
+85 54
+
+
+
+
+
+85 54
+enemy_is_playing = 0
+Dans ft_algo
+73 27
+
+
+
+
+
+73 27
+enemy_is_playing = 0
+Dans ft_algo
+70 42
+
+
+
+
+
+70 42
+enemy_is_playing = 0
+Dans ft_algo
+67 47
+
+
+
+
+
+67 47
+enemy_is_playing = 0
+Dans ft_algo
+60 21
+
+
+
+
+
+60 21
+enemy_is_playing = 0
+Dans ft_algo
+22 43
+
+
+
+
+
+22 43
+enemy_is_playing = 0
+Dans ft_algo
+21 23
+
+
+
+
+
+21 23
+enemy_is_playing = 0
+Dans ft_algo
+18 41
+
+
+
+
+
+18 41
+enemy_is_playing = 0
+Dans ft_algo
+73 41
+
+
+
+
+
+73 41
+enemy_is_playing = 0
+Dans ft_algo
+87 52
+
+
+
+
+
+87 52
+enemy_is_playing = 0
+Dans ft_algo
+3 58
+
+
+
+
+
+3 58
+enemy_is_playing = 0
+Dans ft_algo
+19 14
+
+
+
+
+
+19 14
+enemy_is_playing = 0
+Dans ft_algo
+79 59
+
+
+
+
+
+79 59
+enemy_is_playing = 0
+Dans ft_algo
+81 34
+
+
+
+
+
+81 34
+enemy_is_playing = 0
+Dans ft_algo
+20 55
+
+
+
+
+
+20 55
+enemy_is_playing = 0
+Dans ft_algo
+25 8
+
+
+
+
+
+25 8
+enemy_is_playing = 0
+Dans ft_algo
+88 41
+
+
+
+
+
+88 41
+enemy_is_playing = 0
+Dans ft_algo
+69 58
+
+
+
+
+
+69 58
+enemy_is_playing = 0
+Dans ft_algo
+19 37
+
+
+
+
+
+19 37
+enemy_is_playing = 0
+Dans ft_algo
+3 57
+
+
+
+
+
+3 57
+enemy_is_playing = 0
+Dans ft_algo
+32 13
+
+
+
+
+
+32 13
+enemy_is_playing = 0
+Dans ft_algo
+4 43
+
+
+
+
+
+4 43
+enemy_is_playing = 0
+Dans ft_algo
+77 45
+
+
+
+
+
+77 45
+enemy_is_playing = 0
+Dans ft_algo
+66 50
+
+
+
+
+
+66 50
+enemy_is_playing = 0
+Dans ft_algo
+36 11
+
+
+
+
+
+36 11
+enemy_is_playing = 0
+Dans ft_algo
+74 60
+
+
+
+
+
+74 60
+enemy_is_playing = 0
+Dans ft_algo
+85 46
+
+
+
+
+
+85 46
+enemy_is_playing = 0
+Dans ft_algo
+75 5
+
+
+
+
+
+75 5
+enemy_is_playing = 0
+Dans ft_algo
+0 18
+
+
+
+
+
+0 18
+enemy_is_playing = 0
+Dans ft_algo
+80 53
+
+
+
+
+
+80 53
+enemy_is_playing = 0
+Dans ft_algo
+81 61
+
+
+
+
+
+81 61
+enemy_is_playing = 0
+Dans ft_algo
+29 61
+
+
+
+
+
+29 61
+enemy_is_playing = 0
+Dans ft_algo
+84 36
+
+
+
+
+
+84 36
+enemy_is_playing = 0
+Dans ft_algo
+27 44
+
+
+
+
+
+27 44
+enemy_is_playing = 0
+Dans ft_algo
+71 49
+
+
+
+
+
+71 49
+enemy_is_playing = 0
+Dans ft_algo
+18 48
+
+
+
+
+
+18 48
+enemy_is_playing = 0
+Dans ft_algo
+66 2
+
+
+
+
+
+66 2
+enemy_is_playing = 0
+Dans ft_algo
+15 12
+
+
+
+
+
+15 12
+enemy_is_playing = 0
+Dans ft_algo
+53 36
+
+
+
+
+
+53 36
+enemy_is_playing = 0
+Dans ft_algo
+67 60
+
+
+
+
+
+67 60
+enemy_is_playing = 0
+Dans ft_algo
+4 23
+
+
+
+
+
+4 23
+enemy_is_playing = 0
+Dans ft_algo
+92 5
+
+
+
+
+
+92 5
+enemy_is_playing = 0
+Dans ft_algo
+69 62
+
+
+
+
+
+69 62
+enemy_is_playing = 0
+Dans ft_algo
+11 29
+
+
+
+
+
+11 29
+enemy_is_playing = 0
+Dans ft_algo
+28 51
+
+
+
+
+
+28 51
+enemy_is_playing = 0
+Dans ft_algo
+75 58
+
+
+
+
+
+75 58
+enemy_is_playing = 0
+Dans ft_algo
+69 0
+
+
+
+
+
+69 0
+enemy_is_playing = 0
+Dans ft_algo
+28 10
+
+
+
+
+
+28 10
+enemy_is_playing = 0
+Dans ft_algo
+60 54
+
+
+
+
+
+60 54
+enemy_is_playing = 0
+Dans ft_algo
+0 61
+
+
+
+
+
+0 61
+enemy_is_playing = 0
+Dans ft_algo
+77 57
+
+
+
+
+
+77 57
+enemy_is_playing = 0
+Dans ft_algo
+35 55
+
+
+
+
+
+35 55
+enemy_is_playing = 0
+Dans ft_algo
+61 57
+
+
+
+
+
+61 57
+enemy_is_playing = 0
+Dans ft_algo
+46 14
+
+
+
+
+
+46 14
+enemy_is_playing = 0
+Dans ft_algo
+3 13
+
+
+
+
+
+3 13
+enemy_is_playing = 0
+Dans ft_algo
+27 4
+
+
+
+
+
+27 4
+enemy_is_playing = 0
+Dans ft_algo
+59 44
+
+
+
+
+
+59 44
+enemy_is_playing = 0
+Dans ft_algo
+57 45
+
+
+
+
+
+57 45
+enemy_is_playing = 0
+Dans ft_algo
+72 63
+
+
+
+
+
+72 63
+enemy_is_playing = 0
+Dans ft_algo
+0 56
+
+
+
+
+
+0 56
+enemy_is_playing = 0
+Dans ft_algo
+13 48
+
+
+
+
+
+13 48
+enemy_is_playing = 0
+Dans ft_algo
+0 64
+
+
+
+
+
+0 64
+enemy_is_playing = 0
+Dans ft_algo
+83 56
+
+
+
+
+
+83 56
+enemy_is_playing = 0
+Dans ft_algo
+83 60
+
+
+
+
+
+83 60
+enemy_is_playing = 0
+Dans ft_algo
+4 65
+
+
+
+
+
+4 65
+enemy_is_playing = 0
+Dans ft_algo
+68 52
+
+
+
+
+
+68 52
+enemy_is_playing = 0
+Dans ft_algo
+96 36
+
+
+
+
+
+96 36
+enemy_is_playing = 0
+Dans ft_algo
+0 64
+
+
+
+
+
+0 64
+enemy_is_playing = 0
+Dans ft_algo
+80 40
+
+
+
+
+
+80 40
+enemy_is_playing = 0
+Dans ft_algo
+81 39
+
+
+
+
+
+81 39
+enemy_is_playing = 0
+Dans ft_algo
+60 0
+
+
+
+
+
+60 0
+enemy_is_playing = 0
+Dans ft_algo
+3 59
+
+
+
+
+
+3 59
+enemy_is_playing = 0
+Dans ft_algo
+2 12
+
+
+
+
+
+2 12
+enemy_is_playing = 0
+Dans ft_algo
+65 42
+
+
+
+
+
+65 42
+enemy_is_playing = 0
+Dans ft_algo
+65 56
+
+
+
+
+
+65 56
+enemy_is_playing = 0
+Dans ft_algo
+65 42
+
+
+
+
+
+65 42
+enemy_is_playing = 0
+Dans ft_algo
+25 27
+
+
+
+
+
+25 27
+enemy_is_playing = 0
+Dans ft_algo
+10 49
+
+
+
+
+
+10 49
+enemy_is_playing = 0
+Dans ft_algo
+17 21
+
+
+
+
+
+17 21
+enemy_is_playing = 0
+Dans ft_algo
+72 55
+
+
+
+
+
+72 55
+enemy_is_playing = 0
+Dans ft_algo
+41 64
+
+
+
+
+
+41 64
+enemy_is_playing = 0
+Dans ft_algo
+65 13
+
+
+
+
+
+65 13
+enemy_is_playing = 0
+Dans ft_algo
+91 60
+
+
+
+
+
+91 60
+enemy_is_playing = 0
+Dans ft_algo
+21 2
+
+
+
+
+
+21 2
+enemy_is_playing = 0
+Dans ft_algo
+94 64
+
+
+
+
+
+94 64
+enemy_is_playing = 0
+Dans ft_algo
+53 66
+
+
+
+
+
+53 66
+enemy_is_playing = 0
+Dans ft_algo
+76 51
+
+
+
+
+
+76 51
+enemy_is_playing = 0
+Dans ft_algo
+51 64
+
+
+
+
+
+51 64
+enemy_is_playing = 0
+Dans ft_algo
+28 10
+
+
+
+
+
+28 10
+enemy_is_playing = 0
+Dans ft_algo
+92 65
+
+
+
+
+
+92 65
+enemy_is_playing = 0
+Dans ft_algo
+69 25
+
+
+
+
+
+69 25
+enemy_is_playing = 0
+Dans ft_algo
+28 55
+
+
+
+
+
+28 55
+enemy_is_playing = 0
+Dans ft_algo
+8 60
+
+
+
+
+
+8 60
+enemy_is_playing = 0
+Dans ft_algo
+53 42
+
+
+
+
+
+53 42
+enemy_is_playing = 0
+Dans ft_algo
+31 64
+
+
+
+
+
+31 64
+enemy_is_playing = 0
+Dans ft_algo
+75 0
+
+
+
+
+
+75 0
+enemy_is_playing = 0
+Dans ft_algo
+91 57
+
+
+
+
+
+91 57
+enemy_is_playing = 0
+Dans ft_algo
+3 60
+
+
+
+
+
+3 60
+enemy_is_playing = 0
+Dans ft_algo
+4 26
+
+
+
+
+
+4 26
+enemy_is_playing = 0
+Dans ft_algo
+24 5
+
+
+
+
+
+24 5
+enemy_is_playing = 0
+Dans ft_algo
+64 35
+
+
+
+
+
+64 35
+enemy_is_playing = 0
+Dans ft_algo
+72 63
+
+
+
+
+
+72 63
+enemy_is_playing = 0
+Dans ft_algo
+87 66
+
+
+
+
+
+87 66
+enemy_is_playing = 0
+Dans ft_algo
+52 28
+
+
+
+
+
+52 28
+enemy_is_playing = 0
+Dans ft_algo
+89 45
+
+
+
+
+
+89 45
+enemy_is_playing = 0
+Dans ft_algo
+0 57
+
+
+
+
+
+0 57
+enemy_is_playing = 0
+Dans ft_algo
+0 68
+
+
+
+
+
+0 68
+enemy_is_playing = 0
+Dans ft_algo
+15 27
+
+
+
+
+
+15 27
+enemy_is_playing = 0
+Dans ft_algo
+8 63
+
+
+
+
+
+8 63
+enemy_is_playing = 0
+Dans ft_algo
+77 61
+
+
+
+
+
+77 61
+enemy_is_playing = 0
+Dans ft_algo
+45 18
+
+
+
+
+
+45 18
+enemy_is_playing = 0
+Dans ft_algo
+63 69
+
+
+
+
+
+63 69
+enemy_is_playing = 0
+Dans ft_algo
+68 29
+
+
+
+
+
+68 29
+enemy_is_playing = 0
+Dans ft_algo
+14 61
+
+
+
+
+
+14 61
+enemy_is_playing = 0
+Dans ft_algo
+86 67
+
+
+
+
+
+86 67
+enemy_is_playing = 0
+Dans ft_algo
+60 21
+
+
+
+
+
+60 21
+enemy_is_playing = 0
+Dans ft_algo
+15 11
+
+
+
+
+
+15 11
+enemy_is_playing = 0
+Dans ft_algo
+46 2
+
+
+
+
+
+46 2
+enemy_is_playing = 0
+Dans ft_algo
+41 65
+
+
+
+
+
+41 65
+enemy_is_playing = 0
+Dans ft_algo
+3 3
+
+
+
+
+
+3 3
+enemy_is_playing = 0
+Dans ft_algo
+58 69
+
+
+
+
+
+58 69
+enemy_is_playing = 0
+Dans ft_algo
+74 62
+
+
+
+
+
+74 62
+enemy_is_playing = 0
+Dans ft_algo
+4 23
+
+
+
+
+
+4 23
+enemy_is_playing = 0
+Dans ft_algo
+61 67
+
+
+
+
+
+61 67
+enemy_is_playing = 0
+Dans ft_algo
+61 42
+
+
+
+
+
+61 42
+enemy_is_playing = 0
+Dans ft_algo
+28 36
+
+
+
+
+
+28 36
+enemy_is_playing = 0
+Dans ft_algo
+62 71
+
+
+
+
+
+62 71
+enemy_is_playing = 0
+Dans ft_algo
+9 56
+
+
+
+
+
+9 56
+enemy_is_playing = 0
+Dans ft_algo
+44 22
+
+
+
+
+
+44 22
+enemy_is_playing = 0
+Dans ft_algo
+60 33
+
+
+
+
+
+60 33
+enemy_is_playing = 0
+Dans ft_algo
+97 28
+
+
+
+
+
+97 28
+enemy_is_playing = 0
+Dans ft_algo
+0 66
+
+
+
+
+
+0 66
+enemy_is_playing = 0
+Dans ft_algo
+74 65
+
+
+
+
+
+74 65
+enemy_is_playing = 0
+Dans ft_algo
+44 43
+
+
+
+
+
+44 43
+enemy_is_playing = 0
+Dans ft_algo
+62 9
+
+
+
+
+
+62 9
+enemy_is_playing = 0
+Dans ft_algo
+21 59
+
+
+
+
+
+21 59
+enemy_is_playing = 0
+Dans ft_algo
+92 65
+
+
+
+
+
+92 65
+enemy_is_playing = 0
+Dans ft_algo
+30 64
+
+
+
+
+
+30 64
+enemy_is_playing = 0
+Dans ft_algo
+28 55
+
+
+
+
+
+28 55
+enemy_is_playing = 0
+Dans ft_algo
+79 27
+
+
+
+
+
+79 27
+enemy_is_playing = 0
+Dans ft_algo
+10 6
+
+
+
+
+
+10 6
+enemy_is_playing = 0
+Dans ft_algo
+84 48
+
+
+
+
+
+84 48
+enemy_is_playing = 0
+Dans ft_algo
+72 63
+
+
+
+
+
+72 63
+enemy_is_playing = 0
+Dans ft_algo
+0 38
+
+
+
+
+
+0 38
+enemy_is_playing = 0
+Dans ft_algo
+59 60
+
+
+
+
+
+59 60
+enemy_is_playing = 0
+Dans ft_algo
+11 59
+
+
+
+
+
+11 59
+enemy_is_playing = 0
+Dans ft_algo
+20 71
+
+
+
+
+
+20 71
+enemy_is_playing = 0
+Dans ft_algo
+63 54
+
+
+
+
+
+63 54
+enemy_is_playing = 0
+Dans ft_algo
+2 71
+
+
+
+
+
+2 71
+enemy_is_playing = 0
+Dans ft_algo
+32 57
+
+
+
+
+
+32 57
+enemy_is_playing = 0
+Dans ft_algo
+11 69
+
+
+
+
+
+11 69
+enemy_is_playing = 0
+Dans ft_algo
+0 67
+
+
+
+
+
+0 67
+enemy_is_playing = 0
+Dans ft_algo
+8 71
+
+
+
+
+
+8 71
+enemy_is_playing = 0
+Dans ft_algo
+8 54
+
+
+
+
+
+8 54
+enemy_is_playing = 0
+Dans ft_algo
+55 65
+
+
+
+
+
+55 65
+enemy_is_playing = 0
+Dans ft_algo
+75 44
+
+
+
+
+
+75 44
+enemy_is_playing = 0
+Dans ft_algo
+16 50
+
+
+
+
+
+16 50
+enemy_is_playing = 0
+Dans ft_algo
+43 62
+
+
+
+
+
+43 62
+enemy_is_playing = 0
+Dans ft_algo
+95 0
+
+
+
+
+
+95 0
+enemy_is_playing = 0
+Dans ft_algo
+28 51
+
+
+
+
+
+28 51
+enemy_is_playing = 0
+Dans ft_algo
+65 38
+
+
+
+
+
+65 38
+enemy_is_playing = 0
+Dans ft_algo
+55 70
+
+
+
+
+
+55 70
+enemy_is_playing = 0
+Dans ft_algo
+56 42
+
+
+
+
+
+56 42
+enemy_is_playing = 0
+Dans ft_algo
+36 30
+
+
+
+
+
+36 30
+enemy_is_playing = 0
+Dans ft_algo
+42 64
+
+
+
+
+
+42 64
+enemy_is_playing = 0
+Dans ft_algo
+8 71
+
+
+
+
+
+8 71
+enemy_is_playing = 0
+Dans ft_algo
+28 71
+
+
+
+
+
+28 71
+enemy_is_playing = 0
+Dans ft_algo
+55 4
+
+
+
+
+
+55 4
+enemy_is_playing = 0
+Dans ft_algo
+90 69
+
+
+
+
+
+90 69
+enemy_is_playing = 0
+Dans ft_algo
+46 31
+
+
+
+
+
+46 31
+enemy_is_playing = 0
+Dans ft_algo
+51 11
+
+
+
+
+
+51 11
+enemy_is_playing = 0
+Dans ft_algo
+61 17
+
+
+
+
+
+61 17
+enemy_is_playing = 0
+Dans ft_algo
+37 64
+
+
+
+
+
+37 64
+enemy_is_playing = 0
+Dans ft_algo
+21 51
+
+
+
+
+
+21 51
+enemy_is_playing = 0
+Dans ft_algo
+19 65
+
+
+
+
+
+19 65
+enemy_is_playing = 0
+Dans ft_algo
+39 35
+
+
+
+
+
+39 35
+enemy_is_playing = 0
+Dans ft_algo
+51 70
+
+
+
+
+
+51 70
+enemy_is_playing = 0
+Dans ft_algo
+74 60
+
+
+
+
+
+74 60
+enemy_is_playing = 0
+Dans ft_algo
+19 65
+
+
+
+
+
+19 65
+enemy_is_playing = 0
+Dans ft_algo
+32 13
+
+
+
+
+
+32 13
+enemy_is_playing = 0
+Dans ft_algo
+41 70
+
+
+
+
+
+41 70
+enemy_is_playing = 0
+Dans ft_algo
+48 59
+
+
+
+
+
+48 59
+enemy_is_playing = 0
+Dans ft_algo
+42 66
+
+
+
+
+
+42 66
+enemy_is_playing = 0
+Dans ft_algo
+57 20
+
+
+
+
+
+57 20
+enemy_is_playing = 0
+Dans ft_algo
+19 52
+
+
+
+
+
+19 52
+enemy_is_playing = 0
+Dans ft_algo
+93 58
+
+
+
+
+
+93 58
+enemy_is_playing = 0
+Dans ft_algo
+15 5
+
+
+
+
+
+15 5
+enemy_is_playing = 0
+Dans ft_algo
+39 16
+
+
+
+
+
+39 16
+enemy_is_playing = 0
+Dans ft_algo
+78 20
+
+
+
+
+
+78 20
+enemy_is_playing = 0
+Dans ft_algo
+87 66
+
+
+
+
+
+87 66
+enemy_is_playing = 0
+Dans ft_algo
+0 17
+
+
+
+
+
+0 17
+enemy_is_playing = 0
+Dans ft_algo
+2 12
+
+
+
+
+
+2 12
+enemy_is_playing = 0
+Dans ft_algo
+69 68
+
+
+
+
+
+69 68
+enemy_is_playing = 0
+Dans ft_algo
+90 69
+
+
+
+
+
+90 69
+enemy_is_playing = 0
+Dans ft_algo
+93 34
+
+
+
+
+
+93 34
+enemy_is_playing = 0
+Dans ft_algo
+4 43
+
+
+
+
+
+4 43
+enemy_is_playing = 0
+Dans ft_algo
+83 71
+
+
+
+
+
+83 71
+enemy_is_playing = 0
+Dans ft_algo
+30 60
+
+
+
+
+
+30 60
+enemy_is_playing = 0
+Dans ft_algo
+67 65
+
+
+
+
+
+67 65
+enemy_is_playing = 0
+Dans ft_algo
+54 21
+
+
+
+
+
+54 21
+enemy_is_playing = 0
+Dans ft_algo
+68 15
+
+
+
+
+
+68 15
+enemy_is_playing = 0
+Dans ft_algo
+41 57
+
+
+
+
+
+41 57
+enemy_is_playing = 0
+Dans ft_algo
+27 67
+
+
+
+
+
+27 67
+enemy_is_playing = 0
+Dans ft_algo
+23 69
+
+
+
+
+
+23 69
+enemy_is_playing = 0
+Dans ft_algo
+39 64
+
+
+
+
+
+39 64
+enemy_is_playing = 0
+Dans ft_algo
+61 72
+
+
+
+
+
+61 72
+enemy_is_playing = 0
+Dans ft_algo
+13 58
+
+
+
+
+
+13 58
+enemy_is_playing = 0
+Dans ft_algo
+15 5
+
+
+
+
+
+15 5
+enemy_is_playing = 0
+Dans ft_algo
+78 69
+
+
+
+
+
+78 69
+enemy_is_playing = 0
+Dans ft_algo
+40 29
+
+
+
+
+
+40 29
+enemy_is_playing = 0
+Dans ft_algo
+64 69
+
+
+
+
+
+64 69
+enemy_is_playing = 0
+Dans ft_algo
+31 73
+
+
+
+
+
+31 73
+enemy_is_playing = 0
+Dans ft_algo
+7 67
+
+
+
+
+
+7 67
+enemy_is_playing = 0
+Dans ft_algo
+68 19
+
+
+
+
+
+68 19
+enemy_is_playing = 0
+Dans ft_algo
+0 62
+
+
+
+
+
+0 62
+enemy_is_playing = 0
+Dans ft_algo
+69 47
+
+
+
+
+
+69 47
+enemy_is_playing = 0
+Dans ft_algo
+51 70
+
+
+
+
+
+51 70
+enemy_is_playing = 0
+Dans ft_algo
+33 64
+
+
+
+
+
+33 64
+enemy_is_playing = 0
+Dans ft_algo
+55 73
+
+
+
+
+
+55 73
+enemy_is_playing = 0
+Dans ft_algo
+38 71
+
+
+
+
+
+38 71
+enemy_is_playing = 0
+Dans ft_algo
+23 69
+
+
+
+
+
+23 69
+enemy_is_playing = 0
+Dans ft_algo
+3 66
+
+
+
+
+
+3 66
+enemy_is_playing = 0
+Dans ft_algo
+26 42
+
+
+
+
+
+26 42
+enemy_is_playing = 0
+Dans ft_algo
+21 66
+
+
+
+
+
+21 66
+enemy_is_playing = 0
+Dans ft_algo
+88 27
+
+
+
+
+
+88 27
+enemy_is_playing = 0
+Dans ft_algo
+30 3
+
+
+
+
+
+30 3
+enemy_is_playing = 0
+Dans ft_algo
+77 24
+
+
+
+
+
+77 24
+enemy_is_playing = 0
+Dans ft_algo
+8 16
+
+
+
+
+
+8 16
+enemy_is_playing = 0
+Dans ft_algo
+66 73
+
+
+
+
+
+66 73
+enemy_is_playing = 0
+Dans ft_algo
+60 14
+
+
+
+
+
+60 14
+enemy_is_playing = 0
+Dans ft_algo
+10 29
+
+
+
+
+
+10 29
+enemy_is_playing = 0
+Dans ft_algo
+20 60
+
+
+
+
+
+20 60
+enemy_is_playing = 0
+Dans ft_algo
+91 15
+
+
+
+
+
+91 15
+enemy_is_playing = 0
+Dans ft_algo
+33 71
+
+
+
+
+
+33 71
+enemy_is_playing = 0
+Dans ft_algo
+5 53
+
+
+
+
+
+5 53
+enemy_is_playing = 0
+Dans ft_algo
+68 19
+
+
+
+
+
+68 19
+enemy_is_playing = 0
+Dans ft_algo
+2 74
+
+
+
+
+
+2 74
+enemy_is_playing = 0
+Dans ft_algo
+83 42
+
+
+
+
+
+83 42
+enemy_is_playing = 0
+Dans ft_algo
+51 63
+
+
+
+
+
+51 63
+enemy_is_playing = 0
+Dans ft_algo
+54 56
+
+
+
+
+
+54 56
+enemy_is_playing = 0
+Dans ft_algo
+17 65
+
+
+
+
+
+17 65
+enemy_is_playing = 0
+Dans ft_algo
+49 60
+
+
+
+
+
+49 60
+enemy_is_playing = 0
+Dans ft_algo
+77 72
+
+
+
+
+
+77 72
+enemy_is_playing = 0
+Dans ft_algo
+21 67
+
+
+
+
+
+21 67
+enemy_is_playing = 0
+Dans ft_algo
+55 74
+
+
+
+
+
+55 74
+enemy_is_playing = 0
+Dans ft_algo
+27 75
+
+
+
+
+
+27 75
+enemy_is_playing = 0
+Dans ft_algo
+66 73
+
+
+
+
+
+66 73
+enemy_is_playing = 0
+Dans ft_algo
+90 73
+
+
+
+
+
+90 73
+enemy_is_playing = 0
+Dans ft_algo
+40 6
+
+
+
+
+
+40 6
+enemy_is_playing = 0
+Dans ft_algo
+89 22
+
+
+
+
+
+89 22
+enemy_is_playing = 0
+Dans ft_algo
+22 74
+
+
+
+
+
+22 74
+enemy_is_playing = 0
+Dans ft_algo
+8 16
+
+
+
+
+
+8 16
+enemy_is_playing = 0
+Dans ft_algo
+90 72
+
+
+
+
+
+90 72
+enemy_is_playing = 0
+Dans ft_algo
+51 53
+
+
+
+
+
+51 53
+enemy_is_playing = 0
+Dans ft_algo
+39 29
+
+
+
+
+
+39 29
+enemy_is_playing = 0
+Dans ft_algo
+7 67
+
+
+
+
+
+7 67
+enemy_is_playing = 0
+Dans ft_algo
+62 73
+
+
+
+
+
+62 73
+enemy_is_playing = 0
+Dans ft_algo
+10 68
+
+
+
+
+
+10 68
+enemy_is_playing = 0
+Dans ft_algo
+61 32
+
+
+
+
+
+61 32
+enemy_is_playing = 0
+Dans ft_algo
+57 65
+
+
+
+
+
+57 65
+enemy_is_playing = 0
+Dans ft_algo
+87 13
+
+
+
+
+
+87 13
+enemy_is_playing = 0
+Dans ft_algo
+92 62
+
+
+
+
+
+92 62
+enemy_is_playing = 0
+Dans ft_algo
+43 69
+
+
+
+
+
+43 69
+enemy_is_playing = 0
+Dans ft_algo
+64 74
+
+
+
+
+
+64 74
+enemy_is_playing = 0
+Dans ft_algo
+90 60
+
+
+
+
+
+90 60
+enemy_is_playing = 0
+Dans ft_algo
+75 7
+
+
+
+
+
+75 7
+enemy_is_playing = 0
+Dans ft_algo
+64 35
+
+
+
+
+
+64 35
+enemy_is_playing = 0
+Dans ft_algo
+0 48
+
+
+
+
+
+0 48
+enemy_is_playing = 0
+Dans ft_algo
+77 46
+
+
+
+
+
+77 46
+enemy_is_playing = 0
+Dans ft_algo
+5 27
+
+
+
+
+
+5 27
+enemy_is_playing = 0
+Dans ft_algo
+88 27
+
+
+
+
+
+88 27
+enemy_is_playing = 0
+Dans ft_algo
+73 41
+
+
+
+
+
+73 41
+enemy_is_playing = 0
+Dans ft_algo
+15 5
+
+
+
+
+
+15 5
+enemy_is_playing = 0
+Dans ft_algo
+21 23
+
+
+
+
+
+21 23
+enemy_is_playing = 0
+Dans ft_algo
+9 22
+
+
+
+
+
+9 22
+enemy_is_playing = 0
+Dans ft_algo
+22 47
+
+
+
+
+
+22 47
+enemy_is_playing = 0
+Dans ft_algo
+3 23
+
+
+
+
+
+3 23
+enemy_is_playing = 0
+Dans ft_algo
+18 6
+
+
+
+
+
+18 6
+enemy_is_playing = 0
+Dans ft_algo
+94 60
+
+
+
+
+
+94 60
+enemy_is_playing = 0
+Dans ft_algo
+38 41
+
+
+
+
+
+38 41
+enemy_is_playing = 0
+Dans ft_algo
+76 22
+
+
+
+
+
+76 22
+enemy_is_playing = 0
+Dans ft_algo
+21 66
+
+
+
+
+
+21 66
+enemy_is_playing = 0
+Dans ft_algo
+3 23
+
+
+
+
+
+3 23
+enemy_is_playing = 0
+Dans ft_algo
+69 75
+
+
+
+
+
+69 75
+enemy_is_playing = 0
+Dans ft_algo
+75 74
+
+
+
+
+
+75 74
+enemy_is_playing = 0
+Dans ft_algo
+84 37
+
+
+
+
+
+84 37
+enemy_is_playing = 0
+Dans ft_algo
+57 65
+
+
+
+
+
+57 65
+enemy_is_playing = 0
+Dans ft_algo
+37 64
+
+
+
+
+
+37 64
+enemy_is_playing = 0
+Dans ft_algo
+55 59
+
+
+
+
+
+55 59
+enemy_is_playing = 0
+Dans ft_algo
+86 41
+
+
+
+
+
+86 41
+enemy_is_playing = 0
+Dans ft_algo
+81 34
+
+
+
+
+
+81 34
+enemy_is_playing = 0
+Dans ft_algo
+78 72
+
+
+
+
+
+78 72
+enemy_is_playing = 0
+Dans ft_algo
+15 68
+
+
+
+
+
+15 68
+enemy_is_playing = 0
+Dans ft_algo
+40 37
+
+
+
+
+
+40 37
+enemy_is_playing = 0
+Dans ft_algo
+95 19
+
+
+
+
+
+95 19
+enemy_is_playing = 0
+Dans ft_algo
+76 4
+
+
+
+
+
+76 4
+enemy_is_playing = 0
+Dans ft_algo
+7 76
+
+
+
+
+
+7 76
+enemy_is_playing = 0
+Dans ft_algo
+0 53
+
+
+
+
+
+0 53
+enemy_is_playing = 0
+Dans ft_algo
+20 29
+
+
+
+
+
+20 29
+enemy_is_playing = 0
+Dans ft_algo
+31 66
+
+
+
+
+
+31 66
+enemy_is_playing = 0
+Dans ft_algo
+26 42
+
+
+
+
+
+26 42
+enemy_is_playing = 0
+Dans ft_algo
+42 76
+
+
+
+
+
+42 76
+enemy_is_playing = 0
+Dans ft_algo
+61 29
+
+
+
+
+
+61 29
+enemy_is_playing = 0
+Dans ft_algo
+17 62
+
+
+
+
+
+17 62
+enemy_is_playing = 0
+Dans ft_algo
+87 15
+
+
+
+
+
+87 15
+enemy_is_playing = 0
+Dans ft_algo
+35 15
+
+
+
+
+
+35 15
+enemy_is_playing = 0
+Dans ft_algo
+79 51
+
+
+
+
+
+79 51
+enemy_is_playing = 0
+Dans ft_algo
+51 67
+
+
+
+
+
+51 67
+enemy_is_playing = 0
+Dans ft_algo
+42 70
+
+
+
+
+
+42 70
+enemy_is_playing = 0
+Dans ft_algo
+29 40
+
+
+
+
+
+29 40
+enemy_is_playing = 0
+Dans ft_algo
+80 1
+
+
+
+
+
+80 1
+enemy_is_playing = 0
+Dans ft_algo
+86 67
+
+
+
+
+
+86 67
+enemy_is_playing = 0
+Dans ft_algo
+59 75
+
+
+
+
+
+59 75
+enemy_is_playing = 0
+Dans ft_algo
+35 15
+
+
+
+
+
+35 15
+enemy_is_playing = 0
+Dans ft_algo
+59 75
+
+
+
+
+
+59 75
+enemy_is_playing = 0
+Dans ft_algo
+11 49
+
+
+
+
+
+11 49
+enemy_is_playing = 0
+Dans ft_algo
+84 71
+
+
+
+
+
+84 71
+enemy_is_playing = 0
+Dans ft_algo
+68 72
+
+
+
+
+
+68 72
+enemy_is_playing = 0
+Dans ft_algo
+14 74
+
+
+
+
+
+14 74
+enemy_is_playing = 0
+Dans ft_algo
+19 12
+
+
+
+
+
+19 12
+enemy_is_playing = 0
+Dans ft_algo
+37 64
+
+
+
+
+
+37 64
+enemy_is_playing = 0
+Dans ft_algo
+4 70
+
+
+
+
+
+4 70
+enemy_is_playing = 0
+Dans ft_algo
+47 22
+
+
+
+
+
+47 22
+enemy_is_playing = 0
+Dans ft_algo
+38 29
+
+
+
+
+
+38 29
+enemy_is_playing = 0
+Dans ft_algo
+57 44
+
+
+
+
+
+57 44
+enemy_is_playing = 0
+Dans ft_algo
+56 27
+
+
+
+
+
+56 27
+enemy_is_playing = 0
+Dans ft_algo
+26 77
+
+
+
+
+
+26 77
+enemy_is_playing = 0
+Dans ft_algo
+40 6
+
+
+
+
+
+40 6
+enemy_is_playing = 0
+Dans ft_algo
+3 66
+
+
+
+
+
+3 66
+enemy_is_playing = 0
+Dans ft_algo
+0 69
+
+
+
+
+
+0 69
+enemy_is_playing = 0
+Dans ft_algo
+30 25
+
+
+
+
+
+30 25
+enemy_is_playing = 0
+Dans ft_algo
+59 71
+
+
+
+
+
+59 71
+enemy_is_playing = 0
+Dans ft_algo
+4 43
+
+
+
+
+
+4 43
+enemy_is_playing = 0
+Dans ft_algo
+24 74
+
+
+
+
+
+24 74
+enemy_is_playing = 0
+Dans ft_algo
+75 58
+
+
+
+
+
+75 58
+enemy_is_playing = 0
+Dans ft_algo
+69 75
+
+
+
+
+
+69 75
+enemy_is_playing = 0
+Dans ft_algo
+22 21
+
+
+
+
+
+22 21
+enemy_is_playing = 0
+Dans ft_algo
+8 72
+
+
+
+
+
+8 72
+enemy_is_playing = 0
+Dans ft_algo
+4 70
+
+
+
+
+
+4 70
+enemy_is_playing = 0
+Dans ft_algo
+46 73
+
+
+
+
+
+46 73
+enemy_is_playing = 0
+Dans ft_algo
+84 0
+
+
+
+
+
+84 0
+enemy_is_playing = 0
+Dans ft_algo
+0 53
+
+
+
+
+
+0 53
+enemy_is_playing = 0
+Dans ft_algo
+54 21
+
+
+
+
+
+54 21
+enemy_is_playing = 0
+Dans ft_algo
+31 72
+
+
+
+
+
+31 72
+enemy_is_playing = 0
+Dans ft_algo
+52 58
+
+
+
+
+
+52 58
+enemy_is_playing = 0
+Dans ft_algo
+67 69
+
+
+
+
+
+67 69
+enemy_is_playing = 0
+Dans ft_algo
+2 46
+
+
+
+
+
+2 46
+enemy_is_playing = 0
+Dans ft_algo
+49 78
+
+
+
+
+
+49 78
+enemy_is_playing = 0
+Dans ft_algo
+28 51
+
+
+
+
+
+28 51
+enemy_is_playing = 0
+Dans ft_algo
+77 23
+
+
+
+
+
+77 23
+enemy_is_playing = 0
+Dans ft_algo
+25 76
+
+
+
+
+
+25 76
+enemy_is_playing = 0
+Dans ft_algo
+9 76
+
+
+
+
+
+9 76
+enemy_is_playing = 0
+Dans ft_algo
+0 78
+
+
+
+
+
+0 78
+enemy_is_playing = 0
+Dans ft_algo
+56 75
+
+
+
+
+
+56 75
+enemy_is_playing = 0
+Dans ft_algo
+22 28
+
+
+
+
+
+22 28
+enemy_is_playing = 0
+Dans ft_algo
+46 78
+
+
+
+
+
+46 78
+enemy_is_playing = 0
+Dans ft_algo
+74 70
+
+
+
+
+
+74 70
+enemy_is_playing = 0
+Dans ft_algo
+7 10
+
+
+
+
+
+7 10
+enemy_is_playing = 0
+Dans ft_algo
+0 73
+
+
+
+
+
+0 73
+enemy_is_playing = 0
+Dans ft_algo
+12 26
+
+
+
+
+
+12 26
+enemy_is_playing = 0
+Dans ft_algo
+15 72
+
+
+
+
+
+15 72
+enemy_is_playing = 0
+Dans ft_algo
+55 74
+
+
+
+
+
+55 74
+enemy_is_playing = 0
+Dans ft_algo
+66 2
+
+
+
+
+
+66 2
+enemy_is_playing = 0
+Dans ft_algo
+19 59
+
+
+
+
+
+19 59
+enemy_is_playing = 0
+Dans ft_algo
+39 35
+
+
+
+
+
+39 35
+enemy_is_playing = 0
+Dans ft_algo
+17 76
+
+
+
+
+
+17 76
+enemy_is_playing = 0
+Dans ft_algo
+41 50
+
+
+
+
+
+41 50
+enemy_is_playing = 0
+Dans ft_algo
+30 34
+
+
+
+
+
+30 34
+enemy_is_playing = 0
+Dans ft_algo
+37 5
+
+
+
+
+
+37 5
+enemy_is_playing = 0
+Dans ft_algo
+27 4
+
+
+
+
+
+27 4
+enemy_is_playing = 0
+Dans ft_algo
+90 72
+
+
+
+
+
+90 72
+enemy_is_playing = 0
+Dans ft_algo
+69 75
+
+
+
+
+
+69 75
+enemy_is_playing = 0
+Dans ft_algo
+71 39
+
+
+
+
+
+71 39
+enemy_is_playing = 0
+Dans ft_algo
+17 76
+
+
+
+
+
+17 76
+enemy_is_playing = 0
+Dans ft_algo
+32 24
+
+
+
+
+
+32 24
+enemy_is_playing = 0
+Dans ft_algo
+87 13
+
+
+
+
+
+87 13
+enemy_is_playing = 0
+Dans ft_algo
+91 78
+
+
+
+
+
+91 78
+enemy_is_playing = 0
+Dans ft_algo
+43 58
+
+
+
+
+
+43 58
+enemy_is_playing = 0
+Dans ft_algo
+5 6
+
+
+
+
+
+5 6
+enemy_is_playing = 0
+Dans ft_algo
+46 58
+
+
+
+
+
+46 58
+enemy_is_playing = 0
+Dans ft_algo
+59 71
+
+
+
+
+
+59 71
+enemy_is_playing = 0
+Dans ft_algo
+68 4
+
+
+
+
+
+68 4
+enemy_is_playing = 0
+Dans ft_algo
+74 72
+
+
+
+
+
+74 72
+enemy_is_playing = 0
+Dans ft_algo
+66 78
+
+
+
+
+
+66 78
+enemy_is_playing = 0
+Dans ft_algo
+9 78
+
+
+
+
+
+9 78
+enemy_is_playing = 0
+Dans ft_algo
+86 58
+
+
+
+
+
+86 58
+enemy_is_playing = 0
+Dans ft_algo
+81 55
+
+
+
+
+
+81 55
+enemy_is_playing = 0
+Dans ft_algo
+64 74
+
+
+
+
+
+64 74
+enemy_is_playing = 0
+Dans ft_algo
+66 69
+
+
+
+
+
+66 69
+enemy_is_playing = 0
+Dans ft_algo
+54 78
+
+
+
+
+
+54 78
+enemy_is_playing = 0
+Dans ft_algo
+95 24
+
+
+
+
+
+95 24
+enemy_is_playing = 0
+Dans ft_algo
+12 31
+
+
+
+
+
+12 31
+enemy_is_playing = 0
+Dans ft_algo
+27 24
+
+
+
+
+
+27 24
+enemy_is_playing = 0
+Dans ft_algo
+7 10
+
+
+
+
+
+7 10
+enemy_is_playing = 0
+Dans ft_algo
+77 71
+
+
+
+
+
+77 71
+enemy_is_playing = 0
+Dans ft_algo
+0 73
+
+
+
+
+
+0 73
+enemy_is_playing = 0
+Dans ft_algo
+39 72
+
+
+
+
+
+39 72
+enemy_is_playing = 0
+Dans ft_algo
+52 20
+
+
+
+
+
+52 20
+enemy_is_playing = 0
+Dans ft_algo
+53 5
+
+
+
+
+
+53 5
+enemy_is_playing = 0
+Dans ft_algo
+19 12
+
+
+
+
+
+19 12
+enemy_is_playing = 0
+Dans ft_algo
+66 69
+
+
+
+
+
+66 69
+enemy_is_playing = 0
+Dans ft_algo
+24 74
+
+
+
+
+
+24 74
+enemy_is_playing = 0
+Dans ft_algo
+85 79
+
+
+
+
+
+85 79
+enemy_is_playing = 0
+Dans ft_algo
+49 78
+
+
+
+
+
+49 78
+enemy_is_playing = 0
+Dans ft_algo
+2 80
+
+
+
+
+
+2 80
+enemy_is_playing = 0
+Dans ft_algo
+95 68
+
+
+
+
+
+95 68
+enemy_is_playing = 0
+Dans ft_algo
+30 77
+
+
+
+
+
+30 77
+enemy_is_playing = 0
+Dans ft_algo
+23 32
+
+
+
+
+
+23 32
+enemy_is_playing = 0
+Dans ft_algo
+48 59
+
+
+
+
+
+48 59
+enemy_is_playing = 0
+Dans ft_algo
+44 80
+
+
+
+
+
+44 80
+enemy_is_playing = 0
+Dans ft_algo
+60 18
+
+
+
+
+
+60 18
+enemy_is_playing = 0
+Dans ft_algo
+31 22
+
+
+
+
+
+31 22
+enemy_is_playing = 0
+Dans ft_algo
+23 17
+
+
+
+
+
+23 17
+enemy_is_playing = 0
+Dans ft_algo
+74 70
+
+
+
+
+
+74 70
+enemy_is_playing = 0
+Dans ft_algo
+2 80
+
+
+
+
+
+2 80
+enemy_is_playing = 0
+Dans ft_algo
+3 57
+
+
+
+
+
+3 57
+enemy_is_playing = 0
+Dans ft_algo
+15 27
+
+
+
+
+
+15 27
+enemy_is_playing = 0
+Dans ft_algo
+46 58
+
+
+
+
+
+46 58
+enemy_is_playing = 0
+Dans ft_algo
+28 61
+
+
+
+
+
+28 61
+enemy_is_playing = 0
+Dans ft_algo
+40 80
+
+
+
+
+
+40 80
+enemy_is_playing = 0
+Dans ft_algo
+18 80
+
+
+
+
+
+18 80
+enemy_is_playing = 0
+Dans ft_algo
+13 71
+
+
+
+
+
+13 71
+enemy_is_playing = 0
+Dans ft_algo
+34 78
+
+
+
+
+
+34 78
+enemy_is_playing = 0
+Dans ft_algo
+61 72
+
+
+
+
+
+61 72
+enemy_is_playing = 0
+Dans ft_algo
+64 74
+
+
+
+
+
+64 74
+enemy_is_playing = 0
+Dans ft_algo
+13 71
+
+
+
+
+
+13 71
+enemy_is_playing = 0
+Dans ft_algo
+25 77
+
+
+
+
+
+25 77
+enemy_is_playing = 0
+Dans ft_algo
+90 76
+
+
+
+
+
+90 76
+enemy_is_playing = 0
+Dans ft_algo
+83 80
+
+
+
+
+
+83 80
+enemy_is_playing = 0
+Dans ft_algo
+80 80
+
+
+
+
+
+80 80
+enemy_is_playing = 0
+Dans ft_algo
+38 80
+
+
+
+
+
+38 80
+enemy_is_playing = 0
+Dans ft_algo
+64 57
+
+
+
+
+
+64 57
+enemy_is_playing = 0
+Dans ft_algo
+36 14
+
+
+
+
+
+36 14
+enemy_is_playing = 0
+Dans ft_algo
+24 81
+
+
+
+
+
+24 81
+enemy_is_playing = 0
+Dans ft_algo
+3 32
+
+
+
+
+
+3 32
+enemy_is_playing = 0
+Dans ft_algo
+68 45
+
+
+
+
+
+68 45
+enemy_is_playing = 0
+Dans ft_algo
+0 82
+
+
+
+
+
+0 82
+enemy_is_playing = 0
+Dans ft_algo
+95 19
+
+
+
+
+
+95 19
+enemy_is_playing = 0
+Dans ft_algo
+62 80
+
+
+
+
+
+62 80
+enemy_is_playing = 0
+Dans ft_algo
+56 75
+
+
+
+
+
+56 75
+enemy_is_playing = 0
+Dans ft_algo
+67 80
+
+
+
+
+
+67 80
+enemy_is_playing = 0
+Dans ft_algo
+18 76
+
+
+
+
+
+18 76
+enemy_is_playing = 0
+Dans ft_algo
+21 79
+
+
+
+
+
+21 79
+enemy_is_playing = 0
+Dans ft_algo
+0 61
+
+
+
+
+
+0 61
+enemy_is_playing = 0
+Dans ft_algo
+0 76
+
+
+
+
+
+0 76
+enemy_is_playing = 0
+Dans ft_algo
+8 23
+
+
+
+
+
+8 23
+enemy_is_playing = 0
+Dans ft_algo
+67 20
+
+
+
+
+
+67 20
+enemy_is_playing = 0
+Dans ft_algo
+55 81
+
+
+
+
+
+55 81
+enemy_is_playing = 0
+Dans ft_algo
+81 74
+
+
+
+
+
+81 74
+enemy_is_playing = 0
+Dans ft_algo
+38 29
+
+
+
+
+
+38 29
+enemy_is_playing = 0
+Dans ft_algo
+79 79
+
+
+
+
+
+79 79
+enemy_is_playing = 0
+Dans ft_algo
+30 69
+
+
+
+
+
+30 69
+enemy_is_playing = 0
+Dans ft_algo
+22 74
+
+
+
+
+
+22 74
+enemy_is_playing = 0
+Dans ft_algo
+33 81
+
+
+
+
+
+33 81
+enemy_is_playing = 0
+Dans ft_algo
+67 80
+
+
+
+
+
+67 80
+enemy_is_playing = 0
+Dans ft_algo
+86 79
+
+
+
+
+
+86 79
+enemy_is_playing = 0
+Dans ft_algo
+3 40
+
+
+
+
+
+3 40
+enemy_is_playing = 0
+Dans ft_algo
+79 74
+
+
+
+
+
+79 74
+enemy_is_playing = 0
+Dans ft_algo
+14 75
+
+
+
+
+
+14 75
+enemy_is_playing = 0
+Dans ft_algo
+31 57
+
+
+
+
+
+31 57
+enemy_is_playing = 0
+Dans ft_algo
+46 78
+
+
+
+
+
+46 78
+enemy_is_playing = 0
+Dans ft_algo
+33 76
+
+
+
+
+
+33 76
+enemy_is_playing = 0
+Dans ft_algo
+0 76
+
+
+
+
+
+0 76
+enemy_is_playing = 0
+Dans ft_algo
+55 81
+
+
+
+
+
+55 81
+enemy_is_playing = 0
+Dans ft_algo
+79 74
+
+
+
+
+
+79 74
+enemy_is_playing = 0
+Dans ft_algo
+0 33
+
+
+
+
+
+0 33
+enemy_is_playing = 0
+Dans ft_algo
+47 44
+
+
+
+
+
+47 44
+enemy_is_playing = 0
+Dans ft_algo
+2 74
+
+
+
+
+
+2 74
+enemy_is_playing = 0
+Dans ft_algo
+67 80
+
+
+
+
+
+67 80
+enemy_is_playing = 0
+Dans ft_algo
+4 78
+
+
+
+
+
+4 78
+enemy_is_playing = 0
+Dans ft_algo
+45 50
+
+
+
+
+
+45 50
+enemy_is_playing = 0
+Dans ft_algo
+8 83
+
+
+
+
+
+8 83
+enemy_is_playing = 0
+Dans ft_algo
+42 28
+
+
+
+
+
+42 28
+enemy_is_playing = 0
+Dans ft_algo
+93 79
+
+
+
+
+
+93 79
+enemy_is_playing = 0
+Dans ft_algo
+61 57
+
+
+
+
+
+61 57
+enemy_is_playing = 0
+Dans ft_algo
+13 39
+
+
+
+
+
+13 39
+enemy_is_playing = 0
+Dans ft_algo
+86 79
+
+
+
+
+
+86 79
+enemy_is_playing = 0
+Dans ft_algo
+8 71
+
+
+
+
+
+8 71
+enemy_is_playing = 0
+Dans ft_algo
+89 77
+
+
+
+
+
+89 77
+enemy_is_playing = 0
+Dans ft_algo
+66 78
+
+
+
+
+
+66 78
+enemy_is_playing = 0
+Dans ft_algo
+8 57
+
+
+
+
+
+8 57
+enemy_is_playing = 0
+Dans ft_algo
+41 83
+
+
+
+
+
+41 83
+enemy_is_playing = 0
+Dans ft_algo
+18 76
+
+
+
+
+
+18 76
+enemy_is_playing = 0
+Dans ft_algo
+38 80
+
+
+
+
+
+38 80
+enemy_is_playing = 0
+Dans ft_algo
+51 82
+
+
+
+
+
+51 82
+enemy_is_playing = 0
+Dans ft_algo
+49 77
+
+
+
+
+
+49 77
+enemy_is_playing = 0
+Dans ft_algo
+38 82
+
+
+
+
+
+38 82
+enemy_is_playing = 0
+Dans ft_algo
+8 83
+
+
+
+
+
+8 83
+enemy_is_playing = 0
+Dans ft_algo
+86 2
+
+
+
+
+
+86 2
+enemy_is_playing = 0
+Dans ft_algo
+67 81
+
+
+
+
+
+67 81
+enemy_is_playing = 0
+Dans ft_algo
+60 83
+
+
+
+
+
+60 83
+enemy_is_playing = 0
+Dans ft_algo
+9 82
+
+
+
+
+
+9 82
+enemy_is_playing = 0
+Dans ft_algo
+61 57
+
+
+
+
+
+61 57
+enemy_is_playing = 0
+Dans ft_algo
+85 83
+
+
+
+
+
+85 83
+enemy_is_playing = 0
+Dans ft_algo
+85 82
+
+
+
+
+
+85 82
+enemy_is_playing = 0
+Dans ft_algo
+8 57
+
+
+
+
+
+8 57
+enemy_is_playing = 0
+Dans ft_algo
+84 78
+
+
+
+
+
+84 78
+enemy_is_playing = 0
+Dans ft_algo
+57 44
+
+
+
+
+
+57 44
+enemy_is_playing = 0
+Dans ft_algo
+30 81
+
+
+
+
+
+30 81
+enemy_is_playing = 0
+Dans ft_algo
+33 69
+
+
+
+
+
+33 69
+enemy_is_playing = 0
+Dans ft_algo
+3 32
+
+
+
+
+
+3 32
+enemy_is_playing = 0
+Dans ft_algo
+76 84
+
+
+
+
+
+76 84
+enemy_is_playing = 0
+Dans ft_algo
+22 18
+
+
+
+
+
+22 18
+enemy_is_playing = 0
+Dans ft_algo
+21 83
+
+
+
+
+
+21 83
+enemy_is_playing = 0
+Dans ft_algo
+10 19
+
+
+
+
+
+10 19
+enemy_is_playing = 0
+Dans ft_algo
+54 84
+
+
+
+
+
+54 84
+enemy_is_playing = 0
+Dans ft_algo
+33 84
+
+
+
+
+
+33 84
+enemy_is_playing = 0
+Dans ft_algo
+46 56
+
+
+
+
+
+46 56
+enemy_is_playing = 0
+Dans ft_algo
+2 83
+
+
+
+
+
+2 83
+enemy_is_playing = 0
+Dans ft_algo
+7 81
+
+
+
+
+
+7 81
+enemy_is_playing = 0
+Dans ft_algo
+71 84
+
+
+
+
+
+71 84
+enemy_is_playing = 0
+Dans ft_algo
+43 25
+
+
+
+
+
+43 25
+enemy_is_playing = 0
+Dans ft_algo
+9 80
+
+
+
+
+
+9 80
+enemy_is_playing = 0
+Dans ft_algo
+83 24
+
+
+
+
+
+83 24
+enemy_is_playing = 0
+Dans ft_algo
+24 44
+
+
+
+
+
+24 44
+enemy_is_playing = 0
+Dans ft_algo
+64 47
+
+
+
+
+
+64 47
+enemy_is_playing = 0
+Dans ft_algo
+93 74
+
+
+
+
+
+93 74
+enemy_is_playing = 0
+Dans ft_algo
+3 23
+
+
+
+
+
+3 23
+enemy_is_playing = 0
+Dans ft_algo
+22 18
+
+
+
+
+
+22 18
+enemy_is_playing = 0
+Dans ft_algo
+69 44
+
+
+
+
+
+69 44
+enemy_is_playing = 0
+Dans ft_algo
+74 80
+
+
+
+
+
+74 80
+enemy_is_playing = 0
+Dans ft_algo
+30 35
+
+
+
+
+
+30 35
+enemy_is_playing = 0
+Dans ft_algo
+44 79
+
+
+
+
+
+44 79
+enemy_is_playing = 0
+Dans ft_algo
+30 67
+
+
+
+
+
+30 67
+enemy_is_playing = 0
+Dans ft_algo
+46 78
+
+
+
+
+
+46 78
+enemy_is_playing = 0
+Dans ft_algo
+38 86
+
+
+
+
+
+38 86
+enemy_is_playing = 0
+Dans ft_algo
+2 85
+
+
+
+
+
+2 85
+enemy_is_playing = 0
+Dans ft_algo
+63 76
+
+
+
+
+
+63 76
+enemy_is_playing = 0
+Dans ft_algo
+44 70
+
+
+
+
+
+44 70
+enemy_is_playing = 0
+Dans ft_algo
+31 64
+
+
+
+
+
+31 64
+enemy_is_playing = 0
+Dans ft_algo
+11 85
+
+
+
+
+
+11 85
+enemy_is_playing = 0
+Dans ft_algo
+30 81
+
+
+
+
+
+30 81
+enemy_is_playing = 0
+Dans ft_algo
+83 65
+
+
+
+
+
+83 65
+enemy_is_playing = 0
+Dans ft_algo
+3 23
+
+
+
+
+
+3 23
+enemy_is_playing = 0
+Dans ft_algo
+60 86
+
+
+
+
+
+60 86
+enemy_is_playing = 0
+Dans ft_algo
+89 13
+
+
+
+
+
+89 13
+enemy_is_playing = 0
+Dans ft_algo
+79 79
+
+
+
+
+
+79 79
+enemy_is_playing = 0
+Dans ft_algo
+37 85
+
+
+
+
+
+37 85
+enemy_is_playing = 0
+Dans ft_algo
+79 85
+
+
+
+
+
+79 85
+enemy_is_playing = 0
+Dans ft_algo
+78 85
+
+
+
+
+
+78 85
+enemy_is_playing = 0
+Dans ft_algo
+58 66
+
+
+
+
+
+58 66
+enemy_is_playing = 0
+Dans ft_algo
+30 25
+
+
+
+
+
+30 25
+enemy_is_playing = 0
+Dans ft_algo
+12 78
+
+
+
+
+
+12 78
+enemy_is_playing = 0
+Dans ft_algo
+64 80
+
+
+
+
+
+64 80
+enemy_is_playing = 0
+Dans ft_algo
+67 80
+
+
+
+
+
+67 80
+enemy_is_playing = 0
+Dans ft_algo
+31 22
+
+
+
+
+
+31 22
+enemy_is_playing = 0
+Dans ft_algo
+25 77
+
+
+
+
+
+25 77
+enemy_is_playing = 0
+Dans ft_algo
+84 78
+
+
+
+
+
+84 78
+enemy_is_playing = 0
+Dans ft_algo
+28 84
+
+
+
+
+
+28 84
+enemy_is_playing = 0
+Dans ft_algo
+0 73
+
+
+
+
+
+0 73
+enemy_is_playing = 0
+Dans ft_algo
+84 37
+
+
+
+
+
+84 37
+enemy_is_playing = 0
+Dans ft_algo
+72 54
+
+
+
+
+
+72 54
+enemy_is_playing = 0
+Dans ft_algo
+79 74
+
+
+
+
+
+79 74
+enemy_is_playing = 0
+Dans ft_algo
+53 74
+
+
+
+
+
+53 74
+enemy_is_playing = 0
+Dans ft_algo
+2 12
+
+
+
+
+
+2 12
+enemy_is_playing = 0
+Dans ft_algo
+9 80
+
+
+
+
+
+9 80
+enemy_is_playing = 0
+Dans ft_algo
+0 73
+
+
+
+
+
+0 73
+enemy_is_playing = 0
+Dans ft_algo
+28 84
+
+
+
+
+
+28 84
+enemy_is_playing = 0
+Dans ft_algo
+10 19
+
+
+
+
+
+10 19
+enemy_is_playing = 0
+Dans ft_algo
+57 80
+
+
+
+
+
+57 80
+enemy_is_playing = 0
+Dans ft_algo
+88 1
+
+
+
+
+
+88 1
+enemy_is_playing = 0
+Dans ft_algo
+48 84
+
+
+
+
+
+48 84
+enemy_is_playing = 0
+Dans ft_algo
+19 41
+
+
+
+
+
+19 41
+enemy_is_playing = 0
+Dans ft_algo
+31 74
+
+
+
+
+
+31 74
+enemy_is_playing = 0
+Dans ft_algo
+67 78
+
+
+
+
+
+67 78
+enemy_is_playing = 0
+Dans ft_algo
+36 26
+
+
+
+
+
+36 26
+enemy_is_playing = 0
+Dans ft_algo
+20 88
+
+
+
+
+
+20 88
+enemy_is_playing = 0
+Dans ft_algo
+90 35
+
+
+
+
+
+90 35
+enemy_is_playing = 0
+Dans ft_algo
+23 17
+
+
+
+
+
+23 17
+enemy_is_playing = 0
+Dans ft_algo
+23 17
+
+
+
+
+
+23 17
+
+enemy_is_playing = 0
+Dans ft_algo
+15 67
+
+
+
+
+
+15 67
+enemy_is_playing = 0
+Dans ft_algo
+9 55
+
+
+
+
+
+9 55
+enemy_is_playing = 0
+Dans ft_algo
+58 72
+
+
+
+
+
+58 72
+enemy_is_playing = 0
+Dans ft_algo
+93 77
+
+
+
+
+
+93 77
+enemy_is_playing = 0
+Dans ft_algo
+46 7
+
+
+
+
+
+46 7
+enemy_is_playing = 0
+Dans ft_algo
+43 71
+
+
+
+
+
+43 71
+enemy_is_playing = 0
+Dans ft_algo
+7 75
+
+
+
+
+
+7 75
+enemy_is_playing = 0
+Dans ft_algo
+38 72
+
+
+
+
+
+38 72
+enemy_is_playing = 0
+Dans ft_algo
+79 67
+
+
+
+
+
+79 67
+enemy_is_playing = 0
+Dans ft_algo
+75 75
+
+
+
+
+
+75 75
+enemy_is_playing = 0
+Dans ft_algo
+22 71
+
+
+
+
+
+22 71
+enemy_is_playing = 0
+Dans ft_algo
+60 75
+
+
+
+
+
+60 75
+enemy_is_playing = 0
+Dans ft_algo
+50 27
+
+
+
+
+
+50 27
+enemy_is_playing = 0
+Dans ft_algo
+2 20
+
+
+
+
+
+2 20
+enemy_is_playing = 0
+Dans ft_algo
+4 26
+
+
+
+
+
+4 26
+enemy_is_playing = 0
+Dans ft_algo
+18 74
+
+
+
+
+
+18 74
+enemy_is_playing = 0
+Dans ft_algo
+7 75
+
+
+
+
+
+7 75
+enemy_is_playing = 0
+Dans ft_algo
+73 66
+
+
+
+
+
+73 66
+enemy_is_playing = 0
+Dans ft_algo
+18 72
+
+
+
+
+
+18 72
+enemy_is_playing = 0
+Dans ft_algo
+26 73
+
+
+
+
+
+26 73
+enemy_is_playing = 0
+Dans ft_algo
+1 77
+
+
+
+
+
+1 77
+enemy_is_playing = 0
+Dans ft_algo
+81 77
+
+
+
+
+
+81 77
+enemy_is_playing = 0
+Dans ft_algo
+47 22
+
+
+
+
+
+47 22
+enemy_is_playing = 0
+Dans ft_algo
+40 37
+
+
+
+
+
+40 37
+enemy_is_playing = 0
+Dans ft_algo
+91 69
+
+
+
+
+
+91 69
+enemy_is_playing = 0
+Dans ft_algo
+9 77
+
+
+
+
+
+9 77
+enemy_is_playing = 0
+Dans ft_algo
+7 77
+
+
+
+
+
+7 77
+enemy_is_playing = 0
+Dans ft_algo
+44 72
+
+
+
+
+
+44 72
+enemy_is_playing = 0
+Dans ft_algo
+7 77
+
+
+
+
+
+7 77
+enemy_is_playing = 0
+Dans ft_algo
+96 57
+
+
+
+
+
+96 57
+enemy_is_playing = 0
+Dans ft_algo
+91 64
+
+
+
+
+
+91 64
+enemy_is_playing = 0
+Dans ft_algo
+18 74
+
+
+
+
+
+18 74
+enemy_is_playing = 0
+Dans ft_algo
+66 72
+
+
+
+
+
+66 72
+enemy_is_playing = 0
+Dans ft_algo
+68 75
+
+
+
+
+
+68 75
+enemy_is_playing = 0
+Dans ft_algo
+9 33
+
+
+
+
+
+9 33
+enemy_is_playing = 0
+Dans ft_algo
+32 77
+
+
+
+
+
+32 77
+enemy_is_playing = 0
+Dans ft_algo
+48 78
+
+
+
+
+
+48 78
+enemy_is_playing = 0
+Dans ft_algo
+35 78
+
+
+
+
+
+35 78
+enemy_is_playing = 0
+Dans ft_algo
+7 78
+
+
+
+
+
+7 78
+enemy_is_playing = 0
+Dans ft_algo
+78 70
+
+
+
+
+
+78 70
+enemy_is_playing = 0
+Dans ft_algo
+12 40
+
+
+
+
+
+12 40
+enemy_is_playing = 0
+Dans ft_algo
+23 71
+
+
+
+
+
+23 71
+enemy_is_playing = 0
+Dans ft_algo
+0 78
+
+
+
+
+
+0 78
+enemy_is_playing = 0
+Dans ft_algo
+61 77
+
+
+
+
+
+61 77
+enemy_is_playing = 0
+Dans ft_algo
+37 74
+
+
+
+
+
+37 74
+enemy_is_playing = 0
+Dans ft_algo
+64 72
+
+
+
+
+
+64 72
+enemy_is_playing = 0
+Dans ft_algo
+32 79
+
+
+
+
+
+32 79
+enemy_is_playing = 0
+Dans ft_algo
+90 21
+
+
+
+
+
+90 21
+enemy_is_playing = 0
+Dans ft_algo
+29 75
+
+
+
+
+
+29 75
+enemy_is_playing = 0
+Dans ft_algo
+56 77
+
+
+
+
+
+56 77
+enemy_is_playing = 0
+Dans ft_algo
+50 79
+
+
+
+
+
+50 79
+enemy_is_playing = 0
+Dans ft_algo
+69 22
+
+
+
+
+
+69 22
+enemy_is_playing = 0
+Dans ft_algo
+32 76
+
+
+
+
+
+32 76
+enemy_is_playing = 0
+Dans ft_algo
+15 67
+
+
+
+
+
+15 67
+enemy_is_playing = 0
+Dans ft_algo
+71 79
+
+
+
+
+
+71 79
+enemy_is_playing = 0
+Dans ft_algo
+68 80
+
+
+
+
+
+68 80
+enemy_is_playing = 0
+Dans ft_algo
+22 21
+
+
+
+
+
+22 21
+enemy_is_playing = 0
+Dans ft_algo
+68 74
+
+
+
+
+
+68 74
+enemy_is_playing = 0
+Dans ft_algo
+18 79
+
+
+
+
+
+18 79
+enemy_is_playing = 0
+Dans ft_algo
+84 73
+
+
+
+
+
+84 73
+enemy_is_playing = 0
+Dans ft_algo
+23 80
+
+
+
+
+
+23 80
+enemy_is_playing = 0
+Dans ft_algo
+12 75
+
+
+
+
+
+12 75
+enemy_is_playing = 0
+Dans ft_algo
+20 17
+
+
+
+
+
+20 17
+enemy_is_playing = 0
+Dans ft_algo
+58 72
+
+
+
+
+
+58 72
+enemy_is_playing = 0
+Dans ft_algo
+80 32
+
+
+
+
+
+80 32
+enemy_is_playing = 0
+Dans ft_algo
+54 78
+
+
+
+
+
+54 78
+enemy_is_playing = 0
+Dans ft_algo
+18 72
+
+
+
+
+
+18 72
+enemy_is_playing = 0
+Dans ft_algo
+3 74
+
+
+
+
+
+3 74
+enemy_is_playing = 0
+Dans ft_algo
+97 49
+
+
+
+
+
+97 49
+enemy_is_playing = 0
+Dans ft_algo
+61 73
+
+
+
+
+
+61 73
+enemy_is_playing = 0
+Dans ft_algo
+24 65
+
+
+
+
+
+24 65
+enemy_is_playing = 0
+Dans ft_algo
+16 50
+
+
+
+
+
+16 50
+enemy_is_playing = 0
+Dans ft_algo
+92 79
+
+
+
+
+
+92 79
+enemy_is_playing = 0
+Dans ft_algo
+85 70
+
+
+
+
+
+85 70
+enemy_is_playing = 0
+Dans ft_algo
+24 15
+
+
+
+
+
+24 15
+enemy_is_playing = 0
+Dans ft_algo
+24 15
+
+
+
+
+
+24 15
+enemy_is_playing = 0
+Dans ft_algo
+35 78
+
+
+
+
+
+35 78
+enemy_is_playing = 0
+Dans ft_algo
+13 51
+
+
+
+
+
+13 51
+enemy_is_playing = 0
+Dans ft_algo
+50 27
+
+
+
+
+
+50 27
+enemy_is_playing = 0
+Dans ft_algo
+54 71
+
+
+
+
+
+54 71
+enemy_is_playing = 0
+Dans ft_algo
+0 81
+
+
+
+
+
+0 81
+enemy_is_playing = 0
+Dans ft_algo
+63 69
+
+
+
+
+
+63 69
+enemy_is_playing = 0
+Dans ft_algo
+22 74
+
+
+
+
+
+22 74
+enemy_is_playing = 0
+Dans ft_algo
+49 75
+
+
+
+
+
+49 75
+enemy_is_playing = 0
+Dans ft_algo
+50 77
+
+
+
+
+
+50 77
+enemy_is_playing = 0
+Dans ft_algo
+76 74
+
+
+
+
+
+76 74
+enemy_is_playing = 0
+Dans ft_algo
+79 57
+
+
+
+
+
+79 57
+enemy_is_playing = 0
+Dans ft_algo
+92 72
+
+
+
+
+
+92 72
+enemy_is_playing = 0
+Dans ft_algo
+13 74
+
+
+
+
+
+13 74
+enemy_is_playing = 0
+Dans ft_algo
+60 80
+
+
+
+
+
+60 80
+enemy_is_playing = 0
+Dans ft_algo
+1 78
+
+
+
+
+
+1 78
+enemy_is_playing = 0
+Dans ft_algo
+31 72
+
+
+
+
+
+31 72
+enemy_is_playing = 0
+Dans ft_algo
+55 52
+
+
+
+
+
+55 52
+enemy_is_playing = 0
+Dans ft_algo
+0 77
+
+
+
+
+
+0 77
+enemy_is_playing = 0
+Dans ft_algo
+0 73
+
+
+
+
+
+0 73
+enemy_is_playing = 0
+Dans ft_algo
+23 71
+
+
+
+
+
+23 71
+enemy_is_playing = 0
+Dans ft_algo
+48 62
+
+
+
+
+
+48 62
+enemy_is_playing = 0
+Dans ft_algo
+22 60
+
+
+
+
+
+22 60
+enemy_is_playing = 0
+Dans ft_algo
+88 42
+
+
+
+
+
+88 42
+enemy_is_playing = 0
+Dans ft_algo
+9 28
+
+
+
+
+
+9 28
+enemy_is_playing = 0
+Dans ft_algo
+32 80
+
+
+
+
+
+32 80
+enemy_is_playing = 0
+Dans ft_algo
+24 57
+
+
+
+
+
+24 57
+enemy_is_playing = 0
+Dans ft_algo
+64 67
+
+
+
+
+
+64 67
+enemy_is_playing = 0
+Dans ft_algo
+2 53
+
+
+
+
+
+2 53
+enemy_is_playing = 0
+Dans ft_algo
+61 73
+
+
+
+
+
+61 73
+enemy_is_playing = 0
+Dans ft_algo
+56 77
+
+
+
+
+
+56 77
+enemy_is_playing = 0
+Dans ft_algo
+26 73
+
+
+
+
+
+26 73
+enemy_is_playing = 0
+Dans ft_algo
+0 81
+
+
+
+
+
+0 81
+enemy_is_playing = 0
+Dans ft_algo
+41 81
+
+
+
+
+
+41 81
+enemy_is_playing = 0
+Dans ft_algo
+96 77
+
+
+
+
+
+96 77
+enemy_is_playing = 0
+Dans ft_algo
+95 75
+
+
+
+
+
+95 75
+enemy_is_playing = 0
+Dans ft_algo
+0 62
+
+
+
+
+
+0 62
+enemy_is_playing = 0
+Dans ft_algo
+10 80
+
+
+
+
+
+10 80
+enemy_is_playing = 0
+Dans ft_algo
+45 80
+
+
+
+
+
+45 80
+enemy_is_playing = 0
+Dans ft_algo
+14 78
+
+
+
+
+
+14 78
+enemy_is_playing = 0
+Dans ft_algo
+73 78
+
+
+
+
+
+73 78
+enemy_is_playing = 0
+Dans ft_algo
+78 77
+
+
+
+
+
+78 77
+enemy_is_playing = 0
+Dans ft_algo
+2 82
+
+
+
+
+
+2 82
+enemy_is_playing = 0
+Dans ft_algo
+96 24
+
+
+
+
+
+96 24
+enemy_is_playing = 0
+Dans ft_algo
+39 28
+
+
+
+
+
+39 28
+enemy_is_playing = 0
+Dans ft_algo
+36 37
+
+
+
+
+
+36 37
+enemy_is_playing = 0
+Dans ft_algo
+15 81
+
+
+
+
+
+15 81
+enemy_is_playing = 0
+Dans ft_algo
+56 77
+
+
+
+
+
+56 77
+enemy_is_playing = 0
+Dans ft_algo
+23 80
+
+
+
+
+
+23 80
+enemy_is_playing = 0
+Dans ft_algo
+68 74
+
+
+
+
+
+68 74
+enemy_is_playing = 0
+Dans ft_algo
+78 69
+
+
+
+
+
+78 69
+enemy_is_playing = 0
+Dans ft_algo
+37 74
+
+
+
+
+
+37 74
+enemy_is_playing = 0
+Dans ft_algo
+29 83
+
+
+
+
+
+29 83
+enemy_is_playing = 0
+Dans ft_algo
+60 74
+
+
+
+
+
+60 74
+enemy_is_playing = 0
+Dans ft_algo
+35 78
+
+
+
+
+
+35 78
+enemy_is_playing = 0
+Dans ft_algo
+64 67
+
+
+
+
+
+64 67
+enemy_is_playing = 0
+Dans ft_algo
+12 77
+
+
+
+
+
+12 77
+enemy_is_playing = 0
+Dans ft_algo
+67 34
+
+
+
+
+
+67 34
+enemy_is_playing = 0
+Dans ft_algo
+21 70
+
+
+
+
+
+21 70
+enemy_is_playing = 0
+Dans ft_algo
+21 70
+
+
+
+
+
+21 70
+ ft_algo
+6 24
+
+
+
+
+
+6 24
+enemy_is_playing = 0
+Dans ft_algo
+51 70
+
+
+
+
+
+51 70
+enemy_is_playing = 0
+Dans ft_algo
+83 80
+
+
+
+
+
+83 80
+enemy_is_playing = 0
+Dans ft_algo
+79 70
+
+
+
+
+
+79 70
+enemy_is_playing = 0
+Dans ft_algo
+52 13
+
+
+
+
+
+52 13
+enemy_is_playing = 0
+Dans ft_algo
+29 78
+
+
+
+
+
+29 78
+enemy_is_playing = 0
+Dans ft_algo
+79 66
+
+
+
+
+
+79 66
+enemy_is_playing = 0
+Dans ft_algo
+33 47
+
+
+
+
+
+33 47
+enemy_is_playing = 0
+Dans ft_algo
+26 81
+
+
+
+
+
+26 81
+enemy_is_playing = 0
+Dans ft_algo
+78 67
+
+
+
+
+
+78 67
+enemy_is_playing = 0
+Dans ft_algo
+31 82
+
+
+
+
+
+31 82
+enemy_is_playing = 0
+Dans ft_algo
+43 46
+
+
+
+
+
+43 46
+enemy_is_playing = 0
+Dans ft_algo
+56 69
+
+
+
+
+
+56 69
+enemy_is_playing = 0
+Dans ft_algo
+60 68
+
+
+
+
+
+60 68
+enemy_is_playing = 0
+Dans ft_algo
+12 41
+
+
+
+
+
+12 41
+enemy_is_playing = 0
+Dans ft_algo
+41 71
+
+
+
+
+
+41 71
+enemy_is_playing = 0
+Dans ft_algo
+25 79
+
+
+
+
+
+25 79
+enemy_is_playing = 0
+Dans ft_algo
+52 80
+
+
+
+
+
+52 80
+enemy_is_playing = 0
+Dans ft_algo
+89 76
+
+
+
+
+
+89 76
+enemy_is_playing = 0
+Dans ft_algo
+72 76
+
+
+
+
+
+72 76
+enemy_is_playing = 0
+Dans ft_algo
+29 75
+
+
+
+
+
+29 75
+enemy_is_playing = 0
+Dans ft_algo
+94 50
+
+
+
+
+
+94 50
+enemy_is_playing = 0
+Dans ft_algo
+38 21
+
+
+
+
+
+38 21
+enemy_is_playing = 0
+Dans ft_algo
+77 74
+
+
+
+
+
+77 74
+enemy_is_playing = 0
+Dans ft_algo
+73 70
+
+
+
+
+
+73 70
+enemy_is_playing = 0
+Dans ft_algo
+79 54
+
+
+
+
+
+79 54
+enemy_is_playing = 0
+Dans ft_algo
+22 81
+
+
+
+
+
+22 81
+enemy_is_playing = 0
+Dans ft_algo
+2 81
+
+
+
+
+
+2 81
+enemy_is_playing = 0
+Dans ft_algo
+55 75
+
+
+
+
+
+55 75
+enemy_is_playing = 0
+Dans ft_algo
+5 75
+
+
+
+
+
+5 75
+enemy_is_playing = 0
+Dans ft_algo
+31 61
+
+
+
+
+
+31 61
+enemy_is_playing = 0
+Dans ft_algo
+66 82
+
+
+
+
+
+66 82
+enemy_is_playing = 0
+Dans ft_algo
+58 82
+
+
+
+
+
+58 82
+enemy_is_playing = 0
+Dans ft_algo
+44 76
+
+
+
+
+
+44 76
+enemy_is_playing = 0
+Dans ft_algo
+12 79
+
+
+
+
+
+12 79
+enemy_is_playing = 0
+Dans ft_algo
+1 37
+
+
+
+
+
+1 37
+enemy_is_playing = 0
+Dans ft_algo
+78 32
+
+
+
+
+
+78 32
+enemy_is_playing = 0
+Dans ft_algo
+35 81
+
+
+
+
+
+35 81
+enemy_is_playing = 0
+Dans ft_algo
+3 78
+
+
+
+
+
+3 78
+enemy_is_playing = 0
+Dans ft_algo
+1 42
+
+
+
+
+
+1 42
+enemy_is_playing = 0
+Dans ft_algo
+87 68
+
+
+
+
+
+87 68
+enemy_is_playing = 0
+Dans ft_algo
+58 81
+
+
+
+
+
+58 81
+enemy_is_playing = 0
+Dans ft_algo
+0 74
+
+
+
+
+
+0 74
+enemy_is_playing = 0
+Dans ft_algo
+62 82
+
+
+
+
+
+62 82
+enemy_is_playing = 0
+Dans ft_algo
+22 83
+
+
+
+
+
+22 83
+enemy_is_playing = 0
+Dans ft_algo
+86 73
+
+
+
+
+
+86 73
+enemy_is_playing = 0
+Dans ft_algo
+58 32
+
+
+
+
+
+58 32
+enemy_is_playing = 0
+Dans ft_algo
+42 69
+
+
+
+
+
+42 69
+enemy_is_playing = 0
+Dans ft_algo
+11 62
+
+
+
+
+
+11 62
+enemy_is_playing = 0
+Dans ft_algo
+86 62
+
+
+
+
+
+86 62
+enemy_is_playing = 0
+Dans ft_algo
+1 48
+
+
+
+
+
+1 48
+enemy_is_playing = 0
+Dans ft_algo
+71 83
+
+
+
+
+
+71 83
+enemy_is_playing = 0
+Dans ft_algo
+89 83
+
+
+
+
+
+89 83
+enemy_is_playing = 0
+Dans ft_algo
+54 38
+
+
+
+
+
+54 38
+enemy_is_playing = 0
+Dans ft_algo
+57 72
+
+
+
+
+
+57 72
+enemy_is_playing = 0
+Dans ft_algo
+19 83
+
+
+
+
+
+19 83
+enemy_is_playing = 0
+Dans ft_algo
+72 62
+
+
+
+
+
+72 62
+enemy_is_playing = 0
+Dans ft_algo
+14 82
+
+
+
+
+
+14 82
+enemy_is_playing = 0
+Dans ft_algo
+66 82
+
+
+
+
+
+66 82
+enemy_is_playing = 0
+Dans ft_algo
+43 79
+
+
+
+
+
+43 79
+enemy_is_playing = 0
+Dans ft_algo
+22 81
+
+
+
+
+
+22 81
+enemy_is_playing = 0
+Dans ft_algo
+40 78
+
+
+
+
+
+40 78
+enemy_is_playing = 0
+Dans ft_algo
+84 81
+
+
+
+
+
+84 81
+enemy_is_playing = 0
+Dans ft_algo
+85 75
+
+
+
+
+
+85 75
+enemy_is_playing = 0
+Dans ft_algo
+67 47
+
+
+
+
+
+67 47
+enemy_is_playing = 0
+Dans ft_algo
+0 84
+
+
+
+
+
+0 84
+enemy_is_playing = 0
+Dans ft_algo
+36 60
+
+
+
+
+
+36 60
+enemy_is_playing = 0
+Dans ft_algo
+41 14
+
+
+
+
+
+41 14
+enemy_is_playing = 0
+Dans ft_algo
+71 67
+
+
+
+
+
+71 67
+enemy_is_playing = 0
+Dans ft_algo
+14 79
+
+
+
+
+
+14 79
+enemy_is_playing = 0
+Dans ft_algo
+34 77
+
+
+
+
+
+34 77
+enemy_is_playing = 0
+Dans ft_algo
+40 45
+
+
+
+
+
+40 45
+enemy_is_playing = 0
+Dans ft_algo
+28 84
+
+
+
+
+
+28 84
+enemy_is_playing = 0
+Dans ft_algo
+28 84
+
+
+
+
+
+28 84

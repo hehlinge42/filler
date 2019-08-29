@@ -183,16 +183,16 @@ int			ft_get_points(t_var *var)
 			{
 				(var->nb_enemy)++;
 				var->enemy_is_playing = 1;
-				ft_free((void **)elem);
+				//ft_free((void **)elem);
 			}
 			init_point(point, point->x, point->y, point->owner);
-			ft_test_dist(var, point);
+			//ft_test_dist(var, point);
 		}
 		else
 		{
 			prec = elem;
 			tmp = elem->next;
-			//ft_get_closest(elem, var);
+			ft_get_closest(elem, var);
 			point->available = is_available(*var, point->x, point->y);
 		}
 		elem = tmp;

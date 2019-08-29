@@ -144,7 +144,7 @@ int		ft_parse_input(t_var *var)
 	var->enemy_is_playing = (var->turn) ? 0 : 1;
 	if (get_next_line(0, &line) && ft_parse_size(line, var, "Plateau "))
 	{
-		ft_free((void **)&line);
+		//ft_free((void **)&line);
 		if (var->turn == 0)
 			ft_init_neutral_points(var);
 		//print_points(*var);
@@ -152,17 +152,17 @@ int		ft_parse_input(t_var *var)
 		while (nb < var->y_map
 			&& get_next_line(0, &line) > -1 && ft_parse_map(nb, line, var))
 			nb++;
-		ft_free((void **)&line);
+		//ft_free((void **)&line);
 		if (nb == var->y_map
 			&& get_next_line(0, &line) && ft_parse_size(line, var, "Piece "))
 		{
-			ft_free((void **)&line);
+			//ft_free((void **)&line);
 //			printf("size piece ok, x: %d, y: %d\n", var->x_piece, var->y_piece);
 			nb = 0;
 			while (nb < var->y_piece
 				&& get_next_line(0, &line) && ft_parse_piece(nb, line, var))
 					nb++;
-			ft_free((void **)&line);
+			//ft_free((void **)&line);
 //			printf("piece ok\n");
 			if (nb == var->y_piece)
 				return (1);
