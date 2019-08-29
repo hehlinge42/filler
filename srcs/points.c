@@ -35,8 +35,6 @@ t_point		*ft_new_point(int x, int y, char c)
 	return (0);
 }
 
-// point est la ref, le point a convertir, et tmp est le point actuel pour
-// lequel on regarde si il fait basculer, on le recupere dans une liste
 void	ft_dist(t_point *point, t_lst *tmp, t_var *var)
 {
 	int		test;
@@ -46,28 +44,10 @@ void	ft_dist(t_point *point, t_lst *tmp, t_var *var)
 	x = point->x;
 	y = point->y;
 	point = tmp->content;
-	//ft_printf("Entrée dans ft_dist : x = %d, y = %d\n", x, y);
-	//ft_printf("test = %d, dist = %d\n",  abs(((t_point *)point->content)->x - x)
-	//+ abs(((t_point *)point->content)->y - y),  ((t_point *)point->content)->dist);
 	if (x >= 0 && y >= 0 && x < var->x_map && y < var->y_map
 		&& var->map[y][x] != '.' && (test = abs(point->x - x)
 		+ abs(point->y - y)) <= point->dist)
 	{
-		//ft_printf("Point valide trouvé, test = %d\n", test);
-		// le if en dessous dit aue si le test (la distance au point actuel) est
-		// egal a la distance a l'owner actuel, et si soit sur la map on a
-		// l'ennemi et en owner le player ou l'inverse alors on ne sait pas
-		// on peut resumer ça en si map != owner && map + 32 != owner je crois
-		 /*
-		if (test == ((t_point *)point->content)->dist
-			&& (((var->map[y][x] == var->enemy
-				|| var->map[y][x] == var->enemy + 32)
-			&& (((t_point *)point->content)->owner == var->player
-				|| var->map[y][x] == var->player + 32))
-			|| ((var->map[y][x] == var->player
-				|| var->map[y][x] == var->player + 32)
-			&& ((t_point *)point->content)->owner == var->enemy)))
-			*/
 		if (test == point->dist && var->map[y][x] != point->owner
 			&& var->map[y][x] - 32 != point->owner)
 			point->owner = '?';
@@ -126,29 +106,12 @@ void	ft_get_closest(t_lst	*point, t_var *var)
 		}
 		square_nb++;
 	}
-	/*
-	ft_printf("Point x = %d, y = %d : Owner = %c, x_owner = %d, y_owner = %d, dist = %d\n",
-		((t_point *)point->content)->x,
-		((t_point *)point->content)->y,
-		((t_point *)point->content)->owner,
-		((t_point *)point->content)->x_owner,
-		((t_point *)point->content)->y_owner,
-		((t_point *)point->content)->dist);
-		*/
-	/*
-	if (*var->pts_neutral)
-		printf("in get_cl, n start dist (%p): %d, n last dist: %d\n"
-			, ((t_point *)(*(var->pts_neutral))->content)
-			, ((t_point *)(*(var->pts_neutral))->content)->dist
-			,((t_point *)(*(var->pts_neutral))->last->content)->dist);
-		*/
 }
 
 void		ft_available(t_var *var)
 {
 	t_lst	*tmp;
 
-//	printf("dist ft start: %d\n", ((t_point *)(*var->pts_neut)->content)->dist);
 	tmp = *(var->pts_player);
 	while (tmp)
 	{
@@ -159,16 +122,10 @@ void		ft_available(t_var *var)
 	tmp = *(var->pts_neutral);
 	while (tmp)
 	{
-//		printf("dist before assign: %d\n", ((t_point *)tmp->content)->dist);
 		((t_point *)tmp->content)->available = is_available(*var
 			, ((t_point *)tmp->content)->x, ((t_point *)tmp->content)->y);
 		tmp = tmp->next;
-//		printf("dist after  assign: %d\n", ((t_point *)tmp->content)->dist);
 	}
-	//this line is to SEGFAULT because i have the flemme to include the lib for
-	//exit
-//	tmp->next->next = NULL;
-//	printf("dist ft end  : %d\n", ((t_point *)(*var->pts_neut)->content)->dist);
 }
 
 void		ft_test_dist(t_var *var, t_point *pivot)

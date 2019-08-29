@@ -35,10 +35,8 @@ int		ft_parse_size(char *line, t_var *var, char *option)
 		var->x_piece = ft_atoi(line + pos);
 	while (line[pos] >= '0' && line[pos] <= '9')
 		pos++;
-	if ((ft_strcmp(option, "Piece ")
-		&& (var->map = (char **)easymalloc(sizeof(char *) * var->y_map))
-		&& (var->tmp = (char **)easymalloc(sizeof(char *) * var->y_map)))
-		|| (var->piece = (char **)easymalloc(sizeof(char *) * var->y_piece)))
+	if (!ft_strcmp(option, "Plateau ") || (!(ft_strcmp(option, "Piece "))
+		&& (var->piece = (char **)easymalloc(sizeof(char *) * var->y_piece))))
 		if (line[pos] == ':' && line[pos + 1] == 0)
 			return (1);
 	return (0);
@@ -74,17 +72,13 @@ int		ft_parse_map(int nb, char *line, t_var *var)
 				line++;
 			if (*(line++) == ' ' && (int)ft_strlen(line) == var->x_map)
 			{
-				if ((var->map[nb] = (char *)easymalloc(var->x_map + 1))
-					&& (var->tmp[nb] = (char *)easymalloc(var->x_map + 1)))
-				{
-					ft_strncpy(var->map[nb], line, var->x_map);
-					ft_strncpy(var->tmp[nb], line, var->x_map);
-					while (*line == 'o' || *line == 'x' || *line == 'O'
-							|| *line == 'X' || *line == '.')
-						line++;
-					if (!*line)
-						return (1);
-				}
+				ft_strncpy(var->map[nb], line, var->x_map);
+				ft_strncpy(var->tmp[nb], line, var->x_map);
+				while (*line == 'o' || *line == 'x' || *line == 'O'
+						|| *line == 'X' || *line == '.')
+					line++;
+				if (!*line)
+					return (1);
 			}
 		}
 		return (0);
@@ -128,6 +122,16 @@ int		ft_init_neutral_points(t_var *var)
 	}
 	var->nb_neutral = var->x_map * var->y_map;
 	var->turn = 1;
+	if (!(var->map = (char **)easymalloc(sizeof(char *) * var->y_map))
+		|| !(var->tmp = (char **)easymalloc(sizeof(char *) * var->y_map)))
+		return (0);
+	i = -1;
+	while (++i < var->y_map)
+	{
+		if (!(var->map[i] = (char *)easymalloc(var->x_map + 1))
+			|| !(var->tmp[i] = (char *)easymalloc(var->x_map + 1)))
+			return (0);
+	}
 	return (1);
 }
 
