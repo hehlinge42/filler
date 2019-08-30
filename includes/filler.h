@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:30:50 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/20 15:48:03 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/30 16:32:02 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,6 @@ void			ft_algo(t_var *var);
 t_point			*ft_new_point(int x, int y, char c);
 void			print_point(t_point *point, int fd);
 void			print_points(t_var var);
+void			print_map(t_var var, int opt, int nocolor);
 
 # endif

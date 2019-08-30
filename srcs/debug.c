@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:38:31 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/21 19:44:49 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/30 16:35:31 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ void	print_lines(t_var var, char *line, int opt, int nocolor)
 		while (tmp)
 		{
 			point = tmp->content;
-			if (point->owner == var.enemy)
+			if (point->owner == var.enemy && !nocolor)
 				var.map[point->y][point->x] = ',';
-			else if (point->owner == '?')
+			else if (point->owner == '?' && !nocolor)
 				var.map[point->y][point->x] = '?';
 			tmp = tmp->next;
 		}

@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/21 19:42:40 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/30 16:47:46 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,26 +108,6 @@ void	ft_get_closest(t_lst	*point, t_var *var)
 	}
 }
 
-void		ft_available(t_var *var)
-{
-	t_lst	*tmp;
-
-	tmp = *(var->pts_player);
-	while (tmp)
-	{
-		((t_point *)tmp->content)->available = is_available(*var
-			, ((t_point *)tmp->content)->x, ((t_point *)tmp->content)->y);
-		tmp = tmp->next;
-	}
-	tmp = *(var->pts_neutral);
-	while (tmp)
-	{
-		((t_point *)tmp->content)->available = is_available(*var
-			, ((t_point *)tmp->content)->x, ((t_point *)tmp->content)->y);
-		tmp = tmp->next;
-	}
-}
-
 void		ft_test_dist(t_var *var, t_point *pivot)
 {
 	t_lst	*elem;
@@ -144,9 +124,15 @@ void		ft_test_dist(t_var *var, t_point *pivot)
 			point->dist = test;
 			point->x_owner = pivot->x;
 			point->y_owner = pivot->y;
+			/*
+			dprintf(var->fd, "test dist: point %d-%d, new owner: %c, dist: %d\n"
+				, point->y, point->x, pivot->owner, test);
+			*/
 		}
 		else if (test == point->dist && point->owner != pivot->owner)
 		{
+//			dprintf(var->fd, "test dist: point %d-%d, new owner: %c, dist: %d\n"
+//				, point->y, point->x, pivot->owner, test);
 			point->owner = '?';
 		}
 		elem = elem->next;
@@ -160,6 +146,8 @@ int			ft_get_points(t_var *var)
 	t_lst		*tmp;
 	t_lst		*prec;
 
+	dprintf(var->fd, "MAP BEFORE GET\n");
+	print_map(*var, 0, 0);
 	elem = *var->pts_neutral;
 	prec = 0;
 	while (elem)
@@ -186,13 +174,15 @@ int			ft_get_points(t_var *var)
 				//ft_free((void **)elem);
 			}
 			init_point(point, point->x, point->y, point->owner);
-			//ft_test_dist(var, point);
+			ft_test_dist(var, point);
 		}
 		else
 		{
 			prec = elem;
 			tmp = elem->next;
-			ft_get_closest(elem, var);
+		//	ft_get_closest(elem, var);
+		//	dprintf(var->fd, "closest: point %d-%d, new owner: %c, dist: %d\n"
+		//		, point->y, point->x, point->owner, point->dist);
 			point->available = is_available(*var, point->x, point->y);
 		}
 		elem = tmp;
@@ -204,6 +194,8 @@ int			ft_get_points(t_var *var)
 		point->available = is_available(*var, point->x, point->y);
 		elem = elem->next;
 	}
+	dprintf(var->fd, "MAP AFTER GET\n");
+	print_map(*var, 0, 0);
 //	print_elems(*var);
 	return (1);
 }
