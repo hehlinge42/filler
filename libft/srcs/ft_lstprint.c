@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_list.c                                    :+:      :+:    :+:   */
+/*   ft_lstprint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/03 16:39:05 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/21 18:52:09 by sikpenou         ###   ########.fr       */
+/*   Created: 2019/08/31 14:56:31 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/08/31 14:56:33 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_print_list(t_lst *begin_list, int opt)
+int			ft_lstprint(t_lst *begin_list, int opt)
 {
 	int		i;
 

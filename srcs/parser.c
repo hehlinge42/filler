@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/25 17:00:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/21 18:50:12 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/31 12:41:42 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,11 +103,9 @@ int		ft_init_neutral_points(t_var *var)
 {
 	int		i;
 	int		j;
-	int		init_dist;
 	t_lst	*point;
 
 	i = -1;
-	init_dist = (var->y_map > var->x_map) ? var->y_map : var->x_map;
 	while (++i < var->y_map)
 	{
 		j = -1;
@@ -116,7 +114,7 @@ int		ft_init_neutral_points(t_var *var)
 			if (!(point = ft_lstadd_new(var->pts_neutral,
 				(void *)ft_new_point(j, i, '.'), sizeof(t_point))))
 				return (0);
-			((t_point *)point->content)->dist = init_dist;
+			((t_point *)point->content)->dist = 2147483647;
 			//print_point((t_point *)point->content);
 		}
 	}

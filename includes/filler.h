@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:30:50 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/30 16:32:02 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/31 14:14:32 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ typedef struct		s_var
 # define PRINTENV printf("%s -- %s -- line %d\n", __FILE__, __func__, __LINE__); fflush(0);
 
 int				ft_parse_input(t_var *var);
-int				ft_get_points(t_var *var);
+void			ft_get_points(t_var *var);
 int				place_piece(void);
 int				ft_init_point(t_var *var, int x, int y, char letter);
 int				abs(int n);
@@ -66,7 +66,7 @@ void			print_debug(t_var var, char *opt);
 void			ft_algo(t_var *var);
 t_point			*ft_new_point(int x, int y, char c);
 void			print_point(t_point *point, int fd);
-void			print_points(t_var var);
+void			print_points(t_var var, char *opt);
 void			print_map(t_var var, int opt, int nocolor);
 
 # endif

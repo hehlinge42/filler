@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:38:31 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/30 16:35:31 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/08/31 15:36:20 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@ void	print_lines(t_var var, char *line, int opt, int nocolor)
 	int			i;
 	int			pos;
 	char		*code;
+	char		*reset;
 	t_lst		*tmp;
 	t_point		*point;
 
 	i = 0;
+	reset = "\033[0m";
 	while (i < var.y_map)
 	{
 		dprintf(var.fd, "%d\t", i);
@@ -34,6 +36,8 @@ void	print_lines(t_var var, char *line, int opt, int nocolor)
 		while (tmp)
 		{
 			point = tmp->content;
+			if (point->owner == var.player && !nocolor)
+				var.map[point->y][point->x] = '*';
 			if (point->owner == var.enemy && !nocolor)
 				var.map[point->y][point->x] = ',';
 			else if (point->owner == '?' && !nocolor)
@@ -43,17 +47,19 @@ void	print_lines(t_var var, char *line, int opt, int nocolor)
 		pos = 0;
 		while (line[pos])
 		{
-			code = "\033[0m";
+			code = reset;
 			(line[pos] == var.player || line[pos] == var.player + 32)
 			 	? (code = "\033[1;31m") : 0;
 			(line[pos] == var.enemy || line[pos] == var.enemy + 32)
 				? (code = "\033[1;34m") : 0;
 			line[pos] == ',' ? (code = "\033[0;34m") : 0;
-			line[pos] == '.' ? (code = "\033[0;31m") : 0;
+			line[pos] == '*' ? (code = "\033[0;31m") : 0;
+			if (line[pos] == ',' || line[pos] == '*')
+				var.map[i][pos] = '.';
 			if (nocolor)
 				dprintf(var.fd, "%c", line[pos]);
 			else
-				dprintf(var.fd, "%s%c\033[0m", code, line[pos]);
+				dprintf(var.fd, "%s%c%s", code, line[pos], reset);
 			pos++;
 		}
 		dprintf(var.fd, "\n");
@@ -103,10 +109,12 @@ void	print_point(t_point *point, int fd)
 		, available);
 }
 
-void	print_points(t_var var)
+void	print_points(t_var var, char *opt)
 {
 	t_lst		*tmp;
 
+	if (!*opt || ft_strstr(opt, "player"))
+	{
 	dprintf(var.fd, "PLAYER POINTS\n");
 	tmp = *(var.pts_player);
 	while (tmp)
@@ -114,12 +122,16 @@ void	print_points(t_var var)
 		print_point(tmp->content, var.fd);
 		tmp = tmp->next;
 	}
+	}
+	if (!*opt || ft_strstr(opt, "neutral"))
+	{
 	dprintf(var.fd, "NEUTRAL POINTS\n");
 	tmp = *(var.pts_neutral);
 	while (tmp)
 	{
 		print_point(tmp->content, var.fd);
 		tmp = tmp->next;
+	}
 	}
 }
 
@@ -129,13 +141,13 @@ void	print_debug(t_var var, char *opt)
 	if (!*opt || ft_strchr(opt, '1'))
 	{
 		if (ft_strchr(opt, '3'))
-			print_map(var, 1, 0);
+			print_map(var, 1, 1);
 		else if (ft_strchr(opt, '4'))
 			print_map(var, 0, 1);
 		else
-			print_map(var, 0, 0);
+			print_map(var, 0, 1);
 		print_piece(var);
 	}
 	if (!*opt || ft_strchr(opt, '2'))
-		print_points(var);
+		print_points(var, "");
 }
