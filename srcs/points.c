@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/09/01 16:29:47 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/01 16:38:30 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,6 +160,7 @@ void		ft_get_points(t_var *var)
 		if (var->map[point->y][point->x] != '.')
 		{
 			point->owner = var->map[point->y][point->x];
+			point->owner == var->enemy ? var->enemy_is_playing = 1 : 0;
 			tmp = elem;
 			elem = elem->next;
 			ft_lstpop(var->pts_neutral, (void **)tmp, 0);
