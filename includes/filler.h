@@ -70,5 +70,6 @@ void			print_points(t_var var, char *opt);
 void			print_map(t_var var, int opt, int nocolor);
 void			print_available(t_var var);
 void			print_piece(t_var var);
+int				ft_get_dist_enemy(t_point	*point, t_var *var);
 
 # endif

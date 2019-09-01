@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:28:16 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/30 16:31:22 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/01 16:52:14 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,13 +80,10 @@ int		main(void)
 			}
 			dprintf(var.fd, "enemy_is_playing = %d\n", var.enemy_is_playing);
 			ft_get_points(&var);
-			//print_debug(var, "12");
-			write(var.fd, "Dans ft_algo\n", ft_strlen("Dans ft_algo\n"));
-			///print_points(var);
 			ft_algo(&var);
 			ft_printf("%d %d\n", var.y_pos, var.x_pos);
-			dprintf(var.fd, "%d %d\n\n\n\n\n\n", var.x_pos, var.y_pos);
-			dprintf(fd, "%d %d\n", var.x_pos, var.y_pos);
+			var.x_pos = -1;
+			var.y_pos = -1;
 		}
 	}
 	return (1);

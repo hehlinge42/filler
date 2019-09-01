@@ -6,11 +6,12 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 16:16:19 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/21 19:45:13 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/01 16:55:24 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
+#include <limits.h>
 
 void	ft_reset_piece(t_var *var, t_point *point)
 {
@@ -21,21 +22,28 @@ void	ft_reset_piece(t_var *var, t_point *point)
 		ft_strcpy(var->tmp[i + point->y], var->map[i + point->y]);
 }
 
-void	ft_place_piece(t_var *var, t_point *point)
+int		ft_place_piece(t_var *var, t_point *point)
 {
 	int		i;
 	int		j;
 
 	i = -1;
-	while (++i < var->x_piece)
+	while (++i < var->y_piece)
 	{
 		j = -1;
-		while (++j < var->y_piece)
+		while (++j < var->x_piece)
 		{
-			if (var->piece[j][i] == '*')
-				var->tmp[j + point->y][i + point->x] = 'T';
+			if (var->piece[i][j] == '*')
+			{
+				var->tmp[i + point->y][j + point->x] = 'T';
+				if ((i + point->y == 0 || i + point->y == var->y_map
+					|| j + point->x == 0 || j + point->x == var->x_map)
+					&& ft_get_dist_enemy(point, var) < 4)
+					return (1);
+			}
 		}
 	}
+	return (0);
 }
 
 int		ft_check_change_ownership(t_var *var, t_point *pos, t_point *point_to_win)
@@ -71,9 +79,8 @@ int		ft_simulate(t_var *var, t_point *available_spot)
 	t_lst	*point_to_win;
 	int		count;
 
-//	ft_printf("AVAILABLE PT : x = %d, y = %d (current owner: %c)\n",
-//			available_spot->x, available_spot->y, available_spot->owner);
-	ft_place_piece(var, available_spot); // on place la piece dans tmp
+	if (ft_place_piece(var, available_spot))
+		return (INT_MAX); 	
 	point_to_win = *(var->pts_neutral);
 	count = 0;
 	while (point_to_win) // on boucle sur tous les points neutres
@@ -93,17 +100,19 @@ void	ft_algo(t_var *var)
 	int		count;
 	int		tmp;
 
-//	print_points(*var);
+	dprintf(var->fd, "--------\nIN ALGO\n\nNEUTRAL POINTS:\n");
 	point = *(var->pts_neutral);
 	count = -1; // count c'est le meilleur nombre de points convertis jusqu'a maintenant
 	while (point) // on boucle sur tous les points neutre pour chercher les spots dispos
 	{
-		if (((t_point *)point->content)->available // si le point est disponible
+		if (((t_point *)point->content)->available && count < INT_MAX
 				&& ((tmp = ft_simulate(var, (t_point *)point->content)) > count))
 		{
 			var->x_pos = ((t_point *)point->content)->x;
 			var->y_pos = ((t_point *)point->content)->y;
 			count = tmp;
+			print_point(((t_point *)point->content), var->fd);
+			dprintf(var->fd, "count: %d\n", count);
 			if (!(var->enemy_is_playing))
 				return ;
 			// si on améliore le meilleur nombre de points convertis on update le meilleur point
@@ -111,19 +120,23 @@ void	ft_algo(t_var *var)
 		point = point->next;
 	}
 	// si on est X il faut aussi boucler sur les points de X et vice versa avec O
+	dprintf(var->fd, "PLAYER POINTS:\n");
 	point = *(var->pts_player);
 	while (point)
 	{
-		if (((t_point *)point->content)->available
+		if (((t_point *)point->content)->available && count < INT_MAX
 				&& ((tmp = ft_simulate(var, (t_point *)point->content)) > count))
 		{
 			var->x_pos = ((t_point *)point->content)->x;
 			var->y_pos = ((t_point *)point->content)->y;
 			count = tmp;
+			print_point(((t_point *)point->content), var->fd);
+			dprintf(var->fd, "count: %d\n", count);
 			if (!(var->enemy_is_playing))
 				return ;
 
 		}
 		point = point->next;
 	}
+	dprintf(var->fd, "--------\nOUT ALGO, SELECTED: %d-%d\n", var->y_pos, var->x_pos);
 }

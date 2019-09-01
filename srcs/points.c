@@ -35,7 +35,7 @@ t_point		*ft_new_point(int x, int y, char c)
 	return (0);
 }
 
-void	ft_dist(t_point *point, t_lst *tmp, t_var *var)
+void	ft_dist(t_point *point, t_point *point_b, t_var *var, int *dist)
 {
 	int		test;
 	int		x;
@@ -43,69 +43,49 @@ void	ft_dist(t_point *point, t_lst *tmp, t_var *var)
 
 	x = point->x;
 	y = point->y;
-	point = tmp->content;
+	point_b = point;
 	if (x >= 0 && y >= 0 && x < var->x_map && y < var->y_map
 		&& var->map[y][x] != '.' && (test = abs(point->x - x)
-		+ abs(point->y - y)) <= point->dist)
+		+ abs(point->y - y)) <= *dist)
 	{
-		if (test == point->dist && var->map[y][x] != point->owner
-			&& var->map[y][x] - 32 != point->owner)
-			point->owner = '?';
-		else
-		{
-			point->x_owner = x;
-			point->y_owner = y;
-			point->dist = test;
-			if (var->map[y][x] == var->enemy
-				|| var->map[y][x] == var->enemy + 32)
-				point->owner = var->enemy;
-			else if (var->map[y][x] == var->player
-				|| var->map[y][x] == var->player + 32)
-				point->owner = var->player;
-		}
+		if (test < *dist && var->map[y][x] == var->enemy)
+			*dist = test;
 	}
-	//ft_printf("Sortie de ft_distr\n");
 }
 
-void	ft_get_closest(t_lst	*point, t_var *var)
+int		ft_get_dist_enemy(t_point	*point, t_var *var)
 {
 	int			square_nb;
+	int			dist;
 	t_point		tmp;
 
 	square_nb = 1;
 	ft_memset(&tmp, 0, sizeof(tmp));
-	((t_point *)point->content)->dist = (var->x_map >= var->y_map) ? var->x_map : var->y_map;
-	//ft_printf("tmp.dist = %d\n", ((t_point *)point->content)->dist);
-	while (((t_point *)point->content)->dist >= square_nb)
+	dist = (var->x_map >= var->y_map) ? var->x_map : var->y_map;
+	while (dist >= square_nb)
 	{
-		//ft_printf("loop %d, dist = %d\n", square_nb, ((t_point *)point->content)->dist);
-		tmp.y = ((t_point *)point->content)->y - square_nb - 1;
-		tmp.x = ((t_point *)point->content)->x - square_nb - 1;
-		while (++(tmp.y) <= ((t_point *)point->content)->y + square_nb)
+		tmp.y = point->y - square_nb - 1;
+		tmp.x = point->x - square_nb - 1;
+		while (++(tmp.y) <= point->y + square_nb)
 		{
-			//ft_printf("y = %d, limit = %d\n", tmp.y, ((t_point *)point->content)->y + square_nb);
-			if (tmp.y == ((t_point *)point->content)->y - square_nb
-				|| tmp.y == ((t_point *)point->content)->y  + square_nb)
+			if (tmp.y == point->y - square_nb
+				|| tmp.y == point->y  + square_nb)
 			{
-				tmp.x = ((t_point *)point->content)->x - square_nb - 1;
-				while (++(tmp.x) <= ((t_point *)point->content)->x  + square_nb)
-				{
-					//ft_printf("tested point : x = %d, y = %d\n", tmp.x, tmp.y);
-					ft_dist(&tmp, point, var);
-				}
+				tmp.x = point->x - square_nb - 1;
+				while (++(tmp.x) <= point->x  + square_nb)
+					ft_dist(&tmp, point, var, &dist);
 			}
 			else
 			{
-				tmp.x = ((t_point *)point->content)->x - square_nb;
-				//ft_printf("tested point : x = %d, y = %d\n", tmp.x, tmp.y);
-				ft_dist(&tmp, point, var);
-				tmp.x = ((t_point *)point->content)->x + square_nb;
-				//ft_printf("tested point : x = %d, y = %d\n", tmp.x, tmp.y);
-				ft_dist(&tmp, point, var);
+				tmp.x = point->x - square_nb;
+				ft_dist(&tmp, point, var, &dist);
+				tmp.x = point->x + square_nb;
+				ft_dist(&tmp, point, var, &dist);
 			}
 		}
 		square_nb++;
 	}
+	return dist;
 }
 
 void		ft_test_dist(t_var *var, t_point *pivot)
@@ -157,6 +137,7 @@ void		ft_get_points(t_var *var)
 	elem = *var->pts_neutral;
 	while (elem && (point = (t_point *)elem->content))
 	{
+		point->available = is_available(*var, point->x, point->y);
 		if (var->map[point->y][point->x] != '.')
 		{
 			point->owner = var->map[point->y][point->x];
@@ -169,10 +150,7 @@ void		ft_get_points(t_var *var)
 			ft_test_dist(var, point);
 		}
 		else
-		{
-			point->available = is_available(*var, point->x, point->y);
 			elem = elem->next;
-		}
 	}
 	elem = *var->pts_player;
 	while (elem)
