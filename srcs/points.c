@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/09/01 16:38:30 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/01 18:42:45 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,11 @@ void	ft_dist(t_point *point, t_point *point_b, t_var *var, int *dist)
 
 	x = point->x;
 	y = point->y;
-	point_b = point;
+	point = point_b;
 	if (x >= 0 && y >= 0 && x < var->x_map && y < var->y_map
 		&& var->map[y][x] != '.' && (test = abs(point->x - x)
-		+ abs(point->y - y)) <= *dist)
-	{
-		if (test < *dist && var->map[y][x] == var->enemy)
+		+ abs(point->y - y)) <= *dist && var->map[y][x] == var->enemy)
 			*dist = test;
-	}
 }
 
 int		ft_get_dist_enemy(t_point	*point, t_var *var)

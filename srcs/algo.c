@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 16:16:19 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/01 16:55:24 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/01 18:36:24 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,11 @@ int		ft_place_piece(t_var *var, t_point *point)
 				if ((i + point->y == 0 || i + point->y == var->y_map
 					|| j + point->x == 0 || j + point->x == var->x_map)
 					&& ft_get_dist_enemy(point, var) < 4)
+				{
+					dprintf(var->fd, "\t\t\t\tABOUT TO TOUCH WALL: enemy dist =  %d\n"
+						, ft_get_dist_enemy(point, var));
 					return (1);
+				}
 			}
 		}
 	}
@@ -53,7 +57,6 @@ int		ft_check_change_ownership(t_var *var, t_point *pos, t_point *point_to_win)
 	int		test;
 
 	i = -1;
-//	ft_printf("TESTED POINT : x = %d, y = %d, dist = %d\n", point_to_win->x, point_to_win->y, point_to_win->dist);
 	while (++i < var->x_piece)
 	{
 		j = -1;
@@ -63,10 +66,6 @@ int		ft_check_change_ownership(t_var *var, t_point *pos, t_point *point_to_win)
 					&& (test = abs(point_to_win->x - (i + pos->x))
 						+ abs(point_to_win->y - (j + pos->y))) < point_to_win->dist) // et que la distance est meilleure
 			{
-		//		ft_printf("OWNERSHIP CHANGED FOR Y: %d, X: %d\n"
-		//			, point_to_win->y, point_to_win->x);
-		//		ft_printf("test = %d, dist = %d\n", test, point_to_win->dist);
-				// LE PROBLEME c'est que ici la valeur point->dist n'est pas bonne alors qu'elle a bien été écrite dans les fonctions précédentes
 				return (1);
 			}
 		}
