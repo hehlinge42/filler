@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 16:16:19 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/21 19:45:13 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/01 16:55:24 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ void	ft_algo(t_var *var)
 	int		count;
 	int		tmp;
 
-//	print_points(*var);
+	dprintf(var->fd, "--------\nIN ALGO\n\nNEUTRAL POINTS:\n");
 	point = *(var->pts_neutral);
 	count = -1; // count c'est le meilleur nombre de points convertis jusqu'a maintenant
 	while (point) // on boucle sur tous les points neutre pour chercher les spots dispos
@@ -104,6 +104,8 @@ void	ft_algo(t_var *var)
 			var->x_pos = ((t_point *)point->content)->x;
 			var->y_pos = ((t_point *)point->content)->y;
 			count = tmp;
+			print_point(((t_point *)point->content), var->fd);
+			dprintf(var->fd, "count: %d\n", count);
 			if (!(var->enemy_is_playing))
 				return ;
 			// si on améliore le meilleur nombre de points convertis on update le meilleur point
@@ -111,6 +113,7 @@ void	ft_algo(t_var *var)
 		point = point->next;
 	}
 	// si on est X il faut aussi boucler sur les points de X et vice versa avec O
+	dprintf(var->fd, "PLAYER POINTS:\n");
 	point = *(var->pts_player);
 	while (point)
 	{
@@ -120,10 +123,14 @@ void	ft_algo(t_var *var)
 			var->x_pos = ((t_point *)point->content)->x;
 			var->y_pos = ((t_point *)point->content)->y;
 			count = tmp;
+			print_point(((t_point *)point->content), var->fd);
+			dprintf(var->fd, "count: %d\n", count);
 			if (!(var->enemy_is_playing))
 				return ;
 
 		}
 		point = point->next;
 	}
+	dprintf(var->fd, "--------\nOUT ALGO, SELECTED: %d-%d\n", var->y_pos, var->x_pos);
+
 }
