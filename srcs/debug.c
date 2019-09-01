@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:38:31 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/31 15:36:20 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/01 16:28:05 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,31 @@ void	print_point(t_point *point, int fd)
 		, point->y, point->x, point
 		, point->owner, point->y_owner, point->x_owner, point->dist
 		, available);
+}
+
+void	print_available(t_var var)
+{
+	t_lst		*elem;
+	t_point		*point;
+
+	elem = *var.pts_neutral;
+	dprintf(var.fd, "NEUTRAL POINTS\n");
+	while (elem)
+	{
+		point = (t_point *)elem->content;
+		if (point->available)
+			print_point(point, var.fd);
+		elem = elem->next;
+	}
+	elem = *var.pts_player;
+	dprintf(var.fd, "PLAYER POINTS\n");
+	while (elem)
+	{
+		point = (t_point *)elem->content;
+		if (point->available)
+			print_point(point, var.fd);
+		elem = elem->next;
+	}
 }
 
 void	print_points(t_var var, char *opt)

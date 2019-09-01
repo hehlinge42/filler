@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:30:50 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/31 14:14:32 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/01 16:30:15 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,7 @@ t_point			*ft_new_point(int x, int y, char c);
 void			print_point(t_point *point, int fd);
 void			print_points(t_var var, char *opt);
 void			print_map(t_var var, int opt, int nocolor);
+void			print_available(t_var var);
+void			print_piece(t_var var);
 
 # endif

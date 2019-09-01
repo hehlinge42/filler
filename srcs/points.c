@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/31 15:47:12 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/01 16:29:47 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,6 +153,7 @@ void		ft_get_points(t_var *var)
 
 	dprintf(var->fd, "MAP BEFORE GET\n");
 	print_map(*var, 0, 1);
+	print_piece(*var);
 	elem = *var->pts_neutral;
 	while (elem && (point = (t_point *)elem->content))
 	{
@@ -181,7 +182,7 @@ void		ft_get_points(t_var *var)
 	}
 //	dprintf(var->fd, "MAP AFTER GET\n");
 //	print_map(*var, 0, 1);
-	print_points(*var, "neutral");
+	print_available(*var);
 }
 
 /*

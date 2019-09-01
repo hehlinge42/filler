@@ -7,31 +7,17 @@ MAP -- x: 6, y: 4
 2	....X.
 3	......
 
+PIECE -- x: 2, y: 2
+	01
+0	*.
+1	*.
+
 pivot: 1-1 (owner: O, map: O)
 pivot: 2-4 (owner: X, map: X)
 NEUTRAL POINTS
-POINT 0-0 : address:  0x7f9ee7c03e10, owner: O (1-1), dist: 2 -- available: YES
-POINT 0-1 : address:  0x7f9ee7c03ed0, owner: O (1-1), dist: 1 -- available:  NO
-POINT 0-2 : address:  0x7f9ee7c03f90, owner: O (1-1), dist: 2 -- available:  NO
-POINT 0-3 : address:  0x7f9ee7c04050, owner: ? (1-1), dist: 3 -- available:  NO
-POINT 0-4 : address:  0x7f9ee7c04110, owner: X (2-4), dist: 2 -- available:  NO
-POINT 0-5 : address:  0x7f9ee7c041d0, owner: X (2-4), dist: 3 -- available:  NO
-POINT 1-0 : address:  0x7f9ee7c04290, owner: O (1-1), dist: 1 -- available: YES
-POINT 1-2 : address:  0x7f9ee7c04410, owner: O (1-1), dist: 1 -- available:  NO
-POINT 1-3 : address:  0x7f9ee7c044d0, owner: ? (1-1), dist: 2 -- available:  NO
-POINT 1-4 : address:  0x7f9ee7c04590, owner: X (2-4), dist: 1 -- available:  NO
-POINT 1-5 : address:  0x7f9ee7c04650, owner: X (2-4), dist: 2 -- available:  NO
-POINT 2-0 : address:  0x7f9ee7c04710, owner: O (1-1), dist: 2 -- available:  NO
-POINT 2-1 : address:  0x7f9ee7c047d0, owner: O (1-1), dist: 1 -- available:  NO
-POINT 2-2 : address:  0x7f9ee7c04890, owner: ? (1-1), dist: 2 -- available:  NO
-POINT 2-3 : address:  0x7f9ee7c04950, owner: X (2-4), dist: 1 -- available:  NO
-POINT 2-5 : address:  0x7f9ee7c04ad0, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-0 : address:  0x7f9ee7c04b90, owner: O (1-1), dist: 3 -- available:  NO
-POINT 3-1 : address:  0x7f9ee7c04c50, owner: O (1-1), dist: 2 -- available:  NO
-POINT 3-2 : address:  0x7f9ee7c04d10, owner: ? (1-1), dist: 3 -- available:  NO
-POINT 3-3 : address:  0x7f9ee7c04dd0, owner: X (2-4), dist: 2 -- available:  NO
-POINT 3-4 : address:  0x7f9ee7c04e90, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-5 : address:  0x7f9ee7c04f50, owner: X (2-4), dist: 2 -- available:  NO
+POINT 0-1 : address:  0x7f8425c03ed0, owner: O (1-1), dist: 1 -- available: YES
+PLAYER POINTS
+POINT 1-1 : address:  0x7f8425c04350, owner: O (0-0), dist: 2147483647 -- available: YES
 Dans ft_algo
 1 1
 
@@ -45,132 +31,22 @@ MAP BEFORE GET
 MAP -- x: 6, y: 4
 	012345
 0	......
-1	.OO.X.
-2	..O.X.
+1	.O....
+2	.OXXX.
 3	......
 
-pivot: 1-2 (owner: O, map: O)
-pivot: 1-4 (owner: X, map: X)
-pivot: 2-2 (owner: O, map: O)
-NEUTRAL POINTS
-POINT 0-0 : address:  0x7f9ee7c03e10, owner: O (1-1), dist: 2 -- available:  NO
-POINT 0-1 : address:  0x7f9ee7c03ed0, owner: O (1-1), dist: 1 -- available:  NO
-POINT 0-2 : address:  0x7f9ee7c03f90, owner: O (1-2), dist: 1 -- available:  NO
-POINT 0-3 : address:  0x7f9ee7c04050, owner: ? (1-2), dist: 2 -- available:  NO
-POINT 0-4 : address:  0x7f9ee7c04110, owner: X (1-4), dist: 1 -- available:  NO
-POINT 0-5 : address:  0x7f9ee7c041d0, owner: X (1-4), dist: 2 -- available:  NO
-POINT 1-0 : address:  0x7f9ee7c04290, owner: O (1-1), dist: 1 -- available: YES
-POINT 1-3 : address:  0x7f9ee7c044d0, owner: ? (1-2), dist: 1 -- available:  NO
-POINT 1-5 : address:  0x7f9ee7c04650, owner: X (1-4), dist: 1 -- available:  NO
-POINT 2-0 : address:  0x7f9ee7c04710, owner: O (1-1), dist: 2 -- available:  NO
-POINT 2-1 : address:  0x7f9ee7c047d0, owner: O (1-1), dist: 1 -- available: YES
-POINT 2-3 : address:  0x7f9ee7c04950, owner: ? (2-4), dist: 1 -- available:  NO
-POINT 2-5 : address:  0x7f9ee7c04ad0, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-0 : address:  0x7f9ee7c04b90, owner: O (1-1), dist: 3 -- available:  NO
-POINT 3-1 : address:  0x7f9ee7c04c50, owner: O (1-1), dist: 2 -- available:  NO
-POINT 3-2 : address:  0x7f9ee7c04d10, owner: O (2-2), dist: 1 -- available:  NO
-POINT 3-3 : address:  0x7f9ee7c04dd0, owner: ? (2-4), dist: 2 -- available:  NO
-POINT 3-4 : address:  0x7f9ee7c04e90, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-5 : address:  0x7f9ee7c04f50, owner: X (2-4), dist: 2 -- available:  NO
-Dans ft_algo
-0 1
+PIECE -- x: 2, y: 1
+	01
+0	**
 
-
-
-
-
-0 1
-enemy_is_playing = 0
-MAP BEFORE GET
-MAP -- x: 6, y: 4
-	012345
-0	...XXX
-1	OOOXX.
-2	..O.X.
-3	......
-
-pivot: 0-3 (owner: X, map: X)
-pivot: 0-4 (owner: X, map: X)
-pivot: 0-5 (owner: X, map: X)
-pivot: 1-0 (owner: O, map: O)
-pivot: 1-3 (owner: X, map: X)
-NEUTRAL POINTS
-POINT 0-0 : address:  0x7f9ee7c03e10, owner: O (1-0), dist: 1 -- available:  NO
-POINT 0-1 : address:  0x7f9ee7c03ed0, owner: O (1-1), dist: 1 -- available:  NO
-POINT 0-2 : address:  0x7f9ee7c03f90, owner: ? (1-2), dist: 1 -- available:  NO
-POINT 1-5 : address:  0x7f9ee7c04650, owner: X (1-4), dist: 1 -- available:  NO
-POINT 2-0 : address:  0x7f9ee7c04710, owner: O (1-0), dist: 1 -- available:  NO
-POINT 2-1 : address:  0x7f9ee7c047d0, owner: O (1-1), dist: 1 -- available: YES
-POINT 2-3 : address:  0x7f9ee7c04950, owner: ? (2-4), dist: 1 -- available:  NO
-POINT 2-5 : address:  0x7f9ee7c04ad0, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-0 : address:  0x7f9ee7c04b90, owner: O (1-0), dist: 2 -- available:  NO
-POINT 3-1 : address:  0x7f9ee7c04c50, owner: O (1-1), dist: 2 -- available:  NO
-POINT 3-2 : address:  0x7f9ee7c04d10, owner: O (2-2), dist: 1 -- available:  NO
-POINT 3-3 : address:  0x7f9ee7c04dd0, owner: ? (2-4), dist: 2 -- available:  NO
-POINT 3-4 : address:  0x7f9ee7c04e90, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-5 : address:  0x7f9ee7c04f50, owner: X (2-4), dist: 2 -- available:  NO
-Dans ft_algo
-1 2
-
-
-
-
-
-1 2
-enemy_is_playing = 0
-MAP BEFORE GET
-MAP -- x: 6, y: 4
-	012345
-0	...XXX
-1	OOOXXX
-2	.OO.X.
-3	......
-
-pivot: 1-5 (owner: X, map: X)
 pivot: 2-1 (owner: O, map: O)
+pivot: 2-2 (owner: X, map: X)
+pivot: 2-3 (owner: X, map: X)
 NEUTRAL POINTS
-POINT 0-0 : address:  0x7f9ee7c03e10, owner: O (1-0), dist: 1 -- available: YES
-POINT 0-1 : address:  0x7f9ee7c03ed0, owner: O (1-1), dist: 1 -- available: YES
-POINT 0-2 : address:  0x7f9ee7c03f90, owner: ? (1-2), dist: 1 -- available: YES
-POINT 2-0 : address:  0x7f9ee7c04710, owner: O (1-0), dist: 1 -- available:  NO
-POINT 2-3 : address:  0x7f9ee7c04950, owner: ? (2-4), dist: 1 -- available:  NO
-POINT 2-5 : address:  0x7f9ee7c04ad0, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-0 : address:  0x7f9ee7c04b90, owner: O (1-0), dist: 2 -- available:  NO
-POINT 3-1 : address:  0x7f9ee7c04c50, owner: O (2-1), dist: 1 -- available:  NO
-POINT 3-2 : address:  0x7f9ee7c04d10, owner: O (2-2), dist: 1 -- available:  NO
-POINT 3-3 : address:  0x7f9ee7c04dd0, owner: ? (2-4), dist: 2 -- available:  NO
-POINT 3-4 : address:  0x7f9ee7c04e90, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-5 : address:  0x7f9ee7c04f50, owner: X (2-4), dist: 2 -- available:  NO
-Dans ft_algo
-0 0
-
-
-
-
-
-0 0
-enemy_is_playing = 0
-MAP BEFORE GET
-MAP -- x: 6, y: 4
-	012345
-0	OXXXXX
-1	OOOXXX
-2	.OO.X.
-3	......
-
-pivot: 0-0 (owner: O, map: O)
-pivot: 0-1 (owner: X, map: X)
-pivot: 0-2 (owner: X, map: X)
-NEUTRAL POINTS
-POINT 2-0 : address:  0x7f9ee7c04710, owner: O (1-0), dist: 1 -- available:  NO
-POINT 2-3 : address:  0x7f9ee7c04950, owner: ? (2-4), dist: 1 -- available:  NO
-POINT 2-5 : address:  0x7f9ee7c04ad0, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-0 : address:  0x7f9ee7c04b90, owner: O (1-0), dist: 2 -- available:  NO
-POINT 3-1 : address:  0x7f9ee7c04c50, owner: O (2-1), dist: 1 -- available:  NO
-POINT 3-2 : address:  0x7f9ee7c04d10, owner: O (2-2), dist: 1 -- available:  NO
-POINT 3-3 : address:  0x7f9ee7c04dd0, owner: ? (2-4), dist: 2 -- available:  NO
-POINT 3-4 : address:  0x7f9ee7c04e90, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-5 : address:  0x7f9ee7c04f50, owner: X (2-4), dist: 2 -- available:  NO
+POINT 1-0 : address:  0x7f8425c04290, owner: O (1-1), dist: 1 -- available: YES
+POINT 2-0 : address:  0x7f8425c04710, owner: O (2-1), dist: 1 -- available: YES
+PLAYER POINTS
+POINT 1-1 : address:  0x7f8425c04350, owner: O (0-0), dist: 2147483647 -- available: YES
 Dans ft_algo
 0 1
 
@@ -183,77 +59,129 @@ enemy_is_playing = 0
 MAP BEFORE GET
 MAP -- x: 6, y: 4
 	012345
-0	OXXXXX
-1	OOOXXX
-2	OOO.X.
+0	......
+1	OO....
+2	.OXXXX
 3	......
 
-pivot: 2-0 (owner: O, map: O)
+PIECE -- x: 3, y: 2
+	012
+0	**.
+1	**.
+
+pivot: 1-0 (owner: O, map: O)
+pivot: 2-5 (owner: X, map: X)
 NEUTRAL POINTS
-POINT 2-3 : address:  0x7f9ee7c04950, owner: ? (2-4), dist: 1 -- available:  NO
-POINT 2-5 : address:  0x7f9ee7c04ad0, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-0 : address:  0x7f9ee7c04b90, owner: O (2-0), dist: 1 -- available:  NO
-POINT 3-1 : address:  0x7f9ee7c04c50, owner: O (2-1), dist: 1 -- available:  NO
-POINT 3-2 : address:  0x7f9ee7c04d10, owner: O (2-2), dist: 1 -- available:  NO
-POINT 3-3 : address:  0x7f9ee7c04dd0, owner: ? (2-4), dist: 2 -- available:  NO
-POINT 3-4 : address:  0x7f9ee7c04e90, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-5 : address:  0x7f9ee7c04f50, owner: X (2-4), dist: 2 -- available:  NO
+POINT 0-1 : address:  0x7f8425c03ed0, owner: O (1-1), dist: 1 -- available: YES
+PLAYER POINTS
 Dans ft_algo
-1 2
+1 0
 
 
 
 
 
-1 2
+1 0
 enemy_is_playing = 0
 MAP BEFORE GET
 MAP -- x: 6, y: 4
 	012345
-0	OXXXXX
-1	OOOXXX
-2	OOOOX.
+0	.OO...
+1	OOO...
+2	.OXXXX
 3	......
 
-pivot: 2-3 (owner: O, map: O)
+PIECE -- x: 3, y: 1
+	012
+0	.**
+
+pivot: 0-1 (owner: O, map: O)
+pivot: 0-2 (owner: O, map: O)
+pivot: 1-2 (owner: O, map: O)
 NEUTRAL POINTS
-POINT 2-5 : address:  0x7f9ee7c04ad0, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-0 : address:  0x7f9ee7c04b90, owner: O (2-0), dist: 1 -- available:  NO
-POINT 3-1 : address:  0x7f9ee7c04c50, owner: O (2-1), dist: 1 -- available:  NO
-POINT 3-2 : address:  0x7f9ee7c04d10, owner: O (2-2), dist: 1 -- available:  NO
-POINT 3-3 : address:  0x7f9ee7c04dd0, owner: O (2-3), dist: 1 -- available:  NO
-POINT 3-4 : address:  0x7f9ee7c04e90, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-5 : address:  0x7f9ee7c04f50, owner: X (2-4), dist: 2 -- available:  NO
+PLAYER POINTS
+POINT 0-1 : address:  0x7f8425c03ed0, owner: O (1-1), dist: 1 -- available: YES
+POINT 1-1 : address:  0x7f8425c04350, owner: O (0-0), dist: 2147483647 -- available: YES
 Dans ft_algo
-1 2
+1 0
 
 
 
 
 
-1 2
+1 0
 enemy_is_playing = 0
 MAP BEFORE GET
 MAP -- x: 6, y: 4
 	012345
-0	OXXXXX
-1	OOOXXX
-2	OOOOX.
-3	.O....
+0	.OOO..
+1	OOO...
+2	.OXXXX
+3	......
 
-pivot: 3-1 (owner: O, map: O)
+PIECE -- x: 3, y: 1
+	012
+0	***
+
+pivot: 0-3 (owner: O, map: O)
 NEUTRAL POINTS
-POINT 2-5 : address:  0x7f9ee7c04ad0, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-0 : address:  0x7f9ee7c04b90, owner: O (2-0), dist: 1 -- available:  NO
-POINT 3-2 : address:  0x7f9ee7c04d10, owner: O (2-2), dist: 1 -- available:  NO
-POINT 3-3 : address:  0x7f9ee7c04dd0, owner: O (2-3), dist: 1 -- available:  NO
-POINT 3-4 : address:  0x7f9ee7c04e90, owner: X (2-4), dist: 1 -- available:  NO
-POINT 3-5 : address:  0x7f9ee7c04f50, owner: X (2-4), dist: 2 -- available:  NO
+PLAYER POINTS
+POINT 1-2 : address:  0x7f8425c04410, owner: O (1-1), dist: 1 -- available: YES
 Dans ft_algo
-1 2
+2 1
 
 
 
 
 
-1 2
+2 1
+enemy_is_playing = 0
+MAP BEFORE GET
+MAP -- x: 6, y: 4
+	012345
+0	.OOO..
+1	OOOOO.
+2	.OXXXX
+3	......
+
+PIECE -- x: 3, y: 1
+	012
+0	.**
+
+pivot: 1-3 (owner: O, map: O)
+pivot: 1-4 (owner: O, map: O)
+NEUTRAL POINTS
+PLAYER POINTS
+POINT 0-2 : address:  0x7f8425c03f90, owner: O (0-1), dist: 1 -- available: YES
+Dans ft_algo
+2 0
+
+
+
+
+
+2 0
+enemy_is_playing = 0
+MAP BEFORE GET
+MAP -- x: 6, y: 4
+	012345
+0	.OOOO.
+1	OOOOO.
+2	.OXXXX
+3	......
+
+PIECE -- x: 3, y: 1
+	012
+0	***
+
+pivot: 0-4 (owner: O, map: O)
+NEUTRAL POINTS
+PLAYER POINTS
+Dans ft_algo
+2 0
+
+
+
+
+
+2 0
