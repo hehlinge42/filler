@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:30:50 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/02 16:25:37 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/02 16:33:31 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,8 @@
 # define BAD_MAP 2
 # define FULL_MAP 3
 
-#include "libft.h"
+# include "libft.h"
 
-#include <stdio.h>
 typedef struct		s_point
 {
 	int				x;
@@ -54,25 +53,24 @@ typedef struct		s_var
 	int				fd;
 }					t_var;
 
-# define PRINTENV printf("%s -- %s -- line %d\n", __FILE__, __func__, __LINE__); fflush(0);
-
-int				ft_parse_input(t_var *var);
-int				ft_init_neutral_points(t_var *var);
-void			ft_get_points(t_var *var, t_point *point, t_lst *elem
+int					ft_parse_input(t_var *var);
+int					ft_init_neutral_points(t_var *var);
+void				ft_get_points(t_var *var, t_point *point, t_lst *elem
 	, t_lst *tmp);
-int				place_piece(void);
-int				ft_init_point(t_var *var, int x, int y, char letter);
-int				abs(int n);
-int				ft_exit(int opt);
-int				is_available(t_var var, int o_x, int o_y);
-void			print_debug(t_var var, char *opt);
-void			ft_algo(t_var *var, int count, int opt);
-t_point			*ft_new_point(int x, int y, char c);
-void			print_point(t_point *point, int fd);
-void			print_points(t_var var, char *opt);
-void			print_map(t_var var, int opt, int nocolor);
-void			print_available(t_var var);
-void			print_piece(t_var var);
-int				ft_get_dist_enemy(t_point *point, t_var *var, int square_nb);
+int					place_piece(void);
+int					ft_init_point(t_var *var, int x, int y, char letter);
+int					abs(int n);
+int					ft_exit(int opt);
+int					is_available(t_var var, int o_x, int o_y);
+void				print_debug(t_var var, char *opt);
+void				ft_algo(t_var *var, int count, int opt);
+t_point				*ft_new_point(int x, int y, char c);
+void				print_point(t_point *point, int fd);
+void				print_points(t_var var, char *opt);
+void				print_map(t_var var, int opt, int nocolor);
+void				print_available(t_var var);
+void				print_piece(t_var var);
+int					ft_get_dist_enemy(t_point *point, t_var *var
+	, int square_nb);
 
-# endif
+#endif
