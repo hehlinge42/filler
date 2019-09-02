@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/25 17:00:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/31 12:41:42 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/02 11:04:40 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,26 +110,21 @@ int		ft_init_neutral_points(t_var *var)
 	{
 		j = -1;
 		while (++j <var->x_map)
-		{
-			if (!(point = ft_lstadd_new(var->pts_neutral,
-				(void *)ft_new_point(j, i, '.'), sizeof(t_point))))
+			if (!((point = ft_lstadd_new(var->pts_neutral,
+				(void *)ft_new_point(j, i, '.'), sizeof(t_point)))
+					&& (((t_point *)point->content)->dist = 2147483647)))
 				return (0);
-			((t_point *)point->content)->dist = 2147483647;
-			//print_point((t_point *)point->content);
-		}
 	}
 	var->nb_neutral = var->x_map * var->y_map;
-	var->turn = 1;
+	var->turn++;
 	if (!(var->map = (char **)easymalloc(sizeof(char *) * var->y_map))
 		|| !(var->tmp = (char **)easymalloc(sizeof(char *) * var->y_map)))
 		return (0);
 	i = -1;
 	while (++i < var->y_map)
-	{
 		if (!(var->map[i] = (char *)easymalloc(var->x_map + 1))
 			|| !(var->tmp[i] = (char *)easymalloc(var->x_map + 1)))
 			return (0);
-	}
 	return (1);
 }
 
@@ -138,30 +133,22 @@ int		ft_parse_input(t_var *var)
 	char	*line;
 	int		nb;
 
-//	printf("in input\n");
 	var->enemy_is_playing = (var->turn) ? 0 : 1;
 	if (get_next_line(0, &line) && ft_parse_size(line, var, "Plateau "))
 	{
-		//ft_free((void **)&line);
 		if (var->turn == 0)
 			ft_init_neutral_points(var);
-		//print_points(*var);
 		nb = -1;
 		while (nb < var->y_map
 			&& get_next_line(0, &line) > -1 && ft_parse_map(nb, line, var))
 			nb++;
-		//ft_free((void **)&line);
 		if (nb == var->y_map
 			&& get_next_line(0, &line) && ft_parse_size(line, var, "Piece "))
 		{
-			//ft_free((void **)&line);
-//			printf("size piece ok, x: %d, y: %d\n", var->x_piece, var->y_piece);
 			nb = 0;
 			while (nb < var->y_piece
 				&& get_next_line(0, &line) && ft_parse_piece(nb, line, var))
 					nb++;
-			//ft_free((void **)&line);
-//			printf("piece ok\n");
 			if (nb == var->y_piece)
 				return (1);
 		}

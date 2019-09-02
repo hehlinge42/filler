@@ -6,11 +6,11 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 16:44:50 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/21 17:26:44 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/02 11:17:47 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "filler.h" 
+#include "filler.h"
 
 int			is_available(t_var var, int o_x, int o_y)
 {
@@ -37,7 +37,6 @@ int			is_available(t_var var, int o_x, int o_y)
 		}
 		y++;
 	}
-	if (x + o_x >= var.x_map || y + o_y >= var.y_map)
-		count = 2;
+	x + o_x >= var.x_map || y + o_y >= var.y_map ? (count = 2) : 0;
 	return (count == 1 ? 1 : 0);
 }

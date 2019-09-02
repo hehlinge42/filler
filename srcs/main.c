@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:28:16 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/01 16:52:14 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/02 11:20:00 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int		ft_parse_first_line(t_var *var)
 	pos++;
 	if (ft_strcmp(line + pos, " : [players/hehlinge.filler]"))
 		return (0);
-//	ft_free((void **)&line);
 	return (1);
 }
 
@@ -61,11 +60,9 @@ int		ft_init_var(t_var *var)
 int		main(void)
 {
 	t_var	var;
-	int fd;
-	
-	fd = open("debug.txt", O_WRONLY | O_CREAT,0644);
-	//dprintf(var.fd, "fd = %d %d\n", var.fd, fd);
-//	dprintf(fd, "in func, time: %s\n", __TIME__);
+	int		fd;
+
+	fd = open("debug.txt", O_WRONLY | O_CREAT, 0644);
 	if (ft_init_var(&var))
 	{
 		var.fd = fd;
@@ -80,7 +77,7 @@ int		main(void)
 			}
 			dprintf(var.fd, "enemy_is_playing = %d\n", var.enemy_is_playing);
 			ft_get_points(&var);
-			ft_algo(&var);
+			ft_algo(&var, -1, 1);
 			ft_printf("%d %d\n", var.y_pos, var.x_pos);
 			var.x_pos = -1;
 			var.y_pos = -1;

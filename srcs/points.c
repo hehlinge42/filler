@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/09/01 18:42:45 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/02 11:17:03 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,27 +97,15 @@ void		ft_test_dist(t_var *var, t_point *pivot)
 	while (elem)
 	{
 		point = (t_point *)elem->content;
-	//	dprintf(var->fd, "neutral %d-%d, map: %c, owner: %c (dist: %d) ->"
-	//		, point->y, point->x, var->map[point->y][point->x], point->owner, point->dist);
-		fflush(0);
 		if ((test = abs(point->x - pivot->x) + abs(point->y - pivot->y)) < point->dist)
 		{
 			point->owner = pivot->owner;
 			point->dist = test;
 			point->x_owner = pivot->x;
 			point->y_owner = pivot->y;
-			
-//			dprintf(var->fd, "test dist: point %d-%d, new owner: %c, dist: %d\n"
-//				, point->y, point->x, pivot->owner, test);
-			
 		}
 		else if (test == point->dist && point->owner != pivot->owner)
-		{
-//			dprintf(var->fd, "test dist: point %d-%d, new owner: ?, dist: %d\n"
-//				, point->y, point->x, test);
 			point->owner = '?';
-		}
-	//	dprintf(var->fd, " owner: %c (dist: %d)\n" , point->owner, point->dist);
 		elem = elem->next;
 	}
 }
@@ -128,9 +116,6 @@ void		ft_get_points(t_var *var)
 	t_lst		*elem;
 	t_lst		*tmp;
 
-	dprintf(var->fd, "MAP BEFORE GET\n");
-	print_map(*var, 0, 1);
-	print_piece(*var);
 	elem = *var->pts_neutral;
 	while (elem && (point = (t_point *)elem->content))
 	{
@@ -156,72 +141,4 @@ void		ft_get_points(t_var *var)
 		point->available = is_available(*var, point->x, point->y);
 		elem = elem->next;
 	}
-//	dprintf(var->fd, "MAP AFTER GET\n");
-//	print_map(*var, 0, 1);
-	print_available(*var);
 }
-
-/*
-int			ft_get_points(t_var *var)
-{
-	t_point		*point;
-	t_lst		*elem;
-	t_lst		*tmp;
-	t_lst		*prec;
-
-	dprintf(var->fd, "MAP BEFORE GET\n");
-	print_map(*var, 0, 0);
-	elem = *var->pts_neutral;
-	prec = 0;
-	while (elem)
-	{
-		point = (t_point *)elem->content;
-		if (var->map[point->y][point->x] != '.')
-		{
-			point->owner = var->map[point->y][point->x];
-			(var->nb_neutral)--;
-			tmp = elem->next;
-			if (elem == *var->pts_neutral)
-				*var->pts_neutral = ((t_lst *)*var->pts_neutral)->next;
-			else
-				prec->next = elem->next;
-			elem->next = NULL;
-			if (point->owner == var->player || point->owner == var->player + 32)
-			{
-				(var->nb_player)++;
-				ft_lstadd(var->pts_player, elem);
-			}
-			else
-			{
-				(var->nb_enemy)++;
-				var->enemy_is_playing = 1;
-				//ft_free((void **)elem);
-			}
-			init_point(point, point->x, point->y, point->owner);
-			ft_test_dist(var, point);
-		}
-		else
-		{
-			prec = elem;
-			tmp = elem->next;
-		//	ft_get_closest(elem, var);
-		//	dprintf(var->fd, "closest: point %d-%d, new owner: %c, dist: %d\n"
-		//		, point->y, point->x, point->owner, point->dist);
-			point->available = is_available(*var, point->x, point->y);
-		}
-		elem = tmp;
-	}
-	elem = *var->pts_player;
-	while (elem)
-	{
-		point = (t_point *)elem->content;
-		point->available = is_available(*var, point->x, point->y);
-		elem = elem->next;
-	}
-	dprintf(var->fd, "MAP AFTER GET\n");
-	print_map(*var, 0, 0);
-	print_points(*var, "neutral");
-//	print_elems(*var);
-	return (1);
-}
-*/
