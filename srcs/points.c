@@ -6,22 +6,11 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/09/02 11:17:03 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/02 16:28:15 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
-
-void		init_point(t_point *point, int x, int y, char c)
-{
-		ft_memset(point, 0, sizeof(*point));
-		point->x = x;
-		point->y = y;
-		point->owner = c;
-		point->x_owner = 0;
-		point->y_owner = 0;
-		point->dist = 0;
-}
 
 t_point		*ft_new_point(int x, int y, char c)
 {
@@ -29,13 +18,19 @@ t_point		*ft_new_point(int x, int y, char c)
 
 	if ((new = (t_point *)easymalloc(sizeof(*new))))
 	{
-		init_point(new, x, y, c);
+		ft_memset(new, 0, sizeof(*new));
+		new->x = x;
+		new->y = y;
+		new->owner = c;
+		new->x_owner = 0;
+		new->y_owner = 0;
+		new->dist = 0;
 		return (new);
 	}
 	return (0);
 }
 
-void	ft_dist(t_point *point, t_point *point_b, t_var *var, int *dist)
+void		ft_dist(t_point *point, t_point *point_b, t_var *var, int *dist)
 {
 	int		test;
 	int		x;
@@ -46,32 +41,26 @@ void	ft_dist(t_point *point, t_point *point_b, t_var *var, int *dist)
 	point = point_b;
 	if (x >= 0 && y >= 0 && x < var->x_map && y < var->y_map
 		&& var->map[y][x] != '.' && (test = abs(point->x - x)
-		+ abs(point->y - y)) <= *dist && var->map[y][x] == var->enemy)
-			*dist = test;
+			+ abs(point->y - y)) <= *dist && var->map[y][x] == var->enemy)
+		*dist = test;
 }
 
-int		ft_get_dist_enemy(t_point	*point, t_var *var)
+int			ft_get_dist_enemy(t_point *point, t_var *var, int square_nb)
 {
-	int			square_nb;
 	int			dist;
 	t_point		tmp;
 
-	square_nb = 1;
-	ft_memset(&tmp, 0, sizeof(tmp));
 	dist = (var->x_map >= var->y_map) ? var->x_map : var->y_map;
-	while (dist >= square_nb)
+	while (dist >= ++square_nb)
 	{
 		tmp.y = point->y - square_nb - 1;
 		tmp.x = point->x - square_nb - 1;
 		while (++(tmp.y) <= point->y + square_nb)
 		{
-			if (tmp.y == point->y - square_nb
-				|| tmp.y == point->y  + square_nb)
-			{
-				tmp.x = point->x - square_nb - 1;
-				while (++(tmp.x) <= point->x  + square_nb)
+			if ((tmp.y == point->y - square_nb || tmp.y == point->y + square_nb)
+				&& (tmp.x = point->x - square_nb - 1) > -1)
+				while (++(tmp.x) <= point->x + square_nb)
 					ft_dist(&tmp, point, var, &dist);
-			}
 			else
 			{
 				tmp.x = point->x - square_nb;
@@ -80,9 +69,8 @@ int		ft_get_dist_enemy(t_point	*point, t_var *var)
 				ft_dist(&tmp, point, var, &dist);
 			}
 		}
-		square_nb++;
 	}
-	return dist;
+	return (dist);
 }
 
 void		ft_test_dist(t_var *var, t_point *pivot)
@@ -91,13 +79,12 @@ void		ft_test_dist(t_var *var, t_point *pivot)
 	t_point	*point;
 	int		test;
 
-	dprintf(var->fd, "pivot: %d-%d (owner: %c, map: %c)\n"
-		, pivot->y, pivot->x, pivot->owner, var->map[pivot->y][pivot->x]);
 	elem = *var->pts_neutral;
 	while (elem)
 	{
 		point = (t_point *)elem->content;
-		if ((test = abs(point->x - pivot->x) + abs(point->y - pivot->y)) < point->dist)
+		if ((test = abs(point->x - pivot->x) + abs(point->y - pivot->y))
+			< point->dist)
 		{
 			point->owner = pivot->owner;
 			point->dist = test;
@@ -110,13 +97,8 @@ void		ft_test_dist(t_var *var, t_point *pivot)
 	}
 }
 
-void		ft_get_points(t_var *var)
+void		ft_get_points(t_var *var, t_point *point, t_lst *elem, t_lst *tmp)
 {
-	t_point		*point;
-	t_lst		*elem;
-	t_lst		*tmp;
-
-	elem = *var->pts_neutral;
 	while (elem && (point = (t_point *)elem->content))
 	{
 		point->available = is_available(*var, point->x, point->y);
@@ -135,9 +117,8 @@ void		ft_get_points(t_var *var)
 			elem = elem->next;
 	}
 	elem = *var->pts_player;
-	while (elem)
+	while (elem && (point = (t_point *)elem->content))
 	{
-		point = (t_point *)elem->content;
 		point->available = is_available(*var, point->x, point->y);
 		elem = elem->next;
 	}

@@ -6,7 +6,7 @@
 #    By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/02 21:32:05 by sikpenou          #+#    #+#              #
-#    Updated: 2019/08/21 19:24:45 by sikpenou         ###   ########.fr        #
+#    Updated: 2019/09/02 15:23:21 by sikpenou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,6 @@ SRCS = $(addprefix $(SRCDIR), $(SRCFILES))
 SRCFILES =	main.c				\
 			support.c			\
 			parser.c			\
-			debug.c				\
 			points.c			\
 			avail.c				\
 			algo.c

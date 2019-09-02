@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 16:16:19 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/02 11:18:13 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/02 16:28:17 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_place_piece(t_var *var, t_point *point)
 				var->tmp[i + point->y][j + point->x] = 'T';
 				if ((i + point->y == 0 || i + point->y == var->y_map
 					|| j + point->x == 0 || j + point->x == var->x_map)
-					&& ft_get_dist_enemy(point, var) < 4)
+					&& ft_get_dist_enemy(point, var, 0) < 4)
 					return (1);
 			}
 		}
