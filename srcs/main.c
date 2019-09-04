@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:28:16 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/04 12:56:42 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/04 17:33:39 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ int			main(void)
 
 	point = 0;
 	tmp = 0;
-	fd = open("debug.txt", O_WRONLY | O_CREAT | O_TRUNC, 644);
+	fd = open("debug.txt", O_WRONLY | O_CREAT | O_TRUNC, 777);
 	if (ft_init_exit(&var, 0))
 	{
 		var.fd = fd;
@@ -123,7 +123,6 @@ int			main(void)
 				return (ft_init_exit(&var, BAD_MAP));
 			}
 			ft_get_points(&var, point, *var.pts_neutral, tmp);
-			dprintf(var.fd, "enemy_is_playing = %d\n", var.enemy_is_playing);
 			ft_algo(&var, -1, 1);
 			ft_printf("%d %d\n", var.y_pos, var.x_pos);
 			var.x_pos = -1;

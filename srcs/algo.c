@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 16:16:19 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/04 14:19:14 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/04 17:34:50 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,7 @@ void	ft_algo(t_var *var, int count, int opt)
 				return ;
 		}
 		point = point->next;
+		opt ? (ft_algo(var, count, 0)) : 0;
 	}
 	return ;
 }
