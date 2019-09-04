@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser_2.c                                         :+:      :+:    :+:   */
+/*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/25 17:00:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/09/04 12:56:02 by sikpenou         ###   ########.fr       */
+/*   Created: 2019/09/04 10:37:56 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/09/04 14:56:51 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 #include "libft.h"
-#include "stdio.h"
+#include <stdio.h>
 
 int		ft_parse_size(char *line, t_var *var, char *option)
 {
@@ -73,7 +73,6 @@ int		ft_parse_map(int nb, char *line, t_var *var)
 			if (*(line++) == ' ' && (int)ft_strlen(line) == var->x_map)
 			{
 				ft_strncpy(var->map[nb], line, var->x_map);
-				ft_strncpy(var->tmp[nb], line, var->x_map);
 				while (*line == 'o' || *line == 'x' || *line == 'O'
 						|| *line == 'X' || *line == '.')
 					line++;
@@ -99,16 +98,33 @@ int		ft_parse_piece(int nb, char *line, t_var *var)
 	return (0);
 }
 
+int			alloc_map(t_var *var)
+{
+	int		i;
+
+	var->turn++;
+	if (!(var->map = (char **)easymalloc(sizeof(char *) * var->y_map)))
+		return (0);
+	i = -1;
+	while (++i < var->y_map)
+		if (!(var->map[i] = (char *)easymalloc(var->x_map + 1)))
+			return (0);
+	return (1);
+}
+
 int		ft_parse_input(t_var *var)
 {
 	char	*line;
 	int		nb;
 
 	var->enemy_is_playing = (var->turn) ? 0 : 1;
-	if (get_next_line(0, &line) && ft_parse_size(line, var, "Plateau "))
+	while (get_next_line(0, &line) && ft_strncmp(line, "Plat", 4))
+		if (!ft_strncmp(line, "==", 2))
+			return (0);
+	if (ft_parse_size(line, var, "Plateau "))
 	{
-		if (var->turn == 0)
-			ft_init_neutral_points(var, -1, -1);
+		if (!var->turn)
+			alloc_map(var);
 		nb = -1;
 		while (nb < var->y_map
 			&& get_next_line(0, &line) > -1 && ft_parse_map(nb, line, var))

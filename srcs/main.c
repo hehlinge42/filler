@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:28:16 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/02 16:29:26 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/04 12:56:42 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,25 @@
 #include <stdio.h>
 #include <fcntl.h>
 
-int		ft_parse_first_line(t_var *var)
+t_point		*ft_new_point(int x, int y, char c)
+{
+	t_point		*new;
+
+	if ((new = (t_point *)easymalloc(sizeof(*new))))
+	{
+		ft_memset(new, 0, sizeof(*new));
+		new->x = x;
+		new->y = y;
+		new->owner = c;
+		new->x_owner = 0;
+		new->y_owner = 0;
+		new->dist = 0;
+		return (new);
+	}
+	return (0);
+}
+
+int			ft_parse_first_line(t_var *var)
 {
 	int		pos;
 	char	*line;
@@ -37,8 +55,16 @@ int		ft_parse_first_line(t_var *var)
 	return (1);
 }
 
-int		ft_init_var(t_var *var)
+int			ft_init_exit(t_var *var, int opt)
 {
+	if (opt)
+	{
+		if (opt == ERR_FIRST_LINE)
+			ft_printf("exit - bad first line\n");
+		else if (opt == BAD_MAP)
+			ft_printf("exit - bad map\n");
+		return (0);
+	}
 	ft_memset(var, 0, sizeof(*var));
 	var->turn = -1;
 	if ((var->pts_player = (t_lst **)easymalloc(sizeof(*var->pts_player)))
@@ -47,35 +73,34 @@ int		ft_init_var(t_var *var)
 	return (0);
 }
 
-int		ft_init_neutral_points(t_var *var)
+int			ft_init_neutral_points(t_var *var, int i, int j)
 {
-	int		i;
-	int		j;
-	t_lst	*point;
+	t_lst	*tmp;
 
-	i = -1;
 	while (++i < var->y_map)
 	{
 		j = -1;
 		while (++j < var->x_map)
-			if (!((point = ft_lstadd_new(var->pts_neutral,
-				(void *)ft_new_point(j, i, '.'), sizeof(t_point)))
-					&& (((t_point *)point->content)->dist = 2147483647)))
+		{
+			if (!((tmp = ft_lstadd_new(var->pts_neutral,
+							(void *)ft_new_point(j, i, '.'), sizeof(t_point)))))
 				return (0);
+			((t_point *)tmp->content)->dist = 2147483647;
+		}
 	}
 	var->nb_neutral = var->x_map * var->y_map;
 	if (!(var->map = (char **)easymalloc(sizeof(char *) * var->y_map))
-		|| !(var->tmp = (char **)easymalloc(sizeof(char *) * var->y_map)))
+			|| !(var->tmp = (char **)easymalloc(sizeof(char *) * var->y_map)))
 		return (0);
 	i = -1;
 	while (++i < var->y_map)
 		if (!(var->map[i] = (char *)easymalloc(var->x_map + 1))
-			|| !(var->tmp[i] = (char *)easymalloc(var->x_map + 1)))
+				|| !(var->tmp[i] = (char *)easymalloc(var->x_map + 1)))
 			return (0);
 	return (1);
 }
 
-int		main(void)
+int			main(void)
 {
 	t_var		var;
 	int			fd;
@@ -84,21 +109,21 @@ int		main(void)
 
 	point = 0;
 	tmp = 0;
-	fd = open("debug.txt", O_WRONLY | O_CREAT, 0644);
-	if (ft_init_var(&var))
+	fd = open("debug.txt", O_WRONLY | O_CREAT | O_TRUNC, 644);
+	if (ft_init_exit(&var, 0))
 	{
 		var.fd = fd;
 		if (!ft_parse_first_line(&var))
-			return (ft_exit(ERR_FIRST_LINE));
+			return (ft_init_exit(&var, ERR_FIRST_LINE));
 		while (++var.turn > -1)
 		{
 			if (!ft_parse_input(&var))
 			{
 				close(fd);
-				return (ft_exit(BAD_MAP));
+				return (ft_init_exit(&var, BAD_MAP));
 			}
-			dprintf(var.fd, "enemy_is_playing = %d\n", var.enemy_is_playing);
 			ft_get_points(&var, point, *var.pts_neutral, tmp);
+			dprintf(var.fd, "enemy_is_playing = %d\n", var.enemy_is_playing);
 			ft_algo(&var, -1, 1);
 			ft_printf("%d %d\n", var.y_pos, var.x_pos);
 			var.x_pos = -1;

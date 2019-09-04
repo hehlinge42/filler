@@ -6,7 +6,7 @@
 #    By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/02 21:32:05 by sikpenou          #+#    #+#              #
-#    Updated: 2019/09/02 15:23:21 by sikpenou         ###   ########.fr        #
+#    Updated: 2019/09/04 14:25:31 by sikpenou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,10 +20,9 @@ NAME = resources/players/hehlinge.filler
 SRCS = $(addprefix $(SRCDIR), $(SRCFILES))
 
 SRCFILES =	main.c				\
-			support.c			\
 			parser.c			\
 			points.c			\
-			avail.c				\
+			debug.c				\
 			algo.c
 
 SRCDIR = ./srcs/
@@ -34,51 +33,43 @@ OBJFILES = $(SRCFILES:.c=.o)
 
 OBJDIR = objs/
 
-INCLS = includes/
+INCLS = $(INCLDIR)*.h
 
-LIB = libft.a
+INCLDIR = includes/
 
-LIBINCLS =  $(LIBDIR)$(INCLS)
+LIB = $(addprefix $(LIBDIR), libft.a)
+
+LIBINCLS =  $(LIBDIR)$(INCLDIR)
 
 LIBDIR = libft/
 
-LIBFTPRINTF = libftprintf.a
-
-LIBFTPRINTFDIR = libft/ft_printf
-
 all: $(NAME)
 
-$(NAME): $(INCLS) $(SRCS) $(LIB) $(LIBFTPRINTF)
+$(NAME): $(INCLS) $(SRCS) $(LIB)
 	@rm -f auteur
 	@echo hehlinge > auteur
-	@/bin/echo compiling source files
 	@mkdir -p objs
 	@make -j --no-print-directory objects
-	@$(CC) $(CFLAGS) -I $(INCLS) -o $@ $(OBJS) $(LIBDIR)/$(LIB) $(LIBFTPRINTFDIR)/$(LIBFTPRINTF)
+	@$(CC) $(CFLAGS) -I $(INCLDIR) -o $@ $(OBJS) $(LIB)
 
 $(LIB):
 	@make -j --no-print-directory -C $(LIBDIR)
 
-$(LIBFTPRINTF):
-	@make -j --no-print-directory -C $(LIBFTPRINTFDIR)
-
 objects: $(OBJS)
 
 $(OBJDIR)%.o: $(SRCDIR)%.c
-	@$(CC) $(CFLAGS) -I $(INCLS) -I $(LIBINCLS) -o $@ -c $<
+	@$(CC) $(CFLAGS) -I $(INCLDIR) -I $(LIBINCLS) -o $@ -c $<
 
 clean: FORCE
 	@rm -f $(OBJS)
 	@make clean -j --no-print-directory -C $(LIBDIR)
-	@make clean -j --no-print-directory -C $(LIBFTPRINTFDIR)
 	@echo "rm -f .o files"
 	@rm -f $(OBJS)
 
 fclean: clean
 	@rm -f a.out
 	@rm -f test
-	rm -f libft/libft.a
-	rm -f $(LIBFPRINTFDIR)$(LIBFTPRINTF)
+	rm -f $(LIB)
 	rm -f $(NAME)
 
 re: FORCE

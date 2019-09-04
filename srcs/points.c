@@ -6,28 +6,36 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/09/02 16:28:15 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/04 14:19:06 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-t_point		*ft_new_point(int x, int y, char c)
+int			is_available(t_var var, int o_y, int o_x)
 {
-	t_point		*new;
+	int		count;
+	int		x;
+	int		y;
 
-	if ((new = (t_point *)easymalloc(sizeof(*new))))
+	count = (o_y + var.y_piece > var.y_map || o_x + var.x_piece > var.x_map)
+		? 2 : 0;
+	y = -1;
+	while (count < 2 && ++y < var.y_piece && y + o_y < var.y_map)
 	{
-		ft_memset(new, 0, sizeof(*new));
-		new->x = x;
-		new->y = y;
-		new->owner = c;
-		new->x_owner = 0;
-		new->y_owner = 0;
-		new->dist = 0;
-		return (new);
+		x = -1;
+		while (count < 2 && ++x < var.x_piece && x + o_x < var.x_map)
+		{
+			if (var.map[o_y + y][o_x + x] == var.enemy
+				&& var.piece[y][x] == '*')
+				count = 2;
+			else if (var.piece[y][x] == '*'
+				&& (var.map[o_y + y][o_x + x] == var.player
+					|| var.map[o_y + y][o_x + x] == var.player + 32))
+				count++;
+		}
 	}
-	return (0);
+	return (count == 1 ? 1 : 0);
 }
 
 void		ft_dist(t_point *point, t_point *point_b, t_var *var, int *dist)
@@ -101,7 +109,7 @@ void		ft_get_points(t_var *var, t_point *point, t_lst *elem, t_lst *tmp)
 {
 	while (elem && (point = (t_point *)elem->content))
 	{
-		point->available = is_available(*var, point->x, point->y);
+		point->available = is_available(*var, point->y, point->x);
 		if (var->map[point->y][point->x] != '.')
 		{
 			point->owner = var->map[point->y][point->x];
@@ -112,6 +120,7 @@ void		ft_get_points(t_var *var, t_point *point, t_lst *elem, t_lst *tmp)
 			if (point->owner == var->player)
 				ft_lstadd(var->pts_player, tmp);
 			ft_test_dist(var, point);
+			var->map[point->y][point->x] == var->player ? (point->dist = 0) : 0;
 		}
 		else
 			elem = elem->next;
@@ -119,7 +128,7 @@ void		ft_get_points(t_var *var, t_point *point, t_lst *elem, t_lst *tmp)
 	elem = *var->pts_player;
 	while (elem && (point = (t_point *)elem->content))
 	{
-		point->available = is_available(*var, point->x, point->y);
+		point->available = is_available(*var, point->y, point->x);
 		elem = elem->next;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:30:50 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/02 16:33:31 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/04 12:57:03 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 # define ERR_FIRST_LINE 1
 # define BAD_MAP 2
-# define FULL_MAP 3
 
-# include "libft.h"
+# include "../libft/includes/libft.h"
 
+#include <stdio.h>
 typedef struct		s_point
 {
 	int				x;
@@ -54,17 +54,15 @@ typedef struct		s_var
 }					t_var;
 
 int					ft_parse_input(t_var *var);
-int					ft_init_neutral_points(t_var *var);
+int					ft_init_neutral_points(t_var *var, int i, int j);
 void				ft_get_points(t_var *var, t_point *point, t_lst *elem
 	, t_lst *tmp);
 int					place_piece(void);
 int					ft_init_point(t_var *var, int x, int y, char letter);
 int					abs(int n);
 int					ft_exit(int opt);
-int					is_available(t_var var, int o_x, int o_y);
 void				print_debug(t_var var, char *opt);
 void				ft_algo(t_var *var, int count, int opt);
-t_point				*ft_new_point(int x, int y, char c);
 void				print_point(t_point *point, int fd);
 void				print_points(t_var var, char *opt);
 void				print_map(t_var var, int opt, int nocolor);

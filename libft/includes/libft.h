@@ -6,14 +6,14 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:35:34 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/31 15:02:39 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/04 11:17:15 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include "../ft_printf/includes/ft_printf.h"
+# include "ft_printf.h"
 # include <string.h>
 # define BUFF_SIZE 1
 
@@ -103,5 +103,6 @@ void				*ft_memccpy(void *restrict dst, const void *restrict src,
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*easymalloc(int size);
 void				ft_free(void **ptr);
+int					ft_printf(const char *format, ...);
 
 #endif

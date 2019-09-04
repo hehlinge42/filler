@@ -6,14 +6,14 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/23 13:00:02 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/06/12 13:19:17 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/09/04 11:14:57 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "../libft/includes/libft.h"
+# include "libft.h"
 # include <stdarg.h>
 
 # define FD 1

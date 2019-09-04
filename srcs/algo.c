@@ -6,12 +6,17 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 16:16:19 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/02 16:28:17 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/04 14:19:14 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 #include <limits.h>
+
+int		abs(int nb)
+{
+	return (nb < 0 ? -nb : nb);
+}
 
 int		ft_place_piece(t_var *var, t_point *point)
 {
@@ -45,14 +50,14 @@ int		ft_check_change_ownership(t_var *var, t_point *pos
 	int		test;
 
 	i = -1;
-	while (++i < var->x_piece)
+	while (++i < var->y_piece)
 	{
 		j = -1;
-		while (++j < var->y_piece)
+		while (++j < var->x_piece)
 		{
-			if (var->tmp[j + pos->y][i + pos->x] == 'T'
-					&& (test = point_to_win->dist > abs(point_to_win->x
-						- (i + pos->x)) + abs(point_to_win->y - (j + pos->y))))
+			if (var->tmp[i + pos->y][j + pos->x] == 'T'
+					&& (test = point_to_win->dist > abs(point_to_win->y
+						- (i + pos->y)) + abs(point_to_win->x - (j + pos->x))))
 				return (1);
 		}
 	}
@@ -102,6 +107,5 @@ void	ft_algo(t_var *var, int count, int opt)
 		}
 		point = point->next;
 	}
-	opt ? (ft_algo(var, count, 0)) : 0;
 	return ;
 }

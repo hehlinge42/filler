@@ -6,19 +6,15 @@
 #    By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/10 16:35:23 by hehlinge          #+#    #+#              #
-#    Updated: 2019/08/31 14:55:43 by sikpenou         ###   ########.fr        #
+#    Updated: 2019/09/04 14:17:07 by sikpenou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-C = clang
+C = gcc
 
 NAME = libft.a
 
 FLAGS = -Wall -Wextra -Werror -g3
-
-LIBFTPRINTF = libftprintf.a
-
-LIBFTPRINTFDIR = ./ft_printf/
 
 INC_DIR = includes
 
@@ -97,13 +93,29 @@ SRCS = 	ft_atoi.c \
 		ft_strmap.c \
 		ft_strrchr.c \
 		ft_toupper.c \
-		get_next_line.c
+		get_next_line.c \
+		ft_bits.c \
+		ft_char.c \
+		ft_display_int.c \
+		ft_float.c \
+		ft_float_anormal.c \
+		ft_float_calc.c \
+		ft_float_strct.c \
+		ft_float_strct_round.c \
+		ft_int.c \
+		ft_parsing.c \
+		ft_parsing_type.c \
+		ft_percent.c \
+		ft_pointer.c \
+		ft_printf.c \
+		ft_string.c \
+		ft_uint.c \
+		ft_uint_tools.c
 
 
 all: $(NAME)
 
 $(NAME): $(OBJS_LIB)
-	@make -j --no-print-directory -C $(LIBFTPRINTFDIR)
 	@mkdir -p $(OBJ_DIR)
 	@echo "creating libft.a"
 	@ar rc $(NAME) $(OBJS_LIB)

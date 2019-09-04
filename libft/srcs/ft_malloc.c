@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/24 23:04:53 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/30 15:38:52 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/03 16:24:11 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@
 **	implement an EXIT macro, and if (EXIT) ft free exits instead of returning
 */
 
-struct			s_gc_list
+struct									s_gc_list
 {
 	unsigned	len;
 	t_lst		*first;
 	t_lst		*last;
 }				g_to_free;
 
-__attribute__((constructor)) void begin(void)
+__attribute__((constructor)) void		begin(void)
 {
 	g_to_free.len = 0;
 	g_to_free.first = NULL;
 	g_to_free.last = NULL;
 }
 
-__attribute__((destructor)) void end(void)
+__attribute__((destructor)) void 		end(void)
 {
 	t_lst	*elem;
 	t_lst	*tmp;
@@ -53,12 +53,12 @@ __attribute__((destructor)) void end(void)
 ** argument to "len", "first" and "last", print relevant data, and still
 ** return the length
 */
-unsigned					get_gc_data(void)
+unsigned								get_gc_data(void)
 {
 	return (g_to_free.len);
 }
 
-void						ft_free(void **match)
+void									ft_free(void **match)
 {
 	t_lst		*elem;
 	t_lst		*tmp;
@@ -87,7 +87,7 @@ void						ft_free(void **match)
 	}
 }
 
-void					*easymalloc(int size)
+void									*easymalloc(int size)
 {
 	t_lst	*new_free;
 
