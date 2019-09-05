@@ -14,18 +14,15 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror -g3
 
-NAME = resources/players/hehlinge.filler
+NAME = color
 #NAME = hehlinge.filler
 
 SRCS = $(addprefix $(SRCDIR), $(SRCFILES))
 
-SRCFILES =	main.c				\
-			parser.c			\
-			points.c			\
-			debug.c				\
-			algo.c
+SRCFILES =	main_color.c	\
+			parser_color.c	\
 
-SRCDIR = ./srcs/
+SRCDIR = srcs/
 
 OBJS = $(addprefix $(OBJDIR), $(OBJFILES))
 
@@ -35,22 +32,21 @@ OBJDIR = objs/
 
 INCLS = $(INCLDIR)*.h
 
-INCLDIR = includes/
+INCLDIR = ../includes/
 
 LIB = $(addprefix $(LIBDIR), libft.a)
 
-LIBINCLS =  $(LIBDIR)$(INCLDIR)
+LIBINCLS =  $(LIBDIR)includes/
 
-LIBDIR = libft/
+LIBDIR = ../libft/
 
 all: $(NAME)
 
 $(NAME): $(INCLS) $(LIBINCLS) $(SRCS) $(LIB)
-	@rm -f auteur
-	@echo hehlinge > auteur
 	@mkdir -p objs
 	@make -j --no-print-directory objects
-	@$(CC) $(CFLAGS) -I $(INCLDIR) -o $@ $(OBJS) $(LIB)
+	@$(CC) $(CFLAGS) -I $(INCLDIR) -o $@ $(OBJS) $(LIB) -lncursesw
+	@cp $(NAME) ../resources/
 
 $(LIB):
 	@make -j --no-print-directory -C $(LIBDIR)
@@ -58,10 +54,7 @@ $(LIB):
 objects: $(OBJS)
 
 $(OBJDIR)%.o: $(SRCDIR)%.c
-	@$(CC) $(CFLAGS) -I $(INCLDIR) -I $(LIBINCLS) -o $@ -c $<
-
-color:
-	@make -j --no-print-directory -C ncurses/	
+	@$(CC) $(CFLAGS) -I $(INCLDIR) -I $(LIBINCLS) -o $@ -c $< -lncursesw
 
 clean: FORCE
 	@rm -f $(OBJS)

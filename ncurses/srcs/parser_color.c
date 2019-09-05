@@ -102,7 +102,6 @@ int			alloc_map(t_var *var)
 {
 	int		i;
 
-	var->turn++;
 	if (!(var->map = (char **)easymalloc(sizeof(char *) * var->y_map)))
 		return (0);
 	i = -1;
@@ -123,7 +122,7 @@ int		ft_parse_input(t_var *var)
 			return (0);
 	if (ft_parse_size(line, var, "Plateau "))
 	{
-		if (!var->turn)
+		if (!var->turn++)
 			alloc_map(var);
 		nb = -1;
 		while (nb < var->y_map

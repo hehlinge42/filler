@@ -88,7 +88,6 @@ int			ft_init_neutral_points(t_var *var, int i, int j)
 			((t_point *)tmp->content)->dist = 2147483647;
 		}
 	}
-	var->nb_neutral = var->x_map * var->y_map;
 	if (!(var->map = (char **)easymalloc(sizeof(char *) * var->y_map))
 			|| !(var->tmp = (char **)easymalloc(sizeof(char *) * var->y_map)))
 		return (0);
