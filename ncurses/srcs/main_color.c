@@ -1,5 +1,5 @@
 
-#include <ncurses.h>
+#include <curses.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include "filler.h"
@@ -31,6 +31,91 @@ int			ft_parse_first_line(t_var *var)
 	if (ft_strcmp(line + pos, " : [players/hehlinge.filler]"))
 		return (0);
 	return (1);
+}
+
+int		get_faster(t_var *var, int o_y, int o_x, int step)
+{
+	int		ret[2];
+	int		y;
+	int		x;
+	char	c;
+
+	ft_memset(ret, 0, sizeof(*ret) * 2);
+	while (!ret[0] && !ret[1] && ++step < var->y_map + var->x_map)
+	{
+		y = o_y - step >= 0 ? o_y - step - 1 : -1;
+		while (++y < var->y_map && y <= o_y + step)
+		{
+			x = o_x - step >= 0 ? o_x - step - 1 : -1;
+			while (++x < var->x_map && x <= o_x + step)
+				if ((c = var->map[y][x]) != '.' && abs(x - o_x) == step
+					 - abs(y - o_y))
+					c == var->player || c == var->player + 32 ? (ret[0])++
+						: (ret[1])++;
+		}
+	}
+	if (ret[0] && ret[1])
+		return (NN);
+	return (ret[0] ? NP : NE);
+}
+
+void	print_map_ncurses(t_var *var, int i, int j, char c)
+{
+	while (++i < var->y_map)
+	{
+		j = -1;
+		while (++j < var->x_map)
+		{
+			if ((c = var->map[i][j]) != '.')
+			{
+				if (c == var->player || c == var->player + 32)
+					attron(COLOR_PAIR(PLAYER));
+				else
+					attron(COLOR_PAIR(ENEMY));
+			}
+			else
+				attron(COLOR_PAIR(get_faster(var, i, j, 0)));
+			printw("%c", var->map[i][j]);
+		}
+		printw("\n");
+	}
+}
+
+void	set_ncurses(void)
+{
+	initscr();
+	start_color();
+	curs_set(0);
+	init_pair(PLAYER, COLOR_CYAN, COLOR_CYAN);
+	init_pair(NP, COLOR_CYAN, COLOR_BLACK);
+	init_pair(ENEMY, COLOR_RED, COLOR_RED);
+	init_pair(NE, COLOR_RED, COLOR_BLACK);
+	init_pair(NN, COLOR_WHITE, COLOR_WHITE);
+	init_pair(RST, COLOR_WHITE, COLOR_BLACK);
+}
+
+int		main(void)
+{
+	t_var	*var;
+
+	if (!(var = (t_var *)easymalloc(sizeof(*var))))
+		return (0);
+	var->fd = open("debug.txt", O_WRONLY | O_CREAT | O_TRUNC, 777);
+	set_ncurses();
+	newwin(var->y_map + 5, var->x_map + 5, 1, 1);
+	ft_parse_first_line(var);
+	while (ft_parse_input(var))
+	{
+		attron(COLOR_PAIR(RST));
+		printw("turn %d\n", var->turn);
+		print_map_ncurses(var, -1, -1, 0);
+		refresh();
+		usleep(100000);
+		move(0, 0);
+	}
+	usleep(500000);
+	endwin();
+	close(var->fd);
 }
 
 /*
@@ -117,88 +202,3 @@ void	quick_print(t_var var)
 }
 */
 
-int		get_faster(t_var *var, int o_y, int o_x, int step)
-{
-	int		ret[2];
-	int		y;
-	int		x;
-	char	c;
-
-	ft_memset(ret, 0, sizeof(*ret) * 2);
-	while (!ret[0] && !ret[1] && ++step < var->y_map + var->x_map)
-	{
-		y = o_y - step >= 0 ? o_y - step - 1 : -1;
-		while (++y < var->y_map && y <= o_y + step)
-		{
-			x = o_x - step >= 0 ? o_x - step - 1 : -1;
-			while (++x < var->x_map && x <= o_x + step)
-				if ((c = var->map[y][x]) != '.' && abs(x - o_x) == step
-					 - abs(y - o_y))
-					c == var->player || c == var->player + 32 ? (ret[0])++
-						: (ret[1])++;
-		}
-	}
-	if (ret[0] && ret[1])
-		return (NN);
-	return (ret[0] ? NP : NE);
-}
-
-void	print_map_ncurses(t_var *var, int i, int j, char c)
-{
-	while (++i < var->y_map)
-	{
-		j = -1;
-		while (++j < var->x_map)
-		{
-			if ((c = var->map[i][j]) != '.')
-			{
-				if (c == var->player || c == var->player + 32)
-					attron(COLOR_PAIR(PLAYER));
-				else
-					attron(COLOR_PAIR(ENEMY));
-			}
-			else
-				attron(COLOR_PAIR(get_faster(var, i, j, 0)));
-			printw("%c", var->map[i][j]);
-			//addwstr((wchar_t)9633);
-		}
-		printw("\n");
-	}
-}
-
-void	set_ncurses(void)
-{
-	initscr();
-	start_color();
-	curs_set(0);
-	init_pair(PLAYER, COLOR_CYAN, COLOR_CYAN);
-	init_pair(NP, COLOR_CYAN, COLOR_BLACK);
-	init_pair(ENEMY, COLOR_RED, COLOR_RED);
-	init_pair(NE, COLOR_RED, COLOR_BLACK);
-	init_pair(NN, COLOR_WHITE, COLOR_WHITE);
-	init_pair(RST, COLOR_WHITE, COLOR_BLACK);
-}
-
-int		main(void)
-{
-	t_var	*var;
-
-	if (!(var = (t_var *)easymalloc(sizeof(*var))))
-		return (0);
-	var->fd = open("debug.txt", O_WRONLY | O_CREAT | O_TRUNC, 777);
-	set_ncurses();
-	newwin(var->y_map + 5, var->x_map + 5, 1, 1);
-	ft_parse_first_line(var);
-	while (ft_parse_input(var))
-	{
-		attron(COLOR_PAIR(RST));
-		printw("turn %d\n", var->turn);
-		print_map_ncurses(var, -1, -1, 0);
-		refresh();
-		usleep(100000);
-		move(0, 0);
-	}
-	usleep(500000);
-	endwin();
-	close(var->fd);
-}

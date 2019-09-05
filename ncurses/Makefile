@@ -6,7 +6,7 @@
 #    By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/02 21:32:05 by sikpenou          #+#    #+#              #
-#    Updated: 2019/09/04 16:56:42 by sikpenou         ###   ########.fr        #
+#    Updated: 2019/09/05 16:05:02 by sikpenou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,58 +17,59 @@ CFLAGS = -Wall -Wextra -Werror -g3
 NAME = color
 #NAME = hehlinge.filler
 
-SRCS = $(addprefix $(SRCDIR), $(SRCFILES))
+SRCS = $(addprefix $(SRC_DIR), $(SRC_FILES))
 
-SRCFILES =	main_color.c	\
+SRC_FILES =	main_color.c	\
 			parser_color.c	\
 
-SRCDIR = srcs/
+SRC_DIR = srcs/
 
-OBJS = $(addprefix $(OBJDIR), $(OBJFILES))
+OBJS = $(addprefix $(OBJ_DIR), $(OBJ_FILES))
 
-OBJFILES = $(SRCFILES:.c=.o)
+OBJ_FILES = $(SRC_FILES:.c=.o)
 
-OBJDIR = objs/
+OBJ_DIR = objs/
 
-INCLS = $(INCLDIR)*.h
+INCLS = $(INC_DIR)*.h
 
-INCLDIR = ../includes/
+INC_DIR = ../includes/
 
-LIB = $(addprefix $(LIBDIR), libft.a)
+LIB = $(addprefix $(LIB_DIR), libft.a)
 
-LIBINCLS =  $(LIBDIR)includes/
+LIB_INCLS =  $(LIB_DIR)includes/
 
-LIBDIR = ../libft/
+LIB_DIR = ../libft/
 
 all: $(NAME)
 
-$(NAME): $(INCLS) $(LIBINCLS) $(SRCS) $(LIB)
+$(NAME): $(INCLS) $(LIB_INCLS) $(SRCS) $(LIB)
+	@/bin/echo "make $(notdir $(NAME))"
 	@mkdir -p objs
 	@make -j --no-print-directory objects
-	@$(CC) $(CFLAGS) -I $(INCLDIR) -o $@ $(OBJS) $(LIB) -lncursesw
-	@cp $(NAME) ../resources/
+	@$(CC) $(CFLAGS) -I $(INC_DIR) -o $@ $(OBJS) $(LIB) -lncurses
 
-$(LIB):
-	@make -j --no-print-directory -C $(LIBDIR)
+$(LIB): FORCE
+	@make -j --no-print-directory -C $(LIB_DIR)
 
 objects: $(OBJS)
 
-$(OBJDIR)%.o: $(SRCDIR)%.c
-	@$(CC) $(CFLAGS) -I $(INCLDIR) -I $(LIBINCLS) -o $@ -c $< -lncursesw
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCLS)
+	@$(CC) $(CFLAGS) -I $(INC_DIR) -I $(LIB_INCLS) -o $@ -c $<
 
 clean: FORCE
-	@rm -f $(OBJS)
-	@make clean -j --no-print-directory -C $(LIBDIR)
-	@echo "rm -f .o files"
-	@rm -f $(OBJS)
+	@/bin/echo "make clean $(notdir $(NAME))"
+	@rm -rf $(OBJ_DIR)
+	@make clean -j --no-print-directory -C $(LIB_DIR)
 
 fclean: clean
-	@rm -f a.out
-	@rm -f test
-	rm -f $(LIB)
-	rm -f $(NAME)
+	@/bin/echo "make fclean $(notdir $(NAME))"
+	@make fclean -j --no-print-directory -C $(LIB_DIR)
+	@rm -f ../resources/$(NAME)
+	@rm -f debug.txt
+	@rm -f $(NAME)
 
 re: FORCE
+	@/bin/echo "make re $(notdir $(NAME))"
 	@make -j --no-print-directory fclean
 	@make -j --no-print-directory all
 
