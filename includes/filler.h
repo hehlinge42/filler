@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:30:50 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/04 12:57:03 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/11 16:36:09 by hehlinge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 
 # include "../libft/includes/libft.h"
 
-#include <stdio.h>
 typedef struct		s_point
 {
 	int				x;
@@ -50,7 +49,19 @@ typedef struct		s_var
 	int				fd;
 }					t_var;
 
+typedef struct		s_clr
+{
+	char			*name_player;
+	char			*name_enemy;
+	int				nb_player;
+	int				nb_enemy;
+	int				pause;
+	t_var			*var;
+}					t_clr;
+
+
 int					ft_parse_input(t_var *var);
+int					ft_parse_input_color(t_var *var, int nb);
 int					ft_init_neutral_points(t_var *var, int i, int j);
 void				ft_get_points(t_var *var, t_point *point, t_lst *elem
 	, t_lst *tmp);

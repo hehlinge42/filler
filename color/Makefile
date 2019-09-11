@@ -6,7 +6,7 @@
 #    By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/02 21:32:05 by sikpenou          #+#    #+#              #
-#    Updated: 2019/09/05 16:05:02 by sikpenou         ###   ########.fr        #
+#    Updated: 2019/09/11 15:59:38 by hehlinge         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ $(NAME): $(INCLS) $(LIB_INCLS) $(SRCS) $(LIB)
 	@mkdir -p objs
 	@make -j --no-print-directory objects
 	@$(CC) $(CFLAGS) -I $(INC_DIR) -o $@ $(OBJS) $(LIB) -lncurses
+	@cp $(NAME) ../resources
 
 $(LIB): FORCE
 	@make -j --no-print-directory -C $(LIB_DIR)

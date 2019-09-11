@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 10:37:56 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/09/04 14:56:51 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/11 13:22:48 by hehlinge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ int		ft_parse_piece(int nb, char *line, t_var *var)
 	return (0);
 }
 
-int			alloc_map(t_var *var)
+int		alloc_map(t_var *var)
 {
 	int		i;
 
@@ -111,10 +111,9 @@ int			alloc_map(t_var *var)
 	return (1);
 }
 
-int		ft_parse_input(t_var *var)
+int		ft_parse_input_color(t_var *var, int nb)
 {
 	char	*line;
-	int		nb;
 
 	var->enemy_is_playing = (var->turn) ? 0 : 1;
 	while (get_next_line(0, &line) && ft_strncmp(line, "Plat", 4))
@@ -124,7 +123,6 @@ int		ft_parse_input(t_var *var)
 	{
 		if (!var->turn++)
 			alloc_map(var);
-		nb = -1;
 		while (nb < var->y_map
 			&& get_next_line(0, &line) > -1 && ft_parse_map(nb, line, var))
 			nb++;

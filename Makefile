@@ -6,7 +6,7 @@
 #    By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/02 21:32:05 by sikpenou          #+#    #+#              #
-#    Updated: 2019/09/05 16:04:50 by sikpenou         ###   ########.fr        #
+#    Updated: 2019/09/11 13:25:04 by hehlinge         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ LIB_INCLS = $(LIB_DIR)$(INC_DIR)
 
 LIB_DIR = libft/
 
-COLOR = ncurses/color
+COLOR = color/color
 
 all: $(NAME)
 
@@ -59,7 +59,7 @@ $(LIB): FORCE
 	@make -j --no-print-directory -C $(LIB_DIR)
 
 $(COLOR): FORCE
-	@make -j --no-print-directory -C ncurses/	
+	@make -j --no-print-directory -C color/	
 
 objects: $(OBJS)
 
@@ -70,12 +70,12 @@ clean: FORCE
 	@/bin/echo "make clean $(notdir $(NAME))"
 	@rm -f $(OBJS)
 	@make clean -j --no-print-directory -C $(LIB_DIR)
-	@make clean -j --no-print-directory -C ncurses/
+	@make clean -j --no-print-directory -C color/
 
 fclean: clean
 	@/bin/echo "make fclean $(notdir $(NAME))"
 	@make fclean -j --no-print-directory -C $(LIB_DIR)
-	@make fclean -j --no-print-directory -C ncurses/
+	@make fclean -j --no-print-directory -C color/
 	@rm -f resources/color
 	@rm -f resources/debug.txt
 	@rm -f $(NAME)
