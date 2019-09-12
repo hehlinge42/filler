@@ -6,17 +6,16 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/23 17:41:07 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/06/12 13:12:06 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/09/12 17:01:56 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <unistd.h>
 
-static int	ft_valid(char c)
+static int	ft_valid(char c, int i)
 {
 	char	tab[18];
-	int		i;
 
 	tab[0] = 'd';
 	tab[1] = 'i';
@@ -83,17 +82,14 @@ static int	ft_is_convert_type_optional(t_printf *var, char c)
 		var->convert = CONVERT_O;
 		var->length = LENGTH_L;
 	}
-	else if (c == 'D' && var->convert == -1)
-	{
-		var->convert = CONVERT_D;
+	else if (c == 'D' && var->convert == -1 && (var->convert = CONVERT_D))
 		var->length = LENGTH_L;
-	}
 	return (0);
 }
 
 int			ft_is_convert_type(t_printf *var, char *c)
 {
-	if (ft_valid(*c))
+	if (ft_valid(*c, 0))
 	{
 		if ((*c == 'd' || *c == 'i') && var->convert == -1)
 			var->convert = CONVERT_D;

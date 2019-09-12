@@ -6,17 +6,12 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 16:16:19 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/05 14:28:06 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/12 15:41:20 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 #include <limits.h>
-
-int		abs(int nb)
-{
-	return (nb < 0 ? -nb : nb);
-}
 
 int		ft_place_piece(t_var *var, t_point *point)
 {
@@ -56,8 +51,9 @@ int		ft_check_change_ownership(t_var *var, t_point *pos
 		while (++j < var->x_piece)
 		{
 			if (var->tmp[i + pos->y][j + pos->x] == 'T'
-					&& (test = point_to_win->dist > abs(point_to_win->y
-						- (i + pos->y)) + abs(point_to_win->x - (j + pos->x))))
+					&& (test = point_to_win->dist > ft_abs(point_to_win->y
+						- (i + pos->y)) + ft_abs(point_to_win->x
+							- (j + pos->x))))
 				return (1);
 		}
 	}

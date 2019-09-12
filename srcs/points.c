@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/09/05 14:28:04 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/12 15:51:18 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ void		ft_dist(t_point *point, t_point *point_b, t_var *var, int *dist)
 	y = point->y;
 	point = point_b;
 	if (x >= 0 && y >= 0 && x < var->x_map && y < var->y_map
-		&& var->map[y][x] != '.' && (test = abs(point->x - x)
-			+ abs(point->y - y)) <= *dist && var->map[y][x] == var->enemy)
+		&& var->map[y][x] != '.' && (test = ft_abs(point->x - x)
+			+ ft_abs(point->y - y)) <= *dist && var->map[y][x] == var->enemy)
 		*dist = test;
 }
 
@@ -91,7 +91,7 @@ void		ft_test_dist(t_var *var, t_point *pivot)
 	while (elem)
 	{
 		point = (t_point *)elem->content;
-		if ((test = abs(point->x - pivot->x) + abs(point->y - pivot->y))
+		if ((test = ft_abs(point->x - pivot->x) + ft_abs(point->y - pivot->y))
 			< point->dist)
 		{
 			point->owner = pivot->owner;

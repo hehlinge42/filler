@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 13:35:34 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/04 11:17:15 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/12 17:58:17 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,13 @@ typedef struct		s_lst
 	struct s_lst	*next;
 	struct s_lst	*last;
 }					t_lst;
+
+typedef struct		s_gc_list
+{
+	unsigned		len;
+	t_lst			*first;
+	t_lst			*last;
+}					t_gc_list;
 
 typedef struct		s_gnl
 {
@@ -103,6 +110,10 @@ void				*ft_memccpy(void *restrict dst, const void *restrict src,
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*easymalloc(int size);
 void				ft_free(void **ptr);
+void				begin(void) __attribute__((constructor));
+void				end(void) __attribute__((destructor));
+int					ft_abs(int a);
+int					ft_max(int a, int b);
 int					ft_printf(const char *format, ...);
 
 #endif

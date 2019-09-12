@@ -6,7 +6,7 @@
 #    By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/02 21:32:05 by sikpenou          #+#    #+#              #
-#    Updated: 2019/09/11 15:59:38 by hehlinge         ###   ########.fr        #
+#    Updated: 2019/09/12 15:27:17 by sikpenou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRCS = $(addprefix $(SRC_DIR), $(SRC_FILES))
 
 SRC_FILES =	main_color.c	\
 			parser_color.c	\
+			print_color.c
 
 SRC_DIR = srcs/
 

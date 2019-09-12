@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/24 23:04:53 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/09/03 16:24:11 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/12 17:44:18 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@
 **	implement an EXIT macro, and if (EXIT) ft free exits instead of returning
 */
 
-struct									s_gc_list
+static t_gc_list						g_to_free =
 {
-	unsigned	len;
-	t_lst		*first;
-	t_lst		*last;
-}				g_to_free;
+	0,
+	NULL,
+	NULL
+};
 
-__attribute__((constructor)) void		begin(void)
+void									begin(void)
 {
 	g_to_free.len = 0;
 	g_to_free.first = NULL;
 	g_to_free.last = NULL;
 }
 
-__attribute__((destructor)) void 		end(void)
+void									end(void)
 {
 	t_lst	*elem;
 	t_lst	*tmp;
@@ -53,6 +53,7 @@ __attribute__((destructor)) void 		end(void)
 ** argument to "len", "first" and "last", print relevant data, and still
 ** return the length
 */
+
 unsigned								get_gc_data(void)
 {
 	return (g_to_free.len);

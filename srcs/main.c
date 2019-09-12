@@ -6,12 +6,13 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:28:16 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/11 15:35:27 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/09/12 16:56:32 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 #include "libft.h"
+#include "ft_printf.h"
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -102,25 +103,19 @@ int			ft_init_neutral_points(t_var *var, int i, int j)
 int			main(void)
 {
 	t_var		var;
-	int			fd;
 	t_point		*point;
 	t_lst		*tmp;
 
 	point = 0;
 	tmp = 0;
-	fd = open("debug.txt", O_WRONLY | O_CREAT | O_TRUNC, 777);
 	if (ft_init_exit(&var, 0))
 	{
-		var.fd = fd;
 		if (!ft_parse_first_line(&var))
 			return (ft_init_exit(&var, ERR_FIRST_LINE));
 		while (++var.turn > -1)
 		{
 			if (!ft_parse_input(&var))
-			{
-				close(fd);
 				return (ft_init_exit(&var, BAD_MAP));
-			}
 			ft_get_points(&var, point, *var.pts_neutral, tmp);
 			ft_algo(&var, -1, 1);
 			ft_printf("%d %d\n", var.y_pos, var.x_pos);

@@ -6,7 +6,7 @@
 #    By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/10 16:35:23 by hehlinge          #+#    #+#              #
-#    Updated: 2019/09/05 16:05:19 by sikpenou         ###   ########.fr        #
+#    Updated: 2019/09/12 16:59:41 by sikpenou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SRCS = $(addprefix $(SRC_DIR), $(SRC_FILES))
 
 SRC_DIR = srcs/
 
-SRC_FILES = 	ft_atoi.c \
+SRC_FILES = 	ft_abs.c \
+				ft_atoi.c \
 				ft_bzero.c \
 				ft_itoa.c \
 				ft_isalnum.c \
@@ -41,6 +42,7 @@ SRC_FILES = 	ft_atoi.c \
 				ft_lstpop.c \
 				ft_lstprint.c \
 				ft_malloc.c \
+				ft_max.c \
 				ft_memalloc.c \
 				ft_memccpy.c \
 				ft_memcpy.c \

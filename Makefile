@@ -6,7 +6,7 @@
 #    By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/02 21:32:05 by sikpenou          #+#    #+#              #
-#    Updated: 2019/09/11 13:25:04 by hehlinge         ###   ########.fr        #
+#    Updated: 2019/09/12 15:55:25 by sikpenou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,14 +15,12 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g3
 
 NAME = resources/players/hehlinge.filler
-#NAME = hehlinge.filler
 
 SRCS = $(addprefix $(SRC_DIR), $(SRC_FILES))
 
 SRC_FILES =	main.c				\
 			parser.c			\
 			points.c			\
-			debug.c				\
 			algo.c
 
 SRC_DIR = ./srcs/

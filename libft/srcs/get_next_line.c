@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/20 14:14:33 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/09/03 16:25:45 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/09/12 17:02:29 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int				read_loop(char **line, int *pos, int fd)
 {
 	int		check;
 	char	buf[BUFF_SIZE + 1];
-	
+
 	ft_memset(buf, '\0', BUFF_SIZE + 1);
 	check = BUFF_SIZE;
 	while ((*pos = ft_strchr_pos(*line, '\n')) < 0
@@ -73,5 +73,5 @@ int				get_next_line(int fd, char **line)
 		return (ret);
 	tab[fd] = pos > -1 ? ft_strdup(ft_strchr(*line, '\n') + 1) : 0;
 	pos > -1 ? (*line)[pos] = 0 : 1;
-	return (!tab[fd] && pos > -1 ? -1: 1);
+	return (!tab[fd] && pos > -1 ? -1 : 1);
 }

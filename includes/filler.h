@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:30:50 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/11 16:36:09 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/09/12 15:39:40 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,17 @@
 
 # define ERR_FIRST_LINE 1
 # define BAD_MAP 2
+# define PLAYER 1
+# define NP 2
+# define ENEMY 3
+# define NE 4
+# define NN 5
+# define RST 6
+# define SLOW 200000
+# define MEDIUM 90000
+# define FAST 35000
 
-# include "../libft/includes/libft.h"
+# include "libft.h"
 
 typedef struct		s_point
 {
@@ -51,32 +60,40 @@ typedef struct		s_var
 
 typedef struct		s_clr
 {
-	char			*name_player;
-	char			*name_enemy;
 	int				nb_player;
 	int				nb_enemy;
 	int				pause;
+	int				width;
+	int				top;
+	int				center_line;
+	int				bottom;
+	int				border_l;
+	int				center_col;
+	int				border_r;
+	int				anim;
+	char			*name_player;
+	char			*name_enemy;
 	t_var			*var;
 }					t_clr;
 
-
 int					ft_parse_input(t_var *var);
-int					ft_parse_input_color(t_var *var, int nb);
 int					ft_init_neutral_points(t_var *var, int i, int j);
 void				ft_get_points(t_var *var, t_point *point, t_lst *elem
 	, t_lst *tmp);
+int					ft_get_dist_enemy(t_point *point, t_var *var
+	, int square_nb);
 int					place_piece(void);
 int					ft_init_point(t_var *var, int x, int y, char letter);
-int					abs(int n);
 int					ft_exit(int opt);
-void				print_debug(t_var var, char *opt);
 void				ft_algo(t_var *var, int count, int opt);
+int					ft_parse_input_color(t_var *var);
+void				print_box(t_clr *clr);
+void				print_map_ncurses(t_clr *clr, int i, int j, char c);
+void				print_debug(t_var var, char *opt);
 void				print_point(t_point *point, int fd);
 void				print_points(t_var var, char *opt);
 void				print_map(t_var var, int opt, int nocolor);
 void				print_available(t_var var);
 void				print_piece(t_var var);
-int					ft_get_dist_enemy(t_point *point, t_var *var
-	, int square_nb);
 
 #endif
