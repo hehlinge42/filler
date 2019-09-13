@@ -110,6 +110,7 @@ void	print_box(t_clr *clr)
 	sleep = clr->anim ? 800000 : 0;
 	while (i++ <= clr->bottom - 1)
 	{
+		write(1, "\a", 1);
 		sleep = (4 * sleep) / 5;
 		mvprintw(i, clr->border_l, "*");
 		mvprintw(i, clr->border_r, "*");
