@@ -3,28 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 13:21:47 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/23 11:30:20 by hehlinge         ###   ########.fr       */
+/*   Created: 2019/04/02 16:41:45 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/04/06 22:01:23 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-int	ft_strequ(char const *s1, char const *s2)
+int		ft_strequ(char const *s1, char const *s2)
 {
-	int i;
+	char const		*cpy_s1;
+	char const		*cpy_s2;
 
-	i = -1;
 	if (!s1 && !s2)
 		return (1);
-	if (!s1 || !s2)
+	if (!(cpy_s1 = s1))
 		return (0);
-	while (s1[++i] && s2[i])
-		if (s1[i] != s2[i])
-			return (0);
-	if (!(s1[i]) && !(s2[i]))
-		return (1);
-	return (0);
+	if (!(cpy_s2 = s2))
+		return (0);
+	while (*cpy_s1 == *cpy_s2 && *cpy_s1 != '\0' && *cpy_s2 != '\0')
+	{
+		cpy_s1++;
+		cpy_s2++;
+	}
+	return (*cpy_s1 || *cpy_s2 ? 0 : 1);
 }

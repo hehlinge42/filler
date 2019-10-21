@@ -6,7 +6,7 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:44:03 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/09/12 15:51:18 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/10/08 17:18:17 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,9 @@ void		ft_test_dist(t_var *var, t_point *pivot)
 			point->y_owner = pivot->y;
 		}
 		else if (test == point->dist && point->owner != pivot->owner)
+		{
 			point->owner = '?';
+		}
 		elem = elem->next;
 	}
 }
@@ -114,10 +116,9 @@ void		ft_get_points(t_var *var, t_point *point, t_lst *elem, t_lst *tmp)
 		{
 			point->owner = var->map[point->y][point->x];
 			point->owner == var->enemy ? var->enemy_is_playing = 1 : 0;
-			tmp = elem;
+			tmp = ft_lstpop(var->pts_neutral, elem);
 			elem = elem->next;
-			ft_lstpop(var->pts_neutral, (void **)tmp, 0);
-			if (point->owner == var->player)
+			if (tmp && point->owner == var->player)
 				ft_lstadd(var->pts_player, tmp);
 			ft_test_dist(var, point);
 			var->map[point->y][point->x] == var->player ? (point->dist = 0) : 0;
@@ -131,4 +132,5 @@ void		ft_get_points(t_var *var, t_point *point, t_lst *elem, t_lst *tmp)
 		point->available = is_available(*var, point->y, point->x);
 		elem = elem->next;
 	}
+	ft_algo(var, -1, -1);
 }

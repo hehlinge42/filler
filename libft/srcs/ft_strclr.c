@@ -3,22 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 13:20:37 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/23 11:30:18 by hehlinge         ###   ########.fr       */
+/*   Created: 2019/04/05 15:04:21 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/04/05 15:11:36 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_strclr(char *s)
 {
-	int i;
-
-	if (!s)
-		return ;
-	i = -1;
-	while (s[++i])
-		s[i] = '\0';
+	ft_memcset(s, '\0', '\0');
 }

@@ -3,31 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 12:39:14 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/11 15:44:23 by hehlinge         ###   ########.fr       */
+/*   Created: 2019/04/04 18:26:19 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/04/06 20:37:33 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include "../includes/libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t			i;
-	unsigned char	*dest;
-	unsigned char	*source;
+	unsigned int		pos;
+	unsigned char		*cpy_dest;
+	unsigned char		*cpy_src;
 
-	i = 0;
-	dest = (unsigned char *)dst;
-	source = (unsigned char *)src;
-	while (i < n)
+	pos = 0;
+	cpy_dest = (unsigned char *)dst;
+	cpy_src = (unsigned char *)src;
+	while (pos < n)
 	{
-		*(dest + i) = *(source + i);
-		if (*(source + i) == (unsigned char)c)
-			return (void *)(dest + i + 1);
-		i++;
+		cpy_dest[pos] = cpy_src[pos];
+		if (cpy_src[pos++] == (unsigned char)c)
+			return (cpy_dest + pos);
 	}
 	return (NULL);
 }

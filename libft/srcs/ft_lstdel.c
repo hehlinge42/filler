@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 12:32:19 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/23 11:30:18 by hehlinge         ###   ########.fr       */
+/*   Created: 2019/10/08 18:04:02 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/10/08 18:04:08 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_lstdel(t_lst **alst, void (*del)(void *, size_t))
 {

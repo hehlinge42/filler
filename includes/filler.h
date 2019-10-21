@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 15:30:50 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/09/12 15:39:40 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/10/13 22:56:45 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@
 # define SLOW 200000
 # define MEDIUM 90000
 # define FAST 35000
-
+# define YIN 1
+# define CLASSIC 2
 # include "libft.h"
 
 typedef struct		s_point
@@ -55,7 +56,6 @@ typedef struct		s_var
 	char			**piece;
 	t_lst			**pts_player;
 	t_lst			**pts_neutral;
-	int				fd;
 }					t_var;
 
 typedef struct		s_clr
@@ -63,6 +63,12 @@ typedef struct		s_clr
 	int				nb_player;
 	int				nb_enemy;
 	int				pause;
+	int				anim;
+	int				symbol;
+	int				color;
+	int				theme;
+	int				state;
+	int				map_allocated;
 	int				width;
 	int				top;
 	int				center_line;
@@ -70,7 +76,6 @@ typedef struct		s_clr
 	int				border_l;
 	int				center_col;
 	int				border_r;
-	int				anim;
 	char			*name_player;
 	char			*name_enemy;
 	t_var			*var;
@@ -87,8 +92,12 @@ int					ft_init_point(t_var *var, int x, int y, char letter);
 int					ft_exit(int opt);
 void				ft_algo(t_var *var, int count, int opt);
 int					ft_parse_input_color(t_var *var);
-void				print_box(t_clr *clr);
-void				print_map_ncurses(t_clr *clr, int i, int j, char c);
+int					ft_parse_first_line_color(t_clr *clr, t_var *var, int pos
+	, int stop);
+int					set_ncurses(t_clr *clr);
+int					print_box(t_clr *clr);
+void				print_title(t_clr *clr, int sleep, int start);
+void				print_map_ncurses(t_clr *clr, int i, int j);
 void				print_debug(t_var var, char *opt);
 void				print_point(t_point *point, int fd);
 void				print_points(t_var var, char *opt);

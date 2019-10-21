@@ -6,102 +6,132 @@
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/24 23:04:53 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/09/12 17:44:18 by sikpenou         ###   ########.fr       */
+/*   Updated: 2019/10/08 17:21:12 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-/*
-**	implement an EXIT macro, and if (EXIT) ft free exits instead of returning
-*/
-
-static t_gc_list						g_to_free =
+t_gc_list	*get_gc_list(int opt)
 {
-	0,
-	NULL,
-	NULL
-};
+	static t_gc_list	*gc_list = NULL;
 
-void									begin(void)
-{
-	g_to_free.len = 0;
-	g_to_free.first = NULL;
-	g_to_free.last = NULL;
+	if (!gc_list && opt == 1)
+	{
+		if (!(gc_list = (t_gc_list *)malloc(sizeof(*gc_list))))
+			return (0);
+		gc_list->len = 0;
+		gc_list->first = NULL;
+		gc_list->last = NULL;
+	}
+	if (opt == -1)
+		gc_list = NULL;
+	return (gc_list);
 }
 
-void									end(void)
+int			get_gc_data(int opt)
 {
-	t_lst	*elem;
-	t_lst	*tmp;
+	t_lst		*elem;
+	t_gc_list	*gc_list;
 
-	elem = g_to_free.first;
+	if (!(gc_list = get_gc_list(0)))
+		return (0);
+	if (opt)
+	{
+		if (!(elem = gc_list->first))
+		{
+			ft_printf("gc_list is empty\n");
+		}
+		else
+		{
+			ft_printf("\n---\nlist start\n");
+			while (elem)
+			{
+				ft_printf("elem: %p, content: %p, next: %p\n", elem
+					, elem->content, elem->next);
+				elem = elem->next;
+			}
+			ft_printf("list end\n---\n\n");
+		}
+	}
+	return (gc_list->len);
+}
+
+void		ft_free_gc(void)
+{
+	t_lst			*elem;
+	t_lst			*tmp;
+	t_gc_list		*gc_list;
+
+	if (!(gc_list = get_gc_list(0)))
+	{
+		return ;
+	}
+	elem = (gc_list)->first;
 	while (elem)
 	{
-		g_to_free.len--;
+		(gc_list)->len--;
 		tmp = elem;
 		elem = elem->next;
 		if (tmp->content)
+		{
 			free(tmp->content);
+			tmp->content = NULL;
+		}
 		free(tmp);
+		tmp = NULL;
 	}
+	free(gc_list);
+	get_gc_list(-1);
 }
 
-/*
-** this function should take a char *opt, use ft_strstr to compare the
-** argument to "len", "first" and "last", print relevant data, and still
-** return the length
-*/
-
-unsigned								get_gc_data(void)
-{
-	return (g_to_free.len);
-}
-
-void									ft_free(void **match)
+void		ft_free(void **match)
 {
 	t_lst		*elem;
-	t_lst		*tmp;
+	t_gc_list	*gc_list;
 
-	g_to_free.len--;
-	elem = g_to_free.first;
-	if (match && elem->content == match)
+	if (!EASY)
 	{
-		g_to_free.first = elem->next;
-		if (g_to_free.last == elem)
-			g_to_free.last = NULL;
-		free(elem->content);
-		free(elem);
+		free(*match);
+		*match = NULL;
 		return ;
 	}
-	while (match && elem->next && elem->next->content != match)
-		elem = elem->next;
-	if (match && elem->next)
+	if (!*match || !(gc_list = get_gc_list(0)))
+		return ;
+	if (!(elem = ft_lstpop(&(gc_list->first), *match)))
 	{
-		tmp = elem->next;
-		elem->next = elem->next->next;
-		if (g_to_free.last == tmp)
-			g_to_free.last = elem;
-		free(tmp->content);
-		free(tmp);
+		return ;
 	}
+	free(*match);
+	*match = NULL;
+	free(elem);
+	elem = NULL;
+	gc_list->len--;
 }
 
-void									*easymalloc(int size)
+void		*easymalloc(size_t size)
 {
-	t_lst	*new_free;
+	t_lst			*new_free;
+	t_gc_list		*gc_list;
+	void			*zone;
 
-	if (!(new_free = (t_lst *)malloc(sizeof(*new_free))))
+	if (!EASY)
+		return ((zone = malloc(size)) ? ft_memset(zone, 0, size) : NULL);
+	if (size < 1 || !(gc_list = get_gc_list(1)))
 		return (0);
-	if ((new_free->content = (void *)malloc(size)))
+	if (!(new_free = (t_lst *)malloc(sizeof(t_lst))))
+		return (0);
+	ft_memset(new_free, 0, sizeof(t_lst));
+	if ((new_free->content = malloc(size)))
 		ft_memset(new_free->content, 0, size);
 	new_free->next = NULL;
-	if (g_to_free.last)
-		g_to_free.last->next = new_free;
+	if (gc_list->last)
+		gc_list->last->next = new_free;
 	else
-		g_to_free.first = new_free;
-	g_to_free.last = new_free;
-	g_to_free.len++;
+		gc_list->first = new_free;
+	gc_list->first->last = new_free;
+	gc_list->last = new_free;
+	gc_list->len++;
 	return (new_free->content);
 }

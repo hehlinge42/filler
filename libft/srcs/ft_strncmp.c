@@ -3,29 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 13:44:23 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/01 17:43:44 by sikpenou         ###   ########.fr       */
+/*   Created: 2019/04/05 15:30:16 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/04/11 19:20:18 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include <string.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
-	int		res;
+	unsigned char	*cpy_s1;
+	unsigned char	*cpy_s2;
 
 	if (!n)
 		return (0);
-	i = 0;
-	res = 0;
-	while (((unsigned char)s1[i] || (unsigned char)s2[i]) && i < n && res == 0)
+	cpy_s1 = (unsigned char *)s1;
+	cpy_s2 = (unsigned char *)s2;
+	while (*cpy_s1 == *cpy_s2 && *cpy_s1 != '\0' && *cpy_s2 != '\0' && n > 1)
 	{
-		if ((unsigned char)s1[i] != (unsigned char)s2[i])
-			res = ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
+		cpy_s1++;
+		cpy_s2++;
+		n--;
 	}
-	return (res);
+	return (*cpy_s1 - *cpy_s2);
 }

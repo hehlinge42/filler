@@ -6,16 +6,15 @@
 #    By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/02 21:32:05 by sikpenou          #+#    #+#              #
-#    Updated: 2019/09/12 15:27:17 by sikpenou         ###   ########.fr        #
+#    Updated: 2019/10/21 13:02:40 by sikpenou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -g3
+CFLAGS = -Wall -Wextra -Werror
 
 NAME = color
-#NAME = hehlinge.filler
 
 SRCS = $(addprefix $(SRC_DIR), $(SRC_FILES))
 
@@ -31,7 +30,7 @@ OBJ_FILES = $(SRC_FILES:.c=.o)
 
 OBJ_DIR = objs/
 
-INCLS = $(INC_DIR)*.h
+INCLS = $(INC_DIR)filler.h
 
 INC_DIR = ../includes/
 

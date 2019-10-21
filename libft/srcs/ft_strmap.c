@@ -3,31 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 13:23:37 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/23 11:30:20 by hehlinge         ###   ########.fr       */
+/*   Created: 2019/04/02 21:10:00 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/04/11 15:52:48 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char	*ft_strmap(char const *s, char (*f) (char))
 {
-	int		i;
-	char	*res;
+	char			*chain_to;
+	const char		*chain_from;
 
-	i = -1;
-	if (!s)
+	if (!s || !f)
 		return (NULL);
-	while (s[++i])
-		;
-	if (!(res = (char *)easymalloc(sizeof(char) * (i + 1))))
+	if (!(chain_from = s))
 		return (NULL);
-	res[i] = '\0';
-	i = -1;
-	while (s[++i])
-		res[i] = f(s[i]);
-	return (res);
+	if (!(chain_to = (char *)ft_memalloc(ft_strlen((char *)s) + 1)))
+		return (NULL);
+	while (*chain_from)
+	{
+		chain_to[chain_from - s] = (*f)(*chain_from);
+		chain_from++;
+	}
+	return (chain_to);
 }

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 12:36:44 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/08/03 12:37:13 by sikpenou         ###   ########.fr       */
+/*   Created: 2019/10/08 18:05:42 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/10/08 18:05:43 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-#include <stdlib.h>
+#include "libft.h"
 
 t_lst	*ft_lstnew(void const *content, size_t content_size)
 {
@@ -26,8 +25,7 @@ t_lst	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		if (!(new_elem->content = (void *)ft_memalloc(sizeof(void)
-			* (content_size + 1))))
+		if (!(new_elem->content = (void *)easymalloc(content_size)))
 			return (NULL);
 		ft_memcpy(new_elem->content, content, content_size);
 		new_elem->content_size = content_size;

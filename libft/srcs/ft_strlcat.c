@@ -3,32 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 13:23:04 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/23 11:30:20 by hehlinge         ###   ########.fr       */
+/*   Created: 2019/04/04 22:56:26 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/04/06 21:54:16 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+unsigned int	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	dstlen;
-	size_t	srclen;
-	size_t	i;
+	char			*cpy_d;
+	const char		*cpy_s;
+	size_t			n;
+	size_t			dlen;
 
-	dstlen = ft_strlen(dst);
-	srclen = ft_strlen(src);
-	if (dstsize <= dstlen)
-		return (srclen + dstsize);
-	i = 0;
-	while (src[i] && dstlen + 1 < dstsize)
+	cpy_d = (char *)dst;
+	cpy_s = src;
+	n = size;
+	while (n-- != 0 && *cpy_d != '\0')
+		cpy_d++;
+	dlen = cpy_d - dst;
+	n = size - dlen;
+	if (n == 0)
+		return (dlen + ft_strlen((char *)cpy_s));
+	while (*cpy_s != '\0')
 	{
-		dst[dstlen] = src[i];
-		i++;
-		dstlen++;
+		if (n != 1)
+		{
+			*cpy_d++ = *cpy_s;
+			n--;
+		}
+		cpy_s++;
 	}
-	dst[dstlen] = '\0';
-	return (dstlen - i + srclen);
+	*cpy_d = '\0';
+	return (dlen + (cpy_s - src));
 }

@@ -3,40 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 12:28:27 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/23 11:30:18 by hehlinge         ###   ########.fr       */
+/*   Created: 2019/04/03 13:18:08 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/04/10 17:40:11 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 #include <stdlib.h>
 
 char	*ft_itoa(int n)
 {
-	char			*res;
-	unsigned int	nb;
-	unsigned int	i;
-	int				count;
+	int		pos;
+	char	*res;
 
-	count = (n < 0) ? 2 : 1;
-	nb = (n < 0) ? -n : n;
-	i = 1;
-	while (nb / i >= 10)
-	{
-		count++;
-		i *= 10;
-	}
-	if (!(res = (char *)easymalloc(sizeof(char) * (count + 1))))
+	pos = 0;
+	while (n / ft_pow(10, pos) != 0 && pos < 10)
+		pos++;
+	pos = pos + (n < 1 ? 1 : 0);
+	if (!(res = (char *)easymalloc(sizeof(*res) * (pos + 1))))
 		return (NULL);
-	res[count] = '\0';
-	while (--count >= 0)
+	res[pos] = '\0';
+	res[0] = n < 0 ? '-' : 0;
+	if (!n)
+		res[0] = '0';
+	else
 	{
-		res[count] = '0' + (nb % 10);
-		nb /= 10;
+		while (pos > 0 && n != 0)
+		{
+			res[pos - 1] = 48 + (n < 0 ? -(n % 10) : n % 10);
+			n /= 10;
+			pos--;
+		}
 	}
-	if (n < 0)
-		res[0] = '-';
 	return (res);
 }

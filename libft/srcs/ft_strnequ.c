@@ -3,31 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 13:24:32 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/23 11:30:21 by hehlinge         ###   ########.fr       */
+/*   Created: 2019/04/02 16:46:30 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/04/06 21:58:38 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include <string.h>
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	size_t	i;
+	char const		*cpy_s1;
+	char const		*cpy_s2;
 
-	i = 0;
-	if (!s1 && !s2)
-		return (1);
-	if (!s1 || !s2)
-		return (0);
-	while (s1[i] && s2[i] && i < n)
+	if (!(cpy_s1 = s1))
+		cpy_s1 = "";
+	if (!(cpy_s2 = s2))
+		cpy_s2 = "";
+	while (*cpy_s1 == *cpy_s2 && *cpy_s1 && *cpy_s2 && n)
 	{
-		if (s1[i] != s2[i])
-			return (0);
-		i++;
+		cpy_s1++;
+		cpy_s2++;
+		n--;
 	}
-	if (i == n || (!s1[i] && !s2[i]))
+	if (!n || *cpy_s1 == *cpy_s2)
 		return (1);
-	return (0);
+	else
+		return (0);
 }

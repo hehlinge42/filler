@@ -6,15 +6,15 @@
 #    By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/02 21:32:05 by sikpenou          #+#    #+#              #
-#    Updated: 2019/09/12 15:55:25 by sikpenou         ###   ########.fr        #
+#    Updated: 2019/10/21 13:33:06 by sikpenou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -g3
+CFLAGS = -Wall -Wextra -Werror
 
-NAME = resources/players/hehlinge.filler
+NAME = hehlinge.filler
 
 SRCS = $(addprefix $(SRC_DIR), $(SRC_FILES))
 
@@ -31,7 +31,7 @@ OBJ_FILES = $(SRC_FILES:.c=.o)
 
 OBJ_DIR = objs/
 
-INCLS = $(INC_DIR)*.h
+INCLS = $(INC_DIR)filler.h
 
 INC_DIR = includes/
 
@@ -52,6 +52,7 @@ $(NAME): $(INCLS) $(LIB_INCLS) $(SRCS) $(LIB) $(COLOR)
 	@mkdir -p objs
 	@make -j --no-print-directory objects
 	@$(CC) $(CFLAGS) -I $(INC_DIR) -o $@ $(OBJS) $(LIB)
+	@cp $(NAME) resources/players
 
 $(LIB): FORCE
 	@make -j --no-print-directory -C $(LIB_DIR)
@@ -66,7 +67,7 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCLS)
 
 clean: FORCE
 	@/bin/echo "make clean $(notdir $(NAME))"
-	@rm -f $(OBJS)
+	@rm -rf $(OBJ_DIR)
 	@make clean -j --no-print-directory -C $(LIB_DIR)
 	@make clean -j --no-print-directory -C color/
 

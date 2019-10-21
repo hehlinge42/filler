@@ -3,41 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 12:23:55 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/07/11 19:10:12 by hehlinge         ###   ########.fr       */
+/*   Created: 2019/04/04 19:35:27 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/04/11 19:20:27 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
-	int i;
-	int res;
-	int is_neg;
+	int				flip;
+	int				nb;
+	const char		*src;
 
-	i = 0;
-	is_neg = 0;
-	res = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
-		i++;
-	if (str[i] == '-')
-		is_neg = 1;
-	if (str[i] == '+' || str[i] == '-')
-		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	src = str;
+	nb = 0;
+	while (ft_isspace(*src) && *src != '-' && *src != '+' && *src)
+		src++;
+	flip = *src == '-' ? -1 : 1;
+	src = *src == '-' || *src == '+' ? src + 1 : src;
+	while (*src >= '0' && *src <= '9')
 	{
-		if (res < 0 && is_neg)
-			return (0);
-		else if (res < 0 && !is_neg)
-			return (-1);
-		res = res * 10 + (int)str[i] - '0';
-		i++;
+		nb = nb * 10 + *src - 48;
+		src++;
 	}
-	if (is_neg)
-		return (-res);
-	return (res);
+	return (nb * flip);
 }

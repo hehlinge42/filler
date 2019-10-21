@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 12:27:33 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/01 12:27:42 by hehlinge         ###   ########.fr       */
+/*   Created: 2019/04/05 14:45:11 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/04/10 16:51:18 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int		ft_isdigit(int c)
 {
-	return (c >= 48 && c <= 57);
+	if (47 < c && c < 58)
+		return (1);
+	else
+		return (0);
 }

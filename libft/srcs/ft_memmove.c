@@ -3,33 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 13:17:32 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/23 11:30:18 by hehlinge         ###   ########.fr       */
+/*   Created: 2019/04/04 20:37:27 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/04/11 19:14:30 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "../includes/libft.h"
+#include <string.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*dest;
-	char	*source;
-	char	*lasts;
-	char	*lastd;
+	size_t		pos;
 
-	dest = (char *)dst;
-	source = (char *)src;
-	if (dest < source)
-		ft_memcpy(dest, source, len);
+	pos = 0;
+	if (src < dst)
+	{
+		while (len)
+		{
+			*(unsigned char *)(dst + len - 1) = *(unsigned char *)(src + len
+				- 1);
+			len--;
+		}
+	}
 	else
 	{
-		lasts = source + len - 1;
-		lastd = dest + len - 1;
-		while (len--)
-			*lastd-- = *lasts--;
+		while (pos < len)
+		{
+			*(unsigned char *)(dst + pos) = *(unsigned char *)(src + pos);
+			pos++;
+		}
 	}
-	return (void *)dest;
+	return (dst);
 }

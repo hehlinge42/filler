@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 12:27:07 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/01 12:27:18 by hehlinge         ###   ########.fr       */
+/*   Created: 2019/04/05 14:44:53 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/04/06 15:59:31 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+int		ft_isascii(int c)
 {
-	return (c >= 0 && c <= 127);
+	if (-1 < c && c < 128)
+		return (1);
+	else
+		return (0);
 }

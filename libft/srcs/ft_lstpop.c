@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_pop.c                                       :+:      :+:    :+:   */
+/*   ft_lstpop.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/30 19:12:17 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/08/31 15:01:29 by sikpenou         ###   ########.fr       */
+/*   Created: 2019/09/24 15:06:05 by sikpenou          #+#    #+#             */
+/*   Updated: 2019/09/30 21:32:59 by sikpenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstpop(t_lst **begin, void **match, int opt)
+t_lst	*ft_lstpop(t_lst **begin, void *match)
 {
 	t_lst		*elem;
 	t_lst		*tmp;
 
-	elem = *begin;
-	while (elem)
+	if (*begin == match || (*begin)->content == match)
 	{
-		if ((void **)elem == match || elem->content == match)
+		tmp = *begin;
+		(*begin)->next ? ((*begin)->next->last = (*begin)->last) : 0;
+		*begin = (*begin)->next;
+		return (tmp);
+	}
+	elem = (*begin)->last == match || (*begin)->last->content == match
+		? (*begin)->last : *begin;
+	while (elem->next)
+	{
+		if (elem->next == match || elem->next->content == match)
 		{
-			if (elem == *begin)
-				*begin = elem->next;
-			else
-				tmp->next = elem->next;
-			if (opt)
-			{
-				ft_free((void **)elem->content);
-				ft_free((void **)elem);
-			}
-			return ;
+			tmp = elem->next;
+			elem->next = elem->next->next;
+			elem->next ? 0 : ((*begin)->last = elem);
+			return (tmp);
 		}
-		tmp = elem;
 		elem = elem->next;
 	}
+	return (NULL);
 }
