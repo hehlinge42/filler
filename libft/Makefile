@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/04/02 21:32:05 by sikpenou          #+#    #+#              #
-#    Updated: 2019/10/09 21:07:36 by sikpenou         ###   ########.fr        #
+#    Created: 2019/04/02 21:32:05 by hehlinge          #+#    #+#              #
+#    Updated: 2019/10/09 21:07:36 by hehlinge         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -147,7 +147,7 @@ all: $(NAME)
 $(NAME): $(INCLS) $(SRCS)
 	@/bin/echo make $(NAME)
 	@rm -f auteur
-	@echo sikpenou > auteur
+	@echo hehlinge > auteur
 	@mkdir -p $(OBJDIR)
 	@make -j --no-print-directory objects
 	@ar src $(NAME) $(OBJS)

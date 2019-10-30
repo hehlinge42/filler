@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sikpenou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 18:02:19 by sikpenou          #+#    #+#             */
-/*   Updated: 2019/10/21 13:32:04 by sikpenou         ###   ########.fr       */
+/*   Created: 2019/10/08 18:02:19 by hehlinge          #+#    #+#             */
+/*   Updated: 2019/10/21 13:32:04 by hehlinge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,9 @@ int			ft_init_exit(t_var *var, int opt)
 	if (opt)
 	{
 		if (opt == ERR_FIRST_LINE)
-		{
 			ft_printf("exit - bad first line\n");
-		}
 		else if (opt == BAD_MAP)
-		{
 			ft_printf("exit - bad map\n");
-		}
 		ft_free_gc();
 		return (0);
 	}
