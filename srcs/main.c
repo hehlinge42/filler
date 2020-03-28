@@ -16,23 +16,13 @@
 #include <stdlib.h>
 #include <fcntl.h>
 
-t_point		*ft_new_point(int x, int y, char c)
-{
-	t_point		*new;
-
-	if ((new = (t_point *)easymalloc(sizeof(*new))))
-	{
-		ft_memset(new, 0, sizeof(*new));
-		new->x = x;
-		new->y = y;
-		new->owner = c;
-		new->x_owner = 0;
-		new->y_owner = 0;
-		new->dist = 0;
-		return (new);
-	}
-	return (0);
-}
+/*
+** Parameter: t_var *var
+** Return: 1 in case of success, 0 in case of error
+**
+** This function reads the first line of the vm input and checks its content.
+** It sets the values for player and enemy to X and O or vice versa.
+*/
 
 int			ft_parse_first_line(t_var *var)
 {
@@ -54,53 +44,31 @@ int			ft_parse_first_line(t_var *var)
 	return (1);
 }
 
-int			ft_init_exit(t_var *var, int opt)
+/*
+** Parameters: int opt: indicates the nature of the error.
+** Return: EXIT_FAILURE
+**
+** This function displays an error message depending on its parameter opt.
+** Then, it frees the garbage collector.
+*/
+
+int			ft_exit(int opt)
 {
-	if (opt)
-	{
-		if (opt == ERR_FIRST_LINE)
-			ft_printf("exit - bad first line\n");
-		else if (opt == BAD_MAP)
-			ft_printf("exit - bad map\n");
-		ft_free_gc();
-		return (0);
-	}
-	ft_memset(var, 0, sizeof(*var));
-	var->turn = -1;
-	if ((var->pts_player = (t_lst **)easymalloc(sizeof(*var->pts_player)))
-		&& (var->pts_neutral = (t_lst **)easymalloc(sizeof(*var->pts_neutral))))
-		return (ft_parse_first_line(var));
-	return (0);
+	if (opt == ERR_FIRST_LINE)
+		ft_printf("exit - bad first line\n");
+	else if (opt == BAD_MAP)
+		ft_printf("exit - bad map\n");
+	ft_free_gc();
+	return (EXIT_FAILURE);
 }
 
-int			ft_init_neutral_points(t_var *var, int i, int j)
-{
-	t_lst	*tmp;
-
-	while (++i < var->y_map)
-	{
-		j = -1;
-		while (++j < var->x_map)
-		{
-			tmp = ft_lstadd_new(var->pts_neutral,
-				(void *)ft_new_point(j, i, '.'), sizeof(t_point));
-			if (!tmp || !tmp->content)
-				return (0);
-			((t_point *)tmp->content)->dist = 2147483647;
-		}
-	}
-	if (!(var->map = (char **)easymalloc(sizeof(char *) * var->y_map))
-			|| !(var->tmp = (char **)easymalloc(sizeof(char *) * var->y_map)))
-		return (0);
-	i = -1;
-	while (++i < var->y_map)
-	{
-		if (!(var->map[i] = (char *)easymalloc(var->x_map + 1))
-				|| !(var->tmp[i] = (char *)easymalloc(var->x_map + 1)))
-			return (0);
-	}
-	return (1);
-}
+/*
+** The program contains a main loop, which represents a turn.
+** At each turn, the program reads the input and executes its algorithm
+** to find the optimal point to drop the piece it has received from the vm.
+** When there is no spot to drop the piece, the program sets the coordinates to -1,
+** frees the memory and exits.
+*/
 
 int			main(void)
 {
@@ -110,23 +78,24 @@ int			main(void)
 
 	point = 0;
 	tmp = 0;
-	if (!(var = (t_var *)easymalloc(sizeof(*var))))
-		return (0);
-	if (!ft_init_exit(var, 0))
-		return (ft_init_exit(var, ERR_FIRST_LINE));
+	if (!ft_init())
+		return (ft_exit(ERR_FIRST_LINE));
+	if (!ft_parse_first_line(var))
+		return (EXIT_FAILURE);
 	while (++var->turn > -1)
 	{
 		if (!ft_parse_input(var))
-			return (ft_init_exit(var, BAD_MAP));
+			return (ft_exit(BAD_MAP));
 		ft_get_points(var, point, *(var->pts_neutral), tmp);
+		ft_algo(var, -1, -1);
 		ft_printf("%d %d\n", var->y_pos, var->x_pos);
 		if (var->y_pos == -1 || var->x_pos == -1)
 		{
 			ft_free_gc();
-			return (0);
+			return (EXIT_SUCCESS);
 		}
 		var->x_pos = var->x_map + 1;
 		var->y_pos = -1;
 	}
-	return (1);
+	return (EXIT_FAILURE);
 }

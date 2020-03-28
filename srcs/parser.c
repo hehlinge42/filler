@@ -13,6 +13,18 @@
 #include "filler.h"
 #include "libft.h"
 
+/*
+** Parameters: string line to be parsed, string option: either Piece or Plateau
+** Return: 1 in case of success, 0 in case of failure
+**
+** This function is called to parse the line before a new piece or the map,
+** depending on the string parameter "option". The format of this line is
+** Plateau x y: or Piece x y:
+** In both cases, it makes sure the input is valid and gets the size of
+** either the piece or the map.
+** Finally, it allocates a 2D string for the piece.
+*/
+
 int		ft_parse_size(char *line, t_var *var, char *option)
 {
 	int		pos;
@@ -41,7 +53,17 @@ int		ft_parse_size(char *line, t_var *var, char *option)
 	return (0);
 }
 
-int		ft_parse_map_l0(char *line, t_var var)
+/*
+** Parameter: string line to be parsed
+** Return: 1 in case of success, 0 in case of failure
+**
+** This function checks and skips the first line of the map
+** Expected input:
+**  - 4 spaces
+**  - 01234567890123456789... until the map's columns number is reached
+*/
+
+int		ft_parse_map_l0(char *line, t_var *var)
 {
 	int		pos;
 	int		mod;
@@ -55,13 +77,23 @@ int		ft_parse_map_l0(char *line, t_var var)
 		mod = 0;
 		while (line[++pos] - 48 == mod % 10)
 			mod++;
-		if (!line[pos] && mod == var.x_map)
+		if (!line[pos] && mod == var->x_map)
 		{
 			return (1);
 		}
 	}
 	return (0);
 }
+
+/*
+** Parameters: int nb: line number in the map; string line to be parsed
+** Return: 1 in case of success, 0 in cse of failure
+**
+** ft_parse_map calls ft_parse_map_l0 if nb corresponds to
+** the first line of the map.
+** Otherwise, it checks that the line is valid and copies it
+** in the map and its copy.
+*/
 
 int		ft_parse_map(int nb, char *line, t_var *var)
 {
@@ -86,8 +118,16 @@ int		ft_parse_map(int nb, char *line, t_var *var)
 		}
 		return (0);
 	}
-	return (ft_parse_map_l0(line, *var));
+	return (ft_parse_map_l0(line, var));
 }
+
+/*
+** Parameters: int nb: line number in the piece; string line to be parsed
+** Return: 1 in case of success, 0 in cse of failure
+**
+** ft_parse_piece allocates a new line in the piece and copies it.
+** It makes sure the line contains only '.' and '*' characters
+*/
 
 int		ft_parse_piece(int nb, char *line, t_var *var)
 {
@@ -104,6 +144,17 @@ int		ft_parse_piece(int nb, char *line, t_var *var)
 	return (0);
 }
 
+/*
+** Return: 1 in case of success, 0 in case of failure
+**
+** This function is called at each turn.
+** It calls ft_parse_size to parse the size of the input of
+** the vm (new piece and map)
+** It calls ft_init_neutral_points to create the chained list of points on turn 0
+** It calls ft_parse_map to parse and copy the map
+** It calls ft_parse_piece to parse and copy the piece 
+*/
+
 int		ft_parse_input(t_var *var)
 {
 	int		nb;
@@ -117,7 +168,7 @@ int		ft_parse_input(t_var *var)
 				return (0);
 		nb = -1;
 		while (nb < var->y_map && filler_gnl(0, &(line))
-				&& ft_parse_map(nb, line, var))
+			&& ft_parse_map(nb, line, var))
 			nb++;
 		if (nb == var->y_map && filler_gnl(0, &(line))
 			&& ft_parse_size(line, var, "Piece "))

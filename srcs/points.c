@@ -12,6 +12,17 @@
 
 #include "filler.h"
 
+/*
+** Parameters: int o_y = point->y (ordinate); int o_x = point->x (absissa)
+** Return: 1 if the point is a valid spot to drop the piece. 0 otherwise
+**
+** First, is_available makes sure that the piece fits in the map if dropped
+** at these coordinates.
+** Then, it makes sure that none of the points in the area of the piece size
+** belongs to the opponent. It also makes sure that one and only one point of
+** the area belongs to the player.
+*/
+
 int			is_available(t_var var, int o_y, int o_x)
 {
 	int		count;
@@ -81,6 +92,15 @@ int			ft_get_dist_enemy(t_point *point, t_var *var, int square_nb)
 	return (dist);
 }
 
+/*
+** Parameter: t_point *pivot: a point that was neutral until last turn and that
+** was used by either the player or the opponent during the last turn
+**
+** ft_test_dist iterates on every neutral point.
+** It checks if this point is now closer to the pivot point than the previously
+** closest non-neutral point. If so, it upgrades its owner and distance.
+*/
+
 void		ft_test_dist(t_var *var, t_point *pivot)
 {
 	t_lst	*elem;
@@ -107,6 +127,22 @@ void		ft_test_dist(t_var *var, t_point *pivot)
 	}
 }
 
+/*
+** Parameters:
+** - t_point *point: pointer on the content of each successive point of
+**   the list of neutral points
+** - t_lst *elem: each successive neutral point
+** - t_lst *tmp
+**
+** ft_get_points iterates on every neutral point.
+** It calls is_available to know if the point is a valid spot to drop the piece
+** If the point is not neutral anymore (earned in the last turn), it is popped
+** from the neutral points and added to the player points if coherent. Then,
+** it calls ft_test_dist.
+** Finally, ft_get_points iterates on every player's point and calls is_available
+** to determine if they are valid spots to drop the piece
+*/
+
 void		ft_get_points(t_var *var, t_point *point, t_lst *elem, t_lst *tmp)
 {
 	while (elem && (point = (t_point *)elem->content))
@@ -132,5 +168,4 @@ void		ft_get_points(t_var *var, t_point *point, t_lst *elem, t_lst *tmp)
 		point->available = is_available(*var, point->y, point->x);
 		elem = elem->next;
 	}
-	ft_algo(var, -1, -1);
 }

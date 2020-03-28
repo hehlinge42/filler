@@ -28,6 +28,11 @@
 # define CLASSIC 2
 # include "libft.h"
 
+/*
+** The t_point structure contains all the necessary data for each point of the
+** 2D map. x and y are the point's coordinates. 
+*/
+
 typedef struct		s_point
 {
 	int				x;
@@ -38,6 +43,11 @@ typedef struct		s_point
 	int				dist;
 	int				available;
 }					t_point;
+
+/*
+** The t_var structure contains all the program's data and is passed
+** as parameter in every function.
+*/
 
 typedef struct		s_var
 {
@@ -57,6 +67,11 @@ typedef struct		s_var
 	t_lst			**pts_player;
 	t_lst			**pts_neutral;
 }					t_var;
+
+/*
+** The t_clr structure is used by the n_curses program color, which displays
+** the output.
+*/
 
 typedef struct		s_clr
 {
