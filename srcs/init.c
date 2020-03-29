@@ -25,7 +25,7 @@
 ** pts_neutral contains the points owned by none of the players.
 */
 
-t_var	*ft_init(void)
+t_var	*ft_init_filler(void)
 {
 	t_var	*var;
 

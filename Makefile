@@ -21,7 +21,8 @@ SRCS = $(addprefix $(SRC_DIR), $(SRC_FILES))
 SRC_FILES =	main.c				\
 			parser.c			\
 			points.c			\
-			algo.c
+			algo.c				\
+			init.c
 
 SRC_DIR = ./srcs/
 

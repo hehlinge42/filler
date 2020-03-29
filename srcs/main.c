@@ -78,7 +78,7 @@ int			main(void)
 
 	point = 0;
 	tmp = 0;
-	if (!ft_init())
+	if (!(var = ft_init_filler()))
 		return (ft_exit(ERR_FIRST_LINE));
 	if (!ft_parse_first_line(var))
 		return (EXIT_FAILURE);

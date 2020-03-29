@@ -96,6 +96,7 @@ typedef struct		s_clr
 	t_var			*var;
 }					t_clr;
 
+t_var				*ft_init_filler(void);
 int					ft_parse_input(t_var *var);
 int					ft_init_neutral_points(t_var *var, int i, int j);
 void				ft_get_points(t_var *var, t_point *point, t_lst *elem
