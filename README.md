@@ -23,6 +23,8 @@ This command line:
 - set two players with the options -p1 and -p2. A set of players is provided in the sub-folder "players"
 - pipes the output in the program color
 
+![Demo of a battle](https://github.com/hehlinge42/filler/blob/master/resources/filler_battle.gif)
+
 ## Visualizer
 
 The program color has the following options:
@@ -31,3 +33,5 @@ The program color has the following options:
  - slow, medium, fast, speed: [your speed (microseconds)]: set game speed;
  - board, degree, diamond set: board symbol (turns on color);
  These options must be launched as follows: ex: -anim
+ 
+ Project in collaboration with @skpn
